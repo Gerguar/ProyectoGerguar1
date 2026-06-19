@@ -42,7 +42,7 @@ jobs:
           SFTP_HOST: 62.72.62.156
           SFTP_PORT: 65002
           SFTP_USERNAME: u703341534
-          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         timeout-minutes: 6
         shell: bash
         run: |
