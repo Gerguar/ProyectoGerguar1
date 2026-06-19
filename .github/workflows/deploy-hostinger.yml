@@ -1,13 +1,15 @@
 name: deploy-hostinger
 
-# Auto-deploy de web/ a Hostinger via FTP.
+# Auto-deploy de web/ a Hostinger via SFTP (puerto 65002 sobre SSH).
+#
+# Migrado de FTP21 -> SFTP el 19-jun-2026: FTP21 estaba intermitente, SFTP
+# es mas confiable. El autodeploy nativo de Hostinger se desactivo despues
+# del rename del repo (FUTVS -> ProyectoGerguar1), asi que mantenemos este
+# workflow + cron-job.org cada hora.
 #
 # Se dispara cuando:
 #  - Push a main que toque archivos en web/
-#  - Manual (workflow_dispatch)
-#
-# Asi los commits del cron (que solo cambian data/) NO disparan deploy,
-# solo cambios reales del HTML/CSS/JS.
+#  - Manual (workflow_dispatch) -- usado por cron-job.org cada hora
 
 on:
   push:
@@ -20,7 +22,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: hostinger-ftp-deploy
+  group: hostinger-sftp-deploy
   cancel-in-progress: true
 
 jobs:
@@ -35,50 +37,48 @@ jobs:
           sudo apt-get update
           sudo apt-get install --yes lftp
 
-      - name: Sincronizar web/ con la app activa de Hostinger
+      - name: Sincronizar web/ con la app activa de Hostinger via SFTP
         env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        # Hard ceiling: si pasa 6 min total, abortar y dejar que el siguiente
-        # push reintente. Mejor que quedarse 30 min colgado (default 6h).
+          SFTP_HOST: 62.72.62.156
+          SFTP_PORT: 65002
+          SFTP_USERNAME: u703341534
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
         timeout-minutes: 6
         shell: bash
         run: |
-          # 5 intentos con timeouts cortos. Si Hostinger no responde, falla
-          # rapido y reintentamos. Mejor que quedarse esperando 120s × reintentos
-          # internos × attempts (que hacia colgadas de 30+ min).
-          for attempt in 1 2 3 4 5; do
-            echo "Intento FTP ${attempt}/5"
-            # timeout 90s wrap externo: si lftp se cuelga, lo matamos.
-            if timeout 90 lftp -u "${FTP_USERNAME},${FTP_PASSWORD}" -p 21 "${FTP_HOST}" -e "
-              set ftp:ssl-allow no;
-              set ftp:list-options -a;
-              set net:timeout 25;
-              set net:max-retries 2;
-              set net:reconnect-interval-base 3;
-              set cmd:fail-exit yes;
-              mirror --reverse --only-newer --verbose --parallel=1 \
-                --exclude-glob .git* \
-                --exclude-glob node_modules/ \
-                --exclude-glob .DS_Store \
-                ./web/ /domains/futversus.com/nodejs/;
-              bye
-            "; then
-              echo "Sincronizacion FTP completada."
+          for attempt in 1 2 3; do
+            echo "Intento SFTP ${attempt}/3"
+            if timeout 120 lftp \
+              -u "${SFTP_USERNAME},${SFTP_PASSWORD}" \
+              -p "${SFTP_PORT}" \
+              "sftp://${SFTP_HOST}" \
+              -e "
+                set sftp:auto-confirm yes;
+                set net:timeout 25;
+                set net:max-retries 2;
+                set net:reconnect-interval-base 3;
+                set cmd:fail-exit yes;
+                mirror --reverse --only-newer --verbose --parallel=2 \
+                  --exclude-glob .git* \
+                  --exclude-glob node_modules/ \
+                  --exclude-glob .DS_Store \
+                  ./web/ domains/futversus.com/nodejs/;
+                bye
+              "; then
+              echo "Sincronizacion SFTP completada."
               exit 0
             fi
 
-            echo "Intento ${attempt} fallo. Esperando antes de reintentar..."
-            if [[ "${attempt}" -lt 5 ]]; then
+            echo "Intento ${attempt} fallo."
+            if [[ "${attempt}" -lt 3 ]]; then
               sleep $((attempt * 10))
             fi
           done
 
-          echo "La sincronizacion FTP fallo despues de cinco intentos."
+          echo "La sincronizacion SFTP fallo despues de tres intentos."
           exit 1
 
       - name: Resumen
         run: |
           echo "Deploy completado a https://futversus.com/"
-          echo "Archivos en web/ subidos a /domains/futversus.com/nodejs/."
+          echo "Archivos en web/ subidos a ~/domains/futversus.com/nodejs/."
