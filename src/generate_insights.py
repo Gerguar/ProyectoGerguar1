@@ -456,7 +456,7 @@ def build_oportunidades(preds: dict) -> list[dict]:
             p_mkt = (market.get(outcome) or 0) * 100
             if p_mkt <= 0: continue
             edge = p_mod - p_mkt
-            if edge < 12: continue
+            if edge < 8: continue
             opps.append({
                 "partido": f"{h_name} vs {a_name}", "competition": comp,
                 "apuesta": label, "p_modelo": round(p_mod, 1),
