@@ -46,7 +46,10 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
-        run: python -m src.ingest_wc2026
+        # Fallo no critico: si football-data.org tira rate limit o error
+        # transitorio, seguimos con Pinnacle/predict (data del cron previo).
+        # El smart-sync de los proximos 25 min vuelve a intentar.
+        run: python -m src.ingest_wc2026 || echo "[wc2026] fallo no critico, sigue el resto"
 
       - name: Actualizar Forma reciente de Insights
         env:
