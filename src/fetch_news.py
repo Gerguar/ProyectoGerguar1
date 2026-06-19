@@ -63,6 +63,16 @@ OFFTOPIC_KEYWORDS = [
     "horóscopo", "horoscopo", "tarot",
     "padel ", "pádel ", "basquet", "básquet", "tenis ", "boxeo ", "ufc ",
     "f1 ", "formula 1", "fórmula 1", "motogp",
+    # Finanzas / bolsa / mercado bursatil (agregado 19-jun-2026 por falso
+    # positivo "SpaceX: el Cedear mas operado..." que paso el filtro porque
+    # menciona Argentina y "operado" matcheo como keyword de alerta).
+    "cedear", "cedears", "spacex", "starlink",
+    "bolsa local", "bolsa argentina", "mercado bursátil", "mercado bursatil",
+    "wall street", "nasdaq", "merval", "byma",
+    "cotiza ", "cotización", "cotizacion",
+    "inversionista", "inversor ", "inversores",
+    "dólar mep", "dolar mep", "dólar blue", "dolar blue", "dólar ccl", "dolar ccl",
+    "acción más operada", "accion mas operada",
     # 'mundial' es ambiguo (puede ser anime, comic, etc). Solo permitimos si
     # tambien aparece 'futbol' o nombres de selecciones/jugadores (check abajo).
 ]
