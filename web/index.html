@@ -5052,15 +5052,15 @@ let _fixtureLoaded = false
 let _fixtureData = []
 let _fixtureLigaSel = 'todas'
 
-const LIGA_NOMBRES = { EPL:'Premier League', LL:'La Liga', SA:'Serie A', BL:'Bundesliga', L1:'Ligue 1', UCL:'Champions', WC:'Mundial 2026' }
-const LIGA_ORDEN   = ['WC','UCL','EPL','LL','SA','BL','L1']
+const LIGA_NOMBRES = { 1:'Champions', 2:'La Liga', 3:'Premier League', 4:'Serie A', 5:'Bundesliga', 6:'Ligue 1', 7:'Selecciones', 8:'Otras Sel.' }
+const LIGA_ORDEN   = [7,8,1,3,2,4,5,6]
 
 async function loadFixture() {
   if (_fixtureLoaded) { renderFixture(); return }
   try {
     const [programados, finalizados] = await Promise.all([
-      sb('partidos?select=id,fecha,estado,equipo_local:equipo_local_id(id,nombre,abreviacion,escudo_url,color_prim),equipo_visitante:equipo_visitante_id(id,nombre,abreviacion,escudo_url,color_prim),liga:liga_id(nombre,codigo),pronosticos(prob_local,prob_empate,prob_visitante)&estado=eq.programado&order=fecha&limit=200'),
-      sb('partidos?select=id,fecha,estado,goles_local,goles_visitante,equipo_local:equipo_local_id(id,nombre,abreviacion,escudo_url,color_prim),equipo_visitante:equipo_visitante_id(id,nombre,abreviacion,escudo_url,color_prim),liga:liga_id(nombre,codigo)&estado=eq.finalizado&order=fecha.desc&limit=100'),
+      sb('partidos?select=id,fecha,estado,equipo_local:equipo_local_id(id,nombre,abreviacion,escudo_url,color_prim),equipo_visitante:equipo_visitante_id(id,nombre,abreviacion,escudo_url,color_prim),liga:liga_id(id,nombre),pronosticos(prob_local,prob_empate,prob_visitante)&estado=eq.programado&order=fecha&limit=200'),
+      sb('partidos?select=id,fecha,estado,goles_local,goles_visitante,equipo_local:equipo_local_id(id,nombre,abreviacion,escudo_url,color_prim),equipo_visitante:equipo_visitante_id(id,nombre,abreviacion,escudo_url,color_prim),liga:liga_id(id,nombre)&estado=eq.finalizado&order=fecha.desc&limit=100'),
     ])
     _fixtureData = [...(finalizados||[]).reverse(), ...(programados||[])]
     _fixtureLoaded = true
@@ -5083,12 +5083,12 @@ function renderFixture() {
 
   // Ligas disponibles
   const ligasSet = new Set()
-  _fixtureData.forEach(p => { if (p.liga?.codigo) ligasSet.add(p.liga.codigo) })
+  _fixtureData.forEach(p => { if (p.liga?.id) ligasSet.add(p.liga.id) })
   const ligas = LIGA_ORDEN.filter(c => ligasSet.has(c))
 
   // Filtros
   if (filters) {
-    const all = [['todas','Todas'], ...ligas.map(c => [c, LIGA_NOMBRES[c]||c])]
+    const all = [['todas','Todas'], ...ligas.map(c => [c, LIGA_NOMBRES[c]||c])]; const _selVal = _fixtureLigaSel
     filters.innerHTML = all.map(([val,label]) =>
       `<button class="fix-filter-btn${_fixtureLigaSel===val?' active':''}" onclick="setFixturaLiga('${val}')">${label}</button>`
     ).join('')
@@ -5097,7 +5097,7 @@ function renderFixture() {
   // Filtrar
   const partidos = _fixtureLigaSel === 'todas'
     ? _fixtureData
-    : _fixtureData.filter(p => p.liga?.codigo === _fixtureLigaSel)
+    : _fixtureData.filter(p => String(p.liga?.id) === String(_fixtureLigaSel))
 
   // Agrupar por fecha local
   const byDate = {}
@@ -5120,7 +5120,7 @@ function renderFixture() {
 function renderFixtureCard(p) {
   const fin = p.estado === 'finalizado'
   const hora = new Date(p.fecha).toLocaleTimeString('es-AR', { hour:'2-digit', minute:'2-digit' })
-  const liga = p.liga?.codigo ? (LIGA_NOMBRES[p.liga.codigo] || p.liga.nombre || '') : (p.liga?.nombre || '')
+  const liga = p.liga?.id ? (LIGA_NOMBRES[p.liga.id] || p.liga.nombre || '') : (p.liga?.nombre || '')
   const prob = p.pronosticos?.[0]
   const colorH = p.equipo_local?.color_prim ? '#'+p.equipo_local.color_prim.replace('#','') : 'var(--green)'
   const colorA = p.equipo_visitante?.color_prim ? '#'+p.equipo_visitante.color_prim.replace('#','') : '#ef4444'
