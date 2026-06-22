@@ -125,9 +125,19 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .mun-day-label{grid-column:1/-1;font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:2px;color:var(--faint);text-transform:uppercase;margin:.6rem 0 -.2rem;display:flex;align-items:center;gap:.6rem}
 .mun-day-label::after{content:'';flex:1;height:1px;background:var(--border)}
 /* Bracket / cuadro de eliminación */
-.brk-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:1rem}
-.brk-tree{display:flex;gap:1.1rem;min-width:max-content;align-items:stretch}
-.brk-round{display:flex;flex-direction:column;justify-content:space-around;gap:.7rem;min-width:172px}
+.brk-viewport{position:relative}
+.brk-hint{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--faint);text-align:center;margin-bottom:.6rem;transition:opacity .3s}
+.brk-viewport:not(.has-overflow) .brk-hint{display:none}
+/* Sombras en los bordes que indican que hay más cuadro para desplazar */
+.brk-fade{position:absolute;top:0;bottom:0;width:46px;pointer-events:none;z-index:3;opacity:0;transition:opacity .2s}
+.brk-fade-l{left:0;background:linear-gradient(to right,var(--bg),transparent)}
+.brk-fade-r{right:0;background:linear-gradient(to left,var(--bg),transparent)}
+.brk-viewport.has-overflow:not(.at-start) .brk-fade-l{opacity:1}
+.brk-viewport.has-overflow:not(.at-end) .brk-fade-r{opacity:1}
+.brk-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:1rem;cursor:grab;scrollbar-width:thin}
+.brk-scroll.dragging{cursor:grabbing;scroll-behavior:auto;user-select:none}
+.brk-tree{display:flex;gap:.7rem;min-width:max-content;align-items:stretch}
+.brk-round{display:flex;flex-direction:column;justify-content:space-around;gap:.6rem;min-width:142px}
 .brk-round-title{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:1.5px;color:#e6b94c;text-transform:uppercase;text-align:center;padding:.4rem 0;border-bottom:1px solid rgba(212,160,23,.25);margin-bottom:.3rem;position:sticky;top:0}
 .brk-tie{background:var(--surface);border:1px solid var(--border);border-radius:9px;overflow:hidden;font-size:.78rem}
 .brk-slot{display:flex;align-items:center;gap:.45rem;padding:.45rem .55rem;cursor:default}
@@ -5616,7 +5626,59 @@ function renderBracket() {
     return `<div class="${cls}"><div class="brk-round-title">${col.title}</div>${tiesHtml}${extra}</div>`
   }).join('')
 
-  content.innerHTML = `<div class="brk-scroll"><div class="brk-tree">${colsHtml}</div></div>`
+  content.innerHTML = `
+    <div class="brk-viewport">
+      <div class="brk-hint">↔ Arrastrá o deslizá para recorrer el cuadro</div>
+      <div class="brk-fade brk-fade-l"></div>
+      <div class="brk-fade brk-fade-r"></div>
+      <div class="brk-scroll"><div class="brk-tree">${colsHtml}</div></div>
+    </div>`
+  setupBracketScroll()
+}
+
+// Desplazamiento interactivo del bracket: centra en la Final, permite
+// arrastrar con el mouse (drag-to-pan) y muestra sombras en los bordes.
+function setupBracketScroll() {
+  const sc = document.querySelector('#mun-brackets-content .brk-scroll')
+  const vp = document.querySelector('#mun-brackets-content .brk-viewport')
+  if (!sc || !vp) return
+
+  const update = () => {
+    const max = sc.scrollWidth - sc.clientWidth
+    vp.classList.toggle('has-overflow', max > 4)
+    vp.classList.toggle('at-start', sc.scrollLeft <= 4)
+    vp.classList.toggle('at-end', sc.scrollLeft >= max - 4)
+  }
+  // Centrar en la Final una vez que el layout (panel recién visible) se
+  // estabilizó. setTimeout es más confiable que rAF tras un display:block.
+  update()
+  setTimeout(() => {
+    sc.scrollLeft = (sc.scrollWidth - sc.clientWidth) / 2
+    update()
+  }, 80)
+  sc.addEventListener('scroll', update, { passive:true })
+  window.addEventListener('resize', update)
+
+  // Drag-to-pan solo con mouse (en touch el scroll nativo ya funciona).
+  let down = false, startX = 0, startScroll = 0, moved = false
+  sc.addEventListener('pointerdown', e => {
+    if (e.pointerType !== 'mouse') return
+    down = true; moved = false; startX = e.clientX; startScroll = sc.scrollLeft
+    sc.classList.add('dragging'); sc.setPointerCapture(e.pointerId)
+  })
+  sc.addEventListener('pointermove', e => {
+    if (!down) return
+    const dx = e.clientX - startX
+    if (Math.abs(dx) > 4) moved = true
+    sc.scrollLeft = startScroll - dx
+  })
+  const end = () => { down = false; sc.classList.remove('dragging') }
+  sc.addEventListener('pointerup', end)
+  sc.addEventListener('pointercancel', end)
+  // Si hubo arrastre, cancelar el click para no navegar sin querer.
+  sc.addEventListener('click', e => {
+    if (moved) { e.stopPropagation(); e.preventDefault(); moved = false }
+  }, true)
 }
 
 const NavRouter = {
