@@ -140,7 +140,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .brk-viewport.has-overflow:not(.at-end) .brk-fade-r{opacity:1}
 .brk-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:1rem;cursor:grab;scrollbar-width:thin}
 .brk-scroll.dragging{cursor:grabbing;scroll-behavior:auto;user-select:none}
-.brk-zoom-wrap{width:max-content;transform-origin:top left}
+.brk-zoom-wrap{width:max-content;transform-origin:top left;margin-inline:auto}
 .brk-tree{display:flex;gap:.7rem;min-width:max-content;align-items:stretch;transform-origin:top left}
 /* Controles de zoom del bracket */
 .brk-zoom-controls{position:absolute;bottom:1.3rem;right:.5rem;z-index:4;display:flex;gap:.3rem}
@@ -5320,7 +5320,9 @@ function setMundialTab(tab) {
     if (el) el.style.display = (k === tab) ? 'block' : 'none'
   })
   if (_munLoaded) renderMundialActive()
-  window.scrollTo({ top:0, behavior:'smooth' })
+  // Para brackets, el centrado vertical lo hace setupBracketScroll; el resto
+  // de los tabs vuelven arriba.
+  if (tab !== 'brackets') window.scrollTo({ top:0, behavior:'smooth' })
 }
 
 function renderMundialActive() {
@@ -5726,6 +5728,8 @@ function setupBracketScroll() {
     const max = sc.scrollWidth - sc.clientWidth
     if (max > 4) sc.scrollLeft = max / 2
     update()
+    // Centrar la vista de la ventana sobre el cuadro (verticalmente).
+    sc.scrollIntoView({ block:'center', behavior:'smooth' })
   }, 80)
   sc.addEventListener('scroll', update, { passive:true })
   window.addEventListener('resize', () => { brkFullBleed(); update() })
