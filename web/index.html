@@ -68,6 +68,13 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .filter-btn-mundial{border:1px solid #d4a017;color:#e6b94c;background:linear-gradient(135deg,rgba(212,160,23,.08),rgba(212,160,23,.04))}
 .filter-btn-mundial:hover{background:linear-gradient(135deg,#d4a017,#b8870b);border-color:#d4a017;color:#1a1408}
 .filter-btn-mundial.active{background:linear-gradient(135deg,#f0c44f,#d4a017);border-color:#f0c44f;color:#1a1408;box-shadow:0 0 12px rgba(212,160,23,.4)}
+/* Franja CTA al Mundial 2026 (debajo del hero) */
+.mundial-banner{display:flex;align-items:center;justify-content:center;gap:1rem;background:linear-gradient(135deg,#f0c44f,#d4a017);color:#1a1408;text-decoration:none;padding:.9rem 1.5rem;font-family:'Inter',sans-serif;font-weight:900;letter-spacing:1.5px;font-size:1.05rem;text-transform:uppercase;cursor:pointer;transition:filter .2s,box-shadow .2s;box-shadow:0 0 22px rgba(212,160,23,.35);position:relative;z-index:1}
+.mundial-banner:hover{filter:brightness(1.07);box-shadow:0 0 30px rgba(212,160,23,.55)}
+.mundial-banner .mb-trophy{font-size:1.45rem;line-height:1}
+.mundial-banner .mb-arrow{font-size:1.2rem;transition:transform .2s}
+.mundial-banner:hover .mb-arrow{transform:translateX(5px)}
+@media(max-width:560px){.mundial-banner{font-size:.82rem;letter-spacing:1px;gap:.6rem;padding:.75rem 1rem}.mundial-banner .mb-trophy{font-size:1.15rem}}
 /* Sub-fila de filtros por grupo (solo visible cuando esta activo el filtro Mundial) */
 .group-filters{display:none;justify-content:center;flex-wrap:wrap;gap:.35rem;padding:0 1rem .8rem;border-bottom:1px solid var(--border);margin-bottom:.4rem}
 .group-filters.visible{display:flex}
@@ -1234,6 +1241,12 @@ button,a{touch-action:manipulation}
       </a>
     </div>
   </div>
+  <a href="/mundial" onclick="event.preventDefault();nav('/mundial')" class="mundial-banner" aria-label="Entrá a la sección Mundial 2026">
+    <span class="mb-trophy">🏆</span>
+    <span class="mb-text">Entrá · Mundial 2026</span>
+    <span class="mb-trophy">🏆</span>
+    <span class="mb-arrow">→</span>
+  </a>
   <div class="filters">
     <button class="filter-btn" onclick="filterMatches('all',this)">Todos</button>
     <button class="filter-btn filter-btn-mundial active" id="filter-btn-mundial-default" onclick="filterMatches('mundial',this)">🏆 Mundial 2026</button>
