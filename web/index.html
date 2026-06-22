@@ -125,7 +125,11 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .mun-day-label{grid-column:1/-1;font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:2px;color:var(--faint);text-transform:uppercase;margin:.6rem 0 -.2rem;display:flex;align-items:center;gap:.6rem}
 .mun-day-label::after{content:'';flex:1;height:1px;background:var(--border)}
 /* Bracket / cuadro de eliminación */
+/* Full-bleed: el cuadro ocupa el ancho de la ventana (el ancho y el margen
+   negativo los calcula brkFullBleed() en JS, sin contar el scrollbar para no
+   generar scroll horizontal en la página). */
 .brk-viewport{position:relative}
+.brk-viewport .brk-scroll{padding-left:20px;padding-right:20px}
 .brk-hint{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--faint);text-align:center;margin-bottom:.6rem;transition:opacity .3s}
 .brk-viewport:not(.has-overflow) .brk-hint{display:none}
 /* Sombras en los bordes que indican que hay más cuadro para desplazar */
@@ -5680,6 +5684,17 @@ function applyBrkZoom(z, pivotClientX) {
 function brkZoomBtn(dir) { applyBrkZoom(_brkZoom * (dir > 0 ? 1.15 : 0.87)) }
 function brkZoomReset() { applyBrkZoom(1) }
 
+// Estira el viewport del bracket al ancho de la ventana (full-bleed), usando
+// el ancho real sin scrollbar para no generar scroll horizontal en la página.
+function brkFullBleed() {
+  const vp = document.querySelector('#mun-brackets-content .brk-viewport')
+  if (!vp) return
+  vp.style.marginLeft = '0px'; vp.style.width = 'auto'
+  const left = vp.getBoundingClientRect().left
+  vp.style.width = document.documentElement.clientWidth + 'px'
+  vp.style.marginLeft = (-left) + 'px'
+}
+
 // Desplazamiento interactivo del bracket: centra en la Final, permite
 // arrastrar con el mouse (drag-to-pan) y muestra sombras en los bordes.
 function setupBracketScroll() {
@@ -5693,15 +5708,27 @@ function setupBracketScroll() {
     vp.classList.toggle('at-start', sc.scrollLeft <= 4)
     vp.classList.toggle('at-end', sc.scrollLeft >= max - 4)
   }
-  // Centrar en la Final una vez que el layout (panel recién visible) se
-  // estabilizó. setTimeout es más confiable que rAF tras un display:block.
-  update()
+  // Al abrir, ajustar el zoom para que el cuadro entre completo a lo ancho
+  // (se ven las dos columnas de equipos desde el inicio). setTimeout es más
+  // confiable que rAF tras un display:block.
   setTimeout(() => {
-    sc.scrollLeft = (sc.scrollWidth - sc.clientWidth) / 2
+    brkFullBleed()
+    const tree = document.querySelector('#mun-brackets-content .brk-tree')
+    const wrap = document.querySelector('#mun-brackets-content .brk-zoom-wrap')
+    if (tree && wrap) {
+      if (!wrap._natW) { wrap._natW = tree.offsetWidth; wrap._natH = tree.offsetHeight }
+      // Ancho disponible descontando el padding lateral del scroll (~40px).
+      const avail = sc.clientWidth - 40
+      const fit = Math.max(BRK_ZMIN, Math.min(1, avail / wrap._natW))
+      applyBrkZoom(fit)
+    }
+    // Si aun así no entra (pantallas muy chicas), centrar en la Final.
+    const max = sc.scrollWidth - sc.clientWidth
+    if (max > 4) sc.scrollLeft = max / 2
     update()
   }, 80)
   sc.addEventListener('scroll', update, { passive:true })
-  window.addEventListener('resize', update)
+  window.addEventListener('resize', () => { brkFullBleed(); update() })
 
   // Zoom con la rueda del mouse, centrado en el cursor.
   sc.addEventListener('wheel', e => {
