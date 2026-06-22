@@ -65,11 +65,11 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .filter-btn{padding:7px 18px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-size:.82rem;font-weight:700;transition:all .2s;font-family:'Inter',sans-serif}
 .filter-btn.active,.filter-btn:hover{background:var(--green);border-color:var(--green);color:#080a0c}
 /* Filtro destacado del Mundial 2026 — color dorado tipo trofeo, queda como un filtro mas (en el flow del flex) pero con su propio acento */
-.filter-btn-mundial{border:1px solid #d4a017;color:#e6b94c;background:linear-gradient(135deg,rgba(212,160,23,.08),rgba(212,160,23,.04))}
-.filter-btn-mundial:hover{background:linear-gradient(135deg,#d4a017,#b8870b);border-color:#d4a017;color:#1a1408}
-.filter-btn-mundial.active{background:linear-gradient(135deg,#f0c44f,#d4a017);border-color:#f0c44f;color:#1a1408;box-shadow:0 0 12px rgba(212,160,23,.4)}
+.filter-btn-mundial{border:1px solid #d4a017;color:#e6b94c;background:transparent}
+.filter-btn-mundial:hover{background:rgba(212,160,23,.1);border-color:#f0c44f;color:#f0c44f}
+.filter-btn-mundial.active{background:transparent;border-color:#f0c44f;color:#f0c44f;box-shadow:0 0 10px rgba(212,160,23,.35)}
 /* Franja CTA al Mundial 2026 (debajo del hero) */
-.mundial-banner{display:flex;align-items:center;justify-content:center;gap:1rem;background:linear-gradient(135deg,#f0c44f,#d4a017);color:#1a1408;text-decoration:none;padding:.9rem 1.5rem;font-family:'Inter',sans-serif;font-weight:900;letter-spacing:1.5px;font-size:1.05rem;text-transform:uppercase;cursor:pointer;transition:filter .2s,box-shadow .2s;box-shadow:0 0 22px rgba(212,160,23,.35);position:relative;z-index:1}
+.mundial-banner{display:flex;align-items:center;justify-content:center;gap:1rem;background:linear-gradient(135deg,#f0c44f,#d4a017);color:#1a1408;text-decoration:none;padding:.9rem 1.5rem;margin-bottom:1.1rem;font-family:'Inter',sans-serif;font-weight:900;letter-spacing:1.5px;font-size:1.05rem;text-transform:uppercase;cursor:pointer;transition:filter .2s,box-shadow .2s;box-shadow:0 0 22px rgba(212,160,23,.35);position:relative;z-index:1}
 .mundial-banner:hover{filter:brightness(1.07);box-shadow:0 0 30px rgba(212,160,23,.55)}
 .mundial-banner .mb-cup{height:46px;width:auto;flex-shrink:0;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
 .mundial-banner .mb-arrow{font-size:1.2rem;transition:transform .2s}
