@@ -140,6 +140,9 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .brk-slot .brk-flagph{width:20px;height:14px;border-radius:2px;background:var(--surface2);flex-shrink:0;display:inline-block}
 .brk-final-tie{border-color:#d4a017;box-shadow:0 0 14px rgba(212,160,23,.25)}
 .brk-champion{text-align:center;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:2px;color:#f0c44f;text-transform:uppercase;margin-top:.5rem}
+.brk-round-final{min-width:188px}
+.brk-round-final .brk-round-title{color:#f0c44f;border-bottom-color:#d4a017}
+.brk-trophy{text-align:center;font-size:2.4rem;margin-top:.8rem;filter:drop-shadow(0 0 10px rgba(212,160,23,.5))}
 .matches-grid{max-width:1100px;margin:0 auto;padding:.5rem 1.5rem 3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;position:relative;z-index:1;width:100%}
 /* Layout del home: matches centrado a 1100px (mismo ancho que facts,
    home-extra-section, footer). El sidebar de stats sobresale a la
@@ -1180,7 +1183,6 @@ button,a{touch-action:manipulation}
     <a href="/ranking" onclick="event.preventDefault();nav('/ranking')">Ranking 🏆</a>
     <a href="/insights" onclick="event.preventDefault();nav('/insights')">Insights ✦</a>
     <a href="/mundial" onclick="event.preventDefault();nav('/mundial')">Mundial &#x1F3C6;</a>
-    <a href="/fixture" onclick="event.preventDefault();nav('/fixture')">Fixture &#x1F4C5;</a>
   </div>
   <div class="live-badge"><div class="live-dot"></div>Temporada <span id="current-season">…</span></div>
 </nav>
@@ -1454,26 +1456,6 @@ button,a{touch-action:manipulation}
 <!-- /INSIGHTS -->
 
 <!-- FIXTURE -->
-<div id="fixture" class="page" style="position:relative;z-index:1">
-  <div class="rank-page">
-    <button class="back-btn" onclick="nav('/')" style="margin-bottom:1.5rem">← Inicio</button>
-    <div style="margin-bottom:2rem">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:3px;color:var(--green);text-transform:uppercase;margin-bottom:.5rem">Calendario</div>
-      <h1 style="font-size:2rem;font-weight:900;color:#fff;margin:0 0 .4rem">Fixture</h1>
-      <p style="color:var(--muted);font-size:.9rem;margin:0">Partidos próximos y resultados recientes</p>
-    </div>
-
-    <!-- Filtros de liga -->
-    <div id="fixture-filters" style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.8rem"></div>
-
-    <!-- Estado de carga -->
-    <div id="fixture-loading" style="text-align:center;padding:3rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.85rem">Cargando partidos…</div>
-
-    <!-- Contenido agrupado por fecha -->
-    <div id="fixture-content" style="display:none"></div>
-  </div>
-</div>
-
 <!-- MUNDIAL 2026: Pronósticos + Grupos + Brackets -->
 <div id="mundial" class="page" style="position:relative;z-index:1">
   <div class="rank-page">
@@ -1493,15 +1475,15 @@ button,a{touch-action:manipulation}
 
     <!-- TAB: PRONÓSTICOS -->
     <div id="mun-pronos" class="mun-panel">
-      <p style="color:var(--muted);font-size:.85rem;margin:0 0 1.2rem">Todos los partidos del Mundial con la probabilidad del modelo. Sin paginar.</p>
+      <p style="color:var(--muted);font-size:.85rem;margin:0 0 1rem">Próximos partidos del Mundial con la probabilidad del modelo. Sin paginar.</p>
+      <div id="mun-pronos-toggle" style="margin-bottom:1.2rem"></div>
       <div id="mun-pronos-loading" style="text-align:center;padding:3rem;color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.85rem">Cargando pronósticos…</div>
       <div id="mun-pronos-content" style="display:none"></div>
     </div>
 
     <!-- TAB: GRUPOS -->
     <div id="mun-grupos" class="mun-panel" style="display:none">
-      <p style="color:var(--muted);font-size:.85rem;margin:0 0 1rem">Posiciones en vivo. Clasifican los <strong style="color:#f0c44f">2 primeros</strong> de cada grupo + los <strong style="color:#f0c44f">8 mejores terceros</strong> a los dieciseisavos.</p>
-      <div id="grupos-filters" style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem"></div>
+      <p style="color:var(--muted);font-size:.85rem;margin:0 0 1rem">Posiciones en vivo. Clasifican los <strong style="color:#f0c44f">2 primeros</strong> de cada grupo + los <strong style="color:#f0c44f">8 mejores terceros</strong> a los dieciseisavos. Tocá un grupo para ver sus partidos.</p>
       <div class="grp-legend">
         <span><i class="grp-dot grp-dot-q"></i>Clasifica directo (1°-2°)</span>
         <span><i class="grp-dot grp-dot-t"></i>Mejor tercero (zona repechaje)</span>
@@ -5328,17 +5310,35 @@ function renderMundialActive() {
   else if (_munTab === 'brackets') renderBracket()
 }
 
-// ── TAB PRONÓSTICOS: todos los partidos del Mundial, sin paginar ──────────
+// ── TAB PRONÓSTICOS: partidos del Mundial, sin paginar ────────────────────
+let _munVerFinalizados = false
+
 function renderMundialPronos() {
   const loading = document.getElementById('mun-pronos-loading')
   const content = document.getElementById('mun-pronos-content')
+  const toggle  = document.getElementById('mun-pronos-toggle')
   if (!_munData.length) { if (loading) loading.textContent = 'No hay partidos disponibles.'; return }
   if (loading) loading.style.display = 'none'
   if (content) content.style.display = 'block'
 
+  const finalizados = _munData.filter(p => p.estado === 'finalizado')
+  // Por default mostramos solo los NO finalizados (próximos).
+  const lista = _munVerFinalizados ? _munData : _munData.filter(p => p.estado !== 'finalizado')
+
+  if (toggle) {
+    toggle.innerHTML = `<button class="grp-fbtn" onclick="toggleVerFinalizados()">${
+      _munVerFinalizados ? '✓ Ocultar finalizados' : `Ver finalizados (${finalizados.length})`
+    }</button>`
+  }
+
+  if (!lista.length) {
+    content.innerHTML = `<div class="grp-empty">No hay próximos partidos. Tocá "Ver finalizados" para los ya jugados.</div>`
+    return
+  }
+
   // Agrupar por día (fecha local)
   const byDate = {}
-  _munData.forEach(p => {
+  lista.forEach(p => {
     const key = new Date(p.fecha).toLocaleDateString('es-AR',{weekday:'long',day:'numeric',month:'long'})
     ;(byDate[key] = byDate[key] || []).push(p)
   })
@@ -5348,6 +5348,8 @@ function renderMundialPronos() {
     ).join('')
   }</div>`
 }
+
+function toggleVerFinalizados() { _munVerFinalizados = !_munVerFinalizados; renderMundialPronos() }
 
 function munMatchCard(p) {
   const fin = p.estado === 'finalizado'
@@ -5362,7 +5364,7 @@ function munMatchCard(p) {
     ? `<div class="match-score-row"><span class="match-score-lbl">RESULTADO</span><span class="match-score-val">${p.goles_local} - ${p.goles_visitante}</span></div>`
     : ''
   return `
-    <div class="match-card${fin?' match-card-finished':''}" onclick="abrirPartidoDesdeFixture(${p.id})">
+    <div class="match-card${fin?' match-card-finished':''}" onclick="showDetail(${p.id})">
       <div class="league-badge">Grupo ${p.grupo||''}</div>
       <div class="teams-col">
         <div class="team-row">${crest(p.equipo_local)}<div class="team-name-card">${htmlEsc(p.equipo_local?.nombre||'Local')}</div></div>
@@ -5431,7 +5433,6 @@ function bestThirdIds(standings) {
 function renderGrupos() {
   const loading = document.getElementById('grupos-loading')
   const content = document.getElementById('grupos-content')
-  const filters = document.getElementById('grupos-filters')
   if (!_munData.length) {
     if (loading) loading.textContent = 'Todavía no hay partidos de grupos cargados.'
     return
@@ -5443,21 +5444,15 @@ function renderGrupos() {
   const bestThirds = bestThirdIds(standings)
   const gruposDisp = GRUPOS_LETRAS.filter(g => standings[g])
 
-  // Filtros
-  if (filters) {
-    const all = [['all','Todos'], ...gruposDisp.map(g => [g, 'GRUPO '+g])]
-    filters.innerHTML = all.map(([val,label]) =>
-      `<button class="grp-fbtn${_grupoSel===val?' active':''}" onclick="setGrupo('${val}')">${label}</button>`
-    ).join('')
-  }
-
   if (_grupoSel === 'all') {
+    // Grilla de los 12 grupos. Tocar una tabla abre el detalle de ese grupo.
     content.innerHTML = `<div class="grp-grid">${
       gruposDisp.map(g => grupoCardHTML(g, standings[g], bestThirds, true)).join('')
     }</div>`
   } else {
     const g = _grupoSel
     content.innerHTML =
+      `<button class="back-btn" onclick="setGrupo('all')" style="margin-bottom:1.2rem">← Volver a grupos</button>` +
       grupoCardHTML(g, standings[g], bestThirds, false) +
       grupoDetailMatchesHTML(g)
   }
@@ -5496,12 +5491,16 @@ function grupoCardHTML(g, rows, bestThirds, compact) {
     const cells = compact
       ? `<td class="grp-dim">${t.pj}</td><td class="grp-dim">${t.dg>0?'+':''}${t.dg}</td><td class="grp-pts">${t.pts}</td>`
       : `<td class="grp-dim">${t.pj}</td><td class="grp-dim">${t.g}</td><td class="grp-dim">${t.e}</td><td class="grp-dim">${t.p}</td><td class="grp-dim grp-hide">${t.gf}</td><td class="grp-dim grp-hide">${t.gc}</td><td>${t.dg>0?'+':''}${t.dg}</td><td class="grp-pts">${t.pts}</td><td class="grp-hide">${formDots(t)}</td>`
-    return `<tr class="grp-row ${cls}" onclick="irASeleccion('${htmlEsc(t.nombre)}')">
+    // En grilla (compact) el card entero abre el detalle del grupo; en detalle
+    // cada fila lleva a la página de la selección.
+    const rowClick = compact ? '' : ` onclick="irASeleccion('${htmlEsc(t.nombre)}')"`
+    return `<tr class="grp-row ${cls}"${rowClick}>
       <td class="grp-pos">${i+1}</td>${teamCell}${cells}
     </tr>`
   }).join('')
 
-  return `<div class="grp-card">${head}
+  const cardClick = compact ? ` onclick="setGrupo('${g}')" style="cursor:pointer"` : ''
+  return `<div class="grp-card"${cardClick}>${head}
     <table class="grp-table"><thead><tr><th style="width:26px"></th>${cols}</tr></thead>
     <tbody>${body}</tbody></table></div>`
 }
@@ -5559,7 +5558,6 @@ const R32_DEF = {
 // Orden vertical en árbol binario perfecto (cada par consecutivo alimenta la
 // ronda siguiente, así las columnas quedan alineadas visualmente).
 const R32_ORDER = [74,77,73,75,83,84,81,82,76,78,79,80,86,88,85,87]
-const BRK_ROUNDS = ['Dieciseisavos','Octavos','Cuartos','Semis','Final']
 
 function renderBracket() {
   const loading = document.getElementById('mun-brackets-loading')
@@ -5576,14 +5574,26 @@ function renderBracket() {
     return team ? { team } : { ph: (slot.t === '1' ? '1°' : '2°') + ' ' + slot.g }
   }
 
-  // Ronda 1: dieciseisavos con equipos proyectados
-  let rounds = [ R32_ORDER.map(id => ({ a: resolve(R32_DEF[id].a), b: resolve(R32_DEF[id].b) })) ]
-  // Rondas siguientes: slots vacíos (se llenan cuando se jueguen los cruces)
-  let n = rounds[0].length
-  while (n > 1) {
-    n = n / 2
-    rounds.push(Array.from({length:n}, () => ({ a:{ph:'—'}, b:{ph:'—'} })))
-  }
+  const tieFromId = (id) => ({ a: resolve(R32_DEF[id].a), b: resolve(R32_DEF[id].b) })
+  const empty = (n) => Array.from({length:n}, () => ({ a:{ph:'—'}, b:{ph:'—'} }))
+  // Lado izquierdo = primeros 8 cruces; lado derecho = últimos 8 (el orden ya
+  // está armado como árbol binario, así que cada mitad converge en su semifinal).
+  const izqR32 = R32_ORDER.slice(0, 8).map(tieFromId)
+  const derR32 = R32_ORDER.slice(8).map(tieFromId)
+  const finalTie = { a:{ph:'—'}, b:{ph:'—'} }
+
+  // 9 columnas: izquierda → FINAL (centro) → derecha (espejada)
+  const columns = [
+    { title:'16avos', ties:izqR32 },
+    { title:'8vos',   ties:empty(4) },
+    { title:'4tos',   ties:empty(2) },
+    { title:'Semis',  ties:empty(1) },
+    { title:'Final',  ties:[finalTie], final:true },
+    { title:'Semis',  ties:empty(1) },
+    { title:'4tos',   ties:empty(2) },
+    { title:'8vos',   ties:empty(4) },
+    { title:'16avos', ties:derR32 },
+  ]
 
   const slotHtml = (s) => {
     if (s.team) {
@@ -5595,13 +5605,15 @@ function renderBracket() {
     return `<div class="brk-slot"><span class="brk-flagph"></span><span class="brk-ph">${htmlEsc(s.ph||'—')}</span></div>`
   }
 
-  const colsHtml = rounds.map((ties, ri) => {
-    const isFinal = ri === rounds.length - 1
-    const tiesHtml = ties.map(t =>
-      `<div class="brk-tie${isFinal?' brk-final-tie':''}">${slotHtml(t.a)}${slotHtml(t.b)}</div>`
+  const colsHtml = columns.map(col => {
+    const tiesHtml = col.ties.map(t =>
+      `<div class="brk-tie${col.final?' brk-final-tie':''}">${slotHtml(t.a)}${slotHtml(t.b)}</div>`
     ).join('')
-    const champ = isFinal ? `<div class="brk-champion">🏆 Campeón</div>` : ''
-    return `<div class="brk-round"><div class="brk-round-title">${BRK_ROUNDS[ri]}</div>${tiesHtml}${champ}</div>`
+    const extra = col.final
+      ? `<div class="brk-trophy">🏆</div><div class="brk-champion">Campeón 2026</div>`
+      : ''
+    const cls = col.final ? 'brk-round brk-round-final' : 'brk-round'
+    return `<div class="${cls}"><div class="brk-round-title">${col.title}</div>${tiesHtml}${extra}</div>`
   }).join('')
 
   content.innerHTML = `<div class="brk-scroll"><div class="brk-tree">${colsHtml}</div></div>`
@@ -5664,11 +5676,6 @@ const NavRouter = {
       showPage('goat')
       renderGoatTables()
       initGoatVotos()
-      return
-    }
-    if (path === '/fixture' || path === '/fixture/') {
-      showPage('fixture')
-      loadFixture()
       return
     }
     if (path === '/mundial' || path === '/mundial/') {
