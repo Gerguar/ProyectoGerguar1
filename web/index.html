@@ -1242,10 +1242,20 @@ button,a{touch-action:manipulation}
     </div>
   </div>
   <a href="/mundial" onclick="event.preventDefault();nav('/mundial')" class="mundial-banner" aria-label="Entrá a la sección Mundial 2026">
-    <svg class="mb-cup" viewBox="0 0 44 62" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-      <path d="M22 3c5.6 0 9.7 4.4 9.7 10.2 0 4.5-2.7 8.2-6.2 9.8 1.9 7.9 3.5 16.6.9 25h-8.8c-2.6-8.4-1-17.1.9-25-3.5-1.6-6.2-5.3-6.2-9.8C12.3 7.4 16.4 3 22 3z"/>
-      <path d="M15.5 49.5h13l1.7 4.6H13.8z"/>
-      <rect x="10.5" y="54" width="23" height="5.2" rx="2"/>
+    <svg class="mb-cup" viewBox="0 0 56 82" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs><clipPath id="mb-globe-clip"><circle cx="28" cy="21" r="17"/></clipPath></defs>
+      <!-- cuerpo en espiral (las figuras) -->
+      <path fill="currentColor" d="M18 33 C14.5 47 18 59 24 66 L32 66 C38 59 41.5 47 38 33 C33 41 23 41 18 33 Z"/>
+      <!-- base de malaquita (dos discos) -->
+      <rect fill="currentColor" x="16" y="65" width="24" height="6" rx="2"/>
+      <rect fill="currentColor" x="11.5" y="71" width="33" height="7" rx="2.5"/>
+      <!-- globo terráqueo -->
+      <circle fill="currentColor" cx="28" cy="21" r="17"/>
+      <g clip-path="url(#mb-globe-clip)" stroke="#d4a017" stroke-width="2" fill="none" opacity=".55">
+        <line x1="28" y1="2" x2="28" y2="40"/>
+        <ellipse cx="28" cy="21" rx="17" ry="6.5"/>
+        <ellipse cx="28" cy="21" rx="8" ry="17"/>
+      </g>
     </svg>
     <span class="mb-text">Entrá · Mundial 2026</span>
     <span class="mb-arrow">→</span>
