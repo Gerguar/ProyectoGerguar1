@@ -136,7 +136,12 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .brk-viewport.has-overflow:not(.at-end) .brk-fade-r{opacity:1}
 .brk-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:1rem;cursor:grab;scrollbar-width:thin}
 .brk-scroll.dragging{cursor:grabbing;scroll-behavior:auto;user-select:none}
-.brk-tree{display:flex;gap:.7rem;min-width:max-content;align-items:stretch}
+.brk-zoom-wrap{width:max-content;transform-origin:top left}
+.brk-tree{display:flex;gap:.7rem;min-width:max-content;align-items:stretch;transform-origin:top left}
+/* Controles de zoom del bracket */
+.brk-zoom-controls{position:absolute;bottom:1.3rem;right:.5rem;z-index:4;display:flex;gap:.3rem}
+.brk-zoom-controls button{width:30px;height:30px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:#f0c44f;cursor:pointer;font-size:1.05rem;font-weight:700;line-height:1;display:flex;align-items:center;justify-content:center;transition:all .15s;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.brk-zoom-controls button:hover{border-color:#d4a017;background:var(--surface2)}
 .brk-round{display:flex;flex-direction:column;justify-content:space-around;gap:.6rem;min-width:142px}
 .brk-round-title{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:1.5px;color:#e6b94c;text-transform:uppercase;text-align:center;padding:.4rem 0;border-bottom:1px solid rgba(212,160,23,.25);margin-bottom:.3rem;position:sticky;top:0}
 .brk-tie{background:var(--surface);border:1px solid var(--border);border-radius:9px;overflow:hidden;font-size:.78rem}
@@ -5628,13 +5633,52 @@ function renderBracket() {
 
   content.innerHTML = `
     <div class="brk-viewport">
-      <div class="brk-hint">↔ Arrastrá o deslizá para recorrer el cuadro</div>
+      <div class="brk-hint">↔ Arrastrá o deslizá para recorrer · rueda del mouse para zoom</div>
       <div class="brk-fade brk-fade-l"></div>
       <div class="brk-fade brk-fade-r"></div>
-      <div class="brk-scroll"><div class="brk-tree">${colsHtml}</div></div>
+      <div class="brk-scroll"><div class="brk-zoom-wrap"><div class="brk-tree">${colsHtml}</div></div></div>
+      <div class="brk-zoom-controls">
+        <button onclick="brkZoomBtn(-1)" title="Alejar" aria-label="Alejar">−</button>
+        <button onclick="brkZoomReset()" title="Restablecer zoom" aria-label="Restablecer zoom" style="font-size:.85rem">⟲</button>
+        <button onclick="brkZoomBtn(1)" title="Acercar" aria-label="Acercar">+</button>
+      </div>
     </div>`
+  _brkZoom = 1
   setupBracketScroll()
 }
+
+// ── Zoom del bracket (rueda del mouse + botones) ──────────────────────────
+let _brkZoom = 1
+const BRK_ZMIN = 0.5, BRK_ZMAX = 1.8
+
+function applyBrkZoom(z, pivotClientX) {
+  const sc = document.querySelector('#mun-brackets-content .brk-scroll')
+  const tree = document.querySelector('#mun-brackets-content .brk-tree')
+  const wrap = document.querySelector('#mun-brackets-content .brk-zoom-wrap')
+  if (!sc || !tree || !wrap) return
+  z = Math.max(BRK_ZMIN, Math.min(BRK_ZMAX, z))
+  // Tamaño natural (a escala 1), medido una sola vez.
+  if (!wrap._natW) { wrap._natW = tree.offsetWidth; wrap._natH = tree.offsetHeight }
+  const old = _brkZoom
+  // Punto del contenido bajo el cursor (en coords sin escalar) para zoom focal.
+  const rect = sc.getBoundingClientRect()
+  const cx = (pivotClientX != null ? pivotClientX - rect.left : sc.clientWidth / 2)
+  const contentX = (sc.scrollLeft + cx) / old
+  _brkZoom = z
+  tree.style.transform = `scale(${z})`
+  wrap.style.width  = (wrap._natW * z) + 'px'
+  wrap.style.height = (wrap._natH * z) + 'px'
+  sc.scrollLeft = contentX * z - cx
+  const vp = sc.closest('.brk-viewport')
+  if (vp) {
+    const max = sc.scrollWidth - sc.clientWidth
+    vp.classList.toggle('has-overflow', max > 4)
+    vp.classList.toggle('at-start', sc.scrollLeft <= 4)
+    vp.classList.toggle('at-end', sc.scrollLeft >= max - 4)
+  }
+}
+function brkZoomBtn(dir) { applyBrkZoom(_brkZoom * (dir > 0 ? 1.15 : 0.87)) }
+function brkZoomReset() { applyBrkZoom(1) }
 
 // Desplazamiento interactivo del bracket: centra en la Final, permite
 // arrastrar con el mouse (drag-to-pan) y muestra sombras en los bordes.
@@ -5658,6 +5702,12 @@ function setupBracketScroll() {
   }, 80)
   sc.addEventListener('scroll', update, { passive:true })
   window.addEventListener('resize', update)
+
+  // Zoom con la rueda del mouse, centrado en el cursor.
+  sc.addEventListener('wheel', e => {
+    e.preventDefault()
+    applyBrkZoom(_brkZoom * (e.deltaY < 0 ? 1.12 : 0.89), e.clientX)
+  }, { passive:false })
 
   // Drag-to-pan solo con mouse (en touch el scroll nativo ya funciona).
   let down = false, startX = 0, startScroll = 0, moved = false
