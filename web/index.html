@@ -71,7 +71,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 /* Franja CTA al Mundial 2026 (debajo del hero) */
 .mundial-banner{display:flex;align-items:center;justify-content:center;gap:1rem;background:linear-gradient(135deg,#f0c44f,#d4a017);color:#1a1408;text-decoration:none;padding:.9rem 1.5rem;font-family:'Inter',sans-serif;font-weight:900;letter-spacing:1.5px;font-size:1.05rem;text-transform:uppercase;cursor:pointer;transition:filter .2s,box-shadow .2s;box-shadow:0 0 22px rgba(212,160,23,.35);position:relative;z-index:1}
 .mundial-banner:hover{filter:brightness(1.07);box-shadow:0 0 30px rgba(212,160,23,.55)}
-.mundial-banner .mb-cup{height:40px;width:auto;flex-shrink:0;filter:drop-shadow(0 1px 1px rgba(0,0,0,.15))}
+.mundial-banner .mb-cup{height:46px;width:auto;flex-shrink:0;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
 .mundial-banner .mb-arrow{font-size:1.2rem;transition:transform .2s}
 .mundial-banner:hover .mb-arrow{transform:translateX(5px)}
 @media(max-width:560px){.mundial-banner{font-size:.82rem;letter-spacing:1px;gap:.6rem;padding:.75rem 1rem}.mundial-banner .mb-cup{height:32px}}
@@ -1242,21 +1242,7 @@ button,a{touch-action:manipulation}
     </div>
   </div>
   <a href="/mundial" onclick="event.preventDefault();nav('/mundial')" class="mundial-banner" aria-label="Entrá a la sección Mundial 2026">
-    <svg class="mb-cup" viewBox="0 0 56 82" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-      <defs><clipPath id="mb-globe-clip"><circle cx="28" cy="21" r="17"/></clipPath></defs>
-      <!-- cuerpo en espiral (las figuras) -->
-      <path fill="currentColor" d="M18 33 C14.5 47 18 59 24 66 L32 66 C38 59 41.5 47 38 33 C33 41 23 41 18 33 Z"/>
-      <!-- base de malaquita (dos discos) -->
-      <rect fill="currentColor" x="16" y="65" width="24" height="6" rx="2"/>
-      <rect fill="currentColor" x="11.5" y="71" width="33" height="7" rx="2.5"/>
-      <!-- globo terráqueo -->
-      <circle fill="currentColor" cx="28" cy="21" r="17"/>
-      <g clip-path="url(#mb-globe-clip)" stroke="#d4a017" stroke-width="2" fill="none" opacity=".55">
-        <line x1="28" y1="2" x2="28" y2="40"/>
-        <ellipse cx="28" cy="21" rx="17" ry="6.5"/>
-        <ellipse cx="28" cy="21" rx="8" ry="17"/>
-      </g>
-    </svg>
+    <img class="mb-cup" src="copa-mundial.png" alt="Copa del Mundo" />
     <span class="mb-text">Entrá · Mundial 2026</span>
     <span class="mb-arrow">→</span>
   </a>
