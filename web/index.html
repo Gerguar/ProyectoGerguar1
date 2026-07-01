@@ -153,8 +153,9 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .brk-zoom-controls{position:absolute;bottom:1.3rem;right:.5rem;z-index:4;display:flex;gap:.3rem}
 .brk-zoom-controls button{width:30px;height:30px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:#f0c44f;cursor:pointer;font-size:1.05rem;font-weight:700;line-height:1;display:flex;align-items:center;justify-content:center;transition:all .15s;box-shadow:0 2px 8px rgba(0,0,0,.3)}
 .brk-zoom-controls button:hover{border-color:#d4a017;background:var(--surface2)}
-.brk-round{display:flex;flex-direction:column;justify-content:space-around;gap:.6rem;min-width:142px}
-.brk-round-title{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:1.5px;color:#e6b94c;text-transform:uppercase;text-align:center;padding:.4rem 0;border-bottom:1px solid rgba(212,160,23,.25);margin-bottom:.3rem;position:sticky;top:0}
+.brk-round{display:flex;flex-direction:column;min-width:142px}
+.brk-cell{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;padding:.3rem 0}
+.brk-round-title{flex:0 0 auto;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:1.5px;color:#e6b94c;text-transform:uppercase;text-align:center;padding:.4rem 0;border-bottom:1px solid rgba(212,160,23,.25);margin-bottom:.3rem}
 .brk-tie{background:var(--surface);border:1px solid var(--border);border-radius:9px;overflow:hidden;font-size:.78rem}
 .brk-slot{display:flex;align-items:center;gap:.45rem;padding:.45rem .55rem;cursor:default}
 .brk-slot+.brk-slot{border-top:1px solid var(--border)}
@@ -170,9 +171,10 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .brk-slot.brk-lose{opacity:.5}
 .brk-final-tie{border-color:#d4a017;box-shadow:0 0 14px rgba(212,160,23,.25)}
 .brk-champion{text-align:center;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:2px;color:#f0c44f;text-transform:uppercase;margin-top:.5rem}
-.brk-round-final{min-width:188px}
+.brk-round-final{min-width:188px;position:relative}
 .brk-round-final .brk-round-title{color:#f0c44f;border-bottom-color:#d4a017}
-.brk-trophy{text-align:center;font-size:2.4rem;margin-top:.8rem;filter:drop-shadow(0 0 10px rgba(212,160,23,.5))}
+.brk-champion-wrap{position:absolute;bottom:1.5rem;left:0;right:0}
+.brk-trophy{text-align:center;font-size:2.4rem;filter:drop-shadow(0 0 10px rgba(212,160,23,.5))}
 .matches-grid{max-width:1100px;margin:0 auto;padding:.5rem 1.5rem 3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;position:relative;z-index:1;width:100%}
 /* Layout del home: matches centrado a 1100px (mismo ancho que facts,
    home-extra-section, footer). El sidebar de stats sobresale a la
@@ -1504,8 +1506,8 @@ button,a{touch-action:manipulation}
     <!-- Tabs -->
     <div class="mun-tabs">
       <button class="mun-tab active" data-tab="pronos" onclick="setMundialTab('pronos')">📈 Pronósticos</button>
-      <button class="mun-tab" data-tab="grupos" onclick="setMundialTab('grupos')">📊 Grupos</button>
       <button class="mun-tab" data-tab="brackets" onclick="setMundialTab('brackets')">🗝️ Brackets</button>
+      <button class="mun-tab" data-tab="grupos" onclick="setMundialTab('grupos')">📊 Grupos</button>
     </div>
 
     <!-- TAB: PRONÓSTICOS -->
@@ -5707,10 +5709,10 @@ function renderBracket() {
 
   const colsHtml = columns.map(col => {
     const tiesHtml = col.ties.map(t =>
-      `<div class="brk-tie${col.final?' brk-final-tie':''}">${slotHtml(t.a)}${slotHtml(t.b)}</div>`
+      `<div class="brk-cell"><div class="brk-tie${col.final?' brk-final-tie':''}">${slotHtml(t.a)}${slotHtml(t.b)}</div></div>`
     ).join('')
     const extra = col.final
-      ? `<div class="brk-trophy">🏆</div><div class="brk-champion">Campeón 2026</div>`
+      ? `<div class="brk-champion-wrap"><div class="brk-trophy">🏆</div><div class="brk-champion">Campeón 2026</div></div>`
       : ''
     const cls = col.final ? 'brk-round brk-round-final' : 'brk-round'
     return `<div class="${cls}"><div class="brk-round-title">${col.title}</div>${tiesHtml}${extra}</div>`
