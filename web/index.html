@@ -5377,8 +5377,11 @@ function renderMundialPronos() {
 
   computeRondaLabels()
   const finalizados = _munData.filter(p => p.estado === 'finalizado')
-  // Por default mostramos solo los NO finalizados (próximos).
-  const lista = _munVerFinalizados ? _munData : _munData.filter(p => p.estado !== 'finalizado')
+  // Próximos: orden cronológico (asc). Finalizados: del último jugado al más
+  // viejo (desc).
+  const lista = _munVerFinalizados
+    ? finalizados.slice().sort((a,b) => new Date(b.fecha) - new Date(a.fecha))
+    : _munData.filter(p => p.estado !== 'finalizado')
 
   if (toggle) {
     toggle.innerHTML = `<button class="grp-fbtn" onclick="toggleVerFinalizados()">${
