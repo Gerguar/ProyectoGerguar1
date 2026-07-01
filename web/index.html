@@ -164,6 +164,10 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .brk-slot .brk-team{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600;flex:1;min-width:0}
 .brk-slot .brk-ph{color:var(--faint);font-style:italic;font-weight:500;font-family:'JetBrains Mono',monospace;font-size:.72rem}
 .brk-slot .brk-flagph{width:20px;height:14px;border-radius:2px;background:var(--surface2);flex-shrink:0;display:inline-block}
+.brk-slot .brk-score{font-family:'JetBrains Mono',monospace;font-weight:800;font-size:.82rem;margin-left:auto;padding-left:.4rem;color:var(--text)}
+.brk-slot.brk-win .brk-team{color:#f0c44f;font-weight:800}
+.brk-slot.brk-win .brk-score{color:#f0c44f}
+.brk-slot.brk-lose{opacity:.5}
 .brk-final-tie{border-color:#d4a017;box-shadow:0 0 14px rgba(212,160,23,.25)}
 .brk-champion{text-align:center;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:2px;color:#f0c44f;text-transform:uppercase;margin-top:.5rem}
 .brk-round-final{min-width:188px}
@@ -5313,7 +5317,7 @@ async function loadMundial(tab) {
       'equipo_local:equipo_local_id(id,nombre,abreviacion,escudo_url,color_prim,color_sec),' +
       'equipo_visitante:equipo_visitante_id(id,nombre,abreviacion,escudo_url,color_prim,color_sec),' +
       'pronosticos(prob_local,prob_empate,prob_visitante)' +
-      '&liga_id=eq.7&temporada=eq.2026&grupo=not.is.null&order=fecha'
+      '&liga_id=eq.7&temporada=eq.2026&order=fecha'
     )
     _munLoaded = true
   } catch(e) {
@@ -5345,6 +5349,21 @@ function renderMundialActive() {
 
 // ── TAB PRONÓSTICOS: partidos del Mundial, sin paginar ────────────────────
 let _munVerFinalizados = false
+let _munRondas = {}  // id de partido -> etiqueta de ronda (eliminatoria)
+
+// Etiqueta de ronda para los partidos de eliminatoria (sin grupo), por bloques
+// cronológicos: 16 dieciseisavos, 8 octavos, 4 cuartos, 2 semis, 1 final.
+function computeRondaLabels() {
+  const elim = _munData.filter(p => !p.grupo)
+    .sort((a,b) => new Date(a.fecha) - new Date(b.fecha))
+  const bloques = [[16,'16avos'],[8,'Octavos'],[4,'Cuartos'],[2,'Semis'],[1,'Final']]
+  _munRondas = {}
+  let i = 0
+  for (const [n,lbl] of bloques) {
+    for (let k=0; k<n && i<elim.length; k++, i++) _munRondas[elim[i].id] = lbl
+  }
+  for (; i<elim.length; i++) _munRondas[elim[i].id] = 'Eliminación'
+}
 
 function renderMundialPronos() {
   const loading = document.getElementById('mun-pronos-loading')
@@ -5354,6 +5373,7 @@ function renderMundialPronos() {
   if (loading) loading.style.display = 'none'
   if (content) content.style.display = 'block'
 
+  computeRondaLabels()
   const finalizados = _munData.filter(p => p.estado === 'finalizado')
   // Por default mostramos solo los NO finalizados (próximos).
   const lista = _munVerFinalizados ? _munData : _munData.filter(p => p.estado !== 'finalizado')
@@ -5398,7 +5418,7 @@ function munMatchCard(p) {
     : ''
   return `
     <div class="match-card${fin?' match-card-finished':''}" onclick="showDetail(${p.id})">
-      <div class="league-badge">Grupo ${p.grupo||''}</div>
+      <div class="league-badge">${p.grupo ? 'Grupo ' + p.grupo : (_munRondas[p.id] || 'Eliminación')}</div>
       <div class="teams-col">
         <div class="team-row">${crest(p.equipo_local)}<div class="team-name-card">${htmlEsc(p.equipo_local?.nombre||'Local')}</div></div>
         <div class="vs-col">VS</div>
@@ -5600,42 +5620,89 @@ function renderBracket() {
   if (content) content.style.display = 'block'
 
   const standings = computeStandings(_munData)
-  const resolve = (slot) => {
-    if (slot.t === '3') return { ph: '3° ' + slot.gs.join('/') }
-    const rows = standings[slot.g]
-    const team = rows && rows[slot.t === '1' ? 0 : 1]
-    return team ? { team } : { ph: (slot.t === '1' ? '1°' : '2°') + ' ' + slot.g }
-  }
+  // Partidos de eliminatoria (sin grupo) por fecha; ronda por bloques.
+  const elim = _munData.filter(p => !p.grupo).sort((a,b)=> new Date(a.fecha)-new Date(b.fecha))
+  const R32M = elim.slice(0,16), R16M = elim.slice(16,24), QFM = elim.slice(24,28), SFM = elim.slice(28,30), FM = elim.slice(30,31)
 
-  const tieFromId = (id) => ({ a: resolve(R32_DEF[id].a), b: resolve(R32_DEF[id].b) })
-  const empty = (n) => Array.from({length:n}, () => ({ a:{ph:'—'}, b:{ph:'—'} }))
-  // Lado izquierdo = primeros 8 cruces; lado derecho = últimos 8 (el orden ya
-  // está armado como árbol binario, así que cada mitad converge en su semifinal).
-  const izqR32 = R32_ORDER.slice(0, 8).map(tieFromId)
-  const derR32 = R32_ORDER.slice(8).map(tieFromId)
-  const finalTie = { a:{ph:'—'}, b:{ph:'—'} }
+  // mapa nombre -> escudo (de cualquier partido)
+  const escudoMap = {}
+  _munData.forEach(p => [p.equipo_local, p.equipo_visitante].forEach(e => { if (e?.nombre) escudoMap[e.nombre] = safeMediaUrl(e.escudo_url) }))
+  const escudoDe = n => escudoMap[n] || ''
+  const nom = e => e?.nombre || null
+  const findMatch = (list, name) => name ? list.find(m => nom(m.equipo_local)===name || nom(m.equipo_visitante)===name) : null
+  // nombre esperado de una posición 1°/2° (null si es un 3°)
+  const posTeam = (slot) => {
+    if (slot.t === '3') return null
+    const r = standings[slot.g]; const t = r && r[slot.t==='1'?0:1]
+    return t ? t.nombre : null
+  }
+  // arma un tie desde un partido real, orientando A=expA cuando se conoce
+  const tieFromMatch = (m, expA, expB) => {
+    const loc = nom(m.equipo_local), vis = nom(m.equipo_visitante)
+    let aIsLocal = true
+    if (expA && loc===expA) aIsLocal = true
+    else if (expA && vis===expA) aIsLocal = false
+    else if (expB && loc===expB) aIsLocal = false
+    else if (expB && vis===expB) aIsLocal = true
+    const played = m.estado==='finalizado' && m.goles_local!=null
+    const An = aIsLocal?loc:vis, Bn = aIsLocal?vis:loc
+    const As = aIsLocal?m.goles_local:m.goles_visitante, Bs = aIsLocal?m.goles_visitante:m.goles_local
+    return {
+      played,
+      a: { name:An, escudo:escudoDe(An), score: played?As:null, winner: played&&As>Bs },
+      b: { name:Bn, escudo:escudoDe(Bn), score: played?Bs:null, winner: played&&Bs>As },
+    }
+  }
+  const winnerName = (tie) => tie.played ? (tie.a.winner ? tie.a.name : tie.b.name) : null
+  const slotPH = (slot, exp) => exp ? {name:exp, escudo:escudoDe(exp)}
+    : (slot.t==='3' ? {ph:'3° '+slot.gs.join('/')} : {ph:(slot.t==='1'?'1°':'2°')+' '+slot.g})
+
+  // Dieciseisavos: por posición (1°/2° conocido) buscamos el partido real
+  const r32ties = R32_ORDER.map(mid => {
+    const d = R32_DEF[mid]
+    const expA = posTeam(d.a), expB = posTeam(d.b)
+    const m = findMatch(R32M, expA || expB)
+    return m ? tieFromMatch(m, expA, expB) : { played:false, a:slotPH(d.a,expA), b:slotPH(d.b,expB) }
+  })
+  // Rondas siguientes: encadenamos por ganadores reales
+  const buildNext = (prev, list) => {
+    const out = []
+    for (let i=0;i<prev.length;i+=2) {
+      const wA = winnerName(prev[i]), wB = winnerName(prev[i+1])
+      const m = findMatch(list, wA || wB)
+      out.push(m ? tieFromMatch(m, wA, wB)
+        : { played:false, a: wA?{name:wA,escudo:escudoDe(wA)}:{ph:'—'}, b: wB?{name:wB,escudo:escudoDe(wB)}:{ph:'—'} })
+    }
+    return out
+  }
+  const r16ties = buildNext(r32ties, R16M)
+  const qfties  = buildNext(r16ties, QFM)
+  const sfties  = buildNext(qfties,  SFM)
+  const finties = buildNext(sfties,  FM)
 
   // 9 columnas: izquierda → FINAL (centro) → derecha (espejada)
   const columns = [
-    { title:'16avos', ties:izqR32 },
-    { title:'8vos',   ties:empty(4) },
-    { title:'4tos',   ties:empty(2) },
-    { title:'Semis',  ties:empty(1) },
-    { title:'Final',  ties:[finalTie], final:true },
-    { title:'Semis',  ties:empty(1) },
-    { title:'4tos',   ties:empty(2) },
-    { title:'8vos',   ties:empty(4) },
-    { title:'16avos', ties:derR32 },
+    { title:'16avos', ties:r32ties.slice(0,8) },
+    { title:'8vos',   ties:r16ties.slice(0,4) },
+    { title:'4tos',   ties:qfties.slice(0,2) },
+    { title:'Semis',  ties:[sfties[0]] },
+    { title:'Final',  ties:finties, final:true },
+    { title:'Semis',  ties:[sfties[1]] },
+    { title:'4tos',   ties:qfties.slice(2,4) },
+    { title:'8vos',   ties:r16ties.slice(4,8) },
+    { title:'16avos', ties:r32ties.slice(8,16) },
   ]
 
   const slotHtml = (s) => {
-    if (s.team) {
-      const img = s.team.escudo
-        ? `<img src="${htmlEsc(s.team.escudo)}" alt="" onerror="this.style.display='none'">`
+    if (s && s.name) {
+      const img = s.escudo
+        ? `<img src="${htmlEsc(s.escudo)}" alt="" onerror="this.style.display='none'">`
         : `<span class="brk-flagph"></span>`
-      return `<div class="brk-slot clickable" onclick="irASeleccion('${htmlEsc(s.team.nombre)}')">${img}<span class="brk-team">${htmlEsc(s.team.nombre)}</span></div>`
+      const sc = (s.score!=null) ? `<span class="brk-score">${s.score}</span>` : ''
+      const cls = s.winner ? ' brk-win' : (s.score!=null ? ' brk-lose' : '')
+      return `<div class="brk-slot clickable${cls}" onclick="irASeleccion('${htmlEsc(s.name)}')">${img}<span class="brk-team">${htmlEsc(s.name)}</span>${sc}</div>`
     }
-    return `<div class="brk-slot"><span class="brk-flagph"></span><span class="brk-ph">${htmlEsc(s.ph||'—')}</span></div>`
+    return `<div class="brk-slot"><span class="brk-flagph"></span><span class="brk-ph">${htmlEsc((s&&s.ph)||'—')}</span></div>`
   }
 
   const colsHtml = columns.map(col => {
