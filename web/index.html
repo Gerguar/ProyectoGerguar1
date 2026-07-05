@@ -1187,22 +1187,11 @@ button,a{touch-action:manipulation}
   .rank-tab{padding:6px 14px;font-size:.76rem}
 }
 
-/* ── FIXTURE ── */
-.fix-day{margin-bottom:2rem}
-.fix-day-header{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:2px;color:var(--faint);text-transform:uppercase;padding:.5rem 0;border-bottom:1px solid var(--border);margin-bottom:.75rem}
+/* ── FIXTURE (solo lo que reusa el detalle de grupo del Mundial) ── */
 .fix-card{display:flex;align-items:center;gap:1rem;background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:.9rem 1.2rem;margin-bottom:.55rem;cursor:pointer;transition:border-color .15s,background .15s}
 .fix-card:hover{border-color:var(--green);background:rgba(34,197,94,.04)}
 .fix-league{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:1.5px;color:var(--faint);text-transform:uppercase;min-width:52px}
-.fix-teams{flex:1;display:flex;flex-direction:column;gap:.3rem}
-.fix-team-row{display:flex;align-items:center;gap:.6rem;font-size:.88rem;font-weight:600;color:#e8eaed}
-.fix-score{font-family:'JetBrains Mono',monospace;font-size:1.1rem;font-weight:900;min-width:32px;text-align:center;color:#fff}
-.fix-prob{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);min-width:36px;text-align:right}
-.fix-prob-bar{width:4px;border-radius:4px;align-self:stretch;min-height:36px}
-.fix-status-fin{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--faint);min-width:38px;text-align:center}
-.fix-status-prog{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--green);min-width:38px;text-align:center}
-.fix-filter-btn{background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:5px 14px;font-size:.78rem;font-family:'JetBrains Mono',monospace;color:var(--muted);cursor:pointer;transition:all .15s;letter-spacing:.5px}
-.fix-filter-btn.active,.fix-filter-btn:hover{border-color:var(--green);color:var(--green)}
-@media(max-width:600px){.fix-card{padding:.75rem .8rem;gap:.6rem}.fix-league{display:none}.fix-team-row{font-size:.82rem}}
+@media(max-width:600px){.fix-card{padding:.75rem .8rem;gap:.6rem}.fix-league{display:none}}
 </style>
 </head>
 <body>
@@ -5180,122 +5169,8 @@ function rkGoPage(p) {
 
 
 // ── FIXTURE ──────────────────────────────────────────────────────────────────
-let _fixtureLoaded = false
-let _fixtureData = []
-let _fixtureLigaSel = 'todas'
-
-const LIGA_NOMBRES = { 1:'Champions', 2:'La Liga', 3:'Premier League', 4:'Serie A', 5:'Bundesliga', 6:'Ligue 1', 7:'Selecciones', 8:'Otras Sel.' }
-const LIGA_ORDEN   = [7,8,1,3,2,4,5,6]
-
-async function loadFixture() {
-  if (_fixtureLoaded) { renderFixture(); return }
-  try {
-    const [programados, finalizados] = await Promise.all([
-      sb('partidos?select=id,fecha,estado,equipo_local:equipo_local_id(id,nombre,abreviacion,escudo_url,color_prim),equipo_visitante:equipo_visitante_id(id,nombre,abreviacion,escudo_url,color_prim),liga:liga_id(id,nombre),pronosticos(prob_local,prob_empate,prob_visitante)&estado=eq.programado&order=fecha&limit=200'),
-      sb('partidos?select=id,fecha,estado,goles_local,goles_visitante,equipo_local:equipo_local_id(id,nombre,abreviacion,escudo_url,color_prim),equipo_visitante:equipo_visitante_id(id,nombre,abreviacion,escudo_url,color_prim),liga:liga_id(id,nombre)&estado=eq.finalizado&order=fecha.desc&limit=100'),
-    ])
-    _fixtureData = [...(finalizados||[]).reverse(), ...(programados||[])]
-    _fixtureLoaded = true
-  } catch(e) {
-    console.error('loadFixture error', e)
-  }
-  renderFixture()
-}
-
-function renderFixture() {
-  const loading = document.getElementById('fixture-loading')
-  const content = document.getElementById('fixture-content')
-  const filters = document.getElementById('fixture-filters')
-  if (!_fixtureData.length) {
-    if (loading) loading.textContent = 'No hay partidos disponibles.'
-    return
-  }
-  if (loading) loading.style.display = 'none'
-  if (content) content.style.display = 'block'
-
-  // Ligas disponibles
-  const ligasSet = new Set()
-  _fixtureData.forEach(p => { if (p.liga?.id) ligasSet.add(p.liga.id) })
-  const ligas = LIGA_ORDEN.filter(c => ligasSet.has(c))
-
-  // Filtros
-  if (filters) {
-    const all = [['todas','Todas'], ...ligas.map(c => [c, LIGA_NOMBRES[c]||c])]; const _selVal = _fixtureLigaSel
-    filters.innerHTML = all.map(([val,label]) =>
-      `<button class="fix-filter-btn${_fixtureLigaSel===val?' active':''}" onclick="setFixturaLiga('${val}')">${label}</button>`
-    ).join('')
-  }
-
-  // Filtrar
-  const partidos = _fixtureLigaSel === 'todas'
-    ? _fixtureData
-    : _fixtureData.filter(p => String(p.liga?.id) === String(_fixtureLigaSel))
-
-  // Agrupar por fecha local
-  const byDate = {}
-  partidos.forEach(p => {
-    const d = new Date(p.fecha)
-    const key = d.toLocaleDateString('es-AR', { weekday:'long', day:'numeric', month:'long', year:'numeric' })
-    if (!byDate[key]) byDate[key] = []
-    byDate[key].push(p)
-  })
-
-  if (!content) return
-  content.innerHTML = Object.entries(byDate).map(([fecha, ps]) => `
-    <div class="fix-day">
-      <div class="fix-day-header">${fecha}</div>
-      ${ps.map(p => renderFixtureCard(p)).join('')}
-    </div>
-  `).join('')
-}
-
-function renderFixtureCard(p) {
-  const fin = p.estado === 'finalizado'
-  const hora = new Date(p.fecha).toLocaleTimeString('es-AR', { hour:'2-digit', minute:'2-digit' })
-  const liga = p.liga?.id ? (LIGA_NOMBRES[p.liga.id] || p.liga.nombre || '') : (p.liga?.nombre || '')
-  const prob = p.pronosticos?.[0]
-  const colorH = p.equipo_local?.color_prim ? '#'+p.equipo_local.color_prim.replace('#','') : 'var(--green)'
-  const colorA = p.equipo_visitante?.color_prim ? '#'+p.equipo_visitante.color_prim.replace('#','') : '#ef4444'
-  const ph = prob ? Math.round(prob.prob_local) : null
-  const pa = prob ? Math.round(prob.prob_visitante) : null
-
-  const scoreH = fin ? `<span class="fix-score" style="color:${p.goles_local>p.goles_visitante?'var(--green)':'#fff'}">${p.goles_local}</span>` : ''
-  const scoreA = fin ? `<span class="fix-score" style="color:${p.goles_visitante>p.goles_local?'var(--green)':'#fff'}">${p.goles_visitante}</span>` : ''
-  const statusEl = fin
-    ? `<div class="fix-status-fin">FIN</div>`
-    : `<div class="fix-status-prog">${hora}</div>`
-
-  const escH = p.equipo_local?.escudo_url ? `<img src="${p.equipo_local.escudo_url}" style="width:18px;height:18px;object-fit:contain">` : ''
-  const escA = p.equipo_visitante?.escudo_url ? `<img src="${p.equipo_visitante.escudo_url}" style="width:18px;height:18px;object-fit:contain">` : ''
-
-  const probEl = !fin && prob ? `
-    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.2rem">
-      <div class="fix-prob">${ph}%</div>
-      <div class="fix-prob">${pa}%</div>
-    </div>
-    <div class="fix-prob-bar" style="background:linear-gradient(to bottom,${colorH} ${ph}%,${colorA} ${ph}%)"></div>
-  ` : ''
-
-  const matchId = p.id
-  return `
-    <div class="fix-card" onclick="abrirPartidoDesdeFixture(${matchId})">
-      <div class="fix-league">${liga}</div>
-      ${statusEl}
-      <div style="display:flex;gap:.3rem;align-items:center">${scoreH}${scoreA}</div>
-      <div class="fix-teams">
-        <div class="fix-team-row">${escH}<span>${htmlEsc(p.equipo_local?.nombre||'Local')}</span></div>
-        <div class="fix-team-row">${escA}<span>${htmlEsc(p.equipo_visitante?.nombre||'Visitante')}</span></div>
-      </div>
-      ${probEl}
-    </div>
-  `
-}
-
-function setFixturaLiga(liga) {
-  _fixtureLigaSel = liga
-  renderFixture()
-}
-
+// (el tab viejo se eliminó; queda solo el helper de navegación que reusa el
+// detalle de grupo del Mundial)
 async function abrirPartidoDesdeFixture(id) {
   const m = (matches||[]).find(x => x.id == id)
   if (m) { await showDetail(m.id); return }
