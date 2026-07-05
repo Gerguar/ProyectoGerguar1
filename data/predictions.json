@@ -1,42 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-07-05T02:58:51.805112+00:00",
+  "generated_at_utc": "2026-07-05T03:59:36.340255+00:00",
   "model": {
-    "trained_at": "2026-06-28T04:22:49.372365+00:00",
+    "trained_at": "2026-07-05T03:59:34.304344+00:00",
     "method": "DixonColes+Elo+XGBoost(isotonic)",
-    "holdout_metrics": {
-      "n": 1,
-      "log_loss": 0.8323264122009277,
-      "brier": 0.4867342553104894,
-      "accuracy": 1.0,
-      "market_log_loss": null,
-      "calibration": {
-        "home": {
-          "pred": [
-            0.4350360333919525
-          ],
-          "true": [
-            1.0
-          ]
-        },
-        "draw": {
-          "pred": [
-            0.21940350532531738
-          ],
-          "true": [
-            0.0
-          ]
-        },
-        "away": {
-          "pred": [
-            0.3455605208873749
-          ],
-          "true": [
-            0.0
-          ]
-        }
-      }
-    }
+    "holdout_metrics": {}
   },
   "matches": []
 }

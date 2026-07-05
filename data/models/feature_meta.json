@@ -1,9 +1,9 @@
 {
-  "trained_at": "2026-06-28T04:22:49.372365+00:00",
-  "train_end": "2026-03-30 04:17:54.738782+00:00",
-  "valid_end": "2026-05-29 04:17:54.738782+00:00",
-  "n_train": 4696,
-  "n_valid": 670,
+  "trained_at": "2026-07-05T03:59:34.304344+00:00",
+  "train_end": "2026-04-06 03:55:30.343194+00:00",
+  "valid_end": "2026-06-05 03:55:30.343194+00:00",
+  "n_train": 4762,
+  "n_valid": 605,
   "feature_columns": [
     "is_neutral",
     "elo_home_pre",
@@ -70,37 +70,5 @@
     "away_formation_def",
     "formation_def_diff"
   ],
-  "holdout_metrics": {
-    "n": 1,
-    "log_loss": 0.8323264122009277,
-    "brier": 0.4867342553104894,
-    "accuracy": 1.0,
-    "market_log_loss": null,
-    "calibration": {
-      "home": {
-        "pred": [
-          0.4350360333919525
-        ],
-        "true": [
-          1.0
-        ]
-      },
-      "draw": {
-        "pred": [
-          0.21940350532531738
-        ],
-        "true": [
-          0.0
-        ]
-      },
-      "away": {
-        "pred": [
-          0.3455605208873749
-        ],
-        "true": [
-          0.0
-        ]
-      }
-    }
-  }
+  "holdout_metrics": {}
 }
