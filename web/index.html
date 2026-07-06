@@ -2828,7 +2828,7 @@ async function loadAccuracyStats() {
     const data = await sb(
       'partidos?select=goles_local,goles_visitante,' +
       'pronosticos(prob_local,prob_empate,prob_visitante)' +
-      '&estado=eq.finalizado&goles_local=not.is.null&goles_visitante=not.is.null'
+      '&liga_id=eq.7&estado=eq.finalizado&goles_local=not.is.null&goles_visitante=not.is.null'
     )
     let ok = 0, tight = 0, miss = 0, withoutPron = 0
     for (const p of data) {
