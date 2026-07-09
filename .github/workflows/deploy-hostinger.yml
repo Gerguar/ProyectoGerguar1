@@ -58,7 +58,7 @@ jobs:
                 set net:max-retries 2;
                 set net:reconnect-interval-base 3;
                 set cmd:fail-exit yes;
-                mirror --reverse --only-newer --verbose --parallel=2 \
+                mirror --reverse --ignore-time --verbose --parallel=2 \
                   --exclude-glob .git* \
                   --exclude-glob node_modules/ \
                   --exclude-glob .DS_Store \
