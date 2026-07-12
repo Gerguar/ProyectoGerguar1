@@ -42,14 +42,16 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Sync fixture, horarios y resultados Mundial 2026
+        # continue-on-error: si falla NO bloquea los steps siguientes
+        # (Pinnacle/predict), pero el step queda marcado como FALLIDO en el run
+        # (visible) — a diferencia del viejo "|| echo" que lo dejaba en verde y
+        # ocultaba fallos persistentes (ej. FOOTBALL_DATA_TOKEN vencido).
+        continue-on-error: true
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
-        # Fallo no critico: si football-data.org tira rate limit o error
-        # transitorio, seguimos con Pinnacle/predict (data del cron previo).
-        # El smart-sync de los proximos 25 min vuelve a intentar.
-        run: python -m src.ingest_wc2026 || echo "[wc2026] fallo no critico, sigue el resto"
+        run: python -m src.ingest_wc2026
 
       - name: Actualizar Forma reciente de Insights
         env:
