@@ -1,10 +1,135 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-08-01T13:17:49.601608+00:00",
+  "generated_at_utc": "2026-08-02T02:39:21.988578+00:00",
   "model": {
     "trained_at": "2026-07-26T03:30:39.008567+00:00",
     "method": "DixonColes+Elo+XGBoost(isotonic)",
     "holdout_metrics": {}
   },
-  "matches": []
+  "matches": [
+    {
+      "match_id": "fd-564634",
+      "kickoff_ts_utc": "2026-08-15T17:30:00+00:00",
+      "competition": {
+        "code": "LL",
+        "name": "La Liga"
+      },
+      "home": {
+        "id": "alaves",
+        "name": "Alav\u00e9s"
+      },
+      "away": {
+        "id": "getafe",
+        "name": "Getafe"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.3699,
+        "draw": 0.3134,
+        "away": 0.3167
+      },
+      "market_probabilities": {
+        "home": 0.3976,
+        "draw": 0.3337,
+        "away": 0.2687
+      },
+      "scoreline_top": [
+        {
+          "score": "0-0",
+          "p": 0.1684
+        },
+        {
+          "score": "1-0",
+          "p": 0.1505
+        },
+        {
+          "score": "1-1",
+          "p": 0.1398
+        },
+        {
+          "score": "0-1",
+          "p": 0.1324
+        },
+        {
+          "score": "2-0",
+          "p": 0.0755
+        }
+      ],
+      "expected_goals": {
+        "home": 0.96,
+        "away": 0.85
+      },
+      "derived": {
+        "p_over_2_5": 0.2743,
+        "p_btts": 0.3615
+      },
+      "ratings": {
+        "elo_home": 1469.7,
+        "elo_away": 1556.2,
+        "elo_diff": -86.5
+      }
+    },
+    {
+      "match_id": "fd-564633",
+      "kickoff_ts_utc": "2026-08-15T19:30:00+00:00",
+      "competition": {
+        "code": "LL",
+        "name": "La Liga"
+      },
+      "home": {
+        "id": "sevilla",
+        "name": "Sevilla FC"
+      },
+      "away": {
+        "id": "rayo_vallecano",
+        "name": "Rayo Vallecano"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.3676,
+        "draw": 0.3114,
+        "away": 0.321
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1388
+        },
+        {
+          "score": "1-0",
+          "p": 0.1135
+        },
+        {
+          "score": "0-0",
+          "p": 0.1077
+        },
+        {
+          "score": "0-1",
+          "p": 0.1068
+        },
+        {
+          "score": "2-1",
+          "p": 0.078
+        }
+      ],
+      "expected_goals": {
+        "home": 1.18,
+        "away": 1.11
+      },
+      "derived": {
+        "p_over_2_5": 0.4003,
+        "p_btts": 0.4697
+      },
+      "ratings": {
+        "elo_home": 1410.5,
+        "elo_away": 1504.7,
+        "elo_diff": -94.2
+      }
+    }
+  ]
 }
