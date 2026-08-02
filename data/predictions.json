@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-08-02T02:39:21.988578+00:00",
+  "generated_at_utc": "2026-08-02T03:30:40.029927+00:00",
   "model": {
-    "trained_at": "2026-07-26T03:30:39.008567+00:00",
+    "trained_at": "2026-08-02T03:30:37.724003+00:00",
     "method": "DixonColes+Elo+XGBoost(isotonic)",
     "holdout_metrics": {}
   },
@@ -26,9 +26,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3699,
-        "draw": 0.3134,
-        "away": 0.3167
+        "home": 0.3717,
+        "draw": 0.3044,
+        "away": 0.3239
       },
       "market_probabilities": {
         "home": 0.3976,
@@ -38,37 +38,37 @@
       "scoreline_top": [
         {
           "score": "0-0",
-          "p": 0.1684
+          "p": 0.1556
         },
         {
           "score": "1-0",
-          "p": 0.1505
+          "p": 0.1459
         },
         {
           "score": "1-1",
-          "p": 0.1398
+          "p": 0.1413
         },
         {
           "score": "0-1",
-          "p": 0.1324
+          "p": 0.1231
         },
         {
           "score": "2-0",
-          "p": 0.0755
+          "p": 0.0788
         }
       ],
       "expected_goals": {
-        "home": 0.96,
-        "away": 0.85
+        "home": 1.03,
+        "away": 0.88
       },
       "derived": {
-        "p_over_2_5": 0.2743,
-        "p_btts": 0.3615
+        "p_over_2_5": 0.2982,
+        "p_btts": 0.3826
       },
       "ratings": {
-        "elo_home": 1469.7,
-        "elo_away": 1556.2,
-        "elo_diff": -86.5
+        "elo_home": 1437.9,
+        "elo_away": 1518.1,
+        "elo_diff": -80.2
       }
     },
     {
@@ -90,45 +90,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3676,
-        "draw": 0.3114,
-        "away": 0.321
+        "home": 0.3523,
+        "draw": 0.3236,
+        "away": 0.3242
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1388
-        },
-        {
-          "score": "1-0",
-          "p": 0.1135
-        },
-        {
-          "score": "0-0",
-          "p": 0.1077
+          "p": 0.1396
         },
         {
           "score": "0-1",
-          "p": 0.1068
+          "p": 0.1086
         },
         {
-          "score": "2-1",
-          "p": 0.078
+          "score": "1-0",
+          "p": 0.1075
+        },
+        {
+          "score": "0-0",
+          "p": 0.107
+        },
+        {
+          "score": "1-2",
+          "p": 0.0767
         }
       ],
       "expected_goals": {
-        "home": 1.18,
-        "away": 1.11
+        "home": 1.15,
+        "away": 1.16
       },
       "derived": {
-        "p_over_2_5": 0.4003,
-        "p_btts": 0.4697
+        "p_over_2_5": 0.4048,
+        "p_btts": 0.4747
       },
       "ratings": {
         "elo_home": 1410.5,
-        "elo_away": 1504.7,
-        "elo_diff": -94.2
+        "elo_away": 1542.8,
+        "elo_diff": -132.3
       }
     }
   ]
