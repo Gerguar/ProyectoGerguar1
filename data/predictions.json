@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-08-02T13:18:19.727647+00:00",
+  "generated_at_utc": "2026-08-03T02:40:58.189321+00:00",
   "model": {
     "trained_at": "2026-08-02T03:30:37.724003+00:00",
     "method": "DixonColes+Elo+XGBoost(isotonic)",
@@ -26,14 +26,14 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3771,
-        "draw": 0.3077,
-        "away": 0.3153
+        "home": 0.3717,
+        "draw": 0.3044,
+        "away": 0.3239
       },
       "market_probabilities": {
-        "home": 0.3976,
-        "draw": 0.3337,
-        "away": 0.2687
+        "home": 0.3978,
+        "draw": 0.3334,
+        "away": 0.2688
       },
       "scoreline_top": [
         {
@@ -90,9 +90,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3543,
-        "draw": 0.324,
-        "away": 0.3217
+        "home": 0.3523,
+        "draw": 0.3236,
+        "away": 0.3242
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -129,6 +129,190 @@
         "elo_home": 1410.5,
         "elo_away": 1542.8,
         "elo_diff": -132.3
+      }
+    },
+    {
+      "match_id": "fd-564629",
+      "kickoff_ts_utc": "2026-08-16T15:00:00+00:00",
+      "competition": {
+        "code": "LL",
+        "name": "La Liga"
+      },
+      "home": {
+        "id": "santander",
+        "name": "Santander"
+      },
+      "away": {
+        "id": "villarreal",
+        "name": "Villarreal"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.3156,
+        "draw": 0.2401,
+        "away": 0.4444
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1226
+        },
+        {
+          "score": "0-1",
+          "p": 0.0968
+        },
+        {
+          "score": "1-2",
+          "p": 0.0951
+        },
+        {
+          "score": "0-2",
+          "p": 0.0841
+        },
+        {
+          "score": "0-0",
+          "p": 0.0693
+        }
+      ],
+      "expected_goals": {
+        "home": 1.13,
+        "away": 1.63
+      },
+      "derived": {
+        "p_over_2_5": 0.5217,
+        "p_btts": 0.551
+      },
+      "ratings": {
+        "elo_home": 1500.0,
+        "elo_away": 1648.3,
+        "elo_diff": -148.3
+      }
+    },
+    {
+      "match_id": "fd-564632",
+      "kickoff_ts_utc": "2026-08-16T17:00:00+00:00",
+      "competition": {
+        "code": "LL",
+        "name": "La Liga"
+      },
+      "home": {
+        "id": "espanyol",
+        "name": "Espanyol"
+      },
+      "away": {
+        "id": "levante",
+        "name": "Levante"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4465,
+        "draw": 0.2736,
+        "away": 0.2799
+      },
+      "market_probabilities": {
+        "home": 0.4676,
+        "draw": 0.2851,
+        "away": 0.2473
+      },
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1355
+        },
+        {
+          "score": "1-0",
+          "p": 0.1127
+        },
+        {
+          "score": "0-0",
+          "p": 0.096
+        },
+        {
+          "score": "0-1",
+          "p": 0.0892
+        },
+        {
+          "score": "2-1",
+          "p": 0.0863
+        }
+      ],
+      "expected_goals": {
+        "home": 1.34,
+        "away": 1.08
+      },
+      "derived": {
+        "p_over_2_5": 0.4347,
+        "p_btts": 0.4935
+      },
+      "ratings": {
+        "elo_home": 1408.6,
+        "elo_away": 1464.2,
+        "elo_diff": -55.5
+      }
+    },
+    {
+      "match_id": "fd-564636",
+      "kickoff_ts_utc": "2026-08-16T19:30:00+00:00",
+      "competition": {
+        "code": "LL",
+        "name": "La Liga"
+      },
+      "home": {
+        "id": "celta",
+        "name": "Celta"
+      },
+      "away": {
+        "id": "osasuna",
+        "name": "Osasuna"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4826,
+        "draw": 0.2508,
+        "away": 0.2665
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1295
+        },
+        {
+          "score": "1-0",
+          "p": 0.109
+        },
+        {
+          "score": "2-1",
+          "p": 0.0921
+        },
+        {
+          "score": "2-0",
+          "p": 0.0865
+        },
+        {
+          "score": "0-0",
+          "p": 0.0837
+        }
+      ],
+      "expected_goals": {
+        "home": 1.5,
+        "away": 1.06
+      },
+      "derived": {
+        "p_over_2_5": 0.472,
+        "p_btts": 0.515
+      },
+      "ratings": {
+        "elo_home": 1538.4,
+        "elo_away": 1522.8,
+        "elo_diff": 15.6
       }
     }
   ]
