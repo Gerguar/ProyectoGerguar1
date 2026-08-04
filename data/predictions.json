@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-08-03T14:36:23.595302+00:00",
+  "generated_at_utc": "2026-08-04T02:25:38.371630+00:00",
   "model": {
     "trained_at": "2026-08-02T03:30:37.724003+00:00",
     "method": "DixonColes+Elo+XGBoost(isotonic)",
@@ -26,14 +26,14 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3752,
-        "draw": 0.3061,
-        "away": 0.3186
+        "home": 0.3746,
+        "draw": 0.3067,
+        "away": 0.3187
       },
       "market_probabilities": {
-        "home": 0.3981,
-        "draw": 0.333,
-        "away": 0.2689
+        "home": 0.3979,
+        "draw": 0.3333,
+        "away": 0.2688
       },
       "scoreline_top": [
         {
@@ -90,9 +90,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3543,
-        "draw": 0.324,
-        "away": 0.3217
+        "home": 0.3523,
+        "draw": 0.3236,
+        "away": 0.3242
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -210,9 +210,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4457,
-        "draw": 0.2733,
-        "away": 0.281
+        "home": 0.4494,
+        "draw": 0.2753,
+        "away": 0.2752
       },
       "market_probabilities": {
         "home": 0.4672,
@@ -274,9 +274,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4802,
-        "draw": 0.2471,
-        "away": 0.2727
+        "home": 0.4836,
+        "draw": 0.2494,
+        "away": 0.267
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -313,6 +313,66 @@
         "elo_home": 1538.4,
         "elo_away": 1522.8,
         "elo_diff": 15.6
+      }
+    },
+    {
+      "match_id": "fd-564635",
+      "kickoff_ts_utc": "2026-08-17T19:00:00+00:00",
+      "competition": {
+        "code": "LL",
+        "name": "La Liga"
+      },
+      "home": {
+        "id": "deportivo",
+        "name": "Deportivo"
+      },
+      "away": {
+        "id": "elche",
+        "name": "Elche"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.3705,
+        "draw": 0.2936,
+        "away": 0.3359
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1301
+        },
+        {
+          "score": "1-0",
+          "p": 0.0911
+        },
+        {
+          "score": "2-1",
+          "p": 0.0859
+        },
+        {
+          "score": "0-1",
+          "p": 0.0823
+        },
+        {
+          "score": "1-2",
+          "p": 0.0782
+        }
+      ],
+      "expected_goals": {
+        "home": 1.39,
+        "away": 1.27
+      },
+      "derived": {
+        "p_over_2_5": 0.4955,
+        "p_btts": 0.5457
+      },
+      "ratings": {
+        "elo_home": 1500.0,
+        "elo_away": 1462.4,
+        "elo_diff": 37.6
       }
     }
   ]
