@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-08-05T14:06:28.539949+00:00",
+  "generated_at_utc": "2026-08-06T02:27:39.922880+00:00",
   "model": {
     "trained_at": "2026-08-02T03:30:37.724003+00:00",
     "method": "DixonColes+Elo+XGBoost(isotonic)",
@@ -26,14 +26,14 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3751,
-        "draw": 0.306,
-        "away": 0.3188
+        "home": 0.3769,
+        "draw": 0.3054,
+        "away": 0.3177
       },
       "market_probabilities": {
-        "home": 0.395,
-        "draw": 0.3368,
-        "away": 0.2682
+        "home": 0.3963,
+        "draw": 0.3356,
+        "away": 0.2681
       },
       "scoreline_top": [
         {
@@ -90,9 +90,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3543,
-        "draw": 0.324,
-        "away": 0.3217
+        "home": 0.3529,
+        "draw": 0.326,
+        "away": 0.3211
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -210,14 +210,14 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4501,
-        "draw": 0.2758,
-        "away": 0.2741
+        "home": 0.446,
+        "draw": 0.2711,
+        "away": 0.283
       },
       "market_probabilities": {
-        "home": 0.4712,
-        "draw": 0.2838,
-        "away": 0.245
+        "home": 0.4688,
+        "draw": 0.2857,
+        "away": 0.2455
       },
       "scoreline_top": [
         {
@@ -274,9 +274,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.481,
-        "draw": 0.2475,
-        "away": 0.2714
+        "home": 0.4743,
+        "draw": 0.2666,
+        "away": 0.2591
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -334,9 +334,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3668,
-        "draw": 0.2889,
-        "away": 0.3443
+        "home": 0.3705,
+        "draw": 0.2918,
+        "away": 0.3377
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -373,6 +373,66 @@
         "elo_home": 1500.0,
         "elo_away": 1462.4,
         "elo_diff": 37.6
+      }
+    },
+    {
+      "match_id": "fd-564628",
+      "kickoff_ts_utc": "2026-08-19T19:00:00+00:00",
+      "competition": {
+        "code": "LL",
+        "name": "La Liga"
+      },
+      "home": {
+        "id": "atletico_madrid",
+        "name": "Atleti"
+      },
+      "away": {
+        "id": "malaga",
+        "name": "M\u00e1laga"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.6553,
+        "draw": 0.2185,
+        "away": 0.1262
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "2-0",
+          "p": 0.1211
+        },
+        {
+          "score": "1-0",
+          "p": 0.1094
+        },
+        {
+          "score": "2-1",
+          "p": 0.097
+        },
+        {
+          "score": "1-1",
+          "p": 0.0964
+        },
+        {
+          "score": "3-0",
+          "p": 0.0855
+        }
+      ],
+      "expected_goals": {
+        "home": 2.12,
+        "away": 0.8
+      },
+      "derived": {
+        "p_over_2_5": 0.5587,
+        "p_btts": 0.4899
+      },
+      "ratings": {
+        "elo_home": 1659.5,
+        "elo_away": 1500.0,
+        "elo_diff": 159.5
       }
     }
   ]
