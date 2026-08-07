@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-08-06T14:05:27.539090+00:00",
+  "generated_at_utc": "2026-08-07T02:36:13.712963+00:00",
   "model": {
     "trained_at": "2026-08-02T03:30:37.724003+00:00",
     "method": "DixonColes+Elo+XGBoost(isotonic)",
@@ -26,14 +26,14 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3698,
-        "draw": 0.3224,
-        "away": 0.3078
+        "home": 0.375,
+        "draw": 0.303,
+        "away": 0.322
       },
       "market_probabilities": {
-        "home": 0.3953,
-        "draw": 0.3349,
-        "away": 0.2698
+        "home": 0.3974,
+        "draw": 0.3353,
+        "away": 0.2673
       },
       "scoreline_top": [
         {
@@ -90,9 +90,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3569,
-        "draw": 0.3227,
-        "away": 0.3204
+        "home": 0.3566,
+        "draw": 0.3223,
+        "away": 0.3211
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -210,14 +210,14 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4501,
-        "draw": 0.2758,
-        "away": 0.2741
+        "home": 0.4494,
+        "draw": 0.2753,
+        "away": 0.2752
       },
       "market_probabilities": {
-        "home": 0.4638,
-        "draw": 0.2828,
-        "away": 0.2535
+        "home": 0.4681,
+        "draw": 0.2857,
+        "away": 0.2462
       },
       "scoreline_top": [
         {
@@ -274,9 +274,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4801,
-        "draw": 0.249,
-        "away": 0.2709
+        "home": 0.4802,
+        "draw": 0.2471,
+        "away": 0.2727
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -334,9 +334,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3668,
-        "draw": 0.2889,
-        "away": 0.3443
+        "home": 0.3705,
+        "draw": 0.2918,
+        "away": 0.3377
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -433,6 +433,70 @@
         "elo_home": 1659.5,
         "elo_away": 1500.0,
         "elo_diff": 159.5
+      }
+    },
+    {
+      "match_id": "fd-564638",
+      "kickoff_ts_utc": "2026-08-20T19:00:00+00:00",
+      "competition": {
+        "code": "LL",
+        "name": "La Liga"
+      },
+      "home": {
+        "id": "rayo_vallecano",
+        "name": "Rayo Vallecano"
+      },
+      "away": {
+        "id": "alaves",
+        "name": "Alav\u00e9s"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4616,
+        "draw": 0.297,
+        "away": 0.2414
+      },
+      "market_probabilities": {
+        "home": 0.449,
+        "draw": 0.308,
+        "away": 0.2429
+      },
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1338
+        },
+        {
+          "score": "1-0",
+          "p": 0.1225
+        },
+        {
+          "score": "0-0",
+          "p": 0.0991
+        },
+        {
+          "score": "2-0",
+          "p": 0.0904
+        },
+        {
+          "score": "2-1",
+          "p": 0.0889
+        }
+      ],
+      "expected_goals": {
+        "home": 1.4,
+        "away": 0.98
+      },
+      "derived": {
+        "p_over_2_5": 0.4257,
+        "p_btts": 0.4781
+      },
+      "ratings": {
+        "elo_home": 1542.8,
+        "elo_away": 1437.9,
+        "elo_diff": 104.9
       }
     }
   ]
