@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-08-08T01:26:22.263497+00:00",
+  "generated_at_utc": "2026-08-08T12:44:46.994109+00:00",
   "model": {
     "trained_at": "2026-08-02T03:30:37.724003+00:00",
     "method": "DixonColes+Elo+XGBoost(isotonic)",
@@ -26,13 +26,13 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3746,
-        "draw": 0.3037,
-        "away": 0.3217
+        "home": 0.3737,
+        "draw": 0.3099,
+        "away": 0.3165
       },
       "market_probabilities": {
-        "home": 0.3964,
-        "draw": 0.3367,
+        "home": 0.3963,
+        "draw": 0.3368,
         "away": 0.2669
       },
       "scoreline_top": [
@@ -90,9 +90,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3529,
-        "draw": 0.3228,
-        "away": 0.3243
+        "home": 0.3509,
+        "draw": 0.3223,
+        "away": 0.3267
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -210,9 +210,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4494,
-        "draw": 0.2753,
-        "away": 0.2752
+        "home": 0.4501,
+        "draw": 0.2742,
+        "away": 0.2756
       },
       "market_probabilities": {
         "home": 0.4697,
@@ -274,9 +274,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.481,
-        "draw": 0.2475,
-        "away": 0.2714
+        "home": 0.4826,
+        "draw": 0.2508,
+        "away": 0.2665
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -334,9 +334,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3705,
-        "draw": 0.2936,
-        "away": 0.3359
+        "home": 0.3668,
+        "draw": 0.2889,
+        "away": 0.3443
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -454,14 +454,14 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4637,
-        "draw": 0.2951,
-        "away": 0.2412
+        "home": 0.462,
+        "draw": 0.294,
+        "away": 0.244
       },
       "market_probabilities": {
-        "home": 0.4447,
-        "draw": 0.3077,
-        "away": 0.2476
+        "home": 0.4392,
+        "draw": 0.3107,
+        "away": 0.2502
       },
       "scoreline_top": [
         {
@@ -518,14 +518,14 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4631,
-        "draw": 0.2713,
-        "away": 0.2657
+        "home": 0.4617,
+        "draw": 0.2705,
+        "away": 0.2678
       },
       "market_probabilities": {
-        "home": 0.5742,
-        "draw": 0.2204,
-        "away": 0.2054
+        "home": 0.5672,
+        "draw": 0.2225,
+        "away": 0.2103
       },
       "scoreline_top": [
         {
@@ -587,9 +587,9 @@
         "away": 0.1348
       },
       "market_probabilities": {
-        "home": 0.8188,
+        "home": 0.819,
         "draw": 0.1249,
-        "away": 0.0562
+        "away": 0.0561
       },
       "scoreline_top": [
         {
@@ -646,9 +646,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5205,
-        "draw": 0.2273,
-        "away": 0.2522
+        "home": 0.5165,
+        "draw": 0.2256,
+        "away": 0.258
       },
       "market_probabilities": {
         "home": 0.4343,
@@ -689,6 +689,66 @@
         "elo_home": 1607.9,
         "elo_away": 1548.2,
         "elo_diff": 59.7
+      }
+    },
+    {
+      "match_id": "fd-560543",
+      "kickoff_ts_utc": "2026-08-22T11:30:00+00:00",
+      "competition": {
+        "code": "EPL",
+        "name": "Premier League"
+      },
+      "home": {
+        "id": "hull_city",
+        "name": "Hull City"
+      },
+      "away": {
+        "id": "man_united",
+        "name": "Man United"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.258,
+        "draw": 0.2672,
+        "away": 0.4748
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1054
+        },
+        {
+          "score": "0-2",
+          "p": 0.1053
+        },
+        {
+          "score": "0-1",
+          "p": 0.1007
+        },
+        {
+          "score": "1-2",
+          "p": 0.0994
+        },
+        {
+          "score": "0-3",
+          "p": 0.0697
+        }
+      ],
+      "expected_goals": {
+        "home": 0.94,
+        "away": 1.99
+      },
+      "derived": {
+        "p_over_2_5": 0.561,
+        "p_btts": 0.5326
+      },
+      "ratings": {
+        "elo_home": 1500.0,
+        "elo_away": 1704.0,
+        "elo_diff": -204.0
       }
     }
   ]
