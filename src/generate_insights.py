@@ -154,7 +154,7 @@ def build_ai_insights() -> dict:
             nombres = sorted({v.get("jugador", "") for v in vetos if v.get("jugador")})
             if nombres:
                 vetos_str = (
-                    "\n\nJUGADORES YA DESCARTADOS DEL MUNDIAL (no los menciones como "
+                    "\n\nJUGADORES YA DESCARTADOS POR LESION (no los menciones como "
                     "alerta ni duda, ya estan oficialmente afuera): "
                     + ", ".join(nombres) + "."
                 )
@@ -164,13 +164,13 @@ def build_ai_insights() -> dict:
     prompt = f"""Hoy es {today}. Sos el analista de FutVS, una plataforma de análisis estadístico de fútbol.
 
 Buscá en la web las últimas noticias de fútbol de los últimos 4 días y generá un análisis estructurado.{vetos_str}
-PRIORIDAD MÁXIMA: Mundial 2026 (empieza el 11 de junio de 2026 en USA, México y Canadá). Enfocate principalmente en selecciones nacionales — lesiones, convocatorias, amistosos de preparación, favoritos por grupo. Las ligas de clubes son secundarias.
+PRIORIDAD MÁXIMA: las cinco grandes ligas europeas (Premier League, La Liga, Serie A, Bundesliga, Ligue 1) y la UEFA Champions League, en la temporada 2026/27 que está arrancando. Enfocate en clubes — lesiones, fichajes, rachas y rendimiento en las primeras fechas. El Mundial 2026 ya terminó: no lo uses como tema principal.
 
 Buscá información sobre:
-1. Rendimiento vs expectativas: selecciones que están superando o por debajo de su xG en amistosos previos al Mundial 2026
-2. Alertas importantes: lesiones o bajas de jugadores clave en selecciones para el Mundial, sanciones, cambios de último momento
-3. Tendencias: grupos del Mundial, selecciones en racha, estadísticas de preparación, favoritos estadísticos
-4. Noticias destacadas: convocatorias definitivas, resultados de amistosos recientes, datos curiosos del Mundial 2026
+1. Rendimiento vs expectativas: equipos que están superando o por debajo de su xG en el arranque de la temporada 2026/27
+2. Alertas importantes: lesiones o bajas de jugadores clave, sanciones, cambios de último momento
+3. Tendencias: equipos en racha, promedios de goles de las primeras fechas, estadísticas y favoritos
+4. Noticias destacadas: cierre del mercado de pases, resultados sorpresa, datos curiosos de la temporada
 
 Respondé ÚNICAMENTE con un JSON válido con esta estructura exacta (sin texto antes ni después, sin markdown):
 {{
@@ -189,8 +189,8 @@ Máximo 4 items por sección. Textos cortos (máximo 120 caracteres). Todo en es
 
 REGLAS ESTRICTAS:
 - 'tendencias' DEBE tener al menos 3 items con datos concretos (porcentajes, conteos, comparativas).
-- 'xg_performance' usá datos REALES de los últimos amistosos / partidos del Mundial.
-- 'dato_curioso' tiene que ser estadístico, verificable, sobre el Mundial 2026 o sus protagonistas.
+- 'xg_performance' usá datos REALES de las primeras fechas de la temporada 2026/27.
+- 'dato_curioso' tiene que ser estadístico, verificable, sobre las ligas top europeas o sus protagonistas.
 - NO incluyas un campo 'noticias_semana' ni 'alertas'. Esas las generamos desde NewsAPI con fuentes reales.
 - Usá la herramienta web_search para verificar datos, NO inventes nada."""
 
