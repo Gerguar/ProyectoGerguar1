@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>FutVersus — Análisis estadístico del Mundial 2026</title>
+<title>FutVersus — Análisis estadístico de fútbol</title>
 
 <!-- SEO basico -->
-<meta name="description" content="Probabilidades, factores y datos del Mundial 2026 partido por partido. Modelo propio Dixon-Coles + Elo + XGBoost. Sin humo.">
+<meta name="description" content="Probabilidades, factores y datos de las principales ligas europeas partido por partido. Modelo propio Dixon-Coles + Elo + XGBoost. Sin humo.">
 <meta name="author" content="FutVersus">
 <meta name="theme-color" content="#080a0c">
 <meta name="robots" content="index, follow">
@@ -16,8 +16,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="FutVersus">
 <meta property="og:locale" content="es_AR">
-<meta property="og:title" id="og-title" content="FutVersus — Análisis estadístico del Mundial 2026">
-<meta property="og:description" id="og-description" content="Probabilidades, factores y datos del Mundial 2026 partido por partido. Sin humo.">
+<meta property="og:title" id="og-title" content="FutVersus — Análisis estadístico de fútbol">
+<meta property="og:description" id="og-description" content="Probabilidades, factores y datos de las principales ligas europeas partido por partido. Sin humo.">
 <meta property="og:url" id="og-url" content="https://futversus.com/">
 <meta property="og:image" content="https://futversus.com/og-default.png">
 <meta property="og:image:width" content="1200">
@@ -26,8 +26,8 @@
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@FutVersus_">
-<meta name="twitter:title" id="twitter-title" content="FutVersus — Análisis estadístico del Mundial 2026">
-<meta name="twitter:description" id="twitter-description" content="Probabilidades, factores y datos del Mundial 2026 partido por partido.">
+<meta name="twitter:title" id="twitter-title" content="FutVersus — Análisis estadístico de fútbol">
+<meta name="twitter:description" id="twitter-description" content="Probabilidades, factores y datos de las principales ligas europeas partido por partido.">
 <meta name="twitter:image" content="https://futversus.com/og-default.png">
 
 <!-- Analytics: Umami self-hosted en Vercel. data-domains restringe el trackeo solo a futversus.com (no localhost). --><!--
@@ -1213,16 +1213,12 @@ button,a{touch-action:manipulation}
   <div class="hero">
     <div class="hero-bg"></div><div class="hero-overlay"></div>
     <div class="hero-inner">
-      <div class="cmp-card" style="text-align:center;width:231px;margin-left:-30px">
-        <div style="font-family:'Inter',sans-serif;font-size:1.08rem;font-weight:800;color:#e8eaed;line-height:1.25;margin:.15rem 0 1rem">Final del<br><span style="color:#f59e0b">Mundial 2026</span></div>
-        <div id="wc-countdown" style="display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;text-align:center">
-          <div><div class="wc-num" style="font-family:'JetBrains Mono',monospace;font-size:1.3rem;font-weight:900;color:#22c55e;line-height:1">--</div><div style="font-size:.52rem;color:#6b7280;font-family:'JetBrains Mono',monospace;letter-spacing:1px;margin-top:.2rem">D&#205;AS</div></div>
-          <div><div class="wc-num" style="font-family:'JetBrains Mono',monospace;font-size:1.3rem;font-weight:900;color:#22c55e;line-height:1">--</div><div style="font-size:.52rem;color:#6b7280;font-family:'JetBrains Mono',monospace;letter-spacing:1px;margin-top:.2rem">HS</div></div>
-          <div><div class="wc-num" style="font-family:'JetBrains Mono',monospace;font-size:1.3rem;font-weight:900;color:#22c55e;line-height:1">--</div><div style="font-size:.52rem;color:#6b7280;font-family:'JetBrains Mono',monospace;letter-spacing:1px;margin-top:.2rem">MIN</div></div>
-          <div><div class="wc-num" style="font-family:'JetBrains Mono',monospace;font-size:1.3rem;font-weight:900;color:#22c55e;line-height:1">--</div><div style="font-size:.52rem;color:#6b7280;font-family:'JetBrains Mono',monospace;letter-spacing:1px;margin-top:.2rem">SEG</div></div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:#4b5563;text-align:center;margin-top:.85rem;letter-spacing:.5px">19 JUL 2026 &middot; FINAL &middot; METLIFE STADIUM &#127942;</div>
-      </div>
+      <a href="/mundial" onclick="event.preventDefault();nav('/mundial')" class="cmp-card cmp-card-teaser" style="text-align:center;width:231px;margin-left:-30px;text-decoration:none;cursor:pointer;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.55rem">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:#6b7280;letter-spacing:1.5px">MUNDIAL 2026 &middot; FINALIZADO</div>
+        <div style="font-family:'Inter',sans-serif;font-size:1.08rem;font-weight:800;color:#e8eaed;line-height:1.25">Campeón<br><span style="color:#f0c44f">España</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#9aa0a6;letter-spacing:.5px">España <span style="color:#e8eaed;font-weight:700">1</span> &ndash; <span style="color:#e8eaed;font-weight:700">0</span> Argentina</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:#f0c44f;letter-spacing:1px;border:1px solid rgba(212,160,23,.4);padding:.32rem .65rem;border-radius:6px;margin-top:.15rem">VER ARCHIVO &#x2192;</div>
+      </a>
       <div class="hero-center">
         <div class="hero-eyebrow">Análisis estadístico de fútbol</div>
         <h1>Pronósticos de <span>Fútbol</span></h1>
@@ -1236,18 +1232,14 @@ button,a{touch-action:manipulation}
       </a>
     </div>
   </div>
-  <a href="/mundial" onclick="event.preventDefault();nav('/mundial')" class="mundial-banner" aria-label="Entrá a la sección Mundial 2026">
-    <img class="mb-cup" src="copa-mundial.png" alt="Copa del Mundo" />
-    <span class="mb-text">Entrá · Mundial 2026</span>
-    <span class="mb-arrow">→</span>
-  </a>
   <div class="filters">
-    <button class="filter-btn" onclick="filterMatches('all',this)">Todos</button>
-    <button class="filter-btn filter-btn-mundial active" id="filter-btn-mundial-default" onclick="filterMatches('mundial',this)">🏆 Mundial 2026</button>
+    <button class="filter-btn active" id="filter-btn-all-default" onclick="filterMatches('all',this)">Todos</button>
     <button class="filter-btn" onclick="filterMatches('champions',this)">Champions League</button>
     <button class="filter-btn" onclick="filterMatches('laliga',this)">La Liga</button>
     <button class="filter-btn" onclick="filterMatches('premier',this)">Premier League</button>
     <button class="filter-btn" onclick="filterMatches('seriea',this)">Serie A</button>
+    <button class="filter-btn" onclick="filterMatches('bundesliga',this)">Bundesliga</button>
+    <button class="filter-btn" onclick="filterMatches('ligue1',this)">Ligue 1</button>
   </div>
   <div id="group-filters" class="group-filters">
     <button class="group-btn active" onclick="filterByGroup('all',this)">TODOS</button>
@@ -1352,8 +1344,8 @@ button,a{touch-action:manipulation}
 <!-- SELECCIONES MUNDIAL -->
 <div style="position:relative;z-index:1;padding:3rem 1.5rem;border-top:1px solid rgba(255,255,255,.06)">
   <div style="max-width:1100px;margin:0 auto">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;font-weight:700;margin-bottom:.5rem">🌍 Mundial 2026</div>
-    <h2 style="font-size:1.5rem;font-weight:900;letter-spacing:-.5px;color:#fff;margin-bottom:.4rem">Selecciones clasificadas</h2>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:2px;color:var(--green);text-transform:uppercase;font-weight:700;margin-bottom:.5rem">🌍 Selecciones</div>
+    <h2 style="font-size:1.5rem;font-weight:900;letter-spacing:-.5px;color:#fff;margin-bottom:.4rem">Ranking de selecciones</h2>
     <p style="font-size:.85rem;color:var(--muted);margin-bottom:1.8rem">Análisis estadístico, Elo rating y plantilla de cada selección</p>
     <div id="selecciones-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.75rem">
       <div style="color:var(--faint);font-size:.8rem;padding:1rem">Cargando...</div>
@@ -1406,12 +1398,14 @@ button,a{touch-action:manipulation}
     </div>
     <!-- Filtros (mismos que el home) -->
     <div class="filters" id="fin-filters">
-      <button class="filter-btn" onclick="filterFinalizados('all',this)">Todos</button>
-      <button class="filter-btn filter-btn-mundial active" id="fin-filter-mundial" onclick="filterFinalizados('mundial',this)">🏆 Mundial 2026</button>
+      <button class="filter-btn active" onclick="filterFinalizados('all',this)">Todos</button>
       <button class="filter-btn" onclick="filterFinalizados('champions',this)">Champions League</button>
       <button class="filter-btn" onclick="filterFinalizados('laliga',this)">La Liga</button>
       <button class="filter-btn" onclick="filterFinalizados('premier',this)">Premier League</button>
       <button class="filter-btn" onclick="filterFinalizados('seriea',this)">Serie A</button>
+      <button class="filter-btn" onclick="filterFinalizados('bundesliga',this)">Bundesliga</button>
+      <button class="filter-btn" onclick="filterFinalizados('ligue1',this)">Ligue 1</button>
+      <button class="filter-btn filter-btn-mundial" id="fin-filter-mundial" onclick="filterFinalizados('mundial',this)">🏆 Mundial 2026</button>
     </div>
     <div class="matches-grid" id="fin-container">
       <div class="loader"><div class="loader-spin"></div>CARGANDO PARTIDOS...</div>
@@ -2354,28 +2348,9 @@ function currentSeasonShort() {
   if (yearEl) yearEl.textContent = new Date().getFullYear()
 })()
 
-// Contador hasta el Mundial 2026: arranca el 11/jun a las 19:00 UTC
-// (Mexico vs Sudafrica, partido inaugural).
-;(function wcCountdown(){
-  const target = new Date('2026-07-19T23:00:00Z').getTime()
-  function update(){
-    const wrap = document.getElementById('wc-countdown')
-    if (!wrap) return
-    const nums = wrap.querySelectorAll('.wc-num')
-    if (nums.length !== 4) return
-    const diff = Math.max(0, target - Date.now())
-    const days  = Math.floor(diff / 86400000)
-    const hours = Math.floor((diff % 86400000) / 3600000)
-    const mins  = Math.floor((diff % 3600000) / 60000)
-    const secs  = Math.floor((diff % 60000) / 1000)
-    nums[0].textContent = String(days).padStart(2,'0')
-    nums[1].textContent = String(hours).padStart(2,'0')
-    nums[2].textContent = String(mins).padStart(2,'0')
-    nums[3].textContent = String(secs).padStart(2,'0')
-  }
-  update()
-  setInterval(update, 1000)
-})()
+// El countdown a la final del Mundial 2026 se removio al terminar el torneo
+// (19-jul-2026, España 1-0 Argentina). La card del hero ahora linkea al
+// archivo historico en /mundial.
 function formatTime(iso) {
   const d = _asUTC(iso)
   return `${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`
@@ -2763,11 +2738,11 @@ async function loadMatches() {
         factors: generateFactors(pron, p.equipo_local?.nombre, p.equipo_visitante?.nombre)
       }
     })
-    // Filtro inicial: Mundial 2026 (mientras dure). Reusa filterMatches que
-    // tambien activa la sub-fila de grupos. Post-Mundial cambiar a 'all'.
-    const mundialBtn = document.getElementById('filter-btn-mundial-default')
-    if (mundialBtn) {
-      filterMatches('mundial', mundialBtn)
+    // Filtro inicial: todas las ligas. (Durante el Mundial 2026 el default fue
+    // 'mundial'; al terminar el torneo se volvio a 'all'.)
+    const allBtn = document.getElementById('filter-btn-all-default')
+    if (allBtn) {
+      filterMatches('all', allBtn)
     } else {
       renderMatches('all')
     }
@@ -2828,7 +2803,7 @@ async function loadAccuracyStats() {
     const data = await sb(
       'partidos?select=goles_local,goles_visitante,' +
       'pronosticos(prob_local,prob_empate,prob_visitante)' +
-      '&liga_id=eq.7&temporada=eq.2026&estado=eq.finalizado' +
+      '&estado=eq.finalizado' +
       '&goles_local=not.is.null&goles_visitante=not.is.null'
     )
     let ok = 0, tight = 0, miss = 0, withoutPron = 0
@@ -3087,7 +3062,7 @@ function loadHomeExtras() {
 // ══════════════════════════════════════════════
 // PAGINA /finalizados — todos los partidos con resultado
 // ══════════════════════════════════════════════
-let _finFilters = { league: 'mundial', page: 1 }
+let _finFilters = { league: 'all', page: 1 }
 const FIN_PAGE_SIZE = 12
 
 function openFinalizados() {
@@ -5873,18 +5848,18 @@ function nav(path) { if (path.startsWith('/seleccion/')) { window.location.href 
 // SI ayuda en SEO. Bots sociales (WhatsApp, FB, X) NO ejecutan JS — para
 // previews sociales especificos por partido, ver item #3 (prerender).
 const ROUTE_META = {
-  '/':            { title:'FutVersus — Análisis estadístico del Mundial 2026', desc:'Probabilidades, factores y datos del Mundial 2026 partido por partido. Modelo propio Dixon-Coles + Elo + XGBoost. Sin humo.' },
+  '/':            { title:'FutVersus — Análisis estadístico de fútbol',        desc:'Probabilidades, factores y datos de las principales ligas europeas partido por partido. Modelo propio Dixon-Coles + Elo + XGBoost. Sin humo.' },
   '/comparador':  { title:'Comparador de equipos — FutVersus',                 desc:'Compará dos equipos por títulos, plantilla, historia y H2H. Modelo propio FutVersus.' },
-  '/ranking':     { title:'Ranking de jugadores del Mundial 2026 — FutVersus', desc:'Top jugadores del Mundial 2026 ordenados por rating. Filtrá por posición o país.' },
-  '/insights':    { title:'Insights del Mundial 2026 — FutVersus',             desc:'Alertas de lesiones, tendencias, oportunidades y dato curioso del Mundial 2026. Actualizado cada 6h.' },
+  '/ranking':     { title:'Ranking de jugadores — FutVersus',                  desc:'Top jugadores del mundo ordenados por rating. Filtrá por posición o país.' },
+  '/insights':    { title:'Insights — FutVersus',                              desc:'Alertas de lesiones, tendencias, oportunidades y dato curioso de las ligas top. Actualizado cada 6h.' },
   '/mundial':     { title:'Mundial 2026 — pronósticos, grupos y brackets | FutVersus', desc:'Todo el Mundial 2026: pronósticos partido por partido, tabla de posiciones de los 12 grupos en vivo y el cuadro de eliminación.' },
   '/grupos':      { title:'Grupos del Mundial 2026 — tabla de posiciones | FutVersus', desc:'Posiciones en vivo de los 12 grupos del Mundial 2026. Quién clasifica a dieciseisavos: 2 primeros + 8 mejores terceros.' },
-  '/finalizados': { title:'Partidos finalizados — FutVersus',                  desc:'Histórico de partidos finalizados del Mundial 2026 y ligas top. Resultado vs pronóstico del modelo.' },
+  '/finalizados': { title:'Partidos finalizados — FutVersus',                  desc:'Histórico de partidos finalizados de las ligas top y del Mundial 2026. Resultado vs pronóstico del modelo.' },
   '/goat':        { title:'Messi vs Cristiano — comparativa estadística | FutVersus', desc:'Datos crudos de Messi y Cristiano: títulos, goles, asistencias, partidos por temporada.' },
-  '/metodologia': { title:'Metodología del modelo — FutVersus',                desc:'Cómo combinamos Dixon-Coles, Elo, XGBoost y mercado para generar las probabilidades del Mundial 2026.' },
+  '/metodologia': { title:'Metodología del modelo — FutVersus',                desc:'Cómo combinamos Dixon-Coles, Elo, XGBoost y mercado para generar las probabilidades de cada partido.' },
   '/glosario':    { title:'Glosario — FutVersus',                              desc:'Diccionario de conceptos del modelo: xG, Elo, Dixon-Coles, p_modelo, edge.' },
-  '/blog':        { title:'Blog — FutVersus',                                  desc:'Análisis estadístico de partidos del Mundial 2026 y previa por jornada.' },
-  '/sobre-nosotros':{ title:'Sobre FutVersus',                                 desc:'Quiénes somos. Plataforma independiente de análisis estadístico del Mundial 2026.' },
+  '/blog':        { title:'Blog — FutVersus',                                  desc:'Análisis estadístico de partidos de las ligas top y previa por jornada.' },
+  '/sobre-nosotros':{ title:'Sobre FutVersus',                                 desc:'Quiénes somos. Plataforma independiente de análisis estadístico de fútbol.' },
 }
 function updateMeta(path) {
   const m = ROUTE_META[path] || ROUTE_META['/']
