@@ -36,6 +36,10 @@ COMPETITIONS: list[Competition] = [
     Competition("SA",  "Serie A",        "SA"),
     Competition("BL",  "Bundesliga",     "BL1"),
     Competition("L1",  "Ligue 1",        "FL1"),
+
+    # Liga Argentina — sin fd_code (football-data.org free no la cubre).
+    # Se ingiere via football-data.co.uk /new/ARG.csv (ver ingest_couk.py).
+    Competition("ARG", "Liga Profesional Argentina", None),
 ]
 
 INTERNATIONAL_CODES = [c.code for c in COMPETITIONS if c.is_international]
@@ -107,7 +111,7 @@ class Paths:
 class APIKeys:
     football_data: str | None = field(default_factory=lambda: os.getenv("FOOTBALL_DATA_TOKEN"))
     the_odds_api: str | None = field(default_factory=lambda: os.getenv("THE_ODDS_API_KEY"))
-    apifootball: str | None = field(default_factory=lambda: os.getenv("APIFOOTBALL_KEY"))
+    apifootball: str | None = field(default_factory=lambda: os.getenv("API_FOOTBALL_KEY"))
 
 
 ELO = EloConfig()

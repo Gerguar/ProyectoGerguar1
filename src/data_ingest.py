@@ -28,7 +28,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_excep
 
 from .config import COMPETITIONS, PATHS, KEYS
 from .team_normalize import canonical, is_known
-from .ingest_couk import backfill_couk
+from .ingest_couk import backfill_couk, backfill_couk_new
 
 
 class RetryableHTTPError(Exception):
@@ -295,6 +295,12 @@ def main() -> None:
         print(f"[ingest] football-data.co.uk: {len(df_couk)} partidos", flush=True)
         if not df_couk.empty:
             frames.append(df_couk)
+
+        # Ligas "extra" (Liga Argentina, etc.) — un CSV por pais con todas las temporadas.
+        df_couk_new = backfill_couk_new()
+        print(f"[ingest] football-data.co.uk (ligas extra): {len(df_couk_new)} partidos", flush=True)
+        if not df_couk_new.empty:
+            frames.append(df_couk_new)
 
     if not frames:
         print("[ingest] ningun partido fue fetcheado. Posibles causas:", flush=True)
