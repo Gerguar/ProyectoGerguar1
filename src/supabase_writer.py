@@ -26,6 +26,7 @@ import os
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -140,10 +141,42 @@ def _headers(extra: dict | None = None) -> dict:
     return h
 
 
-def sb_get(path: str) -> list[dict]:
-    req = urllib.request.Request(f"{_sb_url()}/rest/v1/{path}", headers=_headers())
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.loads(r.read())
+def sb_get(path: str, page_size: int = 1000) -> list[dict]:
+    """GET contra PostgREST, con paginacion automatica.
+
+    PostgREST corta las respuestas en 1000 filas. Sin paginar el recorte es
+    SILENCIOSO: no tira error, simplemente faltan filas. Por eso, cuando la
+    tabla `partidos` paso las 1000 filas, sync_finished_results() dejo de ver
+    los partidos que quedaban afuera del primer bloque y no los cerraba nunca
+    (aparecian como "N pendientes" en cada corrida de smart-sync).
+
+    Paginamos con el header Range, que no toca la query string del caller.
+    Si el path ya trae un `limit=` explicito, el caller pagina por su cuenta
+    (player_ratings, team_ratings) o quiere un subconjunto: una sola request.
+    """
+    single = "limit=" in path
+    out: list[dict] = []
+    offset = 0
+    while True:
+        extra = None if single else {"Range-Unit": "items",
+                                     "Range": f"{offset}-{offset + page_size - 1}"}
+        req = urllib.request.Request(f"{_sb_url()}/rest/v1/{path}",
+                                     headers=_headers(extra))
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                chunk = json.loads(r.read())
+        except urllib.error.HTTPError as e:
+            # 416 = Range fuera del resultado: ya no quedan filas.
+            if e.code == 416 and offset:
+                break
+            raise
+        if not isinstance(chunk, list):
+            return chunk
+        out.extend(chunk)
+        if single or len(chunk) < page_size:
+            break
+        offset += page_size
+    return out
 
 
 def sb_post(path: str, body: list[dict] | dict, prefer: str = "return=representation") -> Any:
