@@ -317,7 +317,7 @@ class SupabaseSync:
         lo = (fecha_dt - timedelta(days=self.DUP_WINDOW_DAYS)).isoformat()
         hi = (fecha_dt + timedelta(days=self.DUP_WINDOW_DAYS)).isoformat()
         q = urllib.parse.urlencode({
-            "select": "id,fecha,estado",
+            "select": "id,fecha,estado,goles_local,goles_visitante",
             "equipo_local_id": f"eq.{home_id}",
             "equipo_visitante_id": f"eq.{away_id}",
             "fecha": f"gte.{lo}",
@@ -361,7 +361,7 @@ class SupabaseSync:
                 return None, False
 
         # Hay 1+ candidatos. Tomar el mas cercano como canonico, borrar el resto.
-        # No tocar canonicos en estado=finalizado (preservar resultados ya cargados).
+        # No tocar canonicos finalizados CON goles (preservar resultados ya cargados).
         candidatos.sort(
             key=lambda r: abs((pd.to_datetime(r["fecha"], utc=True) - fecha_dt).total_seconds())
         )
@@ -386,20 +386,35 @@ class SupabaseSync:
                 print(f"  ! error borrando duplicado {dup_id}: {e}")
 
         # Corregir fecha del canonico si difiere mas que el threshold.
-        # Saltear si esta finalizado (no pisar resultados/fechas historicas).
-        if canonico.get("estado") != "finalizado":
+        # Saltear SOLO si esta finalizado CON goles: ese si es un partido jugado
+        # y no queremos pisarle la fecha historica. Un "finalizado" SIN goles no
+        # es un partido jugado sino uno archivado por archive_past_partidos() al
+        # pasar su fecha; si la fuente lo reubica (aplazamiento) hay que poder
+        # corregirlo. Sin esto quedaba trabado: se archivaba con la fecha vieja
+        # y despues nadie podia moverlo (caso Celta-Osasuna del 16-ago, aplazado
+        # al 27-ago, que quedaba visible como "finalizado sin resultado").
+        tiene_resultado = (canonico.get("goles_local") is not None
+                           and canonico.get("goles_visitante") is not None)
+        if not (canonico.get("estado") == "finalizado" and tiene_resultado):
             diff_s = abs((canonico_fecha - fecha_dt).total_seconds())
             if diff_s > self.FECHA_UPDATE_THRESHOLD_S:
+                patch = {"fecha": fecha_iso}
+                # Si estaba archivado (finalizado sin goles) y la fuente lo manda
+                # al futuro, es una reprogramacion: vuelve a 'programado'.
+                if (canonico.get("estado") == "finalizado" and not tiene_resultado
+                        and fecha_dt > pd.Timestamp.now(tz="UTC")):
+                    patch["estado"] = "programado"
+                extra = " (+ reactivado a programado)" if "estado" in patch else ""
                 if dry_run:
                     print(f"  [dry-run] update fecha partido {canonico_id}: "
                           f"{canonico_fecha.strftime('%Y-%m-%d %H:%M')} -> "
-                          f"{fecha_dt.strftime('%Y-%m-%d %H:%M')}")
+                          f"{fecha_dt.strftime('%Y-%m-%d %H:%M')}{extra}")
                 else:
                     try:
-                        sb_patch(f"partidos?id=eq.{canonico_id}", {"fecha": fecha_iso})
+                        sb_patch(f"partidos?id=eq.{canonico_id}", patch)
                         print(f"  + fecha corregida partido {canonico_id}: "
                               f"{canonico_fecha.strftime('%Y-%m-%d %H:%M')} -> "
-                              f"{fecha_dt.strftime('%Y-%m-%d %H:%M')}")
+                              f"{fecha_dt.strftime('%Y-%m-%d %H:%M')}{extra}")
                     except Exception as e:
                         print(f"  ! error update fecha {canonico_id}: {e}")
 
