@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ranking de Jugadores · FutVersus</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#22c55e;--blue:#3b82f6;--amber:#f59e0b;--red:#ef4444;--bg:#080a0c;--surface:#0d1014;--surface2:#141820;--border:#1c2028;--border2:#2e3848;--text:#e8eaed;--muted:#6b7280;--faint:#4b5563}
+html,body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.4}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:rgba(8,10,12,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);flex-wrap:wrap;gap:6px}
+.logo{font-size:20px;font-weight:900;font-style:italic;color:#fff;text-decoration:none;letter-spacing:-.5px}
+.logo span{color:var(--green)}
+.nav-links{display:flex;gap:1.6rem}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.88rem;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--green)}
+.live-badge{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:700;color:var(--green);background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);padding:5px 12px;border-radius:20px;letter-spacing:.5px;font-family:'JetBrains Mono',monospace}
+.live-dot{width:7px;height:7px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* NAV MOBILE */
+@media(max-width:700px){
+  nav{display:grid;grid-template-columns:auto 1fr auto;align-items:center;padding:10px max(12px,env(safe-area-inset-left)) 8px max(12px,env(safe-area-inset-right));gap:8px 10px}
+  .logo{white-space:nowrap;font-size:18px}
+  .live-badge{justify-self:end;white-space:nowrap;font-size:9px;padding:4px 8px;letter-spacing:.25px}
+  .nav-links{grid-column:1/-1;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:.45rem;padding-top:7px;border-top:1px solid rgba(255,255,255,.06);justify-content:space-between}
+  .nav-links::-webkit-scrollbar{display:none}
+  .nav-links a{white-space:nowrap;font-size:.78rem;padding:7px 9px;border-radius:999px;background:rgba(255,255,255,.025)}
+}
+
+/* HERO */
+.rank-hero{position:relative;text-align:center;padding:3.5rem 1rem 2.5rem;z-index:1}
+.rank-hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2.5px;color:var(--amber);text-transform:uppercase;margin-bottom:10px}
+.rank-hero h1{font-size:clamp(1.8rem,5vw,3rem);font-weight:900;letter-spacing:-1.5px;line-height:1.1;margin-bottom:.5rem}
+.rank-hero h1 span{color:var(--amber)}
+.rank-hero p{color:#c9d1d9;font-size:1rem;margin-bottom:0}
+
+/* MAIN CONTAINER */
+.rank-wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem 4rem;position:relative;z-index:1}
+
+/* TABS */
+.rank-tabs{display:flex;gap:.5rem;margin-bottom:1.4rem;flex-wrap:wrap}
+.rank-tab{padding:8px 20px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-size:.82rem;font-weight:700;transition:all .2s;font-family:'Inter',sans-serif}
+.rank-tab.active{background:rgba(245,158,11,.12);border-color:var(--amber);color:var(--amber)}
+
+/* FILTERS */
+.rank-filters{display:flex;gap:.7rem;margin-bottom:1.2rem;flex-wrap:wrap;align-items:center}
+.rank-select{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:7px 12px;border-radius:10px;font-size:.82rem;font-family:'Inter',sans-serif;cursor:pointer;outline:none;transition:border-color .2s}
+.rank-select:focus{border-color:var(--amber)}
+.rank-search{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:7px 14px;border-radius:10px;font-size:.82rem;font-family:'Inter',sans-serif;outline:none;width:200px;transition:border-color .2s}
+.rank-search::placeholder{color:var(--faint)}
+.rank-search:focus{border-color:var(--amber)}
+.rank-count{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--faint);margin-left:auto}
+
+/* TABLE */
+.rank-table{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.rank-thead{display:grid;grid-template-columns:52px 2.2fr 90px 110px 130px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--border);background:var(--surface2)}
+.rank-thead span{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--faint);text-transform:uppercase;letter-spacing:1.5px;font-weight:700}
+.rank-row{display:grid;grid-template-columns:52px 2.2fr 90px 110px 130px;align-items:center;padding:11px 16px;border-bottom:1px solid var(--border);transition:background .15s;cursor:default}
+.rank-row:last-child{border-bottom:none}
+.rank-row:hover{background:var(--surface2)}
+
+/* RANK NUMBER */
+.rank-num{font-family:'JetBrains Mono',monospace;font-size:.88rem;font-weight:700;color:var(--faint);text-align:center}
+.rank-num.gold{color:#f59e0b;font-size:1rem}
+.rank-num.silver{color:#94a3b8;font-size:1rem}
+.rank-num.bronze{color:#cd7c4a;font-size:1rem}
+
+/* PLAYER CELL */
+.rank-player{display:flex;align-items:center;gap:10px;min-width:0}
+.rank-crest{width:26px;height:26px;object-fit:contain;flex-shrink:0;border-radius:3px}
+.rank-crest-fb{width:26px;height:26px;flex-shrink:0;border-radius:3px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:900;font-family:'JetBrains Mono',monospace;color:var(--muted)}
+.rank-player-info{min-width:0;display:flex;flex-direction:column;gap:2px}
+.rank-player-name{font-size:.9rem;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-player-club{font-size:.72rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* POS BADGE */
+.pos-badge{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.6rem;font-weight:700;padding:3px 8px;border-radius:6px;letter-spacing:.5px}
+.pos-DEL{background:rgba(239,68,68,.15);color:#f87171;border:1px solid rgba(239,68,68,.25)}
+.pos-MED{background:rgba(59,130,246,.15);color:#60a5fa;border:1px solid rgba(59,130,246,.25)}
+.pos-DEF{background:rgba(34,197,94,.12);color:#4ade80;border:1px solid rgba(34,197,94,.2)}
+.pos-POR{background:rgba(245,158,11,.12);color:#fbbf24;border:1px solid rgba(245,158,11,.2)}
+
+/* NAT */
+.rank-nat{font-size:.82rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* RATING BAR */
+.rank-rating{display:flex;align-items:center;gap:8px}
+.rank-rating-val{font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:900;color:var(--text);min-width:26px;text-align:right;line-height:1}
+.rank-bar-bg{flex:1;height:4px;background:var(--border);border-radius:3px}
+.rank-bar-fill{height:4px;border-radius:3px;background:var(--amber)}
+
+/* PAGINATION */
+.rank-pag{display:flex;align-items:center;justify-content:center;gap:.4rem;padding:1.4rem 0 0}
+.pg-btn{padding:5px 11px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-size:.82rem;font-family:'JetBrains Mono',monospace;transition:all .15s}
+.pg-btn:hover:not(:disabled){border-color:var(--amber);color:var(--amber)}
+.pg-btn.active{background:rgba(245,158,11,.12);border-color:var(--amber);color:var(--amber);font-weight:700}
+.pg-btn:disabled{opacity:.3;cursor:default}
+.pg-info{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--faint);margin-left:.6rem}
+
+/* LOADER */
+.rank-loader{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:5rem 1rem;gap:1rem}
+.rank-spinner{width:32px;height:32px;border:2px solid var(--border);border-top-color:var(--amber);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.rank-loader-txt{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--faint);letter-spacing:2px}
+
+/* EMPTY */
+.rank-empty{text-align:center;padding:3rem 1rem;color:var(--faint);font-size:.88rem}
+
+/* SECTION HEADER (para tab "por posición" y "por país") */
+.rank-section-hdr{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--amber);letter-spacing:2px;text-transform:uppercase;padding:1.2rem 0 .7rem;font-weight:700}
+
+/* MOBILE */
+@media(max-width:700px){
+  .rank-thead{display:none}
+  .rank-row{grid-template-columns:40px 1fr 60px;gap:0 8px;padding:10px 12px}
+  .rank-cell-pos,.rank-cell-nat{display:none}
+  .rank-rating{gap:5px}
+  .rank-rating-val{font-size:.9rem}
+  .rank-bar-bg{min-width:30px}
+  .rank-player-name{font-size:.85rem}
+  .rank-player-club{font-size:.68rem}
+  .rank-num{font-size:.8rem}
+  .rank-search{width:140px}
+}
+@media(max-width:480px){
+  .rank-wrap{padding:0 .85rem 3rem}
+  .rank-tabs{gap:.35rem}
+  .rank-tab{padding:6px 14px;font-size:.76rem}
+}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<nav>
+  <a class="logo" href="/">FUT<span>VS</span></a>
+  <div class="nav-links">
+    <a href="/">Pronósticos 📈</a>
+    <a href="/comparador">Comparador ⚖️</a>
+    <a href="/ranking" class="active">Ranking 🏆</a>
+    <a href="/insights">Insights ✦</a>
+  </div>
+  <div class="live-badge"><div class="live-dot"></div>Temporada 2025/26</div>
+</nav>
+
+<div class="rank-hero">
+  <div class="rank-hero-eyebrow">FutVS · Basado en EA FC 26 OVR</div>
+  <h1>Ranking de <span>Jugadores</span></h1>
+  <p>Los mejores jugadores del mundo ordenados por rating · Temporada 2024/25</p>
+</div>
+
+<div class="rank-wrap">
+  <!-- TABS -->
+  <div class="rank-tabs">
+    <button class="rank-tab active" onclick="setTab('mundial',this)">🌍 Top mundial</button>
+    <button class="rank-tab" onclick="setTab('posicion',this)">Por posición</button>
+    <button class="rank-tab" onclick="setTab('pais',this)">Por país</button>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="rank-filters">
+    <input class="rank-search" id="rank-search" type="text" placeholder="Buscar jugador..." oninput="onSearch()">
+    <select class="rank-select" id="filter-pos" style="display:none" onchange="applyFilters()">
+      <option value="">Todas las posiciones</option>
+      <option value="DEL">Delantero</option>
+      <option value="MED">Mediocampista</option>
+      <option value="DEF">Defensor</option>
+      <option value="POR">Portero</option>
+    </select>
+    <select class="rank-select" id="filter-pais" style="display:none" onchange="applyFilters()">
+      <option value="">Todos los países</option>
+    </select>
+    <span class="rank-count" id="rank-count"></span>
+  </div>
+
+  <!-- TABLE -->
+  <div class="rank-table" id="rank-table">
+    <div class="rank-loader">
+      <div class="rank-spinner"></div>
+      <div class="rank-loader-txt">CARGANDO RANKING...</div>
+    </div>
+  </div>
+
+  <!-- PAGINATION -->
+  <div class="rank-pag" id="rank-pag"></div>
+</div>
+
+<script>
+const SB_URL = 'https://dyeouwqtebrvioesrbcf.supabase.co'
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5ZW91d3F0ZWJydmlvZXNyYmNmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg2MTE4MzIsImV4cCI6MjA5NDE4NzgzMn0.t_9uVZLKl-khTfjnOvlebTUIYZ9C2fMVDM-6ZqMDMaA'
+
+function htmlEsc(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
+
+function safeMediaUrl(value) {
+  if (typeof value !== 'string') return ''
+  const url = value.trim()
+  return /^(https?:\/\/|\/)/i.test(url) ? url : ''
+}
+
+const PAGE_SIZE = 25
+let allPlayers = []       // todos con rating, con equipo
+let filtered = []         // después de filtros
+let currentTab = 'mundial'
+let currentPage = 1
+let searchTimer = null
+
+// Canvas de fondo animado
+;(function(){
+  const c = document.getElementById('bg-canvas')
+  if (!c) return
+  const ctx2 = c.getContext('2d')
+  let W, H, pts = []
+  function resize(){ W = c.width = window.innerWidth; H = c.height = window.innerHeight }
+  function init(){
+    resize()
+    pts = Array.from({length:60},()=>({
+      x:Math.random()*W, y:Math.random()*H,
+      vx:(Math.random()-.5)*.4, vy:(Math.random()-.5)*.4,
+      r:Math.random()*1.5+.5
+    }))
+  }
+  function draw(){
+    ctx2.clearRect(0,0,W,H)
+    pts.forEach(p=>{
+      p.x+=p.vx; p.y+=p.vy
+      if(p.x<0||p.x>W) p.vx*=-1
+      if(p.y<0||p.y>H) p.vy*=-1
+      ctx2.beginPath(); ctx2.arc(p.x,p.y,p.r,0,Math.PI*2)
+      ctx2.fillStyle='rgba(34,197,94,.25)'; ctx2.fill()
+    })
+    pts.forEach((a,i)=>pts.slice(i+1).forEach(b=>{
+      const d=Math.hypot(a.x-b.x,a.y-b.y)
+      if(d<120){ctx2.beginPath();ctx2.moveTo(a.x,a.y);ctx2.lineTo(b.x,b.y);ctx2.strokeStyle=`rgba(34,197,94,${.08*(1-d/120)})`;ctx2.stroke()}
+    }))
+    requestAnimationFrame(draw)
+  }
+  window.addEventListener('resize', ()=>{ resize() })
+  init(); draw()
+})()
+
+// SUPABASE FETCH
+async function sbGet(path) {
+  const r = await fetch(`${SB_URL}/rest/v1/${path}`, {
+    headers: { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}` }
+  })
+  if (!r.ok) throw new Error(`SB ${r.status}`)
+  return r.json()
+}
+
+// LOAD ALL DATA
+async function loadData() {
+  try {
+    // Traemos jugadores con rating + su equipo (escudo)
+    // Supabase: join con equipos via equipo_id
+    const [jugadores, equipos] = await Promise.all([
+      sbGet('jugadores?select=id,nombre,posicion,nacionalidad,rating,equipo_id,notas&rating=not.is.null&rating=gte.70&order=rating.desc&limit=1000'),
+      sbGet('equipos?select=id,nombre,escudo_url')
+    ])
+
+    const equipoMap = {}
+    equipos.forEach(e => { equipoMap[e.id] = e })
+
+    allPlayers = jugadores
+      .filter(j => j.rating && j.nombre && !String(j.notas || '').startsWith('[FUERA_MUNDIAL]'))
+      .map((j, i) => ({
+        ...j,
+        equipo: equipoMap[j.equipo_id] || null,
+        globalRank: i + 1
+      }))
+
+    // Poblar select de países
+    const paises = [...new Set(allPlayers.map(p => p.nacionalidad).filter(Boolean))].sort()
+    const sel = document.getElementById('filter-pais')
+    paises.forEach(p => {
+      const o = document.createElement('option')
+      o.value = p; o.textContent = p
+      sel.appendChild(o)
+    })
+
+    applyFilters()
+  } catch(e) {
+    document.getElementById('rank-table').innerHTML =
+      `<div class="rank-empty">😕 No se pudo cargar el ranking.<br><span style="font-size:.75rem;color:var(--faint)">${htmlEsc(e.message)}</span></div>`
+  }
+}
+
+function setTab(tab, btn) {
+  currentTab = tab
+  currentPage = 1
+  document.querySelectorAll('.rank-tab').forEach(b => b.classList.remove('active'))
+  btn.classList.add('active')
+  document.getElementById('filter-pos').style.display = tab === 'posicion' ? '' : 'none'
+  document.getElementById('filter-pais').style.display = tab === 'pais' ? '' : 'none'
+  // reset selects
+  document.getElementById('filter-pos').value = ''
+  document.getElementById('filter-pais').value = ''
+  applyFilters()
+}
+
+function onSearch() {
+  clearTimeout(searchTimer)
+  searchTimer = setTimeout(() => { currentPage = 1; applyFilters() }, 200)
+}
+
+function applyFilters() {
+  currentPage = 1
+  const search = document.getElementById('rank-search').value.toLowerCase().trim()
+  const pos = document.getElementById('filter-pos').value
+  const pais = document.getElementById('filter-pais').value
+
+  filtered = allPlayers.filter(p => {
+    if (pos && p.posicion !== pos) return false
+    if (pais && p.nacionalidad !== pais) return false
+    if (search && !p.nombre.toLowerCase().includes(search) &&
+        !(p.equipo?.nombre || '').toLowerCase().includes(search)) return false
+    return true
+  })
+
+  document.getElementById('rank-count').textContent =
+    `${filtered.length} jugador${filtered.length !== 1 ? 'es' : ''}`
+
+  render()
+}
+
+function render() {
+  const table = document.getElementById('rank-table')
+
+  if (currentTab === 'posicion') {
+    renderByGroup('posicion')
+  } else if (currentTab === 'pais') {
+    renderByGroup('pais')
+  } else {
+    renderFlat()
+  }
+}
+
+function renderFlat() {
+  const table = document.getElementById('rank-table')
+  const start = (currentPage - 1) * PAGE_SIZE
+  const page = filtered.slice(start, start + PAGE_SIZE)
+
+  if (page.length === 0) {
+    table.innerHTML = '<div class="rank-empty">No se encontraron jugadores.</div>'
+    document.getElementById('rank-pag').innerHTML = ''
+    return
+  }
+
+  table.innerHTML = `
+    <div class="rank-thead">
+      <span style="text-align:center">#</span>
+      <span>Jugador</span>
+      <span>Pos.</span>
+      <span>País</span>
+      <span style="text-align:right">Rating</span>
+    </div>
+    ${page.map((p, i) => rowHTML(p, start + i + 1)).join('')}
+  `
+  renderPag(filtered.length)
+}
+
+function renderByGroup(field) {
+  const table = document.getElementById('rank-table')
+  document.getElementById('rank-pag').innerHTML = ''
+
+  if (filtered.length === 0) {
+    table.innerHTML = '<div class="rank-empty">No se encontraron jugadores.</div>'
+    return
+  }
+
+  // Agrupar
+  const groups = {}
+  filtered.forEach(p => {
+    const key = field === 'posicion' ? (p.posicion || 'SIN') : (p.nacionalidad || 'Desconocido')
+    if (!groups[key]) groups[key] = []
+    groups[key].push(p)
+  })
+
+  // Orden de posiciones
+  const posOrder = ['DEL','MED','DEF','POR']
+  const keys = field === 'posicion'
+    ? posOrder.filter(k => groups[k])
+    : Object.keys(groups).sort((a,b) => groups[b][0].rating - groups[a][0].rating)
+
+  const posLabels = { DEL:'Delanteros', MED:'Mediocampistas', DEF:'Defensores', POR:'Porteros' }
+
+  let html = `<div class="rank-thead">
+    <span style="text-align:center">#</span>
+    <span>Jugador</span>
+    <span>Pos.</span>
+    <span>País</span>
+    <span style="text-align:right">Rating</span>
+  </div>`
+
+  keys.forEach(key => {
+    const label = field === 'posicion' ? (posLabels[key] || key) : `🌍 ${key}`
+    const members = groups[key].slice(0, 10) // top 10 por grupo
+    html += `<div class="rank-section-hdr" style="padding-left:16px">${htmlEsc(label)} · top ${members.length}</div>`
+    members.forEach((p, i) => { html += rowHTML(p, i + 1) })
+  })
+
+  table.innerHTML = html
+}
+
+function rowHTML(p, rank) {
+  const pct = Math.round(((p.rating - 70) / (99 - 70)) * 100)
+  const medalClass = rank === 1 ? 'gold' : rank === 2 ? 'silver' : rank === 3 ? 'bronze' : ''
+  const medalIcon = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : rank
+  const pos = ['DEL','MED','DEF','POR'].includes(p.posicion) ? p.posicion : 'MED'
+
+  const crestUrl = safeMediaUrl(p.equipo?.escudo_url)
+  const escudo = crestUrl
+    ? `<img class="rank-crest" src="${htmlEsc(crestUrl)}" alt="${htmlEsc(p.equipo.nombre || '')}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+    : ''
+  const fallback = p.equipo
+    ? `<div class="rank-crest-fb" ${escudo ? 'style="display:none"' : ''}>${htmlEsc((p.equipo.nombre||'?').substring(0,3).toUpperCase())}</div>`
+    : `<div class="rank-crest-fb">—</div>`
+
+  return `<div class="rank-row">
+    <div class="rank-num ${medalClass}">${medalIcon}</div>
+    <div class="rank-player">
+      ${escudo}${fallback}
+      <div class="rank-player-info">
+        <span class="rank-player-name">${htmlEsc(p.nombre)}</span>
+        <span class="rank-player-club">${htmlEsc(p.equipo?.nombre || '—')}</span>
+      </div>
+    </div>
+    <div class="rank-cell-pos"><span class="pos-badge pos-${pos}">${htmlEsc(p.posicion || '?')}</span></div>
+    <div class="rank-cell-nat rank-nat">${htmlEsc(p.nacionalidad || '—')}</div>
+    <div class="rank-rating">
+      <span class="rank-rating-val">${p.rating}</span>
+      <div class="rank-bar-bg"><div class="rank-bar-fill" style="width:${pct}%"></div></div>
+    </div>
+  </div>`
+}
+
+function renderPag(total) {
+  const totalPages = Math.ceil(total / PAGE_SIZE)
+  const pag = document.getElementById('rank-pag')
+  if (totalPages <= 1) { pag.innerHTML = ''; return }
+
+  let html = `<button class="pg-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled':''}>&#8249;</button>`
+  for (let i = 1; i <= totalPages; i++) {
+    if (totalPages > 7) {
+      const show = i === 1 || i === totalPages || Math.abs(i - currentPage) <= 1
+      if (!show) { if (i === 2 || i === totalPages - 1) html += `<span class="pg-info">…</span>`; continue }
+    }
+    html += `<button class="pg-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`
+  }
+  html += `<button class="pg-btn" onclick="goPage(${currentPage+1})" ${currentPage===totalPages?'disabled':''}>&#8250;</button>`
+  html += `<span class="pg-info">${(currentPage-1)*PAGE_SIZE+1}–${Math.min(currentPage*PAGE_SIZE,total)} de ${total}</span>`
+  pag.innerHTML = html
+}
+
+function goPage(p) {
+  currentPage = p
+  render()
+  document.getElementById('rank-table').scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
+loadData()
+</script>
+</body>
+</html>

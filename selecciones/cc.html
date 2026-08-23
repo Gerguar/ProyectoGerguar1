@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CC · Mundial 2026 · FutVS</title>
+  <meta name="description" content="Análisis estadístico de CC para el Mundial 2026. Elo rating 422, ranking #242 mundial. Plantilla, jugadores clave y pronósticos.">
+  <meta property="og:title" content="CC · Mundial 2026 · FutVS">
+  <meta property="og:description" content="Elo 422 · Ranking mundial #242 · Análisis y plantilla completa">
+  <meta property="og:url" content="https://futversus.com/seleccion/cc">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://futversus.com/seleccion/cc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green:#22c55e;--bg:#080a0c;--card:#0d1117;--border:rgba(255,255,255,.08);
+      --muted:#9ca3af;--faint:#4b5563;--sel:#22c55e;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:#e8eaed;font-family:'Inter',sans-serif;min-height:100vh}
+    a{color:var(--green);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(8,10,12,.95);backdrop-filter:blur(8px);z-index:100}
+    .nav-logo{font-size:1.3rem;font-weight:900;font-style:italic;color:#fff}
+    .nav-logo span{color:var(--green)}
+    .nav-links{display:flex;gap:1.5rem;font-size:.85rem;color:var(--muted)}
+    .hero{padding:3rem 2rem 2rem;max-width:900px;margin:0 auto;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+    .hero-badge{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:2px;color:var(--sel);text-transform:uppercase;margin-bottom:.5rem;font-weight:700}
+    .hero-title{font-size:clamp(2rem,6vw,3.2rem);font-weight:900;letter-spacing:-1.5px;line-height:1.1}
+    .elo-bar{height:6px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden;margin-top:.5rem;width:200px}
+    .elo-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--sel),#22c55e88);width:19%;transition:width .8s ease}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem}
+    .card-title{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:2px;color:var(--faint);text-transform:uppercase;margin-bottom:1.2rem;font-weight:700}
+    .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
+    .stat-item{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:1rem;text-align:center}
+    .stat-value{font-family:'JetBrains Mono',monospace;font-size:1.6rem;font-weight:900;color:var(--sel);line-height:1}
+    .stat-label{font-size:.7rem;color:var(--faint);margin-top:.4rem;letter-spacing:1px;text-transform:uppercase}
+    .main{max-width:900px;margin:0 auto;padding:0 2rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .back-link{max-width:900px;margin:1.5rem auto;padding:0 2rem;display:block;font-size:.85rem;color:var(--muted)}
+    .footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-size:.8rem;color:var(--faint)}
+    @media(max-width:640px){
+      .main{grid-template-columns:1fr}
+      .hero{flex-direction:column;text-align:center}
+      .nav-links{display:none}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="https://futversus.com" class="nav-logo">FUT<span>VS</span></a>
+    <div class="nav-links">
+      <a href="https://futversus.com">Pronósticos</a>
+      <a href="https://futversus.com/comparador">Comparador</a>
+      <a href="https://futversus.com/ranking">Ranking</a>
+    </div>
+  </nav>
+
+  <a href="https://futversus.com" class="back-link">← Volver a FutVS</a>
+
+  <div class="hero">
+    <div style="width:80px;height:80px;border-radius:50%;background:#22c55e33;border:2px solid #22c55e;display:flex;align-items:center;justify-content:center;font-size:2rem">CC</div>
+    <div>
+      <div class="hero-badge">🌍 Mundial 2026 · Selección</div>
+      <h1 class="hero-title">CC</h1>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--muted);margin-top:.5rem">
+        Elo <span style="color:#22c55e;font-weight:700">422</span> · Ranking mundial <span style="color:#22c55e;font-weight:700">#242</span>
+      </div>
+      <div class="elo-bar"><div class="elo-fill"></div></div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div>
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-value">422</div>
+          <div class="stat-label">Elo rating</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">#242</div>
+          <div class="stat-label">Ranking mundial</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">📊 Sobre este ranking</div>
+        <p style="font-size:.85rem;color:var(--muted);line-height:1.7">
+          El Elo de <strong style="color:#e8eaed">CC</strong> refleja su rendimiento histórico
+          ponderado por importancia del partido, resultado y margen de victoria.
+          Un Elo de <strong style="color:#22c55e">422</strong> la posiciona entre las
+          selecciones participantes del Mundial 2026.
+        </p>
+        <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+          <a href="https://futversus.com/ranking" style="font-size:.82rem;font-weight:700">Ver ranking completo →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">⚽ Jugadores destacados</div>
+      <div style="color:#6b7280;font-size:.85rem;padding:1rem 0">Sin datos de plantilla disponibles</div>
+      <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)">
+        <a href="https://futversus.com/comparador?a=cc" style="font-size:.82rem;font-weight:700">Comparar con otra selección →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div>© 2026 <a href="https://futversus.com">FutVS</a> · Análisis estadístico de fútbol · <a href="https://futversus.com">Ver todos los pronósticos</a></div>
+  </footer>
+</body>
+</html>

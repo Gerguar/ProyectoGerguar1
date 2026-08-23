@@ -1,0 +1,46 @@
+<svg viewBox="0 0 1200 630" width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+
+<!-- Fondo oscuro -->
+<rect width="1200" height="630" fill="#0a0e13"/>
+
+<!-- Líneas de campo de fútbol - muy sutiles -->
+<rect x="80" y="60" width="1040" height="510" rx="8" fill="none" stroke="#1a2a1a" stroke-width="1.5"/>
+<line x1="600" y1="60" x2="600" y2="570" stroke="#1a2a1a" stroke-width="1"/>
+<circle cx="600" cy="315" r="90" fill="none" stroke="#1a2a1a" stroke-width="1"/>
+<circle cx="600" cy="315" r="5" fill="#1a2a1a"/>
+<rect x="80" y="210" width="130" height="210" fill="none" stroke="#1a2a1a" stroke-width="1"/>
+<rect x="990" y="210" width="130" height="210" fill="none" stroke="#1a2a1a" stroke-width="1"/>
+
+<!-- Glow verde central sutil -->
+<radialGradient id="glow" cx="50%" cy="50%" r="50%">
+  <stop offset="0%" stop-color="#22c55e" stop-opacity="0.06"/>
+  <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+</radialGradient>
+<rect x="0" y="0" width="1200" height="630" fill="url(#glow)"/>
+
+<!-- Logo FUTVS -->
+<text x="600" y="290" font-family="Arial Black, Arial, sans-serif" font-size="168" font-weight="900" font-style="italic" text-anchor="middle" fill="#ffffff" letter-spacing="-4">FUT<tspan fill="#22c55e">VS</tspan></text>
+
+<!-- Línea separadora -->
+<rect x="420" y="318" width="360" height="2" rx="1" fill="#22c55e" opacity="0.6"/>
+
+<!-- Tagline -->
+<text x="600" y="378" font-family="Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle" fill="#6b7280" letter-spacing="6">PRONÓSTICOS CON INTELIGENCIA ESTADÍSTICA</text>
+
+<!-- Tags de tecnología -->
+<rect x="253" y="430" width="150" height="36" rx="18" fill="#0f2a1a" stroke="#22c55e" stroke-width="1" stroke-opacity="0.4"/>
+<text x="328" y="453" font-family="Courier New, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#22c55e" letter-spacing="1">DIXON-COLES</text>
+
+<rect x="421" y="430" width="100" height="36" rx="18" fill="#0f2a1a" stroke="#22c55e" stroke-width="1" stroke-opacity="0.4"/>
+<text x="471" y="453" font-family="Courier New, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#22c55e" letter-spacing="1">ELO</text>
+
+<rect x="539" y="430" width="120" height="36" rx="18" fill="#0f2a1a" stroke="#22c55e" stroke-width="1" stroke-opacity="0.4"/>
+<text x="599" y="453" font-family="Courier New, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#22c55e" letter-spacing="1">XGBOOST</text>
+
+<rect x="677" y="430" width="130" height="36" rx="18" fill="#0f2a1a" stroke="#22c55e" stroke-width="1" stroke-opacity="0.4"/>
+<text x="742" y="453" font-family="Courier New, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#22c55e" letter-spacing="1">ISOTONIC</text>
+
+<!-- URL -->
+<text x="600" y="560" font-family="Courier New, monospace" font-size="16" text-anchor="middle" fill="#374151" letter-spacing="3">futversus.com</text>
+
+</svg>

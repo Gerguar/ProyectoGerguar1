@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-05-16T12:00:00Z",
+  "model": {
+    "trained_at": "2026-05-12T03:00:00Z",
+    "method": "DixonColes+Elo+XGBoost(isotonic)",
+    "holdout_metrics": {
+      "n": 287,
+      "log_loss": 0.9712,
+      "brier": 0.5904,
+      "accuracy": 0.524,
+      "market_log_loss": 0.9685
+    }
+  },
+  "matches": [
+    {
+      "match_id": "demo-1",
+      "kickoff_ts_utc": "2026-05-20T19:00:00Z",
+      "competition": { "code": "UCL", "name": "UEFA Champions League" },
+      "home": { "id": "65", "name": "Manchester City" },
+      "away": { "id": "81", "name": "FC Barcelona" },
+      "venue": "Etihad Stadium",
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": { "home": 0.4621, "draw": 0.2705, "away": 0.2674 },
+      "market_probabilities": { "home": 0.4810, "draw": 0.2520, "away": 0.2670 },
+      "scoreline_top": [
+        { "score": "2-1", "p": 0.1102 },
+        { "score": "1-1", "p": 0.0987 },
+        { "score": "2-0", "p": 0.0921 },
+        { "score": "1-0", "p": 0.0814 },
+        { "score": "3-1", "p": 0.0610 }
+      ],
+      "expected_goals": { "home": 1.72, "away": 1.31 },
+      "derived": { "p_over_2_5": 0.553, "p_btts": 0.582 },
+      "ratings": { "elo_home": 1842.3, "elo_away": 1798.1, "elo_diff": 44.2 }
+    },
+    {
+      "match_id": "demo-2",
+      "kickoff_ts_utc": "2026-05-21T19:00:00Z",
+      "competition": { "code": "UEL", "name": "UEFA Europa League" },
+      "home": { "id": "503", "name": "AS Roma" },
+      "away": { "id": "5", "name": "Bayer Leverkusen" },
+      "venue": "Stadio Olimpico",
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": { "home": 0.3812, "draw": 0.2914, "away": 0.3274 },
+      "market_probabilities": null,
+      "scoreline_top": [
+        { "score": "1-1", "p": 0.1198 },
+        { "score": "1-0", "p": 0.0901 },
+        { "score": "2-1", "p": 0.0834 },
+        { "score": "0-1", "p": 0.0810 },
+        { "score": "2-2", "p": 0.0612 }
+      ],
+      "expected_goals": { "home": 1.42, "away": 1.38 },
+      "derived": { "p_over_2_5": 0.498, "p_btts": 0.601 },
+      "ratings": { "elo_home": 1721.0, "elo_away": 1735.5, "elo_diff": -14.5 }
+    },
+    {
+      "match_id": "demo-3",
+      "kickoff_ts_utc": "2026-05-22T22:00:00Z",
+      "competition": { "code": "LIB", "name": "Copa Libertadores" },
+      "home": { "id": "1001", "name": "River Plate" },
+      "away": { "id": "1002", "name": "Palmeiras" },
+      "venue": "Estadio Monumental",
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": { "home": 0.4501, "draw": 0.2862, "away": 0.2637 },
+      "market_probabilities": { "home": 0.4400, "draw": 0.2900, "away": 0.2700 },
+      "scoreline_top": [
+        { "score": "1-0", "p": 0.1305 },
+        { "score": "1-1", "p": 0.1101 },
+        { "score": "2-1", "p": 0.0907 },
+        { "score": "2-0", "p": 0.0822 },
+        { "score": "0-0", "p": 0.0801 }
+      ],
+      "expected_goals": { "home": 1.31, "away": 1.05 },
+      "derived": { "p_over_2_5": 0.432, "p_btts": 0.501 },
+      "ratings": { "elo_home": 1690.2, "elo_away": 1672.4, "elo_diff": 17.8 }
+    }
+  ]
+}

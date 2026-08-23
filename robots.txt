@@ -1,0 +1,10 @@
+# robots.txt — futversus.com
+# Indexar todo el sitio publico, bloquear los JSONs internos.
+
+User-agent: *
+Allow: /
+Disallow: /data/
+Disallow: /*.json$
+
+Sitemap: https://futversus.com/sitemap.xml
+# prueba autodeploy
