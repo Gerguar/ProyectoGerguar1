@@ -1,8 +1,19 @@
 name: world-cup-squads (diario + manual)
 
 on:
-  schedule:
-    - cron: "40 5 * * *"
+  # ── CRON APAGADO el 23-ago-2026 ──────────────────────────────────────────
+  # Sincronizaba plantillas, reemplazos y bajas del Mundial 2026, que termino
+  # el 19-jul. Corria todos los dias sin nada que sincronizar.
+  #
+  # Lo unico de aca que alimenta al modelo de LIGAS es
+  # `python -m src.team_ratings` (fuerza de planteles -> features EA FC del
+  # XGBoost), y eso tambien lo corre fbref-stats.yml los miercoles 08:00 UTC,
+  # junto con player_ratings y team_xg. O sea que pasa de diario a semanal, que
+  # post-Mundial alcanza: los ratings EA FC casi no se mueven.
+  #
+  # Queda en workflow_dispatch para correrlo a mano.
+  # schedule:
+  #   - cron: "40 5 * * *"
   workflow_dispatch: {}
 
 concurrency:

@@ -13,8 +13,22 @@ name: mundial (Pinnacle + predict cada 6h)
 # via loadMatches(), asi que no hace falta tocar HTML.
 
 on:
-  schedule:
-    - cron: "20 */6 * * *"  # Cada 6h, a los :20 (offset vs insights que corre :10)
+  # ── CRON APAGADO el 23-ago-2026 ──────────────────────────────────────────
+  # El Mundial 2026 termino el 19-jul (España 1-0 Argentina). Este workflow
+  # seguia corriendo 4 veces por dia: re-predecia partidos que ya no existen y
+  # bajaba cuotas de Pinnacle de un torneo terminado.
+  #
+  # Nada de lo que hacia queda sin cubrir:
+  #   - "Actualizar Forma reciente" era REDUNDANTE: generate_insights.py ya
+  #     llama a build_forma_reciente() en cada corrida, e insights.yml corre
+  #     cada 6h — la misma frecuencia que tenia este cron.
+  #   - el resto (ingest_wc2026, Pinnacle WC, lesiones del Mundial,
+  #     predict_mundial) es especifico del Mundial 2026.
+  #
+  # Queda en workflow_dispatch para correrlo a mano. Para el proximo torneo,
+  # descomentar el schedule.
+  # schedule:
+  #   - cron: "20 */6 * * *"  # Cada 6h, a los :20 (offset vs insights que corre :10)
   workflow_dispatch: {}
 
 concurrency:
