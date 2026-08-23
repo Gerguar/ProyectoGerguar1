@@ -35,6 +35,23 @@ def main() -> None:
     valid_end = now - pd.Timedelta(days=BACKTEST.test_window_days)
     train_end = valid_end - pd.Timedelta(days=BACKTEST.valid_window_days)
 
+    # Las ventanas son por DIAS y los parones largos las vacian. En ago-2026 la
+    # de validacion (25-may a 24-jul) cayo entera en el hueco del Mundial y
+    # quedo con 1 partido: con eso el calibrador isotonico y el early stopping
+    # de XGBoost salen degenerados (el holdout dio log_loss 4.78, peor que
+    # tirar una moneda). Si no se llega al piso, corremos train_end hacia atras
+    # hasta juntar min_valid_matches. Se hace ACA, antes de DC/Elo, para que
+    # esos tambien respeten el corte y no vean partidos de validacion.
+    en_ventana = ((finished["kickoff_ts_utc"] >= train_end) &
+                  (finished["kickoff_ts_utc"] < valid_end)).sum()
+    if en_ventana < BACKTEST.min_valid_matches:
+        previos = finished[finished["kickoff_ts_utc"] < valid_end]
+        if len(previos) > BACKTEST.min_valid_matches:
+            train_end = previos["kickoff_ts_utc"].iloc[-BACKTEST.min_valid_matches]
+            print(f"[train] ventana de validacion con solo {en_ventana} partidos "
+                  f"(paron); se reajusta train_end a {train_end.date()} para "
+                  f"juntar ~{BACKTEST.min_valid_matches}")
+
     # Para DC + Elo entrenamos con TODO el historico (mas data = mejores ratings).
     train_raw_full = finished[finished["kickoff_ts_utc"] < train_end]
     if len(train_raw_full) < BACKTEST.min_train_matches:

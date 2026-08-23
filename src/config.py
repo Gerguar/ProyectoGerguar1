@@ -82,6 +82,11 @@ class BacktestConfig:
     test_window_days: int = 30
     step_days: int = 30
     calibration_method: str = "isotonic"
+    # Piso de partidos para la ventana de validacion. Las ventanas se definen en
+    # DIAS, asi que un paron largo (Mundial, verano) puede dejarlas casi vacias
+    # y degenerar el calibrador y el early stopping. Si no se llega a este piso,
+    # train.py corre train_end hacia atras hasta juntarlos.
+    min_valid_matches: int = 300
 
 
 @dataclass(frozen=True)
