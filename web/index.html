@@ -3031,7 +3031,28 @@ async function loadHomeRankingTop() {
   const wrap = document.getElementById('home-ranking-list')
   if (!wrap) return
   try {
-    const rows = await sb('jugadores?select=id,nombre,nacionalidad,posicion,rating,equipo_id&rating=not.is.null&order=rating.desc&limit=5')
+    // Traemos de mas y deduplicamos: cada jugador tiene fila de club y de
+    // seleccion, y sin esto el top mostraba al mismo dos veces (Mbappe 1o y 2o).
+    // Nos quedamos con la del CLUB, igual que /ranking.
+    const [rowsRaw, equiposRk] = await Promise.all([
+      sb('jugadores?select=id,nombre,nacionalidad,posicion,rating,equipo_id&rating=not.is.null&order=rating.desc&limit=80'),
+      sb('equipos?select=id,liga_id')
+    ])
+    const ligaDeEq = {}
+    ;(equiposRk || []).forEach(e => { ligaDeEq[e.id] = e.liga_id })
+    const ES_SELECCION = new Set([7, 8])
+    const vistosTop = new Map()
+    ;(rowsRaw || []).forEach(p => {
+      const k = (p.nombre || '').normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .toLowerCase().replace(/[^a-z0-9]+/g, '')
+      const esSel = ES_SELECCION.has(ligaDeEq[p.equipo_id])
+      const prev = vistosTop.get(k)
+      if (!prev) vistosTop.set(k, { ...p, esSel })
+      else if (prev.esSel && !esSel) vistosTop.set(k, { ...p, esSel })
+    })
+    const rows = [...vistosTop.values()]
+      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+      .slice(0, 5)
     if (!rows || !rows.length) {
       wrap.innerHTML = '<div class="home-extra-loading">Sin datos de ranking.</div>'
       return
@@ -3044,7 +3065,7 @@ async function loadHomeRankingTop() {
         <span class="home-extra-item-rank">${i+1}.</span>
         <div class="home-extra-item-main">
           <div class="home-extra-item-title">${insEsc(p.nombre)}</div>
-          <div class="home-extra-item-sub">${insEsc(p.posicion || '')} · ${insEsc(p.nacionalidad || '')}</div>
+          <div class="home-extra-item-sub">${insEsc(p.posicion || '')} · ${insEsc(normCountry(p.nacionalidad) || '')}</div>
         </div>
         <span class="home-extra-item-right">${p.rating}</span>
       </a>
@@ -4957,9 +4978,9 @@ async function loadRanking() {
     equipos.forEach(e => { eqMap[e.id] = e })
 
     // Dedup club vs seleccion: el mismo jugador tiene 2 filas en `jugadores`
-    // (una con su club, otra con su seleccion). Como es un sitio del Mundial,
-    // mostramos la version SELECCION (liga 7=Mundial / 8=otras FIFA → escudo
-    // de la seleccion). Si solo existe la fila de club, esa queda.
+    // (una con su club, otra con su seleccion). Terminado el Mundial mostramos
+    // la version CLUB, que es el foco del sitio; si solo existe la fila de
+    // seleccion (liga 7=Mundial / 8=otras FIFA), esa queda.
     const LIGAS_SELECCION = new Set([7, 8])
     const rkKey = j => (j.nombre || '').normalize('NFD').replace(/[̀-ͯ]/g, '')
       .toLowerCase().replace(/[^a-z0-9]+/g, '') + '|' + normCountry(j.nacionalidad)
@@ -4976,10 +4997,11 @@ async function loadRanking() {
         if (!seenRk.has(key)) {
           seenRk.set(key, dedup.length)
           dedup.push(row)
-        } else if (esSeleccion) {
-          // Ya existe: si la version guardada es club y esta es seleccion, reemplazar.
+        } else if (!esSeleccion) {
+          // Ya existe: si la guardada es la de seleccion y esta es la del club,
+          // reemplazar (post-Mundial preferimos el club).
           const idx = seenRk.get(key)
-          if (!dedup[idx].esSeleccion) dedup[idx] = row
+          if (dedup[idx].esSeleccion) dedup[idx] = row
         }
       })
     // Reordenar por rating desc (sort estable) y asignar el rank global.
