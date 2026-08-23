@@ -1,4 +1,4 @@
-name: Selecciones Mundial 2026
+name: Selecciones (paginas + Elo)
 
 on:
   workflow_dispatch:
@@ -19,7 +19,26 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: '3.12'
+          python-version: '3.11'
+          cache: pip
+
+      # `ingest_elo_selecciones` arrastra numpy/pandas/scipy por la cadena
+      # supabase_writer -> elo/dixon_coles/team_normalize, asi que este workflow
+      # ahora si necesita las deps (antes corria solo generate_selecciones.py,
+      # que es stdlib puro). Se baja a 3.11 para alinear con el resto de los
+      # workflows, donde este requirements.txt ya esta probado.
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      # Movido desde smart-sync.yml el 23-ago-2026: alla corria cada 30 min, un
+      # disparate para un dato que solo cambia en las fechas FIFA. Era el unico
+      # lugar del repo donde se actualizaba el Elo de selecciones, que alimenta
+      # el ranking de selecciones del home, asi que se mueve en vez de sacarse.
+      - name: Sync ranking Elo selecciones (eloratings.net)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python -m src.ingest_elo_selecciones || echo "[elo] fallo no critico"
 
       - name: Generar páginas de selecciones
         env:

@@ -1,10 +1,11 @@
-name: smart-sync (resultados + Mundial en vivo)
+name: smart-sync (resultados de ligas)
 
 # Estrategia:
 # - Cron cada 30 min.
 # - Job 'check' (~15s, sin instalar deps Python): activa el sync si hay partidos
-#   vencidos hace 120 min, o si un partido del Mundial ya llego al kickoff o
-#   figura en curso. Durante el Mundial esto refresca estado/resultado cada 30 min.
+#   vencidos hace 120 min.
+#   (23-ago-2026: se sacaron los dos contadores del Mundial —partidos desde el
+#   kickoff y en curso—; con el torneo terminado daban 0 siempre.)
 # - Job 'sync' (~3 min): solo corre si 'check' encontro candidatos. Hace
 #   data_ingest + supabase_sync para refrescar el parquet y propagar los
 #   FINISHED a Supabase.
@@ -36,11 +37,8 @@ jobs:
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: |
           set -euo pipefail
-          NOW=$(date -u +%Y-%m-%dT%H:%M:%S)
           CUTOFF=$(date -u -d "-120 minutes" +%Y-%m-%dT%H:%M:%S)
           URL_OVERDUE="${SUPABASE_URL}/rest/v1/partidos?select=id&estado=eq.programado&fecha=lt.${CUTOFF}"
-          URL_WC_DUE="${SUPABASE_URL}/rest/v1/partidos?select=id&liga_id=eq.7&temporada=eq.2026&estado=eq.programado&fecha=lte.${NOW}"
-          URL_WC_LIVE="${SUPABASE_URL}/rest/v1/partidos?select=id&liga_id=eq.7&temporada=eq.2026&estado=eq.en_curso"
 
           count_url() {
             curl -sI "$1" \
@@ -52,14 +50,10 @@ jobs:
           }
 
           OVERDUE=$(count_url "$URL_OVERDUE")
-          WC_DUE=$(count_url "$URL_WC_DUE")
-          WC_LIVE=$(count_url "$URL_WC_LIVE")
           OVERDUE=${OVERDUE:-0}
-          WC_DUE=${WC_DUE:-0}
-          WC_LIVE=${WC_LIVE:-0}
-          COUNT=$((OVERDUE + WC_DUE + WC_LIVE))
+          COUNT=$OVERDUE
 
-          echo "Vencidos +120m: $OVERDUE | Mundial desde kickoff: $WC_DUE | Mundial en curso: $WC_LIVE"
+          echo "Vencidos +120m: $OVERDUE"
           if [ "$COUNT" -gt 0 ]; then
             echo "needs_sync=true" >> "$GITHUB_OUTPUT"
             echo "pending_count=$COUNT" >> "$GITHUB_OUTPUT"
@@ -103,50 +97,58 @@ jobs:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: python -m src.ingest_match_stats || echo "[stats] fallo no critico, sigue el sync"
 
-      - name: Sync fixture Mundial 2026 (selecciones FIFA, liga_id=7)
-        # continue-on-error: no bloquea los steps siguientes, pero el step queda
-        # marcado como FALLIDO (visible) en vez de ocultar el error con "|| echo".
-        continue-on-error: true
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
-        run: python -m src.ingest_wc2026
+      # ── STEPS DEL MUNDIAL 2026, DESACTIVADOS el 23-ago-2026 ─────────────────
+      # El torneo termino el 19-jul. Estos cuatro steps corrian cada 30 min (48
+      # veces por dia) sobre datos que ya no se mueven. Se dejan comentados en
+      # vez de borrarlos: para el proximo Mundial alcanza con descomentarlos.
+      #
+      #   - ingest_wc2026 / integrate_lesiones_mundial / predict_mundial:
+      #     especificos del Mundial, no hay partidos que sincronizar ni predecir.
+      #   - refresh_insights_forma: ademas era REDUNDANTE — generate_insights ya
+      #     llama a build_forma_reciente() en cada corrida e insights.yml corre
+      #     cada 6h.
+      #
+      # `ingest_elo_selecciones` NO se elimino: se MOVIO a selecciones.yml
+      # (lunes 04:00), porque era el unico lugar del repo donde corria y alimenta
+      # el ranking Elo de selecciones que se ve en el home. Cada 30 min era
+      # absurdo para un dato que cambia en las fechas FIFA.
+      #
+      # - name: Sync fixture Mundial 2026 (selecciones FIFA, liga_id=7)
+      #   continue-on-error: true
+      #   env:
+      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      #     SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #     FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+      #   run: python -m src.ingest_wc2026
+      #
+      # - name: Actualizar Forma reciente de Insights
+      #   env:
+      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      #     SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #   run: python -m src.refresh_insights_forma
+      #
+      # - name: Integrar lesiones desde insights (Claude)
+      #   env:
+      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      #     SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #   run: python -m src.integrate_lesiones_mundial || echo "[lesiones] fallo no critico"
+      #
+      # - name: Re-predict Mundial (despues de updates de partidos + Elo + Lesiones)
+      #   env:
+      #     SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      #     SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      #   run: python -m src.predict_mundial || echo "[predict-mundial] fallo no critico"
 
-      - name: Actualizar Forma reciente de Insights
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-        run: python -m src.refresh_insights_forma
-
-      - name: Sync ranking Elo selecciones (eloratings.net)
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-        run: python -m src.ingest_elo_selecciones || echo "[elo] fallo no critico"
-
-      - name: Integrar lesiones desde insights (Claude)
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-        run: python -m src.integrate_lesiones_mundial || echo "[lesiones] fallo no critico"
-
-      - name: Re-predict Mundial (despues de updates de partidos + Elo + Lesiones)
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-        run: python -m src.predict_mundial || echo "[predict-mundial] fallo no critico"
-
-      - name: Commit resultados y Forma reciente (si hubo cambios)
+      - name: Commit resultados (si hubo cambios)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/matches.parquet web/data/insights.json || true
+          git add data/matches.parquet || true
           if ! git diff --cached --quiet; then
             git stash
             git pull --rebase origin main
             git stash pop
-            git add data/matches.parquet web/data/insights.json || true
+            git add data/matches.parquet || true
             git commit -m "chore: smart-sync $(date -u +%Y-%m-%dT%H:%M:%SZ) (${{ needs.check.outputs.pending_count }} pendientes)"
             git push origin main
           else
