@@ -40,6 +40,24 @@ LEAGUE_MAP_COUK = {
     "F1":  "L1",
 }
 
+# Segundas divisiones (mismo formato mmz4281 que las de arriba).
+# NO se predicen ni se publican: se ingieren solo para alimentar Elo y
+# Dixon-Coles. Sin esto los equipos ASCENDIDOS llegan a primera sin historia
+# y arrancan con el Elo default de 1500, lo que hacia que el modelo diera
+# ~44/25/31 en todos sus partidos (ej. Real Madrid vs Malaga: 31% al Malaga).
+# Como estos codigos no estan en LEAGUE_ALIAS de supabase_sync, los partidos
+# de segunda se saltean solos al sincronizar y nunca llegan a la web.
+LEAGUE_MAP_COUK_2ND = {
+    "E1":  "ENG2",   # Championship
+    "SP2": "ESP2",   # Segunda Division
+    "I2":  "ITA2",   # Serie B
+    "D2":  "GER2",   # 2. Bundesliga
+    "F2":  "FRA2",   # Ligue 2
+}
+
+# Union de ambos, para resolver el competition_code al parsear.
+LEAGUE_MAP_ALL = {**LEAGUE_MAP_COUK, **LEAGUE_MAP_COUK_2ND}
+
 # Ligas "extra" de football-data.co.uk (formato distinto: un solo CSV por pais
 # con TODAS las temporadas). file_code -> competition_code interno.
 # https://www.football-data.co.uk/new/{file_code}.csv
@@ -117,7 +135,7 @@ def parse_csv(content: bytes, league_code: str, season_year: int) -> list[dict]:
     needed = {"Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG"}
     if not needed.issubset(df.columns):
         return []
-    comp_code = LEAGUE_MAP_COUK[league_code]
+    comp_code = LEAGUE_MAP_ALL[league_code]
     season = f"{season_year}/{(season_year + 1) % 100:02d}"
 
     out: list[dict] = []
@@ -184,7 +202,7 @@ def backfill_couk(seasons: list[int] | None = None,
     for s in seasons:
         for lg in leagues:
             url = url_for(s, lg)
-            print(f"[couk] {LEAGUE_MAP_COUK[lg]} {s}/{(s+1)%100:02d} -> {url}", flush=True)
+            print(f"[couk] {LEAGUE_MAP_ALL[lg]} {s}/{(s+1)%100:02d} -> {url}", flush=True)
             try:
                 content = _download(url)
                 if content is None:

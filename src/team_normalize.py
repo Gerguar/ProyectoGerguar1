@@ -360,6 +360,21 @@ TEAM_NAME_TO_SLUG: dict[str, str] = {
     "clermont foot 63": "clermont",
     "lorient": "lorient",
     "fc lorient": "lorient",
+
+    # ── Equipos ascendidos 2026/27 ────────────────────────────────────────
+    # football-data.co.uk (segundas divisiones) los nombra distinto que
+    # football-data.org (primera). Sin estos alias el mismo club entraba con
+    # dos slugs y su historial de segunda no se acumulaba: arrancaban la
+    # temporada con Elo 1500 y el modelo les daba ~44/25/31 a todo.
+    "coventry": "coventry_city",          # E1 "Coventry" / PL "Coventry City"
+    "hull": "hull_city",                  # E1 "Hull" / PL "Hull City"
+    "paderborn": "sc_paderborn",          # D2 "Paderborn" / BL1 "SC Paderborn"
+    "sc paderborn 07": "sc_paderborn",
+    "schalke 04": "schalke",              # D2 "Schalke 04" / BL1 "Schalke"
+    "fc schalke 04": "schalke",
+    "la coruna": "deportivo",             # SP2 "La Coruna" / PD "Deportivo"
+    "deportivo la coruna": "deportivo",
+    "rc deportivo": "deportivo",
 }
 
 

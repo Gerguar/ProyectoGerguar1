@@ -28,7 +28,8 @@ from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_excep
 
 from .config import COMPETITIONS, PATHS, KEYS
 from .team_normalize import canonical, is_known
-from .ingest_couk import backfill_couk, backfill_couk_new
+from .ingest_couk import (backfill_couk, backfill_couk_new,
+                          LEAGUE_MAP_COUK_2ND)
 
 
 class RetryableHTTPError(Exception):
@@ -295,6 +296,16 @@ def main() -> None:
         print(f"[ingest] football-data.co.uk: {len(df_couk)} partidos", flush=True)
         if not df_couk.empty:
             frames.append(df_couk)
+
+        # Segundas divisiones, ultimas 3 temporadas. NO se publican: alimentan
+        # Elo y Dixon-Coles para que los equipos ASCENDIDOS lleguen a primera
+        # con rating real en vez del default 1500 (ver ingest_couk).
+        seasons_2nd = sorted(seasons)[-3:]
+        df_2nd = backfill_couk(seasons=seasons_2nd,
+                               leagues=list(LEAGUE_MAP_COUK_2ND.keys()))
+        print(f"[ingest] football-data.co.uk (segundas divisiones): {len(df_2nd)} partidos", flush=True)
+        if not df_2nd.empty:
+            frames.append(df_2nd)
 
         # Ligas "extra" (Liga Argentina, etc.) — un CSV por pais con todas las temporadas.
         df_couk_new = backfill_couk_new()
