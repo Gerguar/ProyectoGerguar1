@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-09-29T04:21:49.871588+00:00",
+  "generated_at_utc": "2026-09-29T17:41:16.249362+00:00",
   "model": {
     "trained_at": "2026-09-27T04:50:38.026904+00:00",
     "method": "DixonColes+Elo+XGBoost(isotonic)",
@@ -1334,66 +1334,6 @@
       }
     },
     {
-      "match_id": "fd-559673",
-      "kickoff_ts_utc": "2026-10-10T18:45:00+00:00",
-      "competition": {
-        "code": "L1",
-        "name": "Ligue 1"
-      },
-      "home": {
-        "id": "monaco",
-        "name": "Monaco"
-      },
-      "away": {
-        "id": "toulouse",
-        "name": "Toulouse"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.5173,
-        "draw": 0.2453,
-        "away": 0.2374
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1073
-        },
-        {
-          "score": "2-1",
-          "p": 0.097
-        },
-        {
-          "score": "2-0",
-          "p": 0.0783
-        },
-        {
-          "score": "1-0",
-          "p": 0.0762
-        },
-        {
-          "score": "1-2",
-          "p": 0.0629
-        }
-      ],
-      "expected_goals": {
-        "home": 1.91,
-        "away": 1.24
-      },
-      "derived": {
-        "p_over_2_5": 0.6091,
-        "p_btts": 0.6107
-      },
-      "ratings": {
-        "elo_home": 1682.4,
-        "elo_away": 1567.0,
-        "elo_diff": 115.4
-      }
-    },
-    {
       "match_id": "fd-559672",
       "kickoff_ts_utc": "2026-10-10T18:45:00+00:00",
       "competition": {
@@ -1454,63 +1394,63 @@
       }
     },
     {
-      "match_id": "fd-559668",
+      "match_id": "fd-559673",
       "kickoff_ts_utc": "2026-10-10T18:45:00+00:00",
       "competition": {
         "code": "L1",
         "name": "Ligue 1"
       },
       "home": {
-        "id": "lorient",
-        "name": "Lorient"
+        "id": "monaco",
+        "name": "Monaco"
       },
       "away": {
-        "id": "paris",
-        "name": "Paris FC"
+        "id": "toulouse",
+        "name": "Toulouse"
       },
       "venue": null,
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4654,
-        "draw": 0.2749,
-        "away": 0.2596
+        "home": 0.5173,
+        "draw": 0.2453,
+        "away": 0.2374
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1261
-        },
-        {
-          "score": "1-0",
-          "p": 0.0946
+          "p": 0.1073
         },
         {
           "score": "2-1",
-          "p": 0.0925
+          "p": 0.097
         },
         {
           "score": "2-0",
-          "p": 0.0786
+          "p": 0.0783
         },
         {
-          "score": "0-0",
-          "p": 0.0721
+          "score": "1-0",
+          "p": 0.0762
+        },
+        {
+          "score": "1-2",
+          "p": 0.0629
         }
       ],
       "expected_goals": {
-        "home": 1.55,
-        "away": 1.18
+        "home": 1.91,
+        "away": 1.24
       },
       "derived": {
-        "p_over_2_5": 0.5133,
-        "p_btts": 0.5519
+        "p_over_2_5": 0.6091,
+        "p_btts": 0.6107
       },
       "ratings": {
-        "elo_home": 1610.8,
-        "elo_away": 1628.0,
-        "elo_diff": -17.2
+        "elo_home": 1682.4,
+        "elo_away": 1567.0,
+        "elo_diff": 115.4
       }
     },
     {
@@ -1571,6 +1511,66 @@
         "elo_home": 1535.4,
         "elo_away": 1433.3,
         "elo_diff": 102.1
+      }
+    },
+    {
+      "match_id": "fd-559668",
+      "kickoff_ts_utc": "2026-10-10T18:45:00+00:00",
+      "competition": {
+        "code": "L1",
+        "name": "Ligue 1"
+      },
+      "home": {
+        "id": "lorient",
+        "name": "Lorient"
+      },
+      "away": {
+        "id": "paris",
+        "name": "Paris FC"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4654,
+        "draw": 0.2749,
+        "away": 0.2596
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1261
+        },
+        {
+          "score": "1-0",
+          "p": 0.0946
+        },
+        {
+          "score": "2-1",
+          "p": 0.0925
+        },
+        {
+          "score": "2-0",
+          "p": 0.0786
+        },
+        {
+          "score": "0-0",
+          "p": 0.0721
+        }
+      ],
+      "expected_goals": {
+        "home": 1.55,
+        "away": 1.18
+      },
+      "derived": {
+        "p_over_2_5": 0.5133,
+        "p_btts": 0.5519
+      },
+      "ratings": {
+        "elo_home": 1610.8,
+        "elo_away": 1628.0,
+        "elo_diff": -17.2
       }
     },
     {
@@ -2891,6 +2891,126 @@
         "elo_home": 1608.2,
         "elo_away": 1620.0,
         "elo_diff": -11.8
+      }
+    },
+    {
+      "match_id": "fd-575342",
+      "kickoff_ts_utc": "2026-10-13T16:45:00+00:00",
+      "competition": {
+        "code": "UCL",
+        "name": "UEFA Champions League"
+      },
+      "home": {
+        "id": "sabah",
+        "name": "Sabah FK"
+      },
+      "away": {
+        "id": "slavia_praha",
+        "name": "Slavia Praha"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.5016,
+        "draw": 0.2778,
+        "away": 0.2206
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-0",
+          "p": 0.1491
+        },
+        {
+          "score": "1-1",
+          "p": 0.1246
+        },
+        {
+          "score": "2-0",
+          "p": 0.1187
+        },
+        {
+          "score": "0-0",
+          "p": 0.1089
+        },
+        {
+          "score": "2-1",
+          "p": 0.0898
+        }
+      ],
+      "expected_goals": {
+        "home": 1.52,
+        "away": 0.76
+      },
+      "derived": {
+        "p_over_2_5": 0.3987,
+        "p_btts": 0.4218
+      },
+      "ratings": {
+        "elo_home": 1500.0,
+        "elo_away": 1469.5,
+        "elo_diff": 30.5
+      }
+    },
+    {
+      "match_id": "fd-575341",
+      "kickoff_ts_utc": "2026-10-13T16:45:00+00:00",
+      "competition": {
+        "code": "UCL",
+        "name": "UEFA Champions League"
+      },
+      "home": {
+        "id": "lens",
+        "name": "RC Lens"
+      },
+      "away": {
+        "id": "sporting_cp",
+        "name": "Sporting CP"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4227,
+        "draw": 0.2703,
+        "away": 0.307
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1326
+        },
+        {
+          "score": "0-1",
+          "p": 0.0907
+        },
+        {
+          "score": "1-0",
+          "p": 0.0882
+        },
+        {
+          "score": "1-2",
+          "p": 0.0826
+        },
+        {
+          "score": "0-0",
+          "p": 0.0815
+        }
+      ],
+      "expected_goals": {
+        "home": 1.28,
+        "away": 1.32
+      },
+      "derived": {
+        "p_over_2_5": 0.4814,
+        "p_btts": 0.5361
+      },
+      "ratings": {
+        "elo_home": 1711.0,
+        "elo_away": 1578.2,
+        "elo_diff": 132.8
       }
     }
   ]
