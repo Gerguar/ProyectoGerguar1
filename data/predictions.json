@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-18T04:02:20.321480+00:00",
+  "generated_at_utc": "2026-10-18T15:25:10.641521+00:00",
   "model": {
     "trained_at": "2026-10-18T04:02:18.049337+00:00",
     "method": "DixonColes+Elo+XGBoost(isotonic)",
@@ -13,726 +13,6 @@
     }
   },
   "matches": [
-    {
-      "match_id": "fd-558574",
-      "kickoff_ts_utc": "2026-10-18T10:30:00+00:00",
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "home": {
-        "id": "udinese",
-        "name": "Udinese"
-      },
-      "away": {
-        "id": "lecce",
-        "name": "Lecce"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.5263,
-        "draw": 0.2761,
-        "away": 0.1977
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-0",
-          "p": 0.1727
-        },
-        {
-          "score": "2-0",
-          "p": 0.135
-        },
-        {
-          "score": "0-0",
-          "p": 0.1237
-        },
-        {
-          "score": "1-1",
-          "p": 0.1172
-        },
-        {
-          "score": "2-1",
-          "p": 0.0843
-        }
-      ],
-      "expected_goals": {
-        "home": 1.51,
-        "away": 0.62
-      },
-      "derived": {
-        "p_over_2_5": 0.3605,
-        "p_btts": 0.368
-      },
-      "ratings": {
-        "elo_home": 1640.8,
-        "elo_away": 1444.0,
-        "elo_diff": 196.8
-      }
-    },
-    {
-      "match_id": "fd-564715",
-      "kickoff_ts_utc": "2026-10-18T12:00:00+00:00",
-      "competition": {
-        "code": "LL",
-        "name": "La Liga"
-      },
-      "home": {
-        "id": "osasuna",
-        "name": "Osasuna"
-      },
-      "away": {
-        "id": "santander",
-        "name": "Santander"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.5353,
-        "draw": 0.2656,
-        "away": 0.1992
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "2-1",
-          "p": 0.0967
-        },
-        {
-          "score": "1-1",
-          "p": 0.0967
-        },
-        {
-          "score": "2-0",
-          "p": 0.0773
-        },
-        {
-          "score": "1-0",
-          "p": 0.0688
-        },
-        {
-          "score": "3-1",
-          "p": 0.0678
-        }
-      ],
-      "expected_goals": {
-        "home": 2.1,
-        "away": 1.25
-      },
-      "derived": {
-        "p_over_2_5": 0.6513,
-        "p_btts": 0.6313
-      },
-      "ratings": {
-        "elo_home": 1515.2,
-        "elo_away": 1577.2,
-        "elo_diff": -62.0
-      }
-    },
-    {
-      "match_id": "fd-560605",
-      "kickoff_ts_utc": "2026-10-18T13:00:00+00:00",
-      "competition": {
-        "code": "EPL",
-        "name": "Premier League"
-      },
-      "home": {
-        "id": "leeds",
-        "name": "Leeds United"
-      },
-      "away": {
-        "id": "man_united",
-        "name": "Man United"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.3115,
-        "draw": 0.3247,
-        "away": 0.3638
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.122
-        },
-        {
-          "score": "2-1",
-          "p": 0.084
-        },
-        {
-          "score": "1-2",
-          "p": 0.0837
-        },
-        {
-          "score": "1-0",
-          "p": 0.0744
-        },
-        {
-          "score": "0-1",
-          "p": 0.0741
-        }
-      ],
-      "expected_goals": {
-        "home": 1.45,
-        "away": 1.44
-      },
-      "derived": {
-        "p_over_2_5": 0.552,
-        "p_btts": 0.5903
-      },
-      "ratings": {
-        "elo_home": 1657.6,
-        "elo_away": 1736.6,
-        "elo_diff": -79.0
-      }
-    },
-    {
-      "match_id": "fd-560604",
-      "kickoff_ts_utc": "2026-10-18T13:00:00+00:00",
-      "competition": {
-        "code": "EPL",
-        "name": "Premier League"
-      },
-      "home": {
-        "id": "bournemouth",
-        "name": "Bournemouth"
-      },
-      "away": {
-        "id": "sunderland",
-        "name": "Sunderland"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.4401,
-        "draw": 0.3471,
-        "away": 0.2128
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-0",
-          "p": 0.1275
-        },
-        {
-          "score": "1-1",
-          "p": 0.118
-        },
-        {
-          "score": "2-0",
-          "p": 0.1139
-        },
-        {
-          "score": "2-1",
-          "p": 0.0959
-        },
-        {
-          "score": "0-0",
-          "p": 0.0838
-        }
-      ],
-      "expected_goals": {
-        "home": 1.71,
-        "away": 0.84
-      },
-      "derived": {
-        "p_over_2_5": 0.4693,
-        "p_btts": 0.472
-      },
-      "ratings": {
-        "elo_home": 1705.4,
-        "elo_away": 1553.0,
-        "elo_diff": 152.4
-      }
-    },
-    {
-      "match_id": "fd-559664",
-      "kickoff_ts_utc": "2026-10-18T13:00:00+00:00",
-      "competition": {
-        "code": "L1",
-        "name": "Ligue 1"
-      },
-      "home": {
-        "id": "angers",
-        "name": "Angers SCO"
-      },
-      "away": {
-        "id": "marseille",
-        "name": "Marseille"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.1999,
-        "draw": 0.3685,
-        "away": 0.4316
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1264
-        },
-        {
-          "score": "0-1",
-          "p": 0.1179
-        },
-        {
-          "score": "0-2",
-          "p": 0.0974
-        },
-        {
-          "score": "1-2",
-          "p": 0.0942
-        },
-        {
-          "score": "0-0",
-          "p": 0.0854
-        }
-      ],
-      "expected_goals": {
-        "home": 0.97,
-        "away": 1.57
-      },
-      "derived": {
-        "p_over_2_5": 0.4655,
-        "p_btts": 0.4972
-      },
-      "ratings": {
-        "elo_home": 1439.4,
-        "elo_away": 1580.2,
-        "elo_diff": -140.7
-      }
-    },
-    {
-      "match_id": "fd-558577",
-      "kickoff_ts_utc": "2026-10-18T13:00:00+00:00",
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "home": {
-        "id": "fiorentina",
-        "name": "Fiorentina"
-      },
-      "away": {
-        "id": "como",
-        "name": "Como 1907"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.2079,
-        "draw": 0.3399,
-        "away": 0.4522
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1307
-        },
-        {
-          "score": "0-1",
-          "p": 0.1297
-        },
-        {
-          "score": "0-0",
-          "p": 0.0997
-        },
-        {
-          "score": "0-2",
-          "p": 0.0992
-        },
-        {
-          "score": "1-2",
-          "p": 0.0906
-        }
-      ],
-      "expected_goals": {
-        "home": 0.91,
-        "away": 1.46
-      },
-      "derived": {
-        "p_over_2_5": 0.4229,
-        "p_btts": 0.466
-      },
-      "ratings": {
-        "elo_home": 1589.1,
-        "elo_away": 1732.9,
-        "elo_diff": -143.8
-      }
-    },
-    {
-      "match_id": "fd-560609",
-      "kickoff_ts_utc": "2026-10-18T13:00:00+00:00",
-      "competition": {
-        "code": "EPL",
-        "name": "Premier League"
-      },
-      "home": {
-        "id": "brighton",
-        "name": "Brighton Hove"
-      },
-      "away": {
-        "id": "crystal_palace",
-        "name": "Crystal Palace"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.4179,
-        "draw": 0.3671,
-        "away": 0.215
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-0",
-          "p": 0.1303
-        },
-        {
-          "score": "1-1",
-          "p": 0.1221
-        },
-        {
-          "score": "2-0",
-          "p": 0.111
-        },
-        {
-          "score": "2-1",
-          "p": 0.0946
-        },
-        {
-          "score": "0-0",
-          "p": 0.0896
-        }
-      ],
-      "expected_goals": {
-        "home": 1.63,
-        "away": 0.85
-      },
-      "derived": {
-        "p_over_2_5": 0.4515,
-        "p_btts": 0.467
-      },
-      "ratings": {
-        "elo_home": 1653.2,
-        "elo_away": 1548.4,
-        "elo_diff": 104.9
-      }
-    },
-    {
-      "match_id": "fd-565827",
-      "kickoff_ts_utc": "2026-10-18T13:30:00+00:00",
-      "competition": {
-        "code": "BL",
-        "name": "Bundesliga"
-      },
-      "home": {
-        "id": "leverkusen",
-        "name": "Leverkusen"
-      },
-      "away": {
-        "id": "freiburg",
-        "name": "Freiburg"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.6901,
-        "draw": 0.179,
-        "away": 0.1309
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "2-1",
-          "p": 0.0978
-        },
-        {
-          "score": "2-0",
-          "p": 0.0925
-        },
-        {
-          "score": "1-1",
-          "p": 0.0905
-        },
-        {
-          "score": "1-0",
-          "p": 0.0769
-        },
-        {
-          "score": "3-1",
-          "p": 0.0741
-        }
-      ],
-      "expected_goals": {
-        "home": 2.27,
-        "away": 1.06
-      },
-      "derived": {
-        "p_over_2_5": 0.6466,
-        "p_btts": 0.5898
-      },
-      "ratings": {
-        "elo_home": 1684.7,
-        "elo_away": 1551.3,
-        "elo_diff": 133.3
-      }
-    },
-    {
-      "match_id": "fd-564712",
-      "kickoff_ts_utc": "2026-10-18T14:15:00+00:00",
-      "competition": {
-        "code": "LL",
-        "name": "La Liga"
-      },
-      "home": {
-        "id": "celta",
-        "name": "Celta"
-      },
-      "away": {
-        "id": "alaves",
-        "name": "Alav\u00e9s"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.4758,
-        "draw": 0.3084,
-        "away": 0.2158
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.115
-        },
-        {
-          "score": "2-1",
-          "p": 0.0981
-        },
-        {
-          "score": "1-0",
-          "p": 0.0952
-        },
-        {
-          "score": "2-0",
-          "p": 0.0905
-        },
-        {
-          "score": "0-0",
-          "p": 0.0619
-        }
-      ],
-      "expected_goals": {
-        "home": 1.79,
-        "away": 1.08
-      },
-      "derived": {
-        "p_over_2_5": 0.549,
-        "p_btts": 0.5575
-      },
-      "ratings": {
-        "elo_home": 1567.7,
-        "elo_away": 1507.2,
-        "elo_diff": 60.5
-      }
-    },
-    {
-      "match_id": "fd-559657",
-      "kickoff_ts_utc": "2026-10-18T15:15:00+00:00",
-      "competition": {
-        "code": "L1",
-        "name": "Ligue 1"
-      },
-      "home": {
-        "id": "lorient",
-        "name": "Lorient"
-      },
-      "away": {
-        "id": "monaco",
-        "name": "Monaco"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.4531,
-        "draw": 0.3392,
-        "away": 0.2076
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1114
-        },
-        {
-          "score": "2-1",
-          "p": 0.0885
-        },
-        {
-          "score": "1-2",
-          "p": 0.0783
-        },
-        {
-          "score": "1-0",
-          "p": 0.0661
-        },
-        {
-          "score": "2-2",
-          "p": 0.0654
-        }
-      ],
-      "expected_goals": {
-        "home": 1.67,
-        "away": 1.48
-      },
-      "derived": {
-        "p_over_2_5": 0.6096,
-        "p_btts": 0.6324
-      },
-      "ratings": {
-        "elo_home": 1630.9,
-        "elo_away": 1661.6,
-        "elo_diff": -30.7
-      }
-    },
-    {
-      "match_id": "fd-559658",
-      "kickoff_ts_utc": "2026-10-18T15:15:00+00:00",
-      "competition": {
-        "code": "L1",
-        "name": "Ligue 1"
-      },
-      "home": {
-        "id": "paris",
-        "name": "Paris FC"
-      },
-      "away": {
-        "id": "rennes",
-        "name": "Stade Rennais"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.2976,
-        "draw": 0.2777,
-        "away": 0.4247
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.115
-        },
-        {
-          "score": "1-2",
-          "p": 0.0858
-        },
-        {
-          "score": "2-1",
-          "p": 0.0821
-        },
-        {
-          "score": "0-1",
-          "p": 0.0672
-        },
-        {
-          "score": "2-2",
-          "p": 0.0644
-        }
-      ],
-      "expected_goals": {
-        "home": 1.5,
-        "away": 1.57
-      },
-      "derived": {
-        "p_over_2_5": 0.5923,
-        "p_btts": 0.6209
-      },
-      "ratings": {
-        "elo_home": 1615.6,
-        "elo_away": 1708.5,
-        "elo_diff": -92.9
-      }
-    },
-    {
-      "match_id": "fd-559663",
-      "kickoff_ts_utc": "2026-10-18T15:15:00+00:00",
-      "competition": {
-        "code": "L1",
-        "name": "Ligue 1"
-      },
-      "home": {
-        "id": "le_havre",
-        "name": "Le Havre"
-      },
-      "away": {
-        "id": "auxerre",
-        "name": "Auxerre"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.4001,
-        "draw": 0.3477,
-        "away": 0.2522
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "0-0",
-          "p": 0.1441
-        },
-        {
-          "score": "1-1",
-          "p": 0.1422
-        },
-        {
-          "score": "1-0",
-          "p": 0.1337
-        },
-        {
-          "score": "0-1",
-          "p": 0.1248
-        },
-        {
-          "score": "2-0",
-          "p": 0.0722
-        }
-      ],
-      "expected_goals": {
-        "home": 1.03,
-        "away": 0.96
-      },
-      "derived": {
-        "p_over_2_5": 0.3198,
-        "p_btts": 0.4031
-      },
-      "ratings": {
-        "elo_home": 1468.5,
-        "elo_away": 1546.5,
-        "elo_diff": -78.0
-      }
-    },
     {
       "match_id": "fd-565826",
       "kickoff_ts_utc": "2026-10-18T15:30:00+00:00",
@@ -752,9 +32,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.23,
-        "draw": 0.3725,
-        "away": 0.3975
+        "home": 0.2351,
+        "draw": 0.3687,
+        "away": 0.3962
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -812,9 +92,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1379,
-        "draw": 0.396,
-        "away": 0.4661
+        "home": 0.1494,
+        "draw": 0.3998,
+        "away": 0.4509
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -872,9 +152,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.426,
-        "draw": 0.3387,
-        "away": 0.2353
+        "home": 0.4312,
+        "draw": 0.3482,
+        "away": 0.2206
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -932,9 +212,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3025,
-        "draw": 0.321,
-        "away": 0.3765
+        "home": 0.3035,
+        "draw": 0.3113,
+        "away": 0.3852
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -974,66 +254,6 @@
       }
     },
     {
-      "match_id": "fd-558570",
-      "kickoff_ts_utc": "2026-10-18T18:45:00+00:00",
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "home": {
-        "id": "juventus",
-        "name": "Juventus"
-      },
-      "away": {
-        "id": "lazio",
-        "name": "Lazio"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.5033,
-        "draw": 0.3058,
-        "away": 0.1909
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-0",
-          "p": 0.1474
-        },
-        {
-          "score": "2-0",
-          "p": 0.1246
-        },
-        {
-          "score": "1-1",
-          "p": 0.1186
-        },
-        {
-          "score": "0-0",
-          "p": 0.1001
-        },
-        {
-          "score": "2-1",
-          "p": 0.0917
-        }
-      ],
-      "expected_goals": {
-        "home": 1.63,
-        "away": 0.74
-      },
-      "derived": {
-        "p_over_2_5": 0.4202,
-        "p_btts": 0.4242
-      },
-      "ratings": {
-        "elo_home": 1725.9,
-        "elo_away": 1614.7,
-        "elo_diff": 111.1
-      }
-    },
-    {
       "match_id": "fd-559665",
       "kickoff_ts_utc": "2026-10-18T18:45:00+00:00",
       "competition": {
@@ -1052,9 +272,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6159,
-        "draw": 0.2311,
-        "away": 0.1529
+        "home": 0.6292,
+        "draw": 0.2111,
+        "away": 0.1597
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1094,6 +314,66 @@
       }
     },
     {
+      "match_id": "fd-558570",
+      "kickoff_ts_utc": "2026-10-18T18:45:00+00:00",
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "home": {
+        "id": "juventus",
+        "name": "Juventus"
+      },
+      "away": {
+        "id": "lazio",
+        "name": "Lazio"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4814,
+        "draw": 0.3328,
+        "away": 0.1858
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-0",
+          "p": 0.1474
+        },
+        {
+          "score": "2-0",
+          "p": 0.1246
+        },
+        {
+          "score": "1-1",
+          "p": 0.1186
+        },
+        {
+          "score": "0-0",
+          "p": 0.1001
+        },
+        {
+          "score": "2-1",
+          "p": 0.0917
+        }
+      ],
+      "expected_goals": {
+        "home": 1.63,
+        "away": 0.74
+      },
+      "derived": {
+        "p_over_2_5": 0.4202,
+        "p_btts": 0.4242
+      },
+      "ratings": {
+        "elo_home": 1725.9,
+        "elo_away": 1614.7,
+        "elo_diff": 111.1
+      }
+    },
+    {
       "match_id": "fd-564709",
       "kickoff_ts_utc": "2026-10-18T19:00:00+00:00",
       "competition": {
@@ -1112,9 +392,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.8907,
-        "draw": 0.0565,
-        "away": 0.0528
+        "home": 0.8941,
+        "draw": 0.0546,
+        "away": 0.0513
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1172,9 +452,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4163,
-        "draw": 0.3426,
-        "away": 0.2411
+        "home": 0.4009,
+        "draw": 0.3636,
+        "away": 0.2355
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1232,9 +512,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4139,
-        "draw": 0.3547,
-        "away": 0.2313
+        "home": 0.4103,
+        "draw": 0.3582,
+        "away": 0.2315
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1292,9 +572,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3711,
-        "draw": 0.3407,
-        "away": 0.2882
+        "home": 0.3684,
+        "draw": 0.3384,
+        "away": 0.2932
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1352,9 +632,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6159,
-        "draw": 0.1998,
-        "away": 0.1843
+        "home": 0.6175,
+        "draw": 0.2027,
+        "away": 0.1799
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1394,66 +674,6 @@
       }
     },
     {
-      "match_id": "fd-575359",
-      "kickoff_ts_utc": "2026-10-20T16:45:00+00:00",
-      "competition": {
-        "code": "UCL",
-        "name": "UEFA Champions League"
-      },
-      "home": {
-        "id": "sabah",
-        "name": "Sabah FK"
-      },
-      "away": {
-        "id": "dortmund",
-        "name": "Dortmund"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.1397,
-        "draw": 0.2873,
-        "away": 0.573
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "0-2",
-          "p": 0.1121
-        },
-        {
-          "score": "0-1",
-          "p": 0.1102
-        },
-        {
-          "score": "1-1",
-          "p": 0.107
-        },
-        {
-          "score": "1-2",
-          "p": 0.0987
-        },
-        {
-          "score": "0-3",
-          "p": 0.0725
-        }
-      ],
-      "expected_goals": {
-        "home": 0.88,
-        "away": 1.94
-      },
-      "derived": {
-        "p_over_2_5": 0.5357,
-        "p_btts": 0.5068
-      },
-      "ratings": {
-        "elo_home": 1500.0,
-        "elo_away": 1741.6,
-        "elo_diff": -241.6
-      }
-    },
-    {
       "match_id": "fd-575360",
       "kickoff_ts_utc": "2026-10-20T16:45:00+00:00",
       "competition": {
@@ -1472,9 +692,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4781,
-        "draw": 0.3248,
-        "away": 0.1971
+        "home": 0.4763,
+        "draw": 0.3527,
+        "away": 0.1709
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1514,6 +734,66 @@
       }
     },
     {
+      "match_id": "fd-575359",
+      "kickoff_ts_utc": "2026-10-20T16:45:00+00:00",
+      "competition": {
+        "code": "UCL",
+        "name": "UEFA Champions League"
+      },
+      "home": {
+        "id": "sabah",
+        "name": "Sabah FK"
+      },
+      "away": {
+        "id": "dortmund",
+        "name": "Dortmund"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.1612,
+        "draw": 0.2603,
+        "away": 0.5785
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "0-2",
+          "p": 0.1121
+        },
+        {
+          "score": "0-1",
+          "p": 0.1102
+        },
+        {
+          "score": "1-1",
+          "p": 0.107
+        },
+        {
+          "score": "1-2",
+          "p": 0.0987
+        },
+        {
+          "score": "0-3",
+          "p": 0.0725
+        }
+      ],
+      "expected_goals": {
+        "home": 0.88,
+        "away": 1.94
+      },
+      "derived": {
+        "p_over_2_5": 0.5357,
+        "p_btts": 0.5068
+      },
+      "ratings": {
+        "elo_home": 1500.0,
+        "elo_away": 1741.6,
+        "elo_diff": -241.6
+      }
+    },
+    {
       "match_id": "fd-575366",
       "kickoff_ts_utc": "2026-10-20T19:00:00+00:00",
       "competition": {
@@ -1532,9 +812,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5026,
-        "draw": 0.2241,
-        "away": 0.2733
+        "home": 0.4706,
+        "draw": 0.1969,
+        "away": 0.3325
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1592,9 +872,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5679,
-        "draw": 0.1972,
-        "away": 0.2349
+        "home": 0.5594,
+        "draw": 0.202,
+        "away": 0.2386
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1652,9 +932,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.8553,
-        "draw": 0.0831,
-        "away": 0.0616
+        "home": 0.8485,
+        "draw": 0.0816,
+        "away": 0.0698
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1712,9 +992,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1427,
-        "draw": 0.25,
-        "away": 0.6073
+        "home": 0.1545,
+        "draw": 0.2623,
+        "away": 0.5831
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1772,9 +1052,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5783,
-        "draw": 0.3057,
-        "away": 0.116
+        "home": 0.6041,
+        "draw": 0.2734,
+        "away": 0.1225
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1832,9 +1112,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7135,
-        "draw": 0.1639,
-        "away": 0.1225
+        "home": 0.7186,
+        "draw": 0.1565,
+        "away": 0.1249
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1892,9 +1172,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4411,
-        "draw": 0.259,
-        "away": 0.2999
+        "home": 0.3667,
+        "draw": 0.2476,
+        "away": 0.3857
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -1934,66 +1214,6 @@
       }
     },
     {
-      "match_id": "fd-575369",
-      "kickoff_ts_utc": "2026-10-21T16:45:00+00:00",
-      "competition": {
-        "code": "UCL",
-        "name": "UEFA Champions League"
-      },
-      "home": {
-        "id": "lille",
-        "name": "Lille"
-      },
-      "away": {
-        "id": "galatasaray",
-        "name": "Galatasaray"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.502,
-        "draw": 0.3246,
-        "away": 0.1734
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-0",
-          "p": 0.1279
-        },
-        {
-          "score": "1-1",
-          "p": 0.1203
-        },
-        {
-          "score": "2-0",
-          "p": 0.1116
-        },
-        {
-          "score": "2-1",
-          "p": 0.0954
-        },
-        {
-          "score": "0-0",
-          "p": 0.0861
-        }
-      ],
-      "expected_goals": {
-        "home": 1.67,
-        "away": 0.86
-      },
-      "derived": {
-        "p_over_2_5": 0.4622,
-        "p_btts": 0.4723
-      },
-      "ratings": {
-        "elo_home": 1743.9,
-        "elo_away": 1547.9,
-        "elo_diff": 196.0
-      }
-    },
-    {
       "match_id": "fd-575368",
       "kickoff_ts_utc": "2026-10-21T16:45:00+00:00",
       "competition": {
@@ -2012,9 +1232,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2865,
-        "draw": 0.3382,
-        "away": 0.3753
+        "home": 0.3005,
+        "draw": 0.335,
+        "away": 0.3645
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2054,6 +1274,66 @@
       }
     },
     {
+      "match_id": "fd-575369",
+      "kickoff_ts_utc": "2026-10-21T16:45:00+00:00",
+      "competition": {
+        "code": "UCL",
+        "name": "UEFA Champions League"
+      },
+      "home": {
+        "id": "lille",
+        "name": "Lille"
+      },
+      "away": {
+        "id": "galatasaray",
+        "name": "Galatasaray"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.5127,
+        "draw": 0.308,
+        "away": 0.1794
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-0",
+          "p": 0.1279
+        },
+        {
+          "score": "1-1",
+          "p": 0.1203
+        },
+        {
+          "score": "2-0",
+          "p": 0.1116
+        },
+        {
+          "score": "2-1",
+          "p": 0.0954
+        },
+        {
+          "score": "0-0",
+          "p": 0.0861
+        }
+      ],
+      "expected_goals": {
+        "home": 1.67,
+        "away": 0.86
+      },
+      "derived": {
+        "p_over_2_5": 0.4622,
+        "p_btts": 0.4723
+      },
+      "ratings": {
+        "elo_home": 1743.9,
+        "elo_away": 1547.9,
+        "elo_diff": 196.0
+      }
+    },
+    {
       "match_id": "fd-564685",
       "kickoff_ts_utc": "2026-10-21T18:00:00+00:00",
       "competition": {
@@ -2072,9 +1352,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4291,
-        "draw": 0.3311,
-        "away": 0.2398
+        "home": 0.4087,
+        "draw": 0.3691,
+        "away": 0.2222
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2114,246 +1394,6 @@
       }
     },
     {
-      "match_id": "fd-575373",
-      "kickoff_ts_utc": "2026-10-21T19:00:00+00:00",
-      "competition": {
-        "code": "UCL",
-        "name": "UEFA Champions League"
-      },
-      "home": {
-        "id": "club_brugge",
-        "name": "Club Brugge"
-      },
-      "away": {
-        "id": "lens",
-        "name": "RC Lens"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.2375,
-        "draw": 0.2847,
-        "away": 0.4778
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-2",
-          "p": 0.0756
-        },
-        {
-          "score": "1-1",
-          "p": 0.0744
-        },
-        {
-          "score": "2-2",
-          "p": 0.0729
-        },
-        {
-          "score": "2-1",
-          "p": 0.0681
-        },
-        {
-          "score": "1-3",
-          "p": 0.0539
-        }
-      ],
-      "expected_goals": {
-        "home": 1.93,
-        "away": 2.14
-      },
-      "derived": {
-        "p_over_2_5": 0.7713,
-        "p_btts": 0.7574
-      },
-      "ratings": {
-        "elo_home": 1542.1,
-        "elo_away": 1688.8,
-        "elo_diff": -146.7
-      }
-    },
-    {
-      "match_id": "fd-575371",
-      "kickoff_ts_utc": "2026-10-21T19:00:00+00:00",
-      "competition": {
-        "code": "UCL",
-        "name": "UEFA Champions League"
-      },
-      "home": {
-        "id": "inter_milan",
-        "name": "Inter"
-      },
-      "away": {
-        "id": "shaktar",
-        "name": "Shaktar"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.8307,
-        "draw": 0.1099,
-        "away": 0.0594
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "2-0",
-          "p": 0.1241
-        },
-        {
-          "score": "3-0",
-          "p": 0.1013
-        },
-        {
-          "score": "1-0",
-          "p": 0.0974
-        },
-        {
-          "score": "2-1",
-          "p": 0.0914
-        },
-        {
-          "score": "1-1",
-          "p": 0.0785
-        }
-      ],
-      "expected_goals": {
-        "home": 2.45,
-        "away": 0.74
-      },
-      "derived": {
-        "p_over_2_5": 0.617,
-        "p_btts": 0.4802
-      },
-      "ratings": {
-        "elo_home": 1864.8,
-        "elo_away": 1500.0,
-        "elo_diff": 364.8
-      }
-    },
-    {
-      "match_id": "fd-575375",
-      "kickoff_ts_utc": "2026-10-21T19:00:00+00:00",
-      "competition": {
-        "code": "UCL",
-        "name": "UEFA Champions League"
-      },
-      "home": {
-        "id": "sporting_cp",
-        "name": "Sporting CP"
-      },
-      "away": {
-        "id": "lask",
-        "name": "LASK"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.7894,
-        "draw": 0.1447,
-        "away": 0.0659
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "2-0",
-          "p": 0.154
-        },
-        {
-          "score": "3-0",
-          "p": 0.133
-        },
-        {
-          "score": "1-0",
-          "p": 0.1159
-        },
-        {
-          "score": "4-0",
-          "p": 0.0861
-        },
-        {
-          "score": "2-1",
-          "p": 0.0758
-        }
-      ],
-      "expected_goals": {
-        "home": 2.59,
-        "away": 0.49
-      },
-      "derived": {
-        "p_over_2_5": 0.5944,
-        "p_btts": 0.3626
-      },
-      "ratings": {
-        "elo_home": 1578.2,
-        "elo_away": 1500.0,
-        "elo_diff": 78.2
-      }
-    },
-    {
-      "match_id": "fd-575374",
-      "kickoff_ts_utc": "2026-10-21T19:00:00+00:00",
-      "competition": {
-        "code": "UCL",
-        "name": "UEFA Champions League"
-      },
-      "home": {
-        "id": "aston_villa",
-        "name": "Aston Villa"
-      },
-      "away": {
-        "id": "viking",
-        "name": "Viking"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.7746,
-        "draw": 0.1643,
-        "away": 0.0611
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "2-0",
-          "p": 0.132
-        },
-        {
-          "score": "1-0",
-          "p": 0.107
-        },
-        {
-          "score": "3-0",
-          "p": 0.1047
-        },
-        {
-          "score": "2-1",
-          "p": 0.0907
-        },
-        {
-          "score": "1-1",
-          "p": 0.0802
-        }
-      ],
-      "expected_goals": {
-        "home": 2.38,
-        "away": 0.69
-      },
-      "derived": {
-        "p_over_2_5": 0.5911,
-        "p_btts": 0.4548
-      },
-      "ratings": {
-        "elo_home": 1613.1,
-        "elo_away": 1500.0,
-        "elo_diff": 113.1
-      }
-    },
-    {
       "match_id": "fd-575372",
       "kickoff_ts_utc": "2026-10-21T19:00:00+00:00",
       "competition": {
@@ -2372,9 +1412,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3284,
-        "draw": 0.294,
-        "away": 0.3776
+        "home": 0.327,
+        "draw": 0.2706,
+        "away": 0.4024
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2432,9 +1472,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7449,
-        "draw": 0.143,
-        "away": 0.1121
+        "home": 0.7452,
+        "draw": 0.1489,
+        "away": 0.1059
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2474,6 +1514,66 @@
       }
     },
     {
+      "match_id": "fd-575374",
+      "kickoff_ts_utc": "2026-10-21T19:00:00+00:00",
+      "competition": {
+        "code": "UCL",
+        "name": "UEFA Champions League"
+      },
+      "home": {
+        "id": "aston_villa",
+        "name": "Aston Villa"
+      },
+      "away": {
+        "id": "viking",
+        "name": "Viking"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.7637,
+        "draw": 0.1718,
+        "away": 0.0645
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "2-0",
+          "p": 0.132
+        },
+        {
+          "score": "1-0",
+          "p": 0.107
+        },
+        {
+          "score": "3-0",
+          "p": 0.1047
+        },
+        {
+          "score": "2-1",
+          "p": 0.0907
+        },
+        {
+          "score": "1-1",
+          "p": 0.0802
+        }
+      ],
+      "expected_goals": {
+        "home": 2.38,
+        "away": 0.69
+      },
+      "derived": {
+        "p_over_2_5": 0.5911,
+        "p_btts": 0.4548
+      },
+      "ratings": {
+        "elo_home": 1613.1,
+        "elo_away": 1500.0,
+        "elo_diff": 113.1
+      }
+    },
+    {
       "match_id": "fd-575376",
       "kickoff_ts_utc": "2026-10-21T19:00:00+00:00",
       "competition": {
@@ -2492,9 +1592,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7096,
-        "draw": 0.2121,
-        "away": 0.0783
+        "home": 0.7292,
+        "draw": 0.1964,
+        "away": 0.0743
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2534,6 +1634,186 @@
       }
     },
     {
+      "match_id": "fd-575371",
+      "kickoff_ts_utc": "2026-10-21T19:00:00+00:00",
+      "competition": {
+        "code": "UCL",
+        "name": "UEFA Champions League"
+      },
+      "home": {
+        "id": "inter_milan",
+        "name": "Inter"
+      },
+      "away": {
+        "id": "shaktar",
+        "name": "Shaktar"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.8241,
+        "draw": 0.1161,
+        "away": 0.0598
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "2-0",
+          "p": 0.1241
+        },
+        {
+          "score": "3-0",
+          "p": 0.1013
+        },
+        {
+          "score": "1-0",
+          "p": 0.0974
+        },
+        {
+          "score": "2-1",
+          "p": 0.0914
+        },
+        {
+          "score": "1-1",
+          "p": 0.0785
+        }
+      ],
+      "expected_goals": {
+        "home": 2.45,
+        "away": 0.74
+      },
+      "derived": {
+        "p_over_2_5": 0.617,
+        "p_btts": 0.4802
+      },
+      "ratings": {
+        "elo_home": 1864.8,
+        "elo_away": 1500.0,
+        "elo_diff": 364.8
+      }
+    },
+    {
+      "match_id": "fd-575373",
+      "kickoff_ts_utc": "2026-10-21T19:00:00+00:00",
+      "competition": {
+        "code": "UCL",
+        "name": "UEFA Champions League"
+      },
+      "home": {
+        "id": "club_brugge",
+        "name": "Club Brugge"
+      },
+      "away": {
+        "id": "lens",
+        "name": "RC Lens"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.2327,
+        "draw": 0.2975,
+        "away": 0.4697
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-2",
+          "p": 0.0756
+        },
+        {
+          "score": "1-1",
+          "p": 0.0744
+        },
+        {
+          "score": "2-2",
+          "p": 0.0729
+        },
+        {
+          "score": "2-1",
+          "p": 0.0681
+        },
+        {
+          "score": "1-3",
+          "p": 0.0539
+        }
+      ],
+      "expected_goals": {
+        "home": 1.93,
+        "away": 2.14
+      },
+      "derived": {
+        "p_over_2_5": 0.7713,
+        "p_btts": 0.7574
+      },
+      "ratings": {
+        "elo_home": 1542.1,
+        "elo_away": 1688.8,
+        "elo_diff": -146.7
+      }
+    },
+    {
+      "match_id": "fd-575375",
+      "kickoff_ts_utc": "2026-10-21T19:00:00+00:00",
+      "competition": {
+        "code": "UCL",
+        "name": "UEFA Champions League"
+      },
+      "home": {
+        "id": "sporting_cp",
+        "name": "Sporting CP"
+      },
+      "away": {
+        "id": "lask",
+        "name": "LASK"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.7846,
+        "draw": 0.1435,
+        "away": 0.0719
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "2-0",
+          "p": 0.154
+        },
+        {
+          "score": "3-0",
+          "p": 0.133
+        },
+        {
+          "score": "1-0",
+          "p": 0.1159
+        },
+        {
+          "score": "4-0",
+          "p": 0.0861
+        },
+        {
+          "score": "2-1",
+          "p": 0.0758
+        }
+      ],
+      "expected_goals": {
+        "home": 2.59,
+        "away": 0.49
+      },
+      "derived": {
+        "p_over_2_5": 0.5944,
+        "p_btts": 0.3626
+      },
+      "ratings": {
+        "elo_home": 1578.2,
+        "elo_away": 1500.0,
+        "elo_diff": 78.2
+      }
+    },
+    {
       "match_id": "fd-565833",
       "kickoff_ts_utc": "2026-10-23T18:30:00+00:00",
       "competition": {
@@ -2552,9 +1832,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7433,
-        "draw": 0.1606,
-        "away": 0.0961
+        "home": 0.7179,
+        "draw": 0.1783,
+        "away": 0.1038
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2612,9 +1892,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4501,
-        "draw": 0.3322,
-        "away": 0.2176
+        "home": 0.4392,
+        "draw": 0.3343,
+        "away": 0.2265
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2672,9 +1952,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4082,
-        "draw": 0.3607,
-        "away": 0.2311
+        "home": 0.4044,
+        "draw": 0.3661,
+        "away": 0.2295
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2732,9 +2012,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4721,
-        "draw": 0.2956,
-        "away": 0.2324
+        "home": 0.5108,
+        "draw": 0.2699,
+        "away": 0.2193
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2792,9 +2072,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2949,
-        "draw": 0.3734,
-        "away": 0.3317
+        "home": 0.2903,
+        "draw": 0.3607,
+        "away": 0.349
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2852,9 +2132,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2593,
-        "draw": 0.3361,
-        "away": 0.4047
+        "home": 0.2555,
+        "draw": 0.3446,
+        "away": 0.3999
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2912,9 +2192,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4369,
-        "draw": 0.3718,
-        "away": 0.1913
+        "home": 0.4538,
+        "draw": 0.3634,
+        "away": 0.1829
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2954,66 +2234,6 @@
       }
     },
     {
-      "match_id": "fd-558561",
-      "kickoff_ts_utc": "2026-10-24T13:00:00+00:00",
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "home": {
-        "id": "como",
-        "name": "Como 1907"
-      },
-      "away": {
-        "id": "sassuolo",
-        "name": "Sassuolo"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.575,
-        "draw": 0.2851,
-        "away": 0.1399
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-0",
-          "p": 0.1265
-        },
-        {
-          "score": "2-0",
-          "p": 0.1234
-        },
-        {
-          "score": "1-1",
-          "p": 0.1084
-        },
-        {
-          "score": "2-1",
-          "p": 0.0964
-        },
-        {
-          "score": "3-0",
-          "p": 0.077
-        }
-      ],
-      "expected_goals": {
-        "home": 1.87,
-        "away": 0.78
-      },
-      "derived": {
-        "p_over_2_5": 0.4947,
-        "p_btts": 0.4641
-      },
-      "ratings": {
-        "elo_home": 1732.9,
-        "elo_away": 1609.4,
-        "elo_diff": 123.6
-      }
-    },
-    {
       "match_id": "fd-558560",
       "kickoff_ts_utc": "2026-10-24T13:00:00+00:00",
       "competition": {
@@ -3032,9 +2252,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2494,
-        "draw": 0.354,
-        "away": 0.3966
+        "home": 0.2493,
+        "draw": 0.3804,
+        "away": 0.3703
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -3074,6 +2294,246 @@
       }
     },
     {
+      "match_id": "fd-558561",
+      "kickoff_ts_utc": "2026-10-24T13:00:00+00:00",
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "home": {
+        "id": "como",
+        "name": "Como 1907"
+      },
+      "away": {
+        "id": "sassuolo",
+        "name": "Sassuolo"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.579,
+        "draw": 0.2827,
+        "away": 0.1383
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-0",
+          "p": 0.1265
+        },
+        {
+          "score": "2-0",
+          "p": 0.1234
+        },
+        {
+          "score": "1-1",
+          "p": 0.1084
+        },
+        {
+          "score": "2-1",
+          "p": 0.0964
+        },
+        {
+          "score": "3-0",
+          "p": 0.077
+        }
+      ],
+      "expected_goals": {
+        "home": 1.87,
+        "away": 0.78
+      },
+      "derived": {
+        "p_over_2_5": 0.4947,
+        "p_btts": 0.4641
+      },
+      "ratings": {
+        "elo_home": 1732.9,
+        "elo_away": 1609.4,
+        "elo_diff": 123.6
+      }
+    },
+    {
+      "match_id": "fd-565838",
+      "kickoff_ts_utc": "2026-10-24T13:30:00+00:00",
+      "competition": {
+        "code": "BL",
+        "name": "Bundesliga"
+      },
+      "home": {
+        "id": "augsburg",
+        "name": "Augsburg"
+      },
+      "away": {
+        "id": "union_berlin",
+        "name": "Union Berlin"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4185,
+        "draw": 0.3143,
+        "away": 0.2672
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1247
+        },
+        {
+          "score": "1-0",
+          "p": 0.0976
+        },
+        {
+          "score": "2-1",
+          "p": 0.0937
+        },
+        {
+          "score": "2-0",
+          "p": 0.082
+        },
+        {
+          "score": "0-0",
+          "p": 0.0717
+        }
+      ],
+      "expected_goals": {
+        "home": 1.58,
+        "away": 1.14
+      },
+      "derived": {
+        "p_over_2_5": 0.5122,
+        "p_btts": 0.5472
+      },
+      "ratings": {
+        "elo_home": 1554.3,
+        "elo_away": 1470.8,
+        "elo_diff": 83.4
+      }
+    },
+    {
+      "match_id": "fd-565832",
+      "kickoff_ts_utc": "2026-10-24T13:30:00+00:00",
+      "competition": {
+        "code": "BL",
+        "name": "Bundesliga"
+      },
+      "home": {
+        "id": "leipzig",
+        "name": "RB Leipzig"
+      },
+      "away": {
+        "id": "elversberg",
+        "name": "Elversberg"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.7583,
+        "draw": 0.1582,
+        "away": 0.0836
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "2-1",
+          "p": 0.0962
+        },
+        {
+          "score": "2-0",
+          "p": 0.0896
+        },
+        {
+          "score": "1-1",
+          "p": 0.085
+        },
+        {
+          "score": "3-1",
+          "p": 0.0764
+        },
+        {
+          "score": "3-0",
+          "p": 0.0712
+        }
+      ],
+      "expected_goals": {
+        "home": 2.38,
+        "away": 1.07
+      },
+      "derived": {
+        "p_over_2_5": 0.6706,
+        "p_btts": 0.6016
+      },
+      "ratings": {
+        "elo_home": 1674.9,
+        "elo_away": 1566.1,
+        "elo_diff": 108.7
+      }
+    },
+    {
+      "match_id": "fd-565834",
+      "kickoff_ts_utc": "2026-10-24T13:30:00+00:00",
+      "competition": {
+        "code": "BL",
+        "name": "Bundesliga"
+      },
+      "home": {
+        "id": "sc_paderborn",
+        "name": "SC Paderborn"
+      },
+      "away": {
+        "id": "hsv",
+        "name": "HSV"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.2831,
+        "draw": 0.3753,
+        "away": 0.3416
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1247
+        },
+        {
+          "score": "1-2",
+          "p": 0.0838
+        },
+        {
+          "score": "2-1",
+          "p": 0.0833
+        },
+        {
+          "score": "0-1",
+          "p": 0.0782
+        },
+        {
+          "score": "1-0",
+          "p": 0.0777
+        }
+      ],
+      "expected_goals": {
+        "home": 1.41,
+        "away": 1.41
+      },
+      "derived": {
+        "p_over_2_5": 0.5351,
+        "p_btts": 0.5773
+      },
+      "ratings": {
+        "elo_home": 1563.0,
+        "elo_away": 1499.7,
+        "elo_diff": 63.2
+      }
+    },
+    {
       "match_id": "fd-565830",
       "kickoff_ts_utc": "2026-10-24T13:30:00+00:00",
       "competition": {
@@ -3092,9 +2552,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4471,
-        "draw": 0.3347,
-        "away": 0.2182
+        "home": 0.445,
+        "draw": 0.3213,
+        "away": 0.2337
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -3152,9 +2612,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.43,
-        "draw": 0.3277,
-        "away": 0.2422
+        "home": 0.4257,
+        "draw": 0.3509,
+        "away": 0.2234
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -3194,186 +2654,6 @@
       }
     },
     {
-      "match_id": "fd-565832",
-      "kickoff_ts_utc": "2026-10-24T13:30:00+00:00",
-      "competition": {
-        "code": "BL",
-        "name": "Bundesliga"
-      },
-      "home": {
-        "id": "leipzig",
-        "name": "RB Leipzig"
-      },
-      "away": {
-        "id": "elversberg",
-        "name": "Elversberg"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.7494,
-        "draw": 0.1658,
-        "away": 0.0848
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "2-1",
-          "p": 0.0962
-        },
-        {
-          "score": "2-0",
-          "p": 0.0896
-        },
-        {
-          "score": "1-1",
-          "p": 0.085
-        },
-        {
-          "score": "3-1",
-          "p": 0.0764
-        },
-        {
-          "score": "3-0",
-          "p": 0.0712
-        }
-      ],
-      "expected_goals": {
-        "home": 2.38,
-        "away": 1.07
-      },
-      "derived": {
-        "p_over_2_5": 0.6706,
-        "p_btts": 0.6016
-      },
-      "ratings": {
-        "elo_home": 1674.9,
-        "elo_away": 1566.1,
-        "elo_diff": 108.7
-      }
-    },
-    {
-      "match_id": "fd-565838",
-      "kickoff_ts_utc": "2026-10-24T13:30:00+00:00",
-      "competition": {
-        "code": "BL",
-        "name": "Bundesliga"
-      },
-      "home": {
-        "id": "augsburg",
-        "name": "Augsburg"
-      },
-      "away": {
-        "id": "union_berlin",
-        "name": "Union Berlin"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.4126,
-        "draw": 0.3317,
-        "away": 0.2557
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1247
-        },
-        {
-          "score": "1-0",
-          "p": 0.0976
-        },
-        {
-          "score": "2-1",
-          "p": 0.0937
-        },
-        {
-          "score": "2-0",
-          "p": 0.082
-        },
-        {
-          "score": "0-0",
-          "p": 0.0717
-        }
-      ],
-      "expected_goals": {
-        "home": 1.58,
-        "away": 1.14
-      },
-      "derived": {
-        "p_over_2_5": 0.5122,
-        "p_btts": 0.5472
-      },
-      "ratings": {
-        "elo_home": 1554.3,
-        "elo_away": 1470.8,
-        "elo_diff": 83.4
-      }
-    },
-    {
-      "match_id": "fd-565834",
-      "kickoff_ts_utc": "2026-10-24T13:30:00+00:00",
-      "competition": {
-        "code": "BL",
-        "name": "Bundesliga"
-      },
-      "home": {
-        "id": "sc_paderborn",
-        "name": "SC Paderborn"
-      },
-      "away": {
-        "id": "hsv",
-        "name": "HSV"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.2836,
-        "draw": 0.3754,
-        "away": 0.341
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1247
-        },
-        {
-          "score": "1-2",
-          "p": 0.0838
-        },
-        {
-          "score": "2-1",
-          "p": 0.0833
-        },
-        {
-          "score": "0-1",
-          "p": 0.0782
-        },
-        {
-          "score": "1-0",
-          "p": 0.0777
-        }
-      ],
-      "expected_goals": {
-        "home": 1.41,
-        "away": 1.41
-      },
-      "derived": {
-        "p_over_2_5": 0.5351,
-        "p_btts": 0.5773
-      },
-      "ratings": {
-        "elo_home": 1563.0,
-        "elo_away": 1499.7,
-        "elo_diff": 63.2
-      }
-    },
-    {
       "match_id": "fd-560616",
       "kickoff_ts_utc": "2026-10-24T14:00:00+00:00",
       "competition": {
@@ -3392,9 +2672,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7911,
-        "draw": 0.1493,
-        "away": 0.0596
+        "home": 0.8024,
+        "draw": 0.1391,
+        "away": 0.0585
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -3452,9 +2732,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3093,
-        "draw": 0.3052,
-        "away": 0.3855
+        "home": 0.3165,
+        "draw": 0.3175,
+        "away": 0.366
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -3512,9 +2792,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4422,
-        "draw": 0.3261,
-        "away": 0.2318
+        "home": 0.4224,
+        "draw": 0.3512,
+        "away": 0.2263
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -3572,9 +2852,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5498,
-        "draw": 0.2925,
-        "away": 0.1577
+        "home": 0.5739,
+        "draw": 0.2725,
+        "away": 0.1537
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -3632,9 +2912,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4334,
-        "draw": 0.3276,
-        "away": 0.239
+        "home": 0.4325,
+        "draw": 0.3058,
+        "away": 0.2618
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -3674,126 +2954,6 @@
       }
     },
     {
-      "match_id": "fd-565837",
-      "kickoff_ts_utc": "2026-10-24T16:30:00+00:00",
-      "competition": {
-        "code": "BL",
-        "name": "Bundesliga"
-      },
-      "home": {
-        "id": "dortmund",
-        "name": "Dortmund"
-      },
-      "away": {
-        "id": "eintracht_frankfurt",
-        "name": "Frankfurt"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.7885,
-        "draw": 0.1314,
-        "away": 0.0801
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "2-1",
-          "p": 0.0913
-        },
-        {
-          "score": "2-0",
-          "p": 0.082
-        },
-        {
-          "score": "3-1",
-          "p": 0.0801
-        },
-        {
-          "score": "1-1",
-          "p": 0.073
-        },
-        {
-          "score": "3-0",
-          "p": 0.0719
-        }
-      ],
-      "expected_goals": {
-        "home": 2.63,
-        "away": 1.11
-      },
-      "derived": {
-        "p_over_2_5": 0.7215,
-        "p_btts": 0.6268
-      },
-      "ratings": {
-        "elo_home": 1741.6,
-        "elo_away": 1506.6,
-        "elo_diff": 235.0
-      }
-    },
-    {
-      "match_id": "fd-560617",
-      "kickoff_ts_utc": "2026-10-24T16:30:00+00:00",
-      "competition": {
-        "code": "EPL",
-        "name": "Premier League"
-      },
-      "home": {
-        "id": "chelsea",
-        "name": "Chelsea"
-      },
-      "away": {
-        "id": "tottenham",
-        "name": "Tottenham"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.5223,
-        "draw": 0.2664,
-        "away": 0.2113
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1049
-        },
-        {
-          "score": "2-1",
-          "p": 0.0968
-        },
-        {
-          "score": "2-0",
-          "p": 0.0771
-        },
-        {
-          "score": "1-0",
-          "p": 0.0743
-        },
-        {
-          "score": "3-1",
-          "p": 0.0626
-        }
-      ],
-      "expected_goals": {
-        "home": 1.94,
-        "away": 1.25
-      },
-      "derived": {
-        "p_over_2_5": 0.6192,
-        "p_btts": 0.6174
-      },
-      "ratings": {
-        "elo_home": 1563.4,
-        "elo_away": 1528.0,
-        "elo_diff": 35.4
-      }
-    },
-    {
       "match_id": "fd-564722",
       "kickoff_ts_utc": "2026-10-24T16:30:00+00:00",
       "competition": {
@@ -3812,9 +2972,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2391,
-        "draw": 0.3712,
-        "away": 0.3897
+        "home": 0.228,
+        "draw": 0.3903,
+        "away": 0.3817
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -3854,63 +3014,123 @@
       }
     },
     {
-      "match_id": "fd-559652",
-      "kickoff_ts_utc": "2026-10-24T18:45:00+00:00",
+      "match_id": "fd-560617",
+      "kickoff_ts_utc": "2026-10-24T16:30:00+00:00",
       "competition": {
-        "code": "L1",
-        "name": "Ligue 1"
+        "code": "EPL",
+        "name": "Premier League"
       },
       "home": {
-        "id": "lens",
-        "name": "RC Lens"
+        "id": "chelsea",
+        "name": "Chelsea"
       },
       "away": {
-        "id": "paris",
-        "name": "Paris FC"
+        "id": "tottenham",
+        "name": "Tottenham"
       },
       "venue": null,
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5894,
-        "draw": 0.2752,
-        "away": 0.1354
+        "home": 0.5191,
+        "draw": 0.2718,
+        "away": 0.2091
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1052
-        },
-        {
-          "score": "2-0",
-          "p": 0.102
+          "p": 0.1049
         },
         {
           "score": "2-1",
-          "p": 0.0996
+          "p": 0.0968
+        },
+        {
+          "score": "2-0",
+          "p": 0.0771
         },
         {
           "score": "1-0",
-          "p": 0.0972
+          "p": 0.0743
         },
         {
-          "score": "3-0",
-          "p": 0.0677
+          "score": "3-1",
+          "p": 0.0626
         }
       ],
       "expected_goals": {
-        "home": 1.99,
-        "away": 0.98
+        "home": 1.94,
+        "away": 1.25
       },
       "derived": {
-        "p_over_2_5": 0.5695,
-        "p_btts": 0.5434
+        "p_over_2_5": 0.6192,
+        "p_btts": 0.6174
       },
       "ratings": {
-        "elo_home": 1688.8,
-        "elo_away": 1615.6,
-        "elo_diff": 73.2
+        "elo_home": 1563.4,
+        "elo_away": 1528.0,
+        "elo_diff": 35.4
+      }
+    },
+    {
+      "match_id": "fd-565837",
+      "kickoff_ts_utc": "2026-10-24T16:30:00+00:00",
+      "competition": {
+        "code": "BL",
+        "name": "Bundesliga"
+      },
+      "home": {
+        "id": "dortmund",
+        "name": "Dortmund"
+      },
+      "away": {
+        "id": "eintracht_frankfurt",
+        "name": "Frankfurt"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.7759,
+        "draw": 0.1418,
+        "away": 0.0823
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "2-1",
+          "p": 0.0913
+        },
+        {
+          "score": "2-0",
+          "p": 0.082
+        },
+        {
+          "score": "3-1",
+          "p": 0.0801
+        },
+        {
+          "score": "1-1",
+          "p": 0.073
+        },
+        {
+          "score": "3-0",
+          "p": 0.0719
+        }
+      ],
+      "expected_goals": {
+        "home": 2.63,
+        "away": 1.11
+      },
+      "derived": {
+        "p_over_2_5": 0.7215,
+        "p_btts": 0.6268
+      },
+      "ratings": {
+        "elo_home": 1741.6,
+        "elo_away": 1506.6,
+        "elo_diff": 235.0
       }
     },
     {
@@ -3932,9 +3152,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4511,
-        "draw": 0.3596,
-        "away": 0.1893
+        "home": 0.4718,
+        "draw": 0.3394,
+        "away": 0.1888
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -3974,6 +3194,66 @@
       }
     },
     {
+      "match_id": "fd-559652",
+      "kickoff_ts_utc": "2026-10-24T18:45:00+00:00",
+      "competition": {
+        "code": "L1",
+        "name": "Ligue 1"
+      },
+      "home": {
+        "id": "lens",
+        "name": "RC Lens"
+      },
+      "away": {
+        "id": "paris",
+        "name": "Paris FC"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.5691,
+        "draw": 0.2875,
+        "away": 0.1434
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1052
+        },
+        {
+          "score": "2-0",
+          "p": 0.102
+        },
+        {
+          "score": "2-1",
+          "p": 0.0996
+        },
+        {
+          "score": "1-0",
+          "p": 0.0972
+        },
+        {
+          "score": "3-0",
+          "p": 0.0677
+        }
+      ],
+      "expected_goals": {
+        "home": 1.99,
+        "away": 0.98
+      },
+      "derived": {
+        "p_over_2_5": 0.5695,
+        "p_btts": 0.5434
+      },
+      "ratings": {
+        "elo_home": 1688.8,
+        "elo_away": 1615.6,
+        "elo_diff": 73.2
+      }
+    },
+    {
       "match_id": "fd-564724",
       "kickoff_ts_utc": "2026-10-24T19:00:00+00:00",
       "competition": {
@@ -3992,9 +3272,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.8327,
-        "draw": 0.1052,
-        "away": 0.0622
+        "home": 0.822,
+        "draw": 0.1109,
+        "away": 0.0671
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -4052,9 +3332,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.883,
-        "draw": 0.0674,
-        "away": 0.0496
+        "home": 0.8795,
+        "draw": 0.0734,
+        "away": 0.0471
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -4112,9 +3392,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.431,
-        "draw": 0.2898,
-        "away": 0.2791
+        "home": 0.4304,
+        "draw": 0.2907,
+        "away": 0.2788
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -4154,306 +3434,6 @@
       }
     },
     {
-      "match_id": "fd-560613",
-      "kickoff_ts_utc": "2026-10-25T14:00:00+00:00",
-      "competition": {
-        "code": "EPL",
-        "name": "Premier League"
-      },
-      "home": {
-        "id": "crystal_palace",
-        "name": "Crystal Palace"
-      },
-      "away": {
-        "id": "newcastle",
-        "name": "Newcastle"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.2723,
-        "draw": 0.3789,
-        "away": 0.3488
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1286
-        },
-        {
-          "score": "0-1",
-          "p": 0.0867
-        },
-        {
-          "score": "1-2",
-          "p": 0.0849
-        },
-        {
-          "score": "1-0",
-          "p": 0.0817
-        },
-        {
-          "score": "2-1",
-          "p": 0.0804
-        }
-      ],
-      "expected_goals": {
-        "home": 1.32,
-        "away": 1.39
-      },
-      "derived": {
-        "p_over_2_5": 0.5072,
-        "p_btts": 0.5554
-      },
-      "ratings": {
-        "elo_home": 1548.4,
-        "elo_away": 1625.3,
-        "elo_diff": -77.0
-      }
-    },
-    {
-      "match_id": "fd-560612",
-      "kickoff_ts_utc": "2026-10-25T14:00:00+00:00",
-      "competition": {
-        "code": "EPL",
-        "name": "Premier League"
-      },
-      "home": {
-        "id": "liverpool",
-        "name": "Liverpool"
-      },
-      "away": {
-        "id": "brighton",
-        "name": "Brighton Hove"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.5742,
-        "draw": 0.2273,
-        "away": 0.1985
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1187
-        },
-        {
-          "score": "2-1",
-          "p": 0.095
-        },
-        {
-          "score": "1-0",
-          "p": 0.0875
-        },
-        {
-          "score": "2-0",
-          "p": 0.0786
-        },
-        {
-          "score": "1-2",
-          "p": 0.0682
-        }
-      ],
-      "expected_goals": {
-        "home": 1.68,
-        "away": 1.21
-      },
-      "derived": {
-        "p_over_2_5": 0.5521,
-        "p_btts": 0.577
-      },
-      "ratings": {
-        "elo_home": 1675.8,
-        "elo_away": 1653.2,
-        "elo_diff": 22.5
-      }
-    },
-    {
-      "match_id": "fd-558562",
-      "kickoff_ts_utc": "2026-10-25T14:00:00+00:00",
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "home": {
-        "id": "atalanta",
-        "name": "Atalanta"
-      },
-      "away": {
-        "id": "frosinone",
-        "name": "Frosinone"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.6841,
-        "draw": 0.2426,
-        "away": 0.0733
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "2-0",
-          "p": 0.1218
-        },
-        {
-          "score": "1-0",
-          "p": 0.1103
-        },
-        {
-          "score": "2-1",
-          "p": 0.0969
-        },
-        {
-          "score": "1-1",
-          "p": 0.0963
-        },
-        {
-          "score": "3-0",
-          "p": 0.0859
-        }
-      ],
-      "expected_goals": {
-        "home": 2.12,
-        "away": 0.8
-      },
-      "derived": {
-        "p_over_2_5": 0.5568,
-        "p_btts": 0.4875
-      },
-      "ratings": {
-        "elo_home": 1671.0,
-        "elo_away": 1618.7,
-        "elo_diff": 52.2
-      }
-    },
-    {
-      "match_id": "fd-558568",
-      "kickoff_ts_utc": "2026-10-25T14:00:00+00:00",
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "home": {
-        "id": "genoa",
-        "name": "Genoa"
-      },
-      "away": {
-        "id": "venezia",
-        "name": "Venezia FC"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.4159,
-        "draw": 0.3685,
-        "away": 0.2155
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.132
-        },
-        {
-          "score": "1-0",
-          "p": 0.1068
-        },
-        {
-          "score": "2-1",
-          "p": 0.0892
-        },
-        {
-          "score": "0-0",
-          "p": 0.0862
-        },
-        {
-          "score": "0-1",
-          "p": 0.0819
-        }
-      ],
-      "expected_goals": {
-        "home": 1.42,
-        "away": 1.11
-      },
-      "derived": {
-        "p_over_2_5": 0.4636,
-        "p_btts": 0.5146
-      },
-      "ratings": {
-        "elo_home": 1545.1,
-        "elo_away": 1633.0,
-        "elo_diff": -87.9
-      }
-    },
-    {
-      "match_id": "fd-560615",
-      "kickoff_ts_utc": "2026-10-25T14:00:00+00:00",
-      "competition": {
-        "code": "EPL",
-        "name": "Premier League"
-      },
-      "home": {
-        "id": "man_united",
-        "name": "Man United"
-      },
-      "away": {
-        "id": "bournemouth",
-        "name": "Bournemouth"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.4824,
-        "draw": 0.2335,
-        "away": 0.2841
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1064
-        },
-        {
-          "score": "2-1",
-          "p": 0.0947
-        },
-        {
-          "score": "2-0",
-          "p": 0.0709
-        },
-        {
-          "score": "1-0",
-          "p": 0.0706
-        },
-        {
-          "score": "1-2",
-          "p": 0.0676
-        }
-      ],
-      "expected_goals": {
-        "home": 1.87,
-        "away": 1.34
-      },
-      "derived": {
-        "p_over_2_5": 0.6214,
-        "p_btts": 0.6287
-      },
-      "ratings": {
-        "elo_home": 1736.6,
-        "elo_away": 1705.4,
-        "elo_diff": 31.2
-      }
-    },
-    {
       "match_id": "fd-560619",
       "kickoff_ts_utc": "2026-10-25T14:00:00+00:00",
       "competition": {
@@ -4472,9 +3452,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1504,
-        "draw": 0.2348,
-        "away": 0.6148
+        "home": 0.1438,
+        "draw": 0.2264,
+        "away": 0.6298
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -4532,9 +3512,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3213,
-        "draw": 0.3106,
-        "away": 0.3681
+        "home": 0.3011,
+        "draw": 0.3266,
+        "away": 0.3722
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -4574,6 +3554,306 @@
       }
     },
     {
+      "match_id": "fd-558568",
+      "kickoff_ts_utc": "2026-10-25T14:00:00+00:00",
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "home": {
+        "id": "genoa",
+        "name": "Genoa"
+      },
+      "away": {
+        "id": "venezia",
+        "name": "Venezia FC"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4193,
+        "draw": 0.3701,
+        "away": 0.2106
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.132
+        },
+        {
+          "score": "1-0",
+          "p": 0.1068
+        },
+        {
+          "score": "2-1",
+          "p": 0.0892
+        },
+        {
+          "score": "0-0",
+          "p": 0.0862
+        },
+        {
+          "score": "0-1",
+          "p": 0.0819
+        }
+      ],
+      "expected_goals": {
+        "home": 1.42,
+        "away": 1.11
+      },
+      "derived": {
+        "p_over_2_5": 0.4636,
+        "p_btts": 0.5146
+      },
+      "ratings": {
+        "elo_home": 1545.1,
+        "elo_away": 1633.0,
+        "elo_diff": -87.9
+      }
+    },
+    {
+      "match_id": "fd-560615",
+      "kickoff_ts_utc": "2026-10-25T14:00:00+00:00",
+      "competition": {
+        "code": "EPL",
+        "name": "Premier League"
+      },
+      "home": {
+        "id": "man_united",
+        "name": "Man United"
+      },
+      "away": {
+        "id": "bournemouth",
+        "name": "Bournemouth"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4769,
+        "draw": 0.2512,
+        "away": 0.2719
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1064
+        },
+        {
+          "score": "2-1",
+          "p": 0.0947
+        },
+        {
+          "score": "2-0",
+          "p": 0.0709
+        },
+        {
+          "score": "1-0",
+          "p": 0.0706
+        },
+        {
+          "score": "1-2",
+          "p": 0.0676
+        }
+      ],
+      "expected_goals": {
+        "home": 1.87,
+        "away": 1.34
+      },
+      "derived": {
+        "p_over_2_5": 0.6214,
+        "p_btts": 0.6287
+      },
+      "ratings": {
+        "elo_home": 1736.6,
+        "elo_away": 1705.4,
+        "elo_diff": 31.2
+      }
+    },
+    {
+      "match_id": "fd-558562",
+      "kickoff_ts_utc": "2026-10-25T14:00:00+00:00",
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "home": {
+        "id": "atalanta",
+        "name": "Atalanta"
+      },
+      "away": {
+        "id": "frosinone",
+        "name": "Frosinone"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.6909,
+        "draw": 0.2312,
+        "away": 0.078
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "2-0",
+          "p": 0.1218
+        },
+        {
+          "score": "1-0",
+          "p": 0.1103
+        },
+        {
+          "score": "2-1",
+          "p": 0.0969
+        },
+        {
+          "score": "1-1",
+          "p": 0.0963
+        },
+        {
+          "score": "3-0",
+          "p": 0.0859
+        }
+      ],
+      "expected_goals": {
+        "home": 2.12,
+        "away": 0.8
+      },
+      "derived": {
+        "p_over_2_5": 0.5568,
+        "p_btts": 0.4875
+      },
+      "ratings": {
+        "elo_home": 1671.0,
+        "elo_away": 1618.7,
+        "elo_diff": 52.2
+      }
+    },
+    {
+      "match_id": "fd-560612",
+      "kickoff_ts_utc": "2026-10-25T14:00:00+00:00",
+      "competition": {
+        "code": "EPL",
+        "name": "Premier League"
+      },
+      "home": {
+        "id": "liverpool",
+        "name": "Liverpool"
+      },
+      "away": {
+        "id": "brighton",
+        "name": "Brighton Hove"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.533,
+        "draw": 0.2478,
+        "away": 0.2192
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1187
+        },
+        {
+          "score": "2-1",
+          "p": 0.095
+        },
+        {
+          "score": "1-0",
+          "p": 0.0875
+        },
+        {
+          "score": "2-0",
+          "p": 0.0786
+        },
+        {
+          "score": "1-2",
+          "p": 0.0682
+        }
+      ],
+      "expected_goals": {
+        "home": 1.68,
+        "away": 1.21
+      },
+      "derived": {
+        "p_over_2_5": 0.5521,
+        "p_btts": 0.577
+      },
+      "ratings": {
+        "elo_home": 1675.8,
+        "elo_away": 1653.2,
+        "elo_diff": 22.5
+      }
+    },
+    {
+      "match_id": "fd-560613",
+      "kickoff_ts_utc": "2026-10-25T14:00:00+00:00",
+      "competition": {
+        "code": "EPL",
+        "name": "Premier League"
+      },
+      "home": {
+        "id": "crystal_palace",
+        "name": "Crystal Palace"
+      },
+      "away": {
+        "id": "newcastle",
+        "name": "Newcastle"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.2562,
+        "draw": 0.3779,
+        "away": 0.3659
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1286
+        },
+        {
+          "score": "0-1",
+          "p": 0.0867
+        },
+        {
+          "score": "1-2",
+          "p": 0.0849
+        },
+        {
+          "score": "1-0",
+          "p": 0.0817
+        },
+        {
+          "score": "2-1",
+          "p": 0.0804
+        }
+      ],
+      "expected_goals": {
+        "home": 1.32,
+        "away": 1.39
+      },
+      "derived": {
+        "p_over_2_5": 0.5072,
+        "p_btts": 0.5554
+      },
+      "ratings": {
+        "elo_home": 1548.4,
+        "elo_away": 1625.3,
+        "elo_diff": -77.0
+      }
+    },
+    {
       "match_id": "fd-565835",
       "kickoff_ts_utc": "2026-10-25T14:30:00+00:00",
       "competition": {
@@ -4592,9 +3872,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3302,
-        "draw": 0.2392,
-        "away": 0.4306
+        "home": 0.3316,
+        "draw": 0.2663,
+        "away": 0.4022
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -4652,9 +3932,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4053,
-        "draw": 0.3596,
-        "away": 0.2351
+        "home": 0.3664,
+        "draw": 0.3902,
+        "away": 0.2434
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -4694,126 +3974,6 @@
       }
     },
     {
-      "match_id": "fd-559656",
-      "kickoff_ts_utc": "2026-10-25T16:15:00+00:00",
-      "competition": {
-        "code": "L1",
-        "name": "Ligue 1"
-      },
-      "home": {
-        "id": "auxerre",
-        "name": "Auxerre"
-      },
-      "away": {
-        "id": "le_mans",
-        "name": "Le Mans"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.4614,
-        "draw": 0.3538,
-        "away": 0.1848
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-0",
-          "p": 0.1487
-        },
-        {
-          "score": "1-1",
-          "p": 0.1375
-        },
-        {
-          "score": "0-0",
-          "p": 0.1345
-        },
-        {
-          "score": "0-1",
-          "p": 0.1006
-        },
-        {
-          "score": "2-0",
-          "p": 0.0946
-        }
-      ],
-      "expected_goals": {
-        "home": 1.22,
-        "away": 0.84
-      },
-      "derived": {
-        "p_over_2_5": 0.3389,
-        "p_btts": 0.4069
-      },
-      "ratings": {
-        "elo_home": 1546.5,
-        "elo_away": 1573.4,
-        "elo_diff": -26.9
-      }
-    },
-    {
-      "match_id": "fd-559649",
-      "kickoff_ts_utc": "2026-10-25T16:15:00+00:00",
-      "competition": {
-        "code": "L1",
-        "name": "Ligue 1"
-      },
-      "home": {
-        "id": "marseille",
-        "name": "Marseille"
-      },
-      "away": {
-        "id": "le_havre",
-        "name": "Le Havre"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.6027,
-        "draw": 0.2842,
-        "away": 0.1131
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-0",
-          "p": 0.1149
-        },
-        {
-          "score": "2-0",
-          "p": 0.1129
-        },
-        {
-          "score": "1-1",
-          "p": 0.1102
-        },
-        {
-          "score": "2-1",
-          "p": 0.0983
-        },
-        {
-          "score": "3-0",
-          "p": 0.0706
-        }
-      ],
-      "expected_goals": {
-        "home": 1.88,
-        "away": 0.87
-      },
-      "derived": {
-        "p_over_2_5": 0.5179,
-        "p_btts": 0.4977
-      },
-      "ratings": {
-        "elo_home": 1580.2,
-        "elo_away": 1468.5,
-        "elo_diff": 111.7
-      }
-    },
-    {
       "match_id": "fd-559653",
       "kickoff_ts_utc": "2026-10-25T16:15:00+00:00",
       "competition": {
@@ -4832,9 +3992,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2449,
-        "draw": 0.389,
-        "away": 0.3661
+        "home": 0.2455,
+        "draw": 0.3991,
+        "away": 0.3555
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -4892,9 +4052,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5239,
-        "draw": 0.2556,
-        "away": 0.2205
+        "home": 0.5287,
+        "draw": 0.2538,
+        "away": 0.2175
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -4934,6 +4094,126 @@
       }
     },
     {
+      "match_id": "fd-559649",
+      "kickoff_ts_utc": "2026-10-25T16:15:00+00:00",
+      "competition": {
+        "code": "L1",
+        "name": "Ligue 1"
+      },
+      "home": {
+        "id": "marseille",
+        "name": "Marseille"
+      },
+      "away": {
+        "id": "le_havre",
+        "name": "Le Havre"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.6097,
+        "draw": 0.2847,
+        "away": 0.1056
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-0",
+          "p": 0.1149
+        },
+        {
+          "score": "2-0",
+          "p": 0.1129
+        },
+        {
+          "score": "1-1",
+          "p": 0.1102
+        },
+        {
+          "score": "2-1",
+          "p": 0.0983
+        },
+        {
+          "score": "3-0",
+          "p": 0.0706
+        }
+      ],
+      "expected_goals": {
+        "home": 1.88,
+        "away": 0.87
+      },
+      "derived": {
+        "p_over_2_5": 0.5179,
+        "p_btts": 0.4977
+      },
+      "ratings": {
+        "elo_home": 1580.2,
+        "elo_away": 1468.5,
+        "elo_diff": 111.7
+      }
+    },
+    {
+      "match_id": "fd-559656",
+      "kickoff_ts_utc": "2026-10-25T16:15:00+00:00",
+      "competition": {
+        "code": "L1",
+        "name": "Ligue 1"
+      },
+      "home": {
+        "id": "auxerre",
+        "name": "Auxerre"
+      },
+      "away": {
+        "id": "le_mans",
+        "name": "Le Mans"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4702,
+        "draw": 0.3442,
+        "away": 0.1856
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-0",
+          "p": 0.1487
+        },
+        {
+          "score": "1-1",
+          "p": 0.1375
+        },
+        {
+          "score": "0-0",
+          "p": 0.1345
+        },
+        {
+          "score": "0-1",
+          "p": 0.1006
+        },
+        {
+          "score": "2-0",
+          "p": 0.0946
+        }
+      ],
+      "expected_goals": {
+        "home": 1.22,
+        "away": 0.84
+      },
+      "derived": {
+        "p_over_2_5": 0.3389,
+        "p_btts": 0.4069
+      },
+      "ratings": {
+        "elo_home": 1546.5,
+        "elo_away": 1573.4,
+        "elo_diff": -26.9
+      }
+    },
+    {
       "match_id": "fd-560621",
       "kickoff_ts_utc": "2026-10-25T16:30:00+00:00",
       "competition": {
@@ -4952,9 +4232,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2626,
-        "draw": 0.3468,
-        "away": 0.3906
+        "home": 0.2584,
+        "draw": 0.3467,
+        "away": 0.3949
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5012,9 +4292,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1197,
-        "draw": 0.1752,
-        "away": 0.7052
+        "home": 0.1074,
+        "draw": 0.1597,
+        "away": 0.7329
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5072,9 +4352,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1026,
-        "draw": 0.3103,
-        "away": 0.5871
+        "home": 0.1251,
+        "draw": 0.3397,
+        "away": 0.5352
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5132,9 +4412,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5853,
-        "draw": 0.2553,
-        "away": 0.1594
+        "home": 0.5885,
+        "draw": 0.251,
+        "away": 0.1605
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5192,9 +4472,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7373,
-        "draw": 0.1455,
-        "away": 0.1172
+        "home": 0.7384,
+        "draw": 0.1398,
+        "away": 0.1219
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5252,9 +4532,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3055,
-        "draw": 0.2738,
-        "away": 0.4207
+        "home": 0.4048,
+        "draw": 0.3109,
+        "away": 0.2844
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5312,9 +4592,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5736,
-        "draw": 0.1852,
-        "away": 0.2412
+        "home": 0.5744,
+        "draw": 0.1924,
+        "away": 0.2332
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5372,9 +4652,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3729,
-        "draw": 0.3435,
-        "away": 0.2836
+        "home": 0.3801,
+        "draw": 0.3525,
+        "away": 0.2674
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5432,9 +4712,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4768,
-        "draw": 0.3067,
-        "away": 0.2164
+        "home": 0.4476,
+        "draw": 0.3282,
+        "away": 0.2243
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5492,9 +4772,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.816,
-        "draw": 0.1228,
-        "away": 0.0612
+        "home": 0.8182,
+        "draw": 0.1274,
+        "away": 0.0544
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5552,9 +4832,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1581,
-        "draw": 0.3397,
-        "away": 0.5022
+        "home": 0.1706,
+        "draw": 0.3305,
+        "away": 0.4989
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5594,66 +4874,6 @@
       }
     },
     {
-      "match_id": "fd-558553",
-      "kickoff_ts_utc": "2026-10-28T17:30:00+00:00",
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "home": {
-        "id": "parma",
-        "name": "Parma"
-      },
-      "away": {
-        "id": "udinese",
-        "name": "Udinese"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.2609,
-        "draw": 0.3359,
-        "away": 0.4031
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1407
-        },
-        {
-          "score": "0-1",
-          "p": 0.1331
-        },
-        {
-          "score": "0-0",
-          "p": 0.1286
-        },
-        {
-          "score": "1-0",
-          "p": 0.1094
-        },
-        {
-          "score": "0-2",
-          "p": 0.0805
-        }
-      ],
-      "expected_goals": {
-        "home": 0.96,
-        "away": 1.15
-      },
-      "derived": {
-        "p_over_2_5": 0.3521,
-        "p_btts": 0.4277
-      },
-      "ratings": {
-        "elo_home": 1523.8,
-        "elo_away": 1640.8,
-        "elo_diff": -117.0
-      }
-    },
-    {
       "match_id": "fd-558549",
       "kickoff_ts_utc": "2026-10-28T17:30:00+00:00",
       "competition": {
@@ -5672,9 +4892,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4596,
-        "draw": 0.3124,
-        "away": 0.2281
+        "home": 0.4448,
+        "draw": 0.3197,
+        "away": 0.2355
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5714,6 +4934,66 @@
       }
     },
     {
+      "match_id": "fd-558553",
+      "kickoff_ts_utc": "2026-10-28T17:30:00+00:00",
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "home": {
+        "id": "parma",
+        "name": "Parma"
+      },
+      "away": {
+        "id": "udinese",
+        "name": "Udinese"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.2371,
+        "draw": 0.3354,
+        "away": 0.4275
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1407
+        },
+        {
+          "score": "0-1",
+          "p": 0.1331
+        },
+        {
+          "score": "0-0",
+          "p": 0.1286
+        },
+        {
+          "score": "1-0",
+          "p": 0.1094
+        },
+        {
+          "score": "0-2",
+          "p": 0.0805
+        }
+      ],
+      "expected_goals": {
+        "home": 0.96,
+        "away": 1.15
+      },
+      "derived": {
+        "p_over_2_5": 0.3521,
+        "p_btts": 0.4277
+      },
+      "ratings": {
+        "elo_home": 1523.8,
+        "elo_away": 1640.8,
+        "elo_diff": -117.0
+      }
+    },
+    {
       "match_id": "fd-558550",
       "kickoff_ts_utc": "2026-10-28T17:30:00+00:00",
       "competition": {
@@ -5732,9 +5012,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1439,
-        "draw": 0.1888,
-        "away": 0.6673
+        "home": 0.1325,
+        "draw": 0.1872,
+        "away": 0.6803
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5774,66 +5054,6 @@
       }
     },
     {
-      "match_id": "fd-558552",
-      "kickoff_ts_utc": "2026-10-28T19:45:00+00:00",
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "home": {
-        "id": "genoa",
-        "name": "Genoa"
-      },
-      "away": {
-        "id": "juventus",
-        "name": "Juventus"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.2147,
-        "draw": 0.3114,
-        "away": 0.4739
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "0-1",
-          "p": 0.1315
-        },
-        {
-          "score": "1-1",
-          "p": 0.1285
-        },
-        {
-          "score": "0-2",
-          "p": 0.1036
-        },
-        {
-          "score": "0-0",
-          "p": 0.0981
-        },
-        {
-          "score": "1-2",
-          "p": 0.0918
-        }
-      ],
-      "expected_goals": {
-        "home": 0.89,
-        "away": 1.5
-      },
-      "derived": {
-        "p_over_2_5": 0.4273,
-        "p_btts": 0.4633
-      },
-      "ratings": {
-        "elo_home": 1545.1,
-        "elo_away": 1725.9,
-        "elo_diff": -180.8
-      }
-    },
-    {
       "match_id": "fd-558554",
       "kickoff_ts_utc": "2026-10-28T19:45:00+00:00",
       "competition": {
@@ -5852,9 +5072,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1581,
-        "draw": 0.2983,
-        "away": 0.5436
+        "home": 0.1762,
+        "draw": 0.2846,
+        "away": 0.5391
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5894,6 +5114,66 @@
       }
     },
     {
+      "match_id": "fd-558552",
+      "kickoff_ts_utc": "2026-10-28T19:45:00+00:00",
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "home": {
+        "id": "genoa",
+        "name": "Genoa"
+      },
+      "away": {
+        "id": "juventus",
+        "name": "Juventus"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.2201,
+        "draw": 0.3229,
+        "away": 0.457
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "0-1",
+          "p": 0.1315
+        },
+        {
+          "score": "1-1",
+          "p": 0.1285
+        },
+        {
+          "score": "0-2",
+          "p": 0.1036
+        },
+        {
+          "score": "0-0",
+          "p": 0.0981
+        },
+        {
+          "score": "1-2",
+          "p": 0.0918
+        }
+      ],
+      "expected_goals": {
+        "home": 0.89,
+        "away": 1.5
+      },
+      "derived": {
+        "p_over_2_5": 0.4273,
+        "p_btts": 0.4633
+      },
+      "ratings": {
+        "elo_home": 1545.1,
+        "elo_away": 1725.9,
+        "elo_diff": -180.8
+      }
+    },
+    {
       "match_id": "fd-558558",
       "kickoff_ts_utc": "2026-10-29T17:30:00+00:00",
       "competition": {
@@ -5912,9 +5192,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4865,
-        "draw": 0.3247,
-        "away": 0.1887
+        "home": 0.4919,
+        "draw": 0.3011,
+        "away": 0.2071
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5972,9 +5252,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2943,
-        "draw": 0.3193,
-        "away": 0.3864
+        "home": 0.3716,
+        "draw": 0.3442,
+        "away": 0.2842
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6032,9 +5312,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.0705,
-        "draw": 0.1921,
-        "away": 0.7374
+        "home": 0.0731,
+        "draw": 0.1951,
+        "away": 0.7318
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6092,9 +5372,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3859,
-        "draw": 0.3789,
-        "away": 0.2352
+        "home": 0.3805,
+        "draw": 0.3723,
+        "away": 0.2473
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6152,9 +5432,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5969,
-        "draw": 0.2731,
-        "away": 0.13
+        "home": 0.5691,
+        "draw": 0.2975,
+        "away": 0.1334
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6212,9 +5492,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4252,
-        "draw": 0.3567,
-        "away": 0.218
+        "home": 0.4194,
+        "draw": 0.3596,
+        "away": 0.221
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6272,9 +5552,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3275,
-        "draw": 0.3254,
-        "away": 0.3471
+        "home": 0.3328,
+        "draw": 0.3181,
+        "away": 0.3491
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6332,8 +5612,8 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1907,
-        "draw": 0.3232,
+        "home": 0.1954,
+        "draw": 0.3184,
         "away": 0.4862
       },
       "market_probabilities": null,
@@ -6392,9 +5672,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.494,
-        "draw": 0.3117,
-        "away": 0.1942
+        "home": 0.4835,
+        "draw": 0.3191,
+        "away": 0.1974
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6434,186 +5714,6 @@
       }
     },
     {
-      "match_id": "fd-565843",
-      "kickoff_ts_utc": "2026-10-31T14:30:00+00:00",
-      "competition": {
-        "code": "BL",
-        "name": "Bundesliga"
-      },
-      "home": {
-        "id": "bremen",
-        "name": "Bremen"
-      },
-      "away": {
-        "id": "hoffenheim",
-        "name": "Hoffenheim"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.2742,
-        "draw": 0.4052,
-        "away": 0.3206
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1194
-        },
-        {
-          "score": "1-2",
-          "p": 0.0957
-        },
-        {
-          "score": "0-1",
-          "p": 0.0916
-        },
-        {
-          "score": "0-2",
-          "p": 0.0821
-        },
-        {
-          "score": "2-1",
-          "p": 0.0661
-        }
-      ],
-      "expected_goals": {
-        "home": 1.16,
-        "away": 1.69
-      },
-      "derived": {
-        "p_over_2_5": 0.5425,
-        "p_btts": 0.5664
-      },
-      "ratings": {
-        "elo_home": 1449.7,
-        "elo_away": 1629.4,
-        "elo_diff": -179.7
-      }
-    },
-    {
-      "match_id": "fd-565847",
-      "kickoff_ts_utc": "2026-10-31T14:30:00+00:00",
-      "competition": {
-        "code": "BL",
-        "name": "Bundesliga"
-      },
-      "home": {
-        "id": "leverkusen",
-        "name": "Leverkusen"
-      },
-      "away": {
-        "id": "stuttgart",
-        "name": "Stuttgart"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.5244,
-        "draw": 0.2445,
-        "away": 0.2312
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.0932
-        },
-        {
-          "score": "2-1",
-          "p": 0.089
-        },
-        {
-          "score": "2-2",
-          "p": 0.069
-        },
-        {
-          "score": "1-2",
-          "p": 0.0687
-        },
-        {
-          "score": "3-1",
-          "p": 0.0597
-        }
-      ],
-      "expected_goals": {
-        "home": 2.01,
-        "away": 1.55
-      },
-      "derived": {
-        "p_over_2_5": 0.6901,
-        "p_btts": 0.6869
-      },
-      "ratings": {
-        "elo_home": 1684.7,
-        "elo_away": 1707.8,
-        "elo_diff": -23.1
-      }
-    },
-    {
-      "match_id": "fd-565842",
-      "kickoff_ts_utc": "2026-10-31T14:30:00+00:00",
-      "competition": {
-        "code": "BL",
-        "name": "Bundesliga"
-      },
-      "home": {
-        "id": "augsburg",
-        "name": "Augsburg"
-      },
-      "away": {
-        "id": "freiburg",
-        "name": "Freiburg"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.4353,
-        "draw": 0.342,
-        "away": 0.2228
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1217
-        },
-        {
-          "score": "2-1",
-          "p": 0.0893
-        },
-        {
-          "score": "1-0",
-          "p": 0.0804
-        },
-        {
-          "score": "1-2",
-          "p": 0.0775
-        },
-        {
-          "score": "0-1",
-          "p": 0.0689
-        }
-      ],
-      "expected_goals": {
-        "home": 1.54,
-        "away": 1.34
-      },
-      "derived": {
-        "p_over_2_5": 0.5503,
-        "p_btts": 0.5865
-      },
-      "ratings": {
-        "elo_home": 1554.3,
-        "elo_away": 1551.3,
-        "elo_diff": 2.9
-      }
-    },
-    {
       "match_id": "fd-565839",
       "kickoff_ts_utc": "2026-10-31T14:30:00+00:00",
       "competition": {
@@ -6632,9 +5732,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5139,
-        "draw": 0.2859,
-        "away": 0.2002
+        "home": 0.5055,
+        "draw": 0.291,
+        "away": 0.2035
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6692,9 +5792,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2004,
-        "draw": 0.3096,
-        "away": 0.49
+        "home": 0.2036,
+        "draw": 0.3175,
+        "away": 0.4789
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6734,123 +5834,183 @@
       }
     },
     {
-      "match_id": "fd-560630",
-      "kickoff_ts_utc": "2026-10-31T15:00:00+00:00",
+      "match_id": "fd-565847",
+      "kickoff_ts_utc": "2026-10-31T14:30:00+00:00",
       "competition": {
-        "code": "EPL",
-        "name": "Premier League"
+        "code": "BL",
+        "name": "Bundesliga"
       },
       "home": {
-        "id": "brentford",
-        "name": "Brentford"
+        "id": "leverkusen",
+        "name": "Leverkusen"
       },
       "away": {
-        "id": "nottingham_forest",
-        "name": "Nottingham"
+        "id": "stuttgart",
+        "name": "Stuttgart"
       },
       "venue": null,
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.447,
-        "draw": 0.3327,
-        "away": 0.2203
+        "home": 0.4976,
+        "draw": 0.2496,
+        "away": 0.2528
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1262
-        },
-        {
-          "score": "1-0",
-          "p": 0.0925
+          "p": 0.0932
         },
         {
           "score": "2-1",
-          "p": 0.091
+          "p": 0.089
         },
         {
-          "score": "2-0",
-          "p": 0.0749
+          "score": "2-2",
+          "p": 0.069
         },
         {
           "score": "1-2",
-          "p": 0.0729
+          "p": 0.0687
+        },
+        {
+          "score": "3-1",
+          "p": 0.0597
         }
       ],
       "expected_goals": {
-        "home": 1.52,
-        "away": 1.21
+        "home": 2.01,
+        "away": 1.55
       },
       "derived": {
-        "p_over_2_5": 0.5142,
-        "p_btts": 0.5552
+        "p_over_2_5": 0.6901,
+        "p_btts": 0.6869
       },
       "ratings": {
-        "elo_home": 1617.2,
-        "elo_away": 1642.0,
-        "elo_diff": -24.8
+        "elo_home": 1684.7,
+        "elo_away": 1707.8,
+        "elo_diff": -23.1
       }
     },
     {
-      "match_id": "fd-560629",
-      "kickoff_ts_utc": "2026-10-31T15:00:00+00:00",
+      "match_id": "fd-565843",
+      "kickoff_ts_utc": "2026-10-31T14:30:00+00:00",
       "competition": {
-        "code": "EPL",
-        "name": "Premier League"
+        "code": "BL",
+        "name": "Bundesliga"
       },
       "home": {
-        "id": "hull_city",
-        "name": "Hull City"
+        "id": "bremen",
+        "name": "Bremen"
       },
       "away": {
-        "id": "ipswich",
-        "name": "Ipswich Town"
+        "id": "hoffenheim",
+        "name": "Hoffenheim"
       },
       "venue": null,
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2381,
-        "draw": 0.3427,
-        "away": 0.4192
+        "home": 0.2787,
+        "draw": 0.3974,
+        "away": 0.3239
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.121
+          "p": 0.1194
         },
         {
           "score": "1-2",
-          "p": 0.0909
+          "p": 0.0957
         },
         {
           "score": "0-1",
-          "p": 0.082
-        },
-        {
-          "score": "2-1",
-          "p": 0.0752
+          "p": 0.0916
         },
         {
           "score": "0-2",
-          "p": 0.0695
+          "p": 0.0821
+        },
+        {
+          "score": "2-1",
+          "p": 0.0661
         }
       ],
       "expected_goals": {
-        "home": 1.31,
-        "away": 1.58
+        "home": 1.16,
+        "away": 1.69
       },
       "derived": {
-        "p_over_2_5": 0.5513,
-        "p_btts": 0.5854
+        "p_over_2_5": 0.5425,
+        "p_btts": 0.5664
       },
       "ratings": {
-        "elo_home": 1452.4,
-        "elo_away": 1552.8,
-        "elo_diff": -100.4
+        "elo_home": 1449.7,
+        "elo_away": 1629.4,
+        "elo_diff": -179.7
+      }
+    },
+    {
+      "match_id": "fd-565842",
+      "kickoff_ts_utc": "2026-10-31T14:30:00+00:00",
+      "competition": {
+        "code": "BL",
+        "name": "Bundesliga"
+      },
+      "home": {
+        "id": "augsburg",
+        "name": "Augsburg"
+      },
+      "away": {
+        "id": "freiburg",
+        "name": "Freiburg"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.3944,
+        "draw": 0.3281,
+        "away": 0.2776
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1217
+        },
+        {
+          "score": "2-1",
+          "p": 0.0893
+        },
+        {
+          "score": "1-0",
+          "p": 0.0804
+        },
+        {
+          "score": "1-2",
+          "p": 0.0775
+        },
+        {
+          "score": "0-1",
+          "p": 0.0689
+        }
+      ],
+      "expected_goals": {
+        "home": 1.54,
+        "away": 1.34
+      },
+      "derived": {
+        "p_over_2_5": 0.5503,
+        "p_btts": 0.5865
+      },
+      "ratings": {
+        "elo_home": 1554.3,
+        "elo_away": 1551.3,
+        "elo_diff": 2.9
       }
     },
     {
@@ -6872,9 +6032,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6887,
-        "draw": 0.2043,
-        "away": 0.107
+        "home": 0.6455,
+        "draw": 0.2431,
+        "away": 0.1114
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6932,9 +6092,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3805,
-        "draw": 0.3605,
-        "away": 0.259
+        "home": 0.4213,
+        "draw": 0.3434,
+        "away": 0.2353
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6992,9 +6152,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4065,
-        "draw": 0.3385,
-        "away": 0.255
+        "home": 0.417,
+        "draw": 0.3261,
+        "away": 0.2569
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -7034,6 +6194,126 @@
       }
     },
     {
+      "match_id": "fd-560629",
+      "kickoff_ts_utc": "2026-10-31T15:00:00+00:00",
+      "competition": {
+        "code": "EPL",
+        "name": "Premier League"
+      },
+      "home": {
+        "id": "hull_city",
+        "name": "Hull City"
+      },
+      "away": {
+        "id": "ipswich",
+        "name": "Ipswich Town"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.2404,
+        "draw": 0.3112,
+        "away": 0.4485
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.121
+        },
+        {
+          "score": "1-2",
+          "p": 0.0909
+        },
+        {
+          "score": "0-1",
+          "p": 0.082
+        },
+        {
+          "score": "2-1",
+          "p": 0.0752
+        },
+        {
+          "score": "0-2",
+          "p": 0.0695
+        }
+      ],
+      "expected_goals": {
+        "home": 1.31,
+        "away": 1.58
+      },
+      "derived": {
+        "p_over_2_5": 0.5513,
+        "p_btts": 0.5854
+      },
+      "ratings": {
+        "elo_home": 1452.4,
+        "elo_away": 1552.8,
+        "elo_diff": -100.4
+      }
+    },
+    {
+      "match_id": "fd-560630",
+      "kickoff_ts_utc": "2026-10-31T15:00:00+00:00",
+      "competition": {
+        "code": "EPL",
+        "name": "Premier League"
+      },
+      "home": {
+        "id": "brentford",
+        "name": "Brentford"
+      },
+      "away": {
+        "id": "nottingham_forest",
+        "name": "Nottingham"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.43,
+        "draw": 0.3528,
+        "away": 0.2172
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1262
+        },
+        {
+          "score": "1-0",
+          "p": 0.0925
+        },
+        {
+          "score": "2-1",
+          "p": 0.091
+        },
+        {
+          "score": "2-0",
+          "p": 0.0749
+        },
+        {
+          "score": "1-2",
+          "p": 0.0729
+        }
+      ],
+      "expected_goals": {
+        "home": 1.52,
+        "away": 1.21
+      },
+      "derived": {
+        "p_over_2_5": 0.5142,
+        "p_btts": 0.5552
+      },
+      "ratings": {
+        "elo_home": 1617.2,
+        "elo_away": 1642.0,
+        "elo_diff": -24.8
+      }
+    },
+    {
       "match_id": "fd-564735",
       "kickoff_ts_utc": "2026-10-31T15:15:00+00:00",
       "competition": {
@@ -7052,9 +6332,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3153,
-        "draw": 0.3979,
-        "away": 0.2869
+        "home": 0.3106,
+        "draw": 0.4112,
+        "away": 0.2783
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -7112,9 +6392,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2278,
-        "draw": 0.3041,
-        "away": 0.4682
+        "home": 0.2276,
+        "draw": 0.3073,
+        "away": 0.4651
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -7172,9 +6452,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.295,
-        "draw": 0.2769,
-        "away": 0.428
+        "home": 0.293,
+        "draw": 0.3139,
+        "away": 0.3932
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -7232,9 +6512,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3852,
-        "draw": 0.344,
-        "away": 0.2708
+        "home": 0.3966,
+        "draw": 0.3338,
+        "away": 0.2695
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -7292,9 +6572,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7212,
-        "draw": 0.183,
-        "away": 0.0958
+        "home": 0.7104,
+        "draw": 0.1997,
+        "away": 0.0899
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -7352,9 +6632,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6881,
-        "draw": 0.1862,
-        "away": 0.1258
+        "home": 0.7085,
+        "draw": 0.1669,
+        "away": 0.1246
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -7394,66 +6674,6 @@
       }
     },
     {
-      "match_id": "fd-559641",
-      "kickoff_ts_utc": "2026-10-31T19:45:00+00:00",
-      "competition": {
-        "code": "L1",
-        "name": "Ligue 1"
-      },
-      "home": {
-        "id": "lorient",
-        "name": "Lorient"
-      },
-      "away": {
-        "id": "brest",
-        "name": "Brest"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.5444,
-        "draw": 0.2568,
-        "away": 0.1988
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "1-1",
-          "p": 0.1098
-        },
-        {
-          "score": "2-1",
-          "p": 0.0984
-        },
-        {
-          "score": "2-0",
-          "p": 0.0865
-        },
-        {
-          "score": "1-0",
-          "p": 0.0863
-        },
-        {
-          "score": "3-1",
-          "p": 0.0618
-        }
-      ],
-      "expected_goals": {
-        "home": 1.89,
-        "away": 1.14
-      },
-      "derived": {
-        "p_over_2_5": 0.5819,
-        "p_btts": 0.5817
-      },
-      "ratings": {
-        "elo_home": 1630.9,
-        "elo_away": 1512.6,
-        "elo_diff": 118.3
-      }
-    },
-    {
       "match_id": "fd-559640",
       "kickoff_ts_utc": "2026-10-31T19:45:00+00:00",
       "competition": {
@@ -7472,9 +6692,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7546,
-        "draw": 0.1664,
-        "away": 0.079
+        "home": 0.7662,
+        "draw": 0.1582,
+        "away": 0.0757
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -7532,9 +6752,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3847,
-        "draw": 0.3964,
-        "away": 0.2189
+        "home": 0.3955,
+        "draw": 0.39,
+        "away": 0.2145
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -7574,6 +6794,66 @@
       }
     },
     {
+      "match_id": "fd-559641",
+      "kickoff_ts_utc": "2026-10-31T19:45:00+00:00",
+      "competition": {
+        "code": "L1",
+        "name": "Ligue 1"
+      },
+      "home": {
+        "id": "lorient",
+        "name": "Lorient"
+      },
+      "away": {
+        "id": "brest",
+        "name": "Brest"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.5445,
+        "draw": 0.2559,
+        "away": 0.1996
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1098
+        },
+        {
+          "score": "2-1",
+          "p": 0.0984
+        },
+        {
+          "score": "2-0",
+          "p": 0.0865
+        },
+        {
+          "score": "1-0",
+          "p": 0.0863
+        },
+        {
+          "score": "3-1",
+          "p": 0.0618
+        }
+      ],
+      "expected_goals": {
+        "home": 1.89,
+        "away": 1.14
+      },
+      "derived": {
+        "p_over_2_5": 0.5819,
+        "p_btts": 0.5817
+      },
+      "ratings": {
+        "elo_home": 1630.9,
+        "elo_away": 1512.6,
+        "elo_diff": 118.3
+      }
+    },
+    {
       "match_id": "fd-558548",
       "kickoff_ts_utc": "2026-10-31T19:45:00+00:00",
       "competition": {
@@ -7592,9 +6872,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2702,
-        "draw": 0.316,
-        "away": 0.4138
+        "home": 0.2724,
+        "draw": 0.3158,
+        "away": 0.4117
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -7652,9 +6932,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4186,
-        "draw": 0.3552,
-        "away": 0.2263
+        "home": 0.4135,
+        "draw": 0.3648,
+        "away": 0.2217
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -7712,9 +6992,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.9018,
-        "draw": 0.0531,
-        "away": 0.0451
+        "home": 0.8823,
+        "draw": 0.0671,
+        "away": 0.0507
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -7751,6 +7031,426 @@
         "elo_home": 1879.9,
         "elo_away": 1507.2,
         "elo_diff": 372.7
+      }
+    },
+    {
+      "match_id": "fd-558543",
+      "kickoff_ts_utc": "2026-11-01T11:30:00+00:00",
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "home": {
+        "id": "como",
+        "name": "Como 1907"
+      },
+      "away": {
+        "id": "venezia",
+        "name": "Venezia FC"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.6166,
+        "draw": 0.2794,
+        "away": 0.1039
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "2-0",
+          "p": 0.1252
+        },
+        {
+          "score": "1-0",
+          "p": 0.1173
+        },
+        {
+          "score": "1-1",
+          "p": 0.099
+        },
+        {
+          "score": "2-1",
+          "p": 0.0965
+        },
+        {
+          "score": "3-0",
+          "p": 0.0856
+        }
+      ],
+      "expected_goals": {
+        "home": 2.05,
+        "away": 0.77
+      },
+      "derived": {
+        "p_over_2_5": 0.5352,
+        "p_btts": 0.4729
+      },
+      "ratings": {
+        "elo_home": 1732.9,
+        "elo_away": 1633.0,
+        "elo_diff": 100.0
+      }
+    },
+    {
+      "match_id": "fd-564733",
+      "kickoff_ts_utc": "2026-11-01T13:00:00+00:00",
+      "competition": {
+        "code": "LL",
+        "name": "La Liga"
+      },
+      "home": {
+        "id": "getafe",
+        "name": "Getafe"
+      },
+      "away": {
+        "id": "sevilla",
+        "name": "Sevilla FC"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4489,
+        "draw": 0.3135,
+        "away": 0.2375
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-0",
+          "p": 0.1554
+        },
+        {
+          "score": "0-0",
+          "p": 0.1499
+        },
+        {
+          "score": "1-1",
+          "p": 0.1383
+        },
+        {
+          "score": "0-1",
+          "p": 0.1092
+        },
+        {
+          "score": "2-0",
+          "p": 0.0919
+        }
+      ],
+      "expected_goals": {
+        "home": 1.13,
+        "away": 0.81
+      },
+      "derived": {
+        "p_over_2_5": 0.3083,
+        "p_btts": 0.3835
+      },
+      "ratings": {
+        "elo_home": 1567.3,
+        "elo_away": 1508.6,
+        "elo_diff": 58.7
+      }
+    },
+    {
+      "match_id": "fd-558546",
+      "kickoff_ts_utc": "2026-11-01T14:00:00+00:00",
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "home": {
+        "id": "lazio",
+        "name": "Lazio"
+      },
+      "away": {
+        "id": "cagliari",
+        "name": "Cagliari"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.5175,
+        "draw": 0.3138,
+        "away": 0.1686
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-0",
+          "p": 0.1443
+        },
+        {
+          "score": "1-1",
+          "p": 0.126
+        },
+        {
+          "score": "2-0",
+          "p": 0.1135
+        },
+        {
+          "score": "0-0",
+          "p": 0.1059
+        },
+        {
+          "score": "2-1",
+          "p": 0.0904
+        }
+      ],
+      "expected_goals": {
+        "home": 1.51,
+        "away": 0.8
+      },
+      "derived": {
+        "p_over_2_5": 0.4054,
+        "p_btts": 0.4339
+      },
+      "ratings": {
+        "elo_home": 1614.7,
+        "elo_away": 1460.7,
+        "elo_diff": 154.0
+      }
+    },
+    {
+      "match_id": "fd-559647",
+      "kickoff_ts_utc": "2026-11-01T14:00:00+00:00",
+      "competition": {
+        "code": "L1",
+        "name": "Ligue 1"
+      },
+      "home": {
+        "id": "strasbourg",
+        "name": "Strasbourg"
+      },
+      "away": {
+        "id": "auxerre",
+        "name": "Auxerre"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4764,
+        "draw": 0.3354,
+        "away": 0.1882
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1218
+        },
+        {
+          "score": "1-0",
+          "p": 0.1189
+        },
+        {
+          "score": "2-0",
+          "p": 0.1036
+        },
+        {
+          "score": "2-1",
+          "p": 0.0961
+        },
+        {
+          "score": "0-0",
+          "p": 0.0812
+        }
+      ],
+      "expected_goals": {
+        "home": 1.66,
+        "away": 0.93
+      },
+      "derived": {
+        "p_over_2_5": 0.4784,
+        "p_btts": 0.4955
+      },
+      "ratings": {
+        "elo_home": 1625.2,
+        "elo_away": 1546.5,
+        "elo_diff": 78.7
+      }
+    },
+    {
+      "match_id": "fd-558544",
+      "kickoff_ts_utc": "2026-11-01T14:00:00+00:00",
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "home": {
+        "id": "frosinone",
+        "name": "Frosinone"
+      },
+      "away": {
+        "id": "torino",
+        "name": "Torino"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4619,
+        "draw": 0.3544,
+        "away": 0.1837
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1225
+        },
+        {
+          "score": "2-1",
+          "p": 0.0906
+        },
+        {
+          "score": "1-0",
+          "p": 0.0838
+        },
+        {
+          "score": "1-2",
+          "p": 0.0755
+        },
+        {
+          "score": "2-0",
+          "p": 0.0699
+        }
+      ],
+      "expected_goals": {
+        "home": 1.56,
+        "away": 1.3
+      },
+      "derived": {
+        "p_over_2_5": 0.5426,
+        "p_btts": 0.579
+      },
+      "ratings": {
+        "elo_home": 1618.7,
+        "elo_away": 1552.1,
+        "elo_diff": 66.6
+      }
+    },
+    {
+      "match_id": "fd-565841",
+      "kickoff_ts_utc": "2026-11-01T14:30:00+00:00",
+      "competition": {
+        "code": "BL",
+        "name": "Bundesliga"
+      },
+      "home": {
+        "id": "union_berlin",
+        "name": "Union Berlin"
+      },
+      "away": {
+        "id": "fc_koln",
+        "name": "1. FC K\u00f6ln"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.4001,
+        "draw": 0.3645,
+        "away": 0.2354
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-1",
+          "p": 0.1218
+        },
+        {
+          "score": "2-1",
+          "p": 0.0922
+        },
+        {
+          "score": "1-0",
+          "p": 0.0859
+        },
+        {
+          "score": "2-0",
+          "p": 0.0732
+        },
+        {
+          "score": "1-2",
+          "p": 0.0729
+        }
+      ],
+      "expected_goals": {
+        "home": 1.59,
+        "away": 1.26
+      },
+      "derived": {
+        "p_over_2_5": 0.543,
+        "p_btts": 0.5767
+      },
+      "ratings": {
+        "elo_home": 1470.8,
+        "elo_away": 1432.0,
+        "elo_diff": 38.9
+      }
+    },
+    {
+      "match_id": "fd-564734",
+      "kickoff_ts_utc": "2026-11-01T15:15:00+00:00",
+      "competition": {
+        "code": "LL",
+        "name": "La Liga"
+      },
+      "home": {
+        "id": "santander",
+        "name": "Santander"
+      },
+      "away": {
+        "id": "real_madrid",
+        "name": "Real Madrid"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.1203,
+        "draw": 0.1795,
+        "away": 0.7002
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "1-2",
+          "p": 0.0868
+        },
+        {
+          "score": "1-3",
+          "p": 0.0811
+        },
+        {
+          "score": "0-2",
+          "p": 0.0745
+        },
+        {
+          "score": "0-3",
+          "p": 0.0696
+        },
+        {
+          "score": "1-1",
+          "p": 0.0651
+        }
+      ],
+      "expected_goals": {
+        "home": 1.16,
+        "away": 2.8
+      },
+      "derived": {
+        "p_over_2_5": 0.7564,
+        "p_btts": 0.6492
+      },
+      "ratings": {
+        "elo_home": 1577.2,
+        "elo_away": 1777.4,
+        "elo_diff": -200.2
       }
     }
   ]
