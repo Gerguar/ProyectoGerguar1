@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-23T03:28:56.895876+00:00",
+  "generated_at_utc": "2026-10-23T16:31:08.937331+00:00",
   "model": {
     "trained_at": "2026-10-18T04:02:18.049337+00:00",
     "method": "DixonColes+Elo+XGBoost(isotonic)",
@@ -2714,66 +2714,6 @@
       }
     },
     {
-      "match_id": "fd-559648",
-      "kickoff_ts_utc": "2026-10-25T19:45:00+00:00",
-      "competition": {
-        "code": "L1",
-        "name": "Ligue 1"
-      },
-      "home": {
-        "id": "paris_sg",
-        "name": "PSG"
-      },
-      "away": {
-        "id": "olympique_lyon",
-        "name": "Olympique Lyon"
-      },
-      "venue": null,
-      "is_neutral": false,
-      "snapshot": "24h",
-      "probabilities": {
-        "home": 0.6878,
-        "draw": 0.1774,
-        "away": 0.1348
-      },
-      "market_probabilities": null,
-      "scoreline_top": [
-        {
-          "score": "2-0",
-          "p": 0.1075
-        },
-        {
-          "score": "1-1",
-          "p": 0.102
-        },
-        {
-          "score": "1-0",
-          "p": 0.1001
-        },
-        {
-          "score": "2-1",
-          "p": 0.0992
-        },
-        {
-          "score": "3-0",
-          "p": 0.0734
-        }
-      ],
-      "expected_goals": {
-        "home": 2.05,
-        "away": 0.92
-      },
-      "derived": {
-        "p_over_2_5": 0.5699,
-        "p_btts": 0.5298
-      },
-      "ratings": {
-        "elo_home": 1879.7,
-        "elo_away": 1626.8,
-        "elo_diff": 252.9
-      }
-    },
-    {
       "match_id": "fd-564723",
       "kickoff_ts_utc": "2026-10-25T20:00:00+00:00",
       "competition": {
@@ -2831,6 +2771,66 @@
         "elo_home": 1879.9,
         "elo_away": 1777.4,
         "elo_diff": 102.5
+      }
+    },
+    {
+      "match_id": "fd-559648",
+      "kickoff_ts_utc": "2026-10-26T19:30:00+00:00",
+      "competition": {
+        "code": "L1",
+        "name": "Ligue 1"
+      },
+      "home": {
+        "id": "paris_sg",
+        "name": "PSG"
+      },
+      "away": {
+        "id": "olympique_lyon",
+        "name": "Olympique Lyon"
+      },
+      "venue": null,
+      "is_neutral": false,
+      "snapshot": "24h",
+      "probabilities": {
+        "home": 0.6878,
+        "draw": 0.1774,
+        "away": 0.1348
+      },
+      "market_probabilities": null,
+      "scoreline_top": [
+        {
+          "score": "2-0",
+          "p": 0.1075
+        },
+        {
+          "score": "1-1",
+          "p": 0.102
+        },
+        {
+          "score": "1-0",
+          "p": 0.1001
+        },
+        {
+          "score": "2-1",
+          "p": 0.0992
+        },
+        {
+          "score": "3-0",
+          "p": 0.0734
+        }
+      ],
+      "expected_goals": {
+        "home": 2.05,
+        "away": 0.92
+      },
+      "derived": {
+        "p_over_2_5": 0.5699,
+        "p_btts": 0.5298
+      },
+      "ratings": {
+        "elo_home": 1879.7,
+        "elo_away": 1626.8,
+        "elo_diff": 252.9
       }
     },
     {
