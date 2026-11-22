@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-11-22T05:12:25.568988+00:00",
+  "generated_at_utc": "2026-11-22T06:04:43.708908+00:00",
   "model": {
-    "trained_at": "2026-11-15T05:51:11.788355+00:00",
+    "trained_at": "2026-11-22T06:04:41.335440+00:00",
     "method": "DixonColes+Elo+XGBoost(isotonic)",
     "holdout_metrics": {
-      "n": 239,
-      "log_loss": 0.9582759141921997,
-      "brier": 0.534741109125033,
-      "accuracy": 0.6276150627615062,
+      "n": 201,
+      "log_loss": 1.016492247581482,
+      "brier": 0.5681208129557588,
+      "accuracy": 0.5621890547263682,
       "market_log_loss": null
     }
   },
@@ -32,45 +32,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6893,
-        "draw": 0.2361,
-        "away": 0.0747
+        "home": 0.744,
+        "draw": 0.1869,
+        "away": 0.0691
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1241
+          "p": 0.1303
         },
         {
           "score": "1-0",
-          "p": 0.1134
-        },
-        {
-          "score": "2-1",
-          "p": 0.0965
-        },
-        {
-          "score": "1-1",
-          "p": 0.0965
+          "p": 0.1127
         },
         {
           "score": "3-0",
-          "p": 0.0869
+          "p": 0.0967
+        },
+        {
+          "score": "2-1",
+          "p": 0.0938
+        },
+        {
+          "score": "1-1",
+          "p": 0.0885
         }
       ],
       "expected_goals": {
-        "home": 2.1,
-        "away": 0.78
+        "home": 2.23,
+        "away": 0.72
       },
       "derived": {
-        "p_over_2_5": 0.5492,
-        "p_btts": 0.4792
+        "p_over_2_5": 0.5646,
+        "p_btts": 0.462
       },
       "ratings": {
-        "elo_home": 1722.6,
-        "elo_away": 1633.0,
-        "elo_diff": 89.6
+        "elo_home": 1731.4,
+        "elo_away": 1609.3,
+        "elo_diff": 122.1
       }
     },
     {
@@ -92,45 +92,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7786,
-        "draw": 0.1234,
-        "away": 0.0979
+        "home": 0.7845,
+        "draw": 0.1232,
+        "away": 0.0923
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-1",
-          "p": 0.0891
+          "p": 0.0876
         },
         {
           "score": "3-1",
-          "p": 0.0808
+          "p": 0.0814
         },
         {
           "score": "2-0",
-          "p": 0.0788
+          "p": 0.0781
         },
         {
           "score": "3-0",
-          "p": 0.0714
+          "p": 0.0726
         },
         {
           "score": "1-1",
-          "p": 0.0689
+          "p": 0.066
         }
       ],
       "expected_goals": {
-        "home": 2.72,
-        "away": 1.13
+        "home": 2.79,
+        "away": 1.12
       },
       "derived": {
-        "p_over_2_5": 0.7387,
-        "p_btts": 0.6361
+        "p_over_2_5": 0.7477,
+        "p_btts": 0.6357
       },
       "ratings": {
-        "elo_home": 1859.8,
-        "elo_away": 1642.4,
-        "elo_diff": 217.4
+        "elo_home": 1867.3,
+        "elo_away": 1644.9,
+        "elo_diff": 222.4
       }
     },
     {
@@ -152,31 +152,31 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4922,
-        "draw": 0.2625,
-        "away": 0.2453
+        "home": 0.498,
+        "draw": 0.2392,
+        "away": 0.2628
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.133
+          "p": 0.1333
         },
         {
           "score": "1-0",
-          "p": 0.1118
+          "p": 0.1119
         },
         {
           "score": "0-0",
-          "p": 0.0906
+          "p": 0.0913
         },
         {
           "score": "2-1",
-          "p": 0.0889
+          "p": 0.0886
         },
         {
           "score": "0-1",
-          "p": 0.0837
+          "p": 0.0843
         }
       ],
       "expected_goals": {
@@ -184,13 +184,13 @@
         "away": 1.07
       },
       "derived": {
-        "p_over_2_5": 0.4497,
-        "p_btts": 0.5022
+        "p_over_2_5": 0.4478,
+        "p_btts": 0.5012
       },
       "ratings": {
         "elo_home": 1582.6,
-        "elo_away": 1617.6,
-        "elo_diff": -35.0
+        "elo_away": 1619.3,
+        "elo_diff": -36.7
       }
     },
     {
@@ -212,45 +212,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1809,
-        "draw": 0.2511,
-        "away": 0.568
+        "home": 0.1683,
+        "draw": 0.2347,
+        "away": 0.597
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "0-2",
-          "p": 0.117
+          "p": 0.1136
         },
         {
           "score": "0-1",
-          "p": 0.106
-        },
-        {
-          "score": "1-2",
-          "p": 0.0978
+          "p": 0.1088
         },
         {
           "score": "1-1",
-          "p": 0.0972
+          "p": 0.104
+        },
+        {
+          "score": "1-2",
+          "p": 0.0987
         },
         {
           "score": "0-3",
-          "p": 0.0825
+          "p": 0.0755
         }
       ],
       "expected_goals": {
-        "home": 0.84,
-        "away": 2.12
+        "home": 0.87,
+        "away": 1.99
       },
       "derived": {
-        "p_over_2_5": 0.5656,
-        "p_btts": 0.5028
+        "p_over_2_5": 0.5455,
+        "p_btts": 0.5066
       },
       "ratings": {
-        "elo_home": 1452.4,
-        "elo_away": 1636.5,
-        "elo_diff": -184.1
+        "elo_home": 1476.2,
+        "elo_away": 1650.4,
+        "elo_diff": -174.2
       }
     },
     {
@@ -272,45 +272,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5906,
-        "draw": 0.245,
-        "away": 0.1644
+        "home": 0.5822,
+        "draw": 0.238,
+        "away": 0.1798
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-0",
-          "p": 0.1498
-        },
-        {
-          "score": "1-1",
-          "p": 0.1219
+          "p": 0.1559
         },
         {
           "score": "2-0",
-          "p": 0.1213
+          "p": 0.1244
+        },
+        {
+          "score": "1-1",
+          "p": 0.1214
         },
         {
           "score": "0-0",
-          "p": 0.1058
+          "p": 0.1111
         },
         {
           "score": "2-1",
-          "p": 0.0904
+          "p": 0.0888
         }
       ],
       "expected_goals": {
-        "home": 1.56,
-        "away": 0.75
+        "home": 1.54,
+        "away": 0.71
       },
       "derived": {
-        "p_over_2_5": 0.4048,
-        "p_btts": 0.4206
+        "p_over_2_5": 0.3911,
+        "p_btts": 0.4066
       },
       "ratings": {
-        "elo_home": 1630.8,
-        "elo_away": 1443.2,
-        "elo_diff": 187.6
+        "elo_home": 1630.7,
+        "elo_away": 1436.4,
+        "elo_diff": 194.3
       }
     },
     {
@@ -332,45 +332,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4947,
-        "draw": 0.2702,
-        "away": 0.2351
+        "home": 0.538,
+        "draw": 0.2322,
+        "away": 0.2298
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1331
+          "p": 0.1326
         },
         {
           "score": "1-0",
-          "p": 0.1156
+          "p": 0.1169
         },
         {
           "score": "0-0",
-          "p": 0.0932
+          "p": 0.0931
         },
         {
           "score": "2-1",
-          "p": 0.0891
+          "p": 0.0897
         },
         {
           "score": "2-0",
-          "p": 0.0859
+          "p": 0.0877
         }
       ],
       "expected_goals": {
-        "home": 1.41,
-        "away": 1.04
+        "home": 1.42,
+        "away": 1.02
       },
       "derived": {
-        "p_over_2_5": 0.4419,
-        "p_btts": 0.494
+        "p_over_2_5": 0.4421,
+        "p_btts": 0.4925
       },
       "ratings": {
-        "elo_home": 1583.4,
-        "elo_away": 1534.5,
-        "elo_diff": 48.9
+        "elo_home": 1577.5,
+        "elo_away": 1523.4,
+        "elo_diff": 54.2
       }
     },
     {
@@ -392,19 +392,19 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4336,
-        "draw": 0.2816,
-        "away": 0.2848
+        "home": 0.4374,
+        "draw": 0.2534,
+        "away": 0.3092
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.129
+          "p": 0.1291
         },
         {
           "score": "1-0",
-          "p": 0.0908
+          "p": 0.0907
         },
         {
           "score": "2-1",
@@ -412,7 +412,7 @@
         },
         {
           "score": "0-1",
-          "p": 0.0807
+          "p": 0.0806
         },
         {
           "score": "1-2",
@@ -424,8 +424,8 @@
         "away": 1.27
       },
       "derived": {
-        "p_over_2_5": 0.5011,
-        "p_btts": 0.5494
+        "p_over_2_5": 0.5012,
+        "p_btts": 0.5495
       },
       "ratings": {
         "elo_home": 1554.3,
@@ -452,45 +452,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.354,
-        "draw": 0.2996,
-        "away": 0.3464
+        "home": 0.2844,
+        "draw": 0.3038,
+        "away": 0.4119
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.0808
+          "p": 0.0856
         },
         {
           "score": "1-2",
-          "p": 0.0765
+          "p": 0.0797
         },
         {
           "score": "2-1",
-          "p": 0.0736
+          "p": 0.0742
         },
         {
           "score": "2-2",
-          "p": 0.0731
+          "p": 0.0726
         },
         {
           "score": "1-3",
-          "p": 0.0507
+          "p": 0.052
         }
       ],
       "expected_goals": {
-        "home": 1.91,
-        "away": 1.99
+        "home": 1.82,
+        "away": 1.96
       },
       "derived": {
-        "p_over_2_5": 0.7469,
-        "p_btts": 0.7395
+        "p_over_2_5": 0.728,
+        "p_btts": 0.7243
       },
       "ratings": {
-        "elo_home": 1584.0,
-        "elo_away": 1542.7,
-        "elo_diff": 41.2
+        "elo_home": 1574.8,
+        "elo_away": 1537.2,
+        "elo_diff": 37.6
       }
     },
     {
@@ -512,45 +512,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5184,
-        "draw": 0.2544,
-        "away": 0.2272
+        "home": 0.5389,
+        "draw": 0.2077,
+        "away": 0.2534
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1083
+          "p": 0.1111
         },
         {
           "score": "2-1",
-          "p": 0.0863
+          "p": 0.0862
         },
         {
           "score": "1-2",
-          "p": 0.0801
+          "p": 0.081
         },
         {
           "score": "2-2",
-          "p": 0.0671
+          "p": 0.066
         },
         {
           "score": "1-0",
-          "p": 0.061
+          "p": 0.0636
         }
       ],
       "expected_goals": {
-        "home": 1.67,
-        "away": 1.56
+        "home": 1.63,
+        "away": 1.53
       },
       "derived": {
-        "p_over_2_5": 0.6264,
-        "p_btts": 0.6463
+        "p_over_2_5": 0.6123,
+        "p_btts": 0.6358
       },
       "ratings": {
-        "elo_home": 1607.3,
-        "elo_away": 1690.8,
-        "elo_diff": -83.5
+        "elo_home": 1605.9,
+        "elo_away": 1694.0,
+        "elo_diff": -88.2
       }
     },
     {
@@ -572,45 +572,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4521,
-        "draw": 0.2304,
-        "away": 0.3175
+        "home": 0.5287,
+        "draw": 0.1829,
+        "away": 0.2883
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1053
+          "p": 0.1043
         },
         {
           "score": "2-1",
-          "p": 0.0924
+          "p": 0.0936
         },
         {
           "score": "1-2",
-          "p": 0.071
+          "p": 0.0686
+        },
+        {
+          "score": "2-0",
+          "p": 0.0677
         },
         {
           "score": "1-0",
-          "p": 0.0656
-        },
-        {
-          "score": "2-2",
-          "p": 0.0655
+          "p": 0.0667
         }
       ],
       "expected_goals": {
-        "home": 1.84,
-        "away": 1.42
+        "home": 1.89,
+        "away": 1.38
       },
       "derived": {
-        "p_over_2_5": 0.6329,
-        "p_btts": 0.643
+        "p_over_2_5": 0.6342,
+        "p_btts": 0.6405
       },
       "ratings": {
-        "elo_home": 1672.3,
-        "elo_away": 1753.3,
-        "elo_diff": -81.0
+        "elo_home": 1672.7,
+        "elo_away": 1729.5,
+        "elo_diff": -56.8
       }
     },
     {
@@ -632,9 +632,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3555,
-        "draw": 0.3082,
-        "away": 0.3362
+        "home": 0.3286,
+        "draw": 0.2945,
+        "away": 0.3768
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -644,15 +644,15 @@
         },
         {
           "score": "1-0",
-          "p": 0.1108
-        },
-        {
-          "score": "0-1",
-          "p": 0.1097
+          "p": 0.1106
         },
         {
           "score": "0-0",
-          "p": 0.1096
+          "p": 0.1095
+        },
+        {
+          "score": "0-1",
+          "p": 0.1095
         },
         {
           "score": "2-1",
@@ -664,8 +664,8 @@
         "away": 1.13
       },
       "derived": {
-        "p_over_2_5": 0.3972,
-        "p_btts": 0.4682
+        "p_over_2_5": 0.3975,
+        "p_btts": 0.4685
       },
       "ratings": {
         "elo_home": 1449.7,
@@ -692,45 +692,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6532,
-        "draw": 0.2579,
-        "away": 0.0889
+        "home": 0.6796,
+        "draw": 0.2431,
+        "away": 0.0773
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1226
+          "p": 0.1275
         },
         {
           "score": "1-0",
-          "p": 0.1205
+          "p": 0.1256
         },
         {
           "score": "1-1",
-          "p": 0.1044
+          "p": 0.1033
         },
         {
           "score": "2-1",
-          "p": 0.097
+          "p": 0.0959
         },
         {
           "score": "3-0",
-          "p": 0.0798
+          "p": 0.083
         }
       ],
       "expected_goals": {
         "home": 1.95,
-        "away": 0.79
+        "away": 0.75
       },
       "derived": {
-        "p_over_2_5": 0.5172,
-        "p_btts": 0.4743
+        "p_over_2_5": 0.5073,
+        "p_btts": 0.4586
       },
       "ratings": {
-        "elo_home": 1651.8,
-        "elo_away": 1618.7,
-        "elo_diff": 33.0
+        "elo_home": 1660.6,
+        "elo_away": 1609.9,
+        "elo_diff": 50.7
       }
     },
     {
@@ -752,45 +752,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5209,
-        "draw": 0.2744,
-        "away": 0.2047
+        "home": 0.5509,
+        "draw": 0.2607,
+        "away": 0.1884
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1197
+          "p": 0.1198
         },
         {
           "score": "1-0",
-          "p": 0.0969
+          "p": 0.1007
         },
         {
           "score": "2-1",
-          "p": 0.0965
+          "p": 0.0969
         },
         {
           "score": "2-0",
-          "p": 0.087
+          "p": 0.0906
         },
         {
           "score": "0-0",
-          "p": 0.0664
+          "p": 0.0685
         }
       ],
       "expected_goals": {
-        "home": 1.69,
-        "away": 1.11
+        "home": 1.7,
+        "away": 1.07
       },
       "derived": {
-        "p_over_2_5": 0.5312,
-        "p_btts": 0.5527
+        "p_over_2_5": 0.5234,
+        "p_btts": 0.5428
       },
       "ratings": {
         "elo_home": 1495.2,
-        "elo_away": 1578.8,
-        "elo_diff": -83.6
+        "elo_away": 1569.6,
+        "elo_diff": -74.4
       }
     },
     {
@@ -812,45 +812,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3246,
-        "draw": 0.2673,
-        "away": 0.4081
+        "home": 0.3019,
+        "draw": 0.2589,
+        "away": 0.4392
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1209
+          "p": 0.1198
         },
         {
           "score": "1-2",
-          "p": 0.0931
+          "p": 0.0932
         },
         {
           "score": "0-1",
-          "p": 0.0869
+          "p": 0.0848
         },
         {
           "score": "0-2",
-          "p": 0.075
+          "p": 0.0741
         },
         {
           "score": "2-1",
-          "p": 0.0715
+          "p": 0.0717
         }
       ],
       "expected_goals": {
-        "home": 1.24,
-        "away": 1.62
+        "home": 1.26,
+        "away": 1.63
       },
       "derived": {
-        "p_over_2_5": 0.5446,
-        "p_btts": 0.5759
+        "p_over_2_5": 0.5522,
+        "p_btts": 0.5819
       },
       "ratings": {
-        "elo_home": 1670.5,
-        "elo_away": 1859.2,
-        "elo_diff": -188.7
+        "elo_home": 1676.4,
+        "elo_away": 1862.3,
+        "elo_diff": -185.9
       }
     },
     {
@@ -872,45 +872,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6231,
-        "draw": 0.2685,
-        "away": 0.1084
+        "home": 0.6222,
+        "draw": 0.2627,
+        "away": 0.1151
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
-          "score": "1-0",
-          "p": 0.1108
+          "score": "2-0",
+          "p": 0.11
         },
         {
-          "score": "2-0",
-          "p": 0.1103
+          "score": "1-0",
+          "p": 0.1008
         },
         {
           "score": "1-1",
-          "p": 0.1092
+          "p": 0.0998
         },
         {
           "score": "2-1",
-          "p": 0.0988
+          "p": 0.0989
         },
         {
           "score": "3-0",
-          "p": 0.0699
+          "p": 0.0764
         }
       ],
       "expected_goals": {
-        "home": 1.9,
+        "home": 2.08,
         "away": 0.9
       },
       "derived": {
-        "p_over_2_5": 0.5296,
-        "p_btts": 0.5084
+        "p_over_2_5": 0.5724,
+        "p_btts": 0.5238
       },
       "ratings": {
-        "elo_home": 1597.9,
-        "elo_away": 1573.4,
-        "elo_diff": 24.5
+        "elo_home": 1614.9,
+        "elo_away": 1569.8,
+        "elo_diff": 45.0
       }
     },
     {
@@ -932,45 +932,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2359,
-        "draw": 0.352,
-        "away": 0.4121
+        "home": 0.2688,
+        "draw": 0.2836,
+        "away": 0.4477
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "0-1",
-          "p": 0.1551
+          "p": 0.1574
         },
         {
           "score": "0-0",
-          "p": 0.145
+          "p": 0.1507
         },
         {
           "score": "1-1",
-          "p": 0.1375
+          "p": 0.1377
         },
         {
           "score": "1-0",
-          "p": 0.1054
+          "p": 0.1082
         },
         {
           "score": "0-2",
-          "p": 0.0945
+          "p": 0.0936
         }
       ],
       "expected_goals": {
-        "home": 0.81,
-        "away": 1.17
+        "home": 0.8,
+        "away": 1.14
       },
       "derived": {
-        "p_over_2_5": 0.3173,
-        "p_btts": 0.389
+        "p_over_2_5": 0.3066,
+        "p_btts": 0.3807
       },
       "ratings": {
-        "elo_home": 1546.7,
-        "elo_away": 1655.1,
-        "elo_diff": -108.3
+        "elo_home": 1555.9,
+        "elo_away": 1661.8,
+        "elo_diff": -105.9
       }
     },
     {
@@ -992,45 +992,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2816,
-        "draw": 0.3017,
-        "away": 0.4166
+        "home": 0.3024,
+        "draw": 0.28,
+        "away": 0.4176
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1382
+          "p": 0.1368
         },
         {
           "score": "0-1",
-          "p": 0.1116
+          "p": 0.1118
         },
         {
           "score": "0-0",
-          "p": 0.103
+          "p": 0.0987
         },
         {
           "score": "1-0",
-          "p": 0.1005
+          "p": 0.0944
         },
         {
           "score": "1-2",
-          "p": 0.0807
+          "p": 0.0838
         }
       ],
       "expected_goals": {
-        "home": 1.11,
-        "away": 1.23
+        "home": 1.1,
+        "away": 1.29
       },
       "derived": {
-        "p_over_2_5": 0.4145,
-        "p_btts": 0.4812
+        "p_over_2_5": 0.4265,
+        "p_btts": 0.4892
       },
       "ratings": {
-        "elo_home": 1552.0,
+        "elo_home": 1548.8,
         "elo_away": 1589.6,
-        "elo_diff": -37.6
+        "elo_diff": -40.8
       }
     },
     {
@@ -1052,45 +1052,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4509,
-        "draw": 0.3188,
-        "away": 0.2303
+        "home": 0.4943,
+        "draw": 0.286,
+        "away": 0.2197
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1256
+          "p": 0.1257
         },
         {
           "score": "1-0",
-          "p": 0.1006
+          "p": 0.1016
         },
         {
           "score": "2-1",
-          "p": 0.0936
+          "p": 0.0937
         },
         {
           "score": "2-0",
-          "p": 0.0835
+          "p": 0.0844
         },
         {
           "score": "0-0",
-          "p": 0.0742
+          "p": 0.0748
         }
       ],
       "expected_goals": {
-        "home": 1.56,
-        "away": 1.12
+        "home": 1.57,
+        "away": 1.11
       },
       "derived": {
-        "p_over_2_5": 0.5029,
-        "p_btts": 0.5391
+        "p_over_2_5": 0.501,
+        "p_btts": 0.5369
       },
       "ratings": {
-        "elo_home": 1620.6,
-        "elo_away": 1585.0,
-        "elo_diff": 35.6
+        "elo_home": 1630.1,
+        "elo_away": 1595.5,
+        "elo_diff": 34.6
       }
     },
     {
@@ -1112,45 +1112,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4537,
-        "draw": 0.3151,
-        "away": 0.2312
+        "home": 0.4408,
+        "draw": 0.3204,
+        "away": 0.2388
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.123
+          "p": 0.1213
         },
         {
           "score": "2-1",
-          "p": 0.0899
+          "p": 0.0918
         },
         {
           "score": "1-0",
-          "p": 0.0838
+          "p": 0.0844
         },
         {
           "score": "1-2",
-          "p": 0.0763
+          "p": 0.0737
         },
         {
-          "score": "0-1",
-          "p": 0.0702
+          "score": "2-0",
+          "p": 0.0718
         }
       ],
       "expected_goals": {
-        "home": 1.54,
-        "away": 1.3
+        "home": 1.59,
+        "away": 1.28
       },
       "derived": {
-        "p_over_2_5": 0.54,
-        "p_btts": 0.5776
+        "p_over_2_5": 0.547,
+        "p_btts": 0.5805
       },
       "ratings": {
         "elo_home": 1537.8,
-        "elo_away": 1507.0,
-        "elo_diff": 30.8
+        "elo_away": 1502.6,
+        "elo_diff": 35.1
       }
     },
     {
@@ -1172,23 +1172,23 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7138,
-        "draw": 0.1564,
-        "away": 0.1299
+        "home": 0.7059,
+        "draw": 0.1516,
+        "away": 0.1425
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.0999
+          "p": 0.0997
         },
         {
           "score": "3-0",
-          "p": 0.0969
+          "p": 0.0971
         },
         {
           "score": "2-1",
-          "p": 0.0839
+          "p": 0.0836
         },
         {
           "score": "3-1",
@@ -1196,16 +1196,16 @@
         },
         {
           "score": "4-0",
-          "p": 0.0705
+          "p": 0.0708
         }
       ],
       "expected_goals": {
-        "home": 2.91,
+        "home": 2.92,
         "away": 0.84
       },
       "derived": {
-        "p_over_2_5": 0.722,
-        "p_btts": 0.54
+        "p_over_2_5": 0.7234,
+        "p_btts": 0.5399
       },
       "ratings": {
         "elo_home": 1565.6,
@@ -1232,45 +1232,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2807,
-        "draw": 0.2907,
-        "away": 0.4287
+        "home": 0.2718,
+        "draw": 0.2641,
+        "away": 0.4641
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1222
+          "p": 0.1209
         },
         {
           "score": "1-2",
-          "p": 0.0876
+          "p": 0.0855
         },
         {
           "score": "2-1",
-          "p": 0.0796
+          "p": 0.0822
         },
         {
           "score": "0-1",
-          "p": 0.079
+          "p": 0.0745
         },
         {
           "score": "1-0",
-          "p": 0.0712
+          "p": 0.0714
         }
       ],
       "expected_goals": {
-        "home": 1.37,
-        "away": 1.51
+        "home": 1.43,
+        "away": 1.49
       },
       "derived": {
-        "p_over_2_5": 0.5486,
-        "p_btts": 0.5864
+        "p_over_2_5": 0.5583,
+        "p_btts": 0.5949
       },
       "ratings": {
         "elo_home": 1547.9,
-        "elo_away": 1619.8,
-        "elo_diff": -71.9
+        "elo_away": 1605.9,
+        "elo_diff": -58.0
       }
     },
     {
@@ -1292,45 +1292,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7237,
-        "draw": 0.166,
-        "away": 0.1102
+        "home": 0.7626,
+        "draw": 0.1342,
+        "away": 0.1032
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1279
+          "p": 0.1295
         },
         {
           "score": "1-0",
-          "p": 0.1178
+          "p": 0.1187
         },
         {
           "score": "1-1",
-          "p": 0.0963
+          "p": 0.0952
         },
         {
           "score": "2-1",
-          "p": 0.0957
+          "p": 0.0952
         },
         {
           "score": "3-0",
-          "p": 0.089
+          "p": 0.0907
         }
       ],
       "expected_goals": {
-        "home": 2.09,
-        "away": 0.75
+        "home": 2.1,
+        "away": 0.73
       },
       "derived": {
         "p_over_2_5": 0.539,
-        "p_btts": 0.4662
+        "p_btts": 0.4613
       },
       "ratings": {
-        "elo_home": 1864.7,
+        "elo_home": 1868.8,
         "elo_away": 1741.6,
-        "elo_diff": 123.1
+        "elo_diff": 127.2
       }
     },
     {
@@ -1352,45 +1352,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5249,
-        "draw": 0.3203,
-        "away": 0.1548
+        "home": 0.5699,
+        "draw": 0.265,
+        "away": 0.1651
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-0",
-          "p": 0.1372
+          "p": 0.1378
         },
         {
           "score": "2-0",
-          "p": 0.1272
+          "p": 0.1269
         },
         {
           "score": "1-1",
-          "p": 0.1113
+          "p": 0.112
         },
         {
           "score": "2-1",
-          "p": 0.0945
+          "p": 0.0943
         },
         {
           "score": "0-0",
-          "p": 0.0853
+          "p": 0.0863
         }
       ],
       "expected_goals": {
-        "home": 1.78,
+        "home": 1.77,
         "away": 0.74
       },
       "derived": {
-        "p_over_2_5": 0.4629,
-        "p_btts": 0.4414
+        "p_over_2_5": 0.4599,
+        "p_btts": 0.4408
       },
       "ratings": {
-        "elo_home": 1741.5,
+        "elo_home": 1739.8,
         "elo_away": 1500.0,
-        "elo_diff": 241.5
+        "elo_diff": 239.8
       }
     },
     {
@@ -1412,19 +1412,19 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4742,
-        "draw": 0.2951,
-        "away": 0.2307
+        "home": 0.501,
+        "draw": 0.2562,
+        "away": 0.2428
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.138
+          "p": 0.1381
         },
         {
           "score": "1-0",
-          "p": 0.1247
+          "p": 0.1246
         },
         {
           "score": "0-0",
@@ -1432,11 +1432,11 @@
         },
         {
           "score": "0-1",
-          "p": 0.0973
+          "p": 0.0971
         },
         {
           "score": "2-0",
-          "p": 0.083
+          "p": 0.0831
         }
       ],
       "expected_goals": {
@@ -1444,8 +1444,8 @@
         "away": 1.0
       },
       "derived": {
-        "p_over_2_5": 0.3944,
-        "p_btts": 0.4602
+        "p_over_2_5": 0.3946,
+        "p_btts": 0.4604
       },
       "ratings": {
         "elo_home": 1500.0,
@@ -1472,45 +1472,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7586,
-        "draw": 0.1127,
-        "away": 0.1287
+        "home": 0.7439,
+        "draw": 0.1184,
+        "away": 0.1378
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-1",
-          "p": 0.0889
+          "p": 0.0887
         },
         {
           "score": "3-1",
-          "p": 0.0761
+          "p": 0.076
         },
         {
           "score": "1-1",
-          "p": 0.0727
+          "p": 0.0726
         },
         {
           "score": "2-0",
-          "p": 0.0666
+          "p": 0.0659
         },
         {
           "score": "2-2",
-          "p": 0.0594
+          "p": 0.0597
         }
       ],
       "expected_goals": {
         "home": 2.57,
-        "away": 1.34
+        "away": 1.35
       },
       "derived": {
-        "p_over_2_5": 0.7473,
-        "p_btts": 0.684
+        "p_over_2_5": 0.7489,
+        "p_btts": 0.6865
       },
       "ratings": {
-        "elo_home": 1785.7,
+        "elo_home": 1789.9,
         "elo_away": 1528.3,
-        "elo_diff": 257.4
+        "elo_diff": 261.6
       }
     },
     {
@@ -1532,45 +1532,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3758,
-        "draw": 0.2635,
-        "away": 0.3607
+        "home": 0.3838,
+        "draw": 0.2472,
+        "away": 0.369
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1091
+          "p": 0.1042
         },
         {
           "score": "1-2",
-          "p": 0.0918
+          "p": 0.0911
         },
         {
           "score": "2-1",
-          "p": 0.0733
+          "p": 0.0724
+        },
+        {
+          "score": "2-2",
+          "p": 0.0666
         },
         {
           "score": "0-1",
-          "p": 0.0682
-        },
-        {
-          "score": "0-2",
-          "p": 0.065
+          "p": 0.0627
         }
       ],
       "expected_goals": {
-        "home": 1.41,
-        "away": 1.77
+        "home": 1.46,
+        "away": 1.84
       },
       "derived": {
-        "p_over_2_5": 0.616,
-        "p_btts": 0.6326
+        "p_over_2_5": 0.6405,
+        "p_btts": 0.651
       },
       "ratings": {
         "elo_home": 1674.9,
-        "elo_away": 1707.7,
-        "elo_diff": -32.9
+        "elo_away": 1715.4,
+        "elo_diff": -40.5
       }
     },
     {
@@ -1592,45 +1592,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2102,
-        "draw": 0.3,
-        "away": 0.4898
+        "home": 0.2134,
+        "draw": 0.2921,
+        "away": 0.4945
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1224
+          "p": 0.1236
         },
         {
           "score": "0-1",
-          "p": 0.1108
+          "p": 0.1145
         },
         {
           "score": "0-2",
-          "p": 0.0963
+          "p": 0.0981
         },
         {
           "score": "1-2",
-          "p": 0.0962
+          "p": 0.0957
         },
         {
           "score": "0-0",
-          "p": 0.0766
+          "p": 0.0801
         }
       ],
       "expected_goals": {
-        "home": 1.0,
-        "away": 1.65
+        "home": 0.97,
+        "away": 1.63
       },
       "derived": {
-        "p_over_2_5": 0.494,
-        "p_btts": 0.5164
+        "p_over_2_5": 0.4823,
+        "p_btts": 0.5066
       },
       "ratings": {
         "elo_home": 1500.0,
-        "elo_away": 1643.4,
-        "elo_diff": -143.4
+        "elo_away": 1649.0,
+        "elo_diff": -149.0
       }
     },
     {
@@ -1652,45 +1652,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7285,
-        "draw": 0.1312,
-        "away": 0.1403
+        "home": 0.7562,
+        "draw": 0.1104,
+        "away": 0.1335
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1332
+          "p": 0.134
         },
         {
           "score": "3-0",
-          "p": 0.1162
+          "p": 0.1151
         },
         {
           "score": "1-0",
-          "p": 0.0986
+          "p": 0.1007
         },
         {
           "score": "2-1",
-          "p": 0.0841
+          "p": 0.085
         },
         {
           "score": "4-0",
-          "p": 0.076
+          "p": 0.0741
         }
       ],
       "expected_goals": {
-        "home": 2.62,
+        "home": 2.58,
         "away": 0.63
       },
       "derived": {
-        "p_over_2_5": 0.6293,
-        "p_btts": 0.4371
+        "p_over_2_5": 0.6217,
+        "p_btts": 0.4373
       },
       "ratings": {
-        "elo_home": 1822.7,
-        "elo_away": 1691.1,
-        "elo_diff": 131.5
+        "elo_home": 1827.9,
+        "elo_away": 1702.3,
+        "elo_diff": 125.6
       }
     },
     {
@@ -1712,45 +1712,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1517,
-        "draw": 0.2337,
-        "away": 0.6147
+        "home": 0.104,
+        "draw": 0.1873,
+        "away": 0.7087
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "0-2",
-          "p": 0.121
+          "p": 0.1205
         },
         {
           "score": "0-1",
-          "p": 0.1015
+          "p": 0.1005
         },
         {
           "score": "1-2",
-          "p": 0.0952
+          "p": 0.0951
         },
         {
           "score": "0-3",
-          "p": 0.0923
+          "p": 0.0925
         },
         {
           "score": "1-1",
-          "p": 0.0874
+          "p": 0.0869
         }
       ],
       "expected_goals": {
         "home": 0.79,
-        "away": 2.29
+        "away": 2.3
       },
       "derived": {
-        "p_over_2_5": 0.5933,
-        "p_btts": 0.4936
+        "p_over_2_5": 0.5966,
+        "p_btts": 0.4953
       },
       "ratings": {
         "elo_home": 1469.5,
-        "elo_away": 1642.4,
-        "elo_diff": -172.9
+        "elo_away": 1644.9,
+        "elo_diff": -175.3
       }
     },
     {
@@ -1772,45 +1772,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1254,
-        "draw": 0.1646,
-        "away": 0.7099
+        "home": 0.091,
+        "draw": 0.2017,
+        "away": 0.7073
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "0-2",
-          "p": 0.1175
+          "p": 0.1176
         },
         {
           "score": "0-3",
-          "p": 0.1006
+          "p": 0.1031
         },
         {
           "score": "1-2",
-          "p": 0.0902
+          "p": 0.0886
         },
         {
           "score": "0-1",
-          "p": 0.0879
+          "p": 0.086
         },
         {
           "score": "1-3",
-          "p": 0.0772
+          "p": 0.0776
         }
       ],
       "expected_goals": {
-        "home": 0.77,
-        "away": 2.57
+        "home": 0.75,
+        "away": 2.63
       },
       "derived": {
-        "p_over_2_5": 0.6475,
-        "p_btts": 0.4984
+        "p_over_2_5": 0.6562,
+        "p_btts": 0.4942
       },
       "ratings": {
         "elo_home": 1500.0,
-        "elo_away": 1859.8,
-        "elo_diff": -359.8
+        "elo_away": 1867.3,
+        "elo_diff": -367.3
       }
     },
     {
@@ -1832,15 +1832,15 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2732,
-        "draw": 0.2756,
-        "away": 0.4512
+        "home": 0.1823,
+        "draw": 0.2878,
+        "away": 0.5299
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-2",
-          "p": 0.0759
+          "p": 0.0749
         },
         {
           "score": "2-2",
@@ -1848,29 +1848,29 @@
         },
         {
           "score": "1-1",
-          "p": 0.0675
+          "p": 0.0664
         },
         {
           "score": "2-1",
-          "p": 0.0599
+          "p": 0.0598
         },
         {
           "score": "1-3",
-          "p": 0.0598
+          "p": 0.0593
         }
       ],
       "expected_goals": {
-        "home": 1.87,
-        "away": 2.36
+        "home": 1.89,
+        "away": 2.37
       },
       "derived": {
-        "p_over_2_5": 0.7937,
-        "p_btts": 0.7691
+        "p_over_2_5": 0.7978,
+        "p_btts": 0.7731
       },
       "ratings": {
         "elo_home": 1542.1,
-        "elo_away": 1672.3,
-        "elo_diff": -130.2
+        "elo_away": 1672.7,
+        "elo_diff": -130.6
       }
     },
     {
@@ -1892,45 +1892,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3271,
-        "draw": 0.2633,
-        "away": 0.4097
+        "home": 0.2897,
+        "draw": 0.1998,
+        "away": 0.5105
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1085
+          "p": 0.1093
         },
         {
           "score": "1-2",
-          "p": 0.0897
+          "p": 0.0891
         },
         {
           "score": "2-1",
-          "p": 0.076
+          "p": 0.0771
         },
         {
           "score": "2-2",
-          "p": 0.066
+          "p": 0.0661
         },
         {
           "score": "0-1",
-          "p": 0.0649
+          "p": 0.0647
         }
       ],
       "expected_goals": {
-        "home": 1.47,
-        "away": 1.74
+        "home": 1.48,
+        "away": 1.71
       },
       "derived": {
-        "p_over_2_5": 0.6219,
-        "p_btts": 0.6401
+        "p_over_2_5": 0.6194,
+        "p_btts": 0.6391
       },
       "ratings": {
-        "elo_home": 1719.3,
+        "elo_home": 1726.2,
         "elo_away": 1949.8,
-        "elo_diff": -230.5
+        "elo_diff": -223.6
       }
     },
     {
@@ -1952,27 +1952,27 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4146,
-        "draw": 0.3129,
-        "away": 0.2725
+        "home": 0.5309,
+        "draw": 0.2438,
+        "away": 0.2253
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1209
+          "p": 0.1196
         },
         {
           "score": "1-0",
-          "p": 0.1006
+          "p": 0.1027
         },
         {
           "score": "2-1",
-          "p": 0.0964
+          "p": 0.0971
         },
         {
           "score": "2-0",
-          "p": 0.0892
+          "p": 0.0926
         },
         {
           "score": "0-0",
@@ -1980,17 +1980,17 @@
         }
       ],
       "expected_goals": {
-        "home": 1.68,
-        "away": 1.08
+        "home": 1.71,
+        "away": 1.05
       },
       "derived": {
-        "p_over_2_5": 0.5201,
-        "p_btts": 0.5429
+        "p_over_2_5": 0.5198,
+        "p_btts": 0.5375
       },
       "ratings": {
         "elo_home": 1578.2,
-        "elo_away": 1753.3,
-        "elo_diff": -175.2
+        "elo_away": 1729.5,
+        "elo_diff": -151.3
       }
     },
     {
@@ -2012,23 +2012,23 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6099,
-        "draw": 0.181,
-        "away": 0.2091
+        "home": 0.6848,
+        "draw": 0.1478,
+        "away": 0.1674
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-1",
-          "p": 0.0896
+          "p": 0.089
         },
         {
           "score": "1-1",
-          "p": 0.0884
+          "p": 0.0873
         },
         {
           "score": "2-2",
-          "p": 0.0682
+          "p": 0.0685
         },
         {
           "score": "1-2",
@@ -2036,21 +2036,21 @@
         },
         {
           "score": "3-1",
-          "p": 0.0636
+          "p": 0.0635
         }
       ],
       "expected_goals": {
-        "home": 2.13,
-        "away": 1.52
+        "home": 2.14,
+        "away": 1.54
       },
       "derived": {
-        "p_over_2_5": 0.706,
-        "p_btts": 0.6929
+        "p_over_2_5": 0.7113,
+        "p_btts": 0.6974
       },
       "ratings": {
-        "elo_home": 1859.2,
+        "elo_home": 1862.3,
         "elo_away": 1707.8,
-        "elo_diff": 151.4
+        "elo_diff": 154.6
       }
     },
     {
@@ -2072,45 +2072,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.8459,
-        "draw": 0.0803,
-        "away": 0.0738
+        "home": 0.8576,
+        "draw": 0.0728,
+        "away": 0.0696
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1195
+          "p": 0.1183
         },
         {
           "score": "3-0",
-          "p": 0.1048
+          "p": 0.1037
         },
         {
           "score": "2-1",
-          "p": 0.0881
+          "p": 0.0884
         },
         {
           "score": "1-0",
-          "p": 0.0875
+          "p": 0.0865
         },
         {
           "score": "3-1",
-          "p": 0.0772
+          "p": 0.0775
         }
       ],
       "expected_goals": {
         "home": 2.63,
-        "away": 0.74
+        "away": 0.75
       },
       "derived": {
-        "p_over_2_5": 0.6531,
-        "p_btts": 0.487
+        "p_over_2_5": 0.6552,
+        "p_btts": 0.4916
       },
       "ratings": {
-        "elo_home": 1872.9,
+        "elo_home": 1869.7,
         "elo_away": 1748.1,
-        "elo_diff": 124.9
+        "elo_diff": 121.6
       }
     },
     {
@@ -2132,31 +2132,31 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.793,
-        "draw": 0.1291,
-        "away": 0.0779
+        "home": 0.8144,
+        "draw": 0.1208,
+        "away": 0.0648
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1293
+          "p": 0.1298
         },
         {
           "score": "1-0",
-          "p": 0.106
+          "p": 0.1067
         },
         {
           "score": "3-0",
-          "p": 0.1013
+          "p": 0.1015
         },
         {
           "score": "2-1",
-          "p": 0.0921
+          "p": 0.092
         },
         {
           "score": "1-1",
-          "p": 0.0823
+          "p": 0.0824
         }
       ],
       "expected_goals": {
@@ -2164,13 +2164,13 @@
         "away": 0.71
       },
       "derived": {
-        "p_over_2_5": 0.5903,
-        "p_btts": 0.4649
+        "p_over_2_5": 0.5886,
+        "p_btts": 0.463
       },
       "ratings": {
-        "elo_home": 1655.1,
+        "elo_home": 1661.8,
         "elo_away": 1500.0,
-        "elo_diff": 155.1
+        "elo_diff": 161.8
       }
     },
     {
@@ -2192,19 +2192,19 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4718,
-        "draw": 0.3128,
-        "away": 0.2154
+        "home": 0.4902,
+        "draw": 0.2831,
+        "away": 0.2267
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.138
+          "p": 0.1381
         },
         {
           "score": "1-0",
-          "p": 0.1247
+          "p": 0.1246
         },
         {
           "score": "0-0",
@@ -2212,11 +2212,11 @@
         },
         {
           "score": "0-1",
-          "p": 0.0973
+          "p": 0.0971
         },
         {
           "score": "2-0",
-          "p": 0.083
+          "p": 0.0831
         }
       ],
       "expected_goals": {
@@ -2224,8 +2224,8 @@
         "away": 1.0
       },
       "derived": {
-        "p_over_2_5": 0.3944,
-        "p_btts": 0.4602
+        "p_over_2_5": 0.3946,
+        "p_btts": 0.4604
       },
       "ratings": {
         "elo_home": 1500.0,
@@ -2252,19 +2252,19 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3135,
-        "draw": 0.3363,
-        "away": 0.3502
+        "home": 0.3921,
+        "draw": 0.2708,
+        "away": 0.337
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1392
+          "p": 0.1393
         },
         {
           "score": "0-1",
-          "p": 0.1114
+          "p": 0.1112
         },
         {
           "score": "0-0",
@@ -2272,7 +2272,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.1058
+          "p": 0.1057
         },
         {
           "score": "1-2",
@@ -2284,8 +2284,8 @@
         "away": 1.18
       },
       "derived": {
-        "p_over_2_5": 0.4039,
-        "p_btts": 0.4734
+        "p_over_2_5": 0.4041,
+        "p_btts": 0.4737
       },
       "ratings": {
         "elo_home": 1449.7,
@@ -2312,45 +2312,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.414,
-        "draw": 0.2746,
-        "away": 0.3114
+        "home": 0.3779,
+        "draw": 0.2351,
+        "away": 0.387
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1312
-        },
-        {
-          "score": "1-0",
-          "p": 0.0913
+          "p": 0.1305
         },
         {
           "score": "0-1",
-          "p": 0.0867
-        },
-        {
-          "score": "2-1",
-          "p": 0.0837
+          "p": 0.0914
         },
         {
           "score": "1-2",
-          "p": 0.0798
+          "p": 0.0851
+        },
+        {
+          "score": "1-0",
+          "p": 0.0841
+        },
+        {
+          "score": "2-1",
+          "p": 0.0788
         }
       ],
       "expected_goals": {
-        "home": 1.34,
-        "away": 1.28
+        "home": 1.27,
+        "away": 1.37
       },
       "derived": {
-        "p_over_2_5": 0.4867,
-        "p_btts": 0.5393
+        "p_over_2_5": 0.4919,
+        "p_btts": 0.543
       },
       "ratings": {
-        "elo_home": 1633.0,
+        "elo_home": 1609.3,
         "elo_away": 1582.6,
-        "elo_diff": 50.3
+        "elo_diff": 26.7
       }
     },
     {
@@ -2372,45 +2372,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3534,
-        "draw": 0.3006,
-        "away": 0.3461
+        "home": 0.3608,
+        "draw": 0.2786,
+        "away": 0.3606
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1263
+          "p": 0.1273
         },
         {
           "score": "2-1",
-          "p": 0.0855
+          "p": 0.0856
         },
         {
           "score": "1-0",
-          "p": 0.0834
+          "p": 0.0851
         },
         {
           "score": "1-2",
-          "p": 0.0807
+          "p": 0.0803
         },
         {
           "score": "0-1",
-          "p": 0.0784
+          "p": 0.0794
         }
       ],
       "expected_goals": {
-        "home": 1.42,
-        "away": 1.34
+        "home": 1.41,
+        "away": 1.33
       },
       "derived": {
-        "p_over_2_5": 0.5224,
-        "p_btts": 0.5669
+        "p_over_2_5": 0.5161,
+        "p_btts": 0.5621
       },
       "ratings": {
-        "elo_home": 1508.8,
-        "elo_away": 1630.8,
-        "elo_diff": -122.0
+        "elo_home": 1512.4,
+        "elo_away": 1630.7,
+        "elo_diff": -118.3
       }
     },
     {
@@ -2432,45 +2432,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4634,
-        "draw": 0.2825,
-        "away": 0.254
+        "home": 0.4832,
+        "draw": 0.2306,
+        "away": 0.2862
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1221
+          "p": 0.1241
         },
         {
           "score": "2-1",
-          "p": 0.0932
+          "p": 0.0922
         },
         {
           "score": "1-0",
-          "p": 0.0894
+          "p": 0.0911
         },
         {
           "score": "2-0",
-          "p": 0.0765
+          "p": 0.0758
         },
         {
           "score": "1-2",
-          "p": 0.0708
+          "p": 0.0718
         }
       ],
       "expected_goals": {
-        "home": 1.6,
+        "home": 1.56,
         "away": 1.22
       },
       "derived": {
-        "p_over_2_5": 0.5361,
-        "p_btts": 0.5688
+        "p_over_2_5": 0.5251,
+        "p_btts": 0.5619
       },
       "ratings": {
-        "elo_home": 1642.0,
+        "elo_home": 1630.0,
         "elo_away": 1561.9,
-        "elo_diff": 80.1
+        "elo_diff": 68.1
       }
     },
     {
@@ -2492,45 +2492,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5245,
-        "draw": 0.2696,
-        "away": 0.2059
+        "home": 0.5507,
+        "draw": 0.2382,
+        "away": 0.2111
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.0921
+          "p": 0.0934
         },
         {
           "score": "2-1",
-          "p": 0.0891
+          "p": 0.0905
         },
         {
           "score": "2-2",
-          "p": 0.069
+          "p": 0.068
         },
         {
           "score": "1-2",
-          "p": 0.0679
+          "p": 0.0667
         },
         {
           "score": "3-1",
-          "p": 0.0604
+          "p": 0.0615
         }
       ],
       "expected_goals": {
-        "home": 2.03,
-        "away": 1.55
+        "home": 2.04,
+        "away": 1.5
       },
       "derived": {
-        "p_over_2_5": 0.6937,
-        "p_btts": 0.6887
+        "p_over_2_5": 0.6865,
+        "p_btts": 0.6806
       },
       "ratings": {
         "elo_home": 1537.8,
-        "elo_away": 1584.0,
-        "elo_diff": -46.2
+        "elo_away": 1574.8,
+        "elo_diff": -37.0
       }
     },
     {
@@ -2552,45 +2552,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5082,
-        "draw": 0.2729,
-        "away": 0.2189
+        "home": 0.5276,
+        "draw": 0.276,
+        "away": 0.1963
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
-          "score": "1-1",
-          "p": 0.1279
+          "score": "1-0",
+          "p": 0.1304
         },
         {
-          "score": "1-0",
-          "p": 0.126
+          "score": "1-1",
+          "p": 0.1285
         },
         {
           "score": "2-0",
-          "p": 0.1007
+          "p": 0.1028
         },
         {
           "score": "0-0",
-          "p": 0.0929
+          "p": 0.0971
         },
         {
           "score": "2-1",
-          "p": 0.0928
+          "p": 0.0919
         }
       ],
       "expected_goals": {
-        "home": 1.52,
-        "away": 0.92
+        "home": 1.5,
+        "away": 0.89
       },
       "derived": {
-        "p_over_2_5": 0.4419,
-        "p_btts": 0.4768
+        "p_over_2_5": 0.4299,
+        "p_btts": 0.4661
       },
       "ratings": {
-        "elo_home": 1643.4,
-        "elo_away": 1582.0,
-        "elo_diff": 61.4
+        "elo_home": 1649.0,
+        "elo_away": 1578.6,
+        "elo_diff": 70.3
       }
     },
     {
@@ -2612,27 +2612,27 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.493,
-        "draw": 0.3043,
-        "away": 0.2027
+        "home": 0.5566,
+        "draw": 0.2527,
+        "away": 0.1907
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1384
+          "p": 0.1395
         },
         {
           "score": "1-0",
-          "p": 0.1321
+          "p": 0.1389
         },
         {
           "score": "0-0",
-          "p": 0.1183
+          "p": 0.1298
         },
         {
           "score": "0-1",
-          "p": 0.0992
+          "p": 0.1053
         },
         {
           "score": "2-0",
@@ -2640,17 +2640,17 @@
         }
       ],
       "expected_goals": {
-        "home": 1.24,
-        "away": 0.95
+        "home": 1.18,
+        "away": 0.91
       },
       "derived": {
-        "p_over_2_5": 0.3754,
-        "p_btts": 0.4429
+        "p_over_2_5": 0.3491,
+        "p_btts": 0.4218
       },
       "ratings": {
-        "elo_home": 1618.7,
-        "elo_away": 1533.9,
-        "elo_diff": 84.8
+        "elo_home": 1609.9,
+        "elo_away": 1520.8,
+        "elo_diff": 89.0
       }
     },
     {
@@ -2672,9 +2672,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4988,
-        "draw": 0.2681,
-        "away": 0.2331
+        "home": 0.5138,
+        "draw": 0.2656,
+        "away": 0.2206
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2684,7 +2684,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.1078
+          "p": 0.1077
         },
         {
           "score": "2-1",
@@ -2696,7 +2696,7 @@
         },
         {
           "score": "0-0",
-          "p": 0.076
+          "p": 0.0761
         }
       ],
       "expected_goals": {
@@ -2704,8 +2704,8 @@
         "away": 1.04
       },
       "derived": {
-        "p_over_2_5": 0.4961,
-        "p_btts": 0.5236
+        "p_over_2_5": 0.4962,
+        "p_btts": 0.5237
       },
       "ratings": {
         "elo_home": 1558.3,
@@ -2732,15 +2732,15 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.462,
-        "draw": 0.3,
-        "away": 0.2379
+        "home": 0.5007,
+        "draw": 0.2344,
+        "away": 0.2649
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.113
+          "p": 0.1131
         },
         {
           "score": "2-1",
@@ -2748,11 +2748,11 @@
         },
         {
           "score": "1-2",
-          "p": 0.0748
+          "p": 0.0747
         },
         {
           "score": "1-0",
-          "p": 0.072
+          "p": 0.0719
         },
         {
           "score": "2-0",
@@ -2765,7 +2765,7 @@
       },
       "derived": {
         "p_over_2_5": 0.5964,
-        "p_btts": 0.619
+        "p_btts": 0.6191
       },
       "ratings": {
         "elo_home": 1432.0,
@@ -2792,9 +2792,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1863,
-        "draw": 0.198,
-        "away": 0.6157
+        "home": 0.1079,
+        "draw": 0.174,
+        "away": 0.718
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2820,12 +2820,12 @@
         }
       ],
       "expected_goals": {
-        "home": 1.0,
+        "home": 1.01,
         "away": 2.98
       },
       "derived": {
-        "p_over_2_5": 0.7592,
-        "p_btts": 0.6045
+        "p_over_2_5": 0.7591,
+        "p_btts": 0.6046
       },
       "ratings": {
         "elo_home": 1499.7,
@@ -2852,9 +2852,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.47,
-        "draw": 0.2889,
-        "away": 0.2412
+        "home": 0.4592,
+        "draw": 0.2761,
+        "away": 0.2647
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -2868,7 +2868,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.0886
+          "p": 0.0885
         },
         {
           "score": "1-2",
@@ -2884,8 +2884,8 @@
         "away": 1.25
       },
       "derived": {
-        "p_over_2_5": 0.5294,
-        "p_btts": 0.5672
+        "p_over_2_5": 0.5295,
+        "p_btts": 0.5673
       },
       "ratings": {
         "elo_home": 1563.0,
@@ -2912,45 +2912,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5781,
-        "draw": 0.2576,
-        "away": 0.1643
+        "home": 0.5488,
+        "draw": 0.2647,
+        "away": 0.1866
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1084
+          "p": 0.1102
         },
         {
           "score": "2-1",
-          "p": 0.0994
-        },
-        {
-          "score": "2-0",
-          "p": 0.0973
+          "p": 0.0993
         },
         {
           "score": "1-0",
-          "p": 0.0957
+          "p": 0.0978
+        },
+        {
+          "score": "2-0",
+          "p": 0.0977
         },
         {
           "score": "3-1",
-          "p": 0.0639
+          "p": 0.0627
         }
       ],
       "expected_goals": {
-        "home": 1.93,
+        "home": 1.89,
         "away": 1.02
       },
       "derived": {
-        "p_over_2_5": 0.5654,
-        "p_btts": 0.5522
+        "p_over_2_5": 0.5565,
+        "p_btts": 0.5474
       },
       "ratings": {
-        "elo_home": 1636.7,
-        "elo_away": 1608.2,
-        "elo_diff": 28.5
+        "elo_home": 1648.7,
+        "elo_away": 1604.0,
+        "elo_diff": 44.7
       }
     },
     {
@@ -2972,45 +2972,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6444,
-        "draw": 0.1673,
-        "away": 0.1883
+        "home": 0.5963,
+        "draw": 0.2178,
+        "away": 0.186
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1078
+          "p": 0.1115
         },
         {
           "score": "2-1",
-          "p": 0.097
-        },
-        {
-          "score": "2-0",
-          "p": 0.0787
+          "p": 0.0954
         },
         {
           "score": "1-0",
-          "p": 0.078
+          "p": 0.0777
+        },
+        {
+          "score": "2-0",
+          "p": 0.0747
         },
         {
           "score": "1-2",
-          "p": 0.0632
+          "p": 0.0677
         }
       ],
       "expected_goals": {
-        "home": 1.89,
-        "away": 1.23
+        "home": 1.8,
+        "away": 1.28
       },
       "derived": {
-        "p_over_2_5": 0.6038,
-        "p_btts": 0.6067
+        "p_over_2_5": 0.5933,
+        "p_btts": 0.607
       },
       "ratings": {
-        "elo_home": 1753.3,
-        "elo_away": 1620.6,
-        "elo_diff": 132.8
+        "elo_home": 1729.5,
+        "elo_away": 1630.1,
+        "elo_diff": 99.4
       }
     },
     {
@@ -3032,45 +3032,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5138,
-        "draw": 0.2831,
-        "away": 0.2031
+        "home": 0.5398,
+        "draw": 0.2312,
+        "away": 0.229
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1232
+          "p": 0.1241
         },
         {
           "score": "2-1",
-          "p": 0.0879
+          "p": 0.0876
         },
         {
           "score": "1-0",
-          "p": 0.0811
+          "p": 0.082
         },
         {
           "score": "1-2",
-          "p": 0.079
+          "p": 0.0791
         },
         {
           "score": "0-1",
-          "p": 0.0723
+          "p": 0.0734
         }
       ],
       "expected_goals": {
-        "home": 1.5,
-        "away": 1.35
+        "home": 1.48,
+        "away": 1.34
       },
       "derived": {
-        "p_over_2_5": 0.5413,
-        "p_btts": 0.5806
+        "p_over_2_5": 0.5366,
+        "p_btts": 0.5771
       },
       "ratings": {
-        "elo_home": 1578.8,
-        "elo_away": 1495.9,
-        "elo_diff": 82.8
+        "elo_home": 1569.6,
+        "elo_away": 1478.7,
+        "elo_diff": 90.9
       }
     },
     {
@@ -3092,45 +3092,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1696,
-        "draw": 0.3027,
-        "away": 0.5277
+        "home": 0.1312,
+        "draw": 0.2451,
+        "away": 0.6236
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "0-1",
-          "p": 0.1358
+          "p": 0.1295
         },
         {
           "score": "0-2",
-          "p": 0.1203
+          "p": 0.1209
         },
         {
           "score": "1-1",
-          "p": 0.1169
+          "p": 0.1127
         },
         {
           "score": "1-2",
-          "p": 0.0946
+          "p": 0.096
         },
         {
           "score": "0-0",
-          "p": 0.0889
+          "p": 0.0808
         }
       ],
       "expected_goals": {
         "home": 0.79,
-        "away": 1.7
+        "away": 1.79
       },
       "derived": {
-        "p_over_2_5": 0.4526,
-        "p_btts": 0.4506
+        "p_over_2_5": 0.4781,
+        "p_btts": 0.4622
       },
       "ratings": {
-        "elo_home": 1443.2,
-        "elo_away": 1707.7,
-        "elo_diff": -264.5
+        "elo_home": 1436.4,
+        "elo_away": 1715.4,
+        "elo_diff": -279.0
       }
     },
     {
@@ -3152,45 +3152,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2631,
-        "draw": 0.3126,
-        "away": 0.4242
+        "home": 0.2883,
+        "draw": 0.3366,
+        "away": 0.3751
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1352
+          "p": 0.1349
         },
         {
           "score": "0-1",
-          "p": 0.1034
+          "p": 0.103
         },
         {
           "score": "1-0",
-          "p": 0.0926
+          "p": 0.0915
         },
         {
           "score": "0-0",
-          "p": 0.0912
+          "p": 0.0903
         },
         {
           "score": "1-2",
-          "p": 0.0835
+          "p": 0.084
         }
       ],
       "expected_goals": {
         "home": 1.17,
-        "away": 1.3
+        "away": 1.31
       },
       "derived": {
-        "p_over_2_5": 0.4483,
-        "p_btts": 0.5081
+        "p_over_2_5": 0.451,
+        "p_btts": 0.5101
       },
       "ratings": {
-        "elo_home": 1544.7,
+        "elo_home": 1535.9,
         "elo_away": 1617.8,
-        "elo_diff": -73.1
+        "elo_diff": -81.9
       }
     },
     {
@@ -3212,45 +3212,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2567,
-        "draw": 0.2958,
-        "away": 0.4474
+        "home": 0.2907,
+        "draw": 0.2281,
+        "away": 0.4812
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1165
+          "p": 0.1142
         },
         {
           "score": "1-2",
-          "p": 0.096
+          "p": 0.0972
         },
         {
           "score": "0-1",
-          "p": 0.0871
+          "p": 0.0876
         },
         {
           "score": "0-2",
-          "p": 0.0802
+          "p": 0.0834
         },
         {
           "score": "2-1",
-          "p": 0.0663
+          "p": 0.0633
         }
       ],
       "expected_goals": {
-        "home": 1.2,
-        "away": 1.73
+        "home": 1.17,
+        "away": 1.79
       },
       "derived": {
-        "p_over_2_5": 0.5601,
-        "p_btts": 0.5797
+        "p_over_2_5": 0.5666,
+        "p_btts": 0.5788
       },
       "ratings": {
-        "elo_home": 1507.0,
-        "elo_away": 1655.1,
-        "elo_diff": -148.1
+        "elo_home": 1502.6,
+        "elo_away": 1661.8,
+        "elo_diff": -159.2
       }
     },
     {
@@ -3272,45 +3272,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2487,
-        "draw": 0.3064,
-        "away": 0.4448
+        "home": 0.2647,
+        "draw": 0.2628,
+        "away": 0.4725
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1128
+          "p": 0.1144
         },
         {
           "score": "1-2",
-          "p": 0.097
+          "p": 0.0938
         },
         {
           "score": "0-1",
-          "p": 0.0844
+          "p": 0.0778
         },
         {
           "score": "0-2",
-          "p": 0.0812
+          "p": 0.0718
         },
         {
           "score": "2-1",
-          "p": 0.0641
+          "p": 0.071
         }
       ],
       "expected_goals": {
-        "home": 1.19,
-        "away": 1.81
+        "home": 1.31,
+        "away": 1.72
       },
       "derived": {
-        "p_over_2_5": 0.5769,
-        "p_btts": 0.588
+        "p_over_2_5": 0.5834,
+        "p_btts": 0.6046
       },
       "ratings": {
-        "elo_home": 1552.8,
-        "elo_away": 1619.8,
-        "elo_diff": -67.0
+        "elo_home": 1561.2,
+        "elo_away": 1605.9,
+        "elo_diff": -44.7
       }
     },
     {
@@ -3332,15 +3332,15 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6842,
-        "draw": 0.1649,
-        "away": 0.1509
+        "home": 0.6483,
+        "draw": 0.1794,
+        "away": 0.1723
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-1",
-          "p": 0.0849
+          "p": 0.085
         },
         {
           "score": "3-1",
@@ -3392,45 +3392,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2805,
-        "draw": 0.3348,
-        "away": 0.3846
+        "home": 0.317,
+        "draw": 0.2749,
+        "away": 0.4082
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1319
+          "p": 0.1337
         },
         {
           "score": "0-1",
-          "p": 0.1062
-        },
-        {
-          "score": "1-2",
-          "p": 0.0891
+          "p": 0.1072
         },
         {
           "score": "0-0",
-          "p": 0.0857
+          "p": 0.0894
+        },
+        {
+          "score": "1-2",
+          "p": 0.0873
         },
         {
           "score": "1-0",
-          "p": 0.0821
+          "p": 0.0861
         }
       ],
       "expected_goals": {
-        "home": 1.11,
-        "away": 1.42
+        "home": 1.12,
+        "away": 1.37
       },
       "derived": {
-        "p_over_2_5": 0.4648,
-        "p_btts": 0.5158
+        "p_over_2_5": 0.4537,
+        "p_btts": 0.509
       },
       "ratings": {
-        "elo_home": 1492.1,
-        "elo_away": 1634.4,
-        "elo_diff": -142.3
+        "elo_home": 1484.8,
+        "elo_away": 1617.4,
+        "elo_diff": -132.6
       }
     },
     {
@@ -3452,45 +3452,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.806,
-        "draw": 0.126,
-        "away": 0.068
+        "home": 0.7655,
+        "draw": 0.1602,
+        "away": 0.0743
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1043
-        },
-        {
-          "score": "3-0",
-          "p": 0.0913
+          "p": 0.1069
         },
         {
           "score": "2-1",
-          "p": 0.0911
+          "p": 0.0923
         },
         {
-          "score": "3-1",
-          "p": 0.0798
+          "score": "3-0",
+          "p": 0.0914
         },
         {
           "score": "1-0",
-          "p": 0.0759
+          "p": 0.0797
+        },
+        {
+          "score": "3-1",
+          "p": 0.0789
         }
       ],
       "expected_goals": {
-        "home": 2.63,
-        "away": 0.87
+        "home": 2.56,
+        "away": 0.86
       },
       "derived": {
-        "p_over_2_5": 0.6788,
-        "p_btts": 0.544
+        "p_over_2_5": 0.665,
+        "p_btts": 0.5372
       },
       "ratings": {
-        "elo_home": 1872.9,
-        "elo_away": 1607.3,
-        "elo_diff": 265.7
+        "elo_home": 1869.7,
+        "elo_away": 1605.9,
+        "elo_diff": 263.8
       }
     },
     {
@@ -3512,45 +3512,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1969,
-        "draw": 0.3071,
-        "away": 0.496
+        "home": 0.1227,
+        "draw": 0.2143,
+        "away": 0.6631
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "0-1",
-          "p": 0.1541
+          "p": 0.1488
         },
         {
           "score": "1-1",
-          "p": 0.1338
+          "p": 0.1308
         },
         {
           "score": "0-0",
-          "p": 0.1306
+          "p": 0.1178
         },
         {
           "score": "0-2",
-          "p": 0.1038
+          "p": 0.1081
         },
         {
-          "score": "1-0",
-          "p": 0.092
+          "score": "1-2",
+          "p": 0.0866
         }
       ],
       "expected_goals": {
-        "home": 0.79,
-        "away": 1.29
+        "home": 0.8,
+        "away": 1.39
       },
       "derived": {
-        "p_over_2_5": 0.3467,
-        "p_btts": 0.4038
+        "p_over_2_5": 0.3759,
+        "p_btts": 0.4209
       },
       "ratings": {
-        "elo_home": 1573.4,
-        "elo_away": 1719.3,
-        "elo_diff": -145.9
+        "elo_home": 1569.8,
+        "elo_away": 1726.2,
+        "elo_diff": -156.3
       }
     },
     {
@@ -3572,45 +3572,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.8501,
-        "draw": 0.0882,
-        "away": 0.0617
+        "home": 0.8925,
+        "draw": 0.0601,
+        "away": 0.0475
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1224
+          "p": 0.1218
         },
         {
           "score": "3-0",
-          "p": 0.1067
+          "p": 0.1084
         },
         {
           "score": "1-0",
-          "p": 0.0901
+          "p": 0.088
         },
         {
           "score": "2-1",
-          "p": 0.0877
+          "p": 0.0863
         },
         {
           "score": "3-1",
-          "p": 0.0764
+          "p": 0.0768
         }
       ],
       "expected_goals": {
-        "home": 2.62,
-        "away": 0.72
+        "home": 2.67,
+        "away": 0.71
       },
       "derived": {
-        "p_over_2_5": 0.6466,
-        "p_btts": 0.4774
+        "p_over_2_5": 0.6553,
+        "p_btts": 0.4755
       },
       "ratings": {
-        "elo_home": 1859.2,
-        "elo_away": 1534.5,
-        "elo_diff": 324.7
+        "elo_home": 1862.3,
+        "elo_away": 1523.4,
+        "elo_diff": 338.9
       }
     },
     {
@@ -3632,45 +3632,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5015,
-        "draw": 0.3145,
-        "away": 0.184
+        "home": 0.5109,
+        "draw": 0.2954,
+        "away": 0.1937
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1268
+          "p": 0.1326
         },
         {
           "score": "1-0",
-          "p": 0.1061
-        },
-        {
-          "score": "2-1",
-          "p": 0.0935
-        },
-        {
-          "score": "2-0",
-          "p": 0.087
+          "p": 0.1182
         },
         {
           "score": "0-0",
-          "p": 0.0786
+          "p": 0.094
+        },
+        {
+          "score": "2-1",
+          "p": 0.0898
+        },
+        {
+          "score": "2-0",
+          "p": 0.0887
         }
       ],
       "expected_goals": {
-        "home": 1.55,
-        "away": 1.08
+        "home": 1.42,
+        "away": 1.01
       },
       "derived": {
-        "p_over_2_5": 0.4878,
-        "p_btts": 0.5251
+        "p_over_2_5": 0.4395,
+        "p_btts": 0.4896
       },
       "ratings": {
-        "elo_home": 1492.6,
-        "elo_away": 1563.1,
-        "elo_diff": -70.5
+        "elo_home": 1494.0,
+        "elo_away": 1563.2,
+        "elo_diff": -69.2
       }
     },
     {
@@ -3692,31 +3692,31 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.8428,
-        "draw": 0.08,
-        "away": 0.0773
+        "home": 0.8534,
+        "draw": 0.0761,
+        "away": 0.0705
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1133
+          "p": 0.113
         },
         {
           "score": "3-0",
-          "p": 0.0943
+          "p": 0.0939
         },
         {
           "score": "2-1",
-          "p": 0.0928
+          "p": 0.0929
         },
         {
           "score": "1-0",
-          "p": 0.087
+          "p": 0.0867
         },
         {
           "score": "1-1",
-          "p": 0.0781
+          "p": 0.0783
         }
       ],
       "expected_goals": {
@@ -3724,13 +3724,13 @@
         "away": 0.82
       },
       "derived": {
-        "p_over_2_5": 0.6432,
-        "p_btts": 0.5168
+        "p_over_2_5": 0.6437,
+        "p_btts": 0.5181
       },
       "ratings": {
-        "elo_home": 1785.7,
-        "elo_away": 1524.5,
-        "elo_diff": 261.2
+        "elo_home": 1789.9,
+        "elo_away": 1527.9,
+        "elo_diff": 262.0
       }
     },
     {
@@ -3752,9 +3752,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4677,
-        "draw": 0.2782,
-        "away": 0.2541
+        "home": 0.5182,
+        "draw": 0.2448,
+        "away": 0.2371
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -3764,33 +3764,33 @@
         },
         {
           "score": "1-0",
-          "p": 0.121
+          "p": 0.1218
         },
         {
           "score": "0-0",
-          "p": 0.0978
+          "p": 0.0984
         },
         {
           "score": "2-0",
-          "p": 0.0889
+          "p": 0.0896
         },
         {
           "score": "2-1",
-          "p": 0.0887
+          "p": 0.0888
         }
       ],
       "expected_goals": {
         "home": 1.4,
-        "away": 1.0
+        "away": 0.99
       },
       "derived": {
-        "p_over_2_5": 0.4285,
-        "p_btts": 0.4814
+        "p_over_2_5": 0.4271,
+        "p_btts": 0.4797
       },
       "ratings": {
-        "elo_home": 1617.6,
+        "elo_home": 1619.3,
         "elo_away": 1589.6,
-        "elo_diff": 28.0
+        "elo_diff": 29.7
       }
     },
     {
@@ -3812,9 +3812,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.326,
-        "draw": 0.2968,
-        "away": 0.3772
+        "home": 0.3042,
+        "draw": 0.2469,
+        "away": 0.4489
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -3824,33 +3824,33 @@
         },
         {
           "score": "1-2",
-          "p": 0.087
-        },
-        {
-          "score": "0-1",
-          "p": 0.0824
+          "p": 0.0859
         },
         {
           "score": "2-1",
-          "p": 0.0797
+          "p": 0.081
+        },
+        {
+          "score": "0-1",
+          "p": 0.0808
         },
         {
           "score": "1-0",
-          "p": 0.0749
+          "p": 0.0758
         }
       ],
       "expected_goals": {
-        "home": 1.34,
-        "away": 1.47
+        "home": 1.36,
+        "away": 1.45
       },
       "derived": {
-        "p_over_2_5": 0.5326,
-        "p_btts": 0.5743
+        "p_over_2_5": 0.5338,
+        "p_btts": 0.5758
       },
       "ratings": {
-        "elo_home": 1585.0,
-        "elo_away": 1672.3,
-        "elo_diff": -87.4
+        "elo_home": 1595.5,
+        "elo_away": 1672.7,
+        "elo_diff": -77.2
       }
     },
     {
@@ -3872,45 +3872,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4753,
-        "draw": 0.2866,
-        "away": 0.2381
+        "home": 0.505,
+        "draw": 0.2494,
+        "away": 0.2456
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1355
+          "p": 0.1367
         },
         {
           "score": "1-0",
-          "p": 0.1124
+          "p": 0.1156
         },
         {
           "score": "0-0",
-          "p": 0.096
+          "p": 0.1007
         },
         {
           "score": "0-1",
-          "p": 0.0904
+          "p": 0.0934
         },
         {
           "score": "2-1",
-          "p": 0.0858
+          "p": 0.0846
         }
       ],
       "expected_goals": {
-        "home": 1.33,
-        "away": 1.08
+        "home": 1.3,
+        "away": 1.06
       },
       "derived": {
-        "p_over_2_5": 0.4339,
-        "p_btts": 0.4933
+        "p_over_2_5": 0.4209,
+        "p_btts": 0.4831
       },
       "ratings": {
-        "elo_home": 1580.3,
+        "elo_home": 1578.3,
         "elo_away": 1495.2,
-        "elo_diff": 85.2
+        "elo_diff": 83.1
       }
     },
     {
@@ -3932,45 +3932,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3074,
-        "draw": 0.2881,
-        "away": 0.4045
+        "home": 0.3253,
+        "draw": 0.2728,
+        "away": 0.402
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1308
-        },
-        {
-          "score": "0-1",
-          "p": 0.0938
+          "p": 0.1256
         },
         {
           "score": "1-2",
-          "p": 0.0859
+          "p": 0.0901
+        },
+        {
+          "score": "0-1",
+          "p": 0.0892
+        },
+        {
+          "score": "2-1",
+          "p": 0.0749
         },
         {
           "score": "1-0",
-          "p": 0.0838
-        },
-        {
-          "score": "0-0",
-          "p": 0.0788
+          "p": 0.0731
         }
       ],
       "expected_goals": {
-        "home": 1.24,
-        "away": 1.38
+        "home": 1.25,
+        "away": 1.51
       },
       "derived": {
-        "p_over_2_5": 0.4877,
-        "p_btts": 0.5391
+        "p_over_2_5": 0.5212,
+        "p_btts": 0.5623
       },
       "ratings": {
-        "elo_home": 1571.1,
-        "elo_away": 1597.9,
-        "elo_diff": -26.8
+        "elo_home": 1563.4,
+        "elo_away": 1614.9,
+        "elo_diff": -51.4
       }
     },
     {
@@ -3992,45 +3992,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3351,
-        "draw": 0.2769,
-        "away": 0.3879
+        "home": 0.3222,
+        "draw": 0.2169,
+        "away": 0.461
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1324
+          "p": 0.1318
         },
         {
           "score": "0-1",
-          "p": 0.1091
+          "p": 0.1109
         },
         {
           "score": "1-2",
-          "p": 0.0891
+          "p": 0.09
         },
         {
           "score": "0-0",
-          "p": 0.0881
+          "p": 0.0882
         },
         {
-          "score": "1-0",
-          "p": 0.0827
+          "score": "0-2",
+          "p": 0.0842
         }
       ],
       "expected_goals": {
-        "home": 1.09,
-        "away": 1.41
+        "home": 1.07,
+        "away": 1.44
       },
       "derived": {
-        "p_over_2_5": 0.4574,
-        "p_btts": 0.509
+        "p_over_2_5": 0.4573,
+        "p_btts": 0.5067
       },
       "ratings": {
-        "elo_home": 1583.4,
-        "elo_away": 1691.1,
-        "elo_diff": -107.7
+        "elo_home": 1577.5,
+        "elo_away": 1702.3,
+        "elo_diff": -124.7
       }
     },
     {
@@ -4052,45 +4052,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7425,
-        "draw": 0.183,
-        "away": 0.0745
+        "home": 0.629,
+        "draw": 0.2708,
+        "away": 0.1001
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
-          "score": "2-0",
-          "p": 0.1265
-        },
-        {
           "score": "1-0",
-          "p": 0.1152
+          "p": 0.122
         },
         {
-          "score": "2-1",
-          "p": 0.0959
+          "score": "2-0",
+          "p": 0.1199
         },
         {
           "score": "1-1",
-          "p": 0.0955
+          "p": 0.1085
+        },
+        {
+          "score": "2-1",
+          "p": 0.0972
         },
         {
           "score": "3-0",
-          "p": 0.089
+          "p": 0.0753
         }
       ],
       "expected_goals": {
-        "home": 2.11,
-        "away": 0.76
+        "home": 1.88,
+        "away": 0.81
       },
       "derived": {
-        "p_over_2_5": 0.5466,
-        "p_btts": 0.4717
+        "p_over_2_5": 0.505,
+        "p_btts": 0.4763
       },
       "ratings": {
-        "elo_home": 1544.6,
-        "elo_away": 1452.4,
-        "elo_diff": 92.3
+        "elo_home": 1534.1,
+        "elo_away": 1476.2,
+        "elo_diff": 57.8
       }
     },
     {
@@ -4112,31 +4112,31 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3814,
-        "draw": 0.2739,
-        "away": 0.3447
+        "home": 0.3665,
+        "draw": 0.243,
+        "away": 0.3904
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1312
+          "p": 0.1313
         },
         {
           "score": "1-0",
-          "p": 0.0897
+          "p": 0.0895
         },
         {
           "score": "0-1",
-          "p": 0.0881
+          "p": 0.0882
         },
         {
           "score": "2-1",
-          "p": 0.0826
+          "p": 0.0824
         },
         {
           "score": "1-2",
-          "p": 0.0812
+          "p": 0.0813
         }
       ],
       "expected_goals": {
@@ -4144,13 +4144,13 @@
         "away": 1.3
       },
       "derived": {
-        "p_over_2_5": 0.4873,
-        "p_btts": 0.54
+        "p_over_2_5": 0.487,
+        "p_btts": 0.5399
       },
       "ratings": {
         "elo_home": 1592.8,
-        "elo_away": 1707.1,
-        "elo_diff": -114.3
+        "elo_away": 1701.9,
+        "elo_diff": -109.1
       }
     },
     {
@@ -4172,45 +4172,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4232,
-        "draw": 0.3093,
-        "away": 0.2675
+        "home": 0.5092,
+        "draw": 0.2296,
+        "away": 0.2612
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1371
+          "p": 0.1366
         },
         {
           "score": "1-0",
-          "p": 0.1054
+          "p": 0.1056
         },
         {
           "score": "0-1",
-          "p": 0.0989
+          "p": 0.0963
         },
         {
           "score": "0-0",
-          "p": 0.0973
+          "p": 0.0956
         },
         {
           "score": "2-1",
-          "p": 0.0807
+          "p": 0.082
         }
       ],
       "expected_goals": {
-        "home": 1.24,
+        "home": 1.26,
         "away": 1.16
       },
       "derived": {
-        "p_over_2_5": 0.4305,
-        "p_btts": 0.4947
+        "p_over_2_5": 0.4355,
+        "p_btts": 0.4984
       },
       "ratings": {
-        "elo_home": 1561.7,
-        "elo_away": 1531.0,
-        "elo_diff": 30.6
+        "elo_home": 1553.3,
+        "elo_away": 1521.5,
+        "elo_diff": 31.8
       }
     },
     {
@@ -4232,45 +4232,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4496,
-        "draw": 0.341,
-        "away": 0.2094
+        "home": 0.5083,
+        "draw": 0.2835,
+        "away": 0.2082
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1184
+          "p": 0.1153
         },
         {
           "score": "2-1",
-          "p": 0.095
+          "p": 0.0964
         },
         {
           "score": "1-0",
-          "p": 0.0872
+          "p": 0.0862
         },
         {
           "score": "2-0",
-          "p": 0.0783
+          "p": 0.0807
         },
         {
           "score": "1-2",
-          "p": 0.0683
+          "p": 0.0655
         }
       ],
       "expected_goals": {
-        "home": 1.69,
-        "away": 1.21
+        "home": 1.76,
+        "away": 1.19
       },
       "derived": {
-        "p_over_2_5": 0.5536,
-        "p_btts": 0.5781
+        "p_over_2_5": 0.5661,
+        "p_btts": 0.5826
       },
       "ratings": {
-        "elo_home": 1636.5,
-        "elo_away": 1619.7,
-        "elo_diff": 16.8
+        "elo_home": 1650.4,
+        "elo_away": 1619.4,
+        "elo_diff": 31.0
       }
     },
     {
@@ -4292,15 +4292,15 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.279,
-        "draw": 0.2855,
-        "away": 0.4355
+        "home": 0.2934,
+        "draw": 0.2574,
+        "away": 0.4492
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.11
+          "p": 0.1101
         },
         {
           "score": "1-2",
@@ -4312,7 +4312,7 @@
         },
         {
           "score": "0-1",
-          "p": 0.0673
+          "p": 0.0672
         },
         {
           "score": "2-2",
@@ -4324,8 +4324,8 @@
         "away": 1.73
       },
       "derived": {
-        "p_over_2_5": 0.6136,
-        "p_btts": 0.6331
+        "p_over_2_5": 0.6137,
+        "p_btts": 0.6333
       },
       "ratings": {
         "elo_home": 1551.3,
@@ -4352,45 +4352,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1557,
-        "draw": 0.1772,
-        "away": 0.6671
+        "home": 0.1323,
+        "draw": 0.169,
+        "away": 0.6987
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "0-2",
-          "p": 0.1084
+          "p": 0.111
         },
         {
           "score": "1-2",
-          "p": 0.0949
+          "p": 0.093
         },
         {
           "score": "0-3",
-          "p": 0.0879
+          "p": 0.0927
         },
         {
           "score": "0-1",
-          "p": 0.0852
+          "p": 0.0848
         },
         {
           "score": "1-1",
-          "p": 0.082
+          "p": 0.078
         }
       ],
       "expected_goals": {
-        "home": 0.88,
-        "away": 2.43
+        "home": 0.84,
+        "away": 2.51
       },
       "derived": {
-        "p_over_2_5": 0.6415,
-        "p_btts": 0.5358
+        "p_over_2_5": 0.6489,
+        "p_btts": 0.5247
       },
       "ratings": {
-        "elo_home": 1553.6,
-        "elo_away": 1859.8,
-        "elo_diff": -306.2
+        "elo_home": 1550.5,
+        "elo_away": 1867.3,
+        "elo_diff": -316.8
       }
     },
     {
@@ -4412,45 +4412,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4512,
-        "draw": 0.2972,
-        "away": 0.2516
+        "home": 0.3406,
+        "draw": 0.2739,
+        "away": 0.3855
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1137
+          "p": 0.1143
         },
         {
           "score": "2-1",
-          "p": 0.0866
+          "p": 0.0848
         },
         {
           "score": "1-2",
-          "p": 0.081
+          "p": 0.083
         },
         {
           "score": "1-0",
-          "p": 0.0668
+          "p": 0.0656
         },
         {
           "score": "2-2",
-          "p": 0.0648
+          "p": 0.0647
         }
       ],
       "expected_goals": {
-        "home": 1.6,
-        "away": 1.5
+        "home": 1.56,
+        "away": 1.53
       },
       "derived": {
-        "p_over_2_5": 0.5982,
-        "p_btts": 0.625
+        "p_over_2_5": 0.5959,
+        "p_btts": 0.6238
       },
       "ratings": {
-        "elo_home": 1586.3,
-        "elo_away": 1690.8,
-        "elo_diff": -104.5
+        "elo_home": 1569.4,
+        "elo_away": 1694.0,
+        "elo_diff": -124.6
       }
     },
     {
@@ -4472,9 +4472,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5942,
-        "draw": 0.2107,
-        "away": 0.1951
+        "home": 0.6113,
+        "draw": 0.1772,
+        "away": 0.2116
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -4492,11 +4492,11 @@
         },
         {
           "score": "1-0",
-          "p": 0.0728
+          "p": 0.0727
         },
         {
           "score": "3-1",
-          "p": 0.0688
+          "p": 0.0689
         }
       ],
       "expected_goals": {
@@ -4504,7 +4504,7 @@
         "away": 1.19
       },
       "derived": {
-        "p_over_2_5": 0.6418,
+        "p_over_2_5": 0.6419,
         "p_btts": 0.6171
       },
       "ratings": {
@@ -4532,45 +4532,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.487,
-        "draw": 0.2496,
-        "away": 0.2633
+        "home": 0.5343,
+        "draw": 0.2108,
+        "away": 0.2549
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1308
+          "p": 0.1305
         },
         {
           "score": "1-0",
-          "p": 0.121
+          "p": 0.1227
         },
         {
           "score": "2-0",
-          "p": 0.0933
+          "p": 0.095
         },
         {
           "score": "0-0",
-          "p": 0.0931
+          "p": 0.0939
         },
         {
           "score": "2-1",
-          "p": 0.0913
+          "p": 0.0914
         }
       ],
       "expected_goals": {
         "home": 1.47,
-        "away": 0.98
+        "away": 0.96
       },
       "derived": {
-        "p_over_2_5": 0.4418,
-        "p_btts": 0.4862
+        "p_over_2_5": 0.4395,
+        "p_btts": 0.4826
       },
       "ratings": {
-        "elo_home": 1864.7,
-        "elo_away": 1822.7,
-        "elo_diff": 42.0
+        "elo_home": 1868.8,
+        "elo_away": 1827.9,
+        "elo_diff": 41.0
       }
     },
     {
@@ -4592,45 +4592,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7908,
-        "draw": 0.1409,
-        "away": 0.0684
+        "home": 0.8086,
+        "draw": 0.1399,
+        "away": 0.0515
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1405
+          "p": 0.1398
         },
         {
           "score": "1-0",
-          "p": 0.1225
+          "p": 0.1161
         },
         {
           "score": "3-0",
-          "p": 0.1039
+          "p": 0.1086
         },
         {
           "score": "2-1",
-          "p": 0.0906
+          "p": 0.089
         },
         {
           "score": "1-1",
-          "p": 0.0858
+          "p": 0.0803
         }
       ],
       "expected_goals": {
-        "home": 2.22,
-        "away": 0.65
+        "home": 2.33,
+        "away": 0.64
       },
       "derived": {
-        "p_over_2_5": 0.5454,
-        "p_btts": 0.4279
+        "p_over_2_5": 0.569,
+        "p_btts": 0.4289
       },
       "ratings": {
         "elo_home": 1748.1,
-        "elo_away": 1552.0,
-        "elo_diff": 196.1
+        "elo_away": 1548.8,
+        "elo_diff": 199.2
       }
     },
     {
@@ -4652,15 +4652,15 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.449,
-        "draw": 0.2848,
-        "away": 0.2662
+        "home": 0.4604,
+        "draw": 0.2296,
+        "away": 0.3099
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1121
+          "p": 0.114
         },
         {
           "score": "2-1",
@@ -4668,29 +4668,29 @@
         },
         {
           "score": "1-2",
-          "p": 0.0805
-        },
-        {
-          "score": "2-2",
-          "p": 0.0655
+          "p": 0.0808
         },
         {
           "score": "1-0",
-          "p": 0.0654
+          "p": 0.0672
+        },
+        {
+          "score": "2-2",
+          "p": 0.0647
         }
       ],
       "expected_goals": {
-        "home": 1.63,
-        "away": 1.51
+        "home": 1.6,
+        "away": 1.49
       },
       "derived": {
-        "p_over_2_5": 0.6063,
-        "p_btts": 0.631
+        "p_over_2_5": 0.5969,
+        "p_btts": 0.624
       },
       "ratings": {
-        "elo_home": 1574.0,
-        "elo_away": 1642.4,
-        "elo_diff": -68.4
+        "elo_home": 1576.0,
+        "elo_away": 1644.9,
+        "elo_diff": -68.8
       }
     },
     {
@@ -4712,15 +4712,15 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5109,
-        "draw": 0.1954,
-        "away": 0.2938
+        "home": 0.5227,
+        "draw": 0.215,
+        "away": 0.2624
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1064
+          "p": 0.1065
         },
         {
           "score": "2-1",
@@ -4744,8 +4744,8 @@
         "away": 1.29
       },
       "derived": {
-        "p_over_2_5": 0.6169,
-        "p_btts": 0.6215
+        "p_over_2_5": 0.6166,
+        "p_btts": 0.6214
       },
       "ratings": {
         "elo_home": 1741.6,
@@ -4772,45 +4772,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4751,
-        "draw": 0.2642,
-        "away": 0.2607
+        "home": 0.5629,
+        "draw": 0.1989,
+        "away": 0.2382
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1072
+          "p": 0.1093
         },
         {
           "score": "2-1",
-          "p": 0.0942
+          "p": 0.0963
         },
         {
           "score": "1-0",
-          "p": 0.0706
+          "p": 0.0776
         },
         {
           "score": "2-0",
-          "p": 0.07
+          "p": 0.0768
         },
         {
           "score": "1-2",
-          "p": 0.0687
+          "p": 0.0652
         }
       ],
       "expected_goals": {
         "home": 1.85,
-        "away": 1.35
+        "away": 1.25
       },
       "derived": {
-        "p_over_2_5": 0.6188,
-        "p_btts": 0.6284
+        "p_over_2_5": 0.6003,
+        "p_btts": 0.6079
       },
       "ratings": {
-        "elo_home": 1608.0,
-        "elo_away": 1652.5,
-        "elo_diff": -44.4
+        "elo_home": 1625.0,
+        "elo_away": 1659.8,
+        "elo_diff": -34.8
       }
     },
     {
@@ -4832,45 +4832,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4598,
-        "draw": 0.3132,
-        "away": 0.227
+        "home": 0.5384,
+        "draw": 0.258,
+        "away": 0.2036
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1358
+          "p": 0.1371
         },
         {
           "score": "1-0",
-          "p": 0.1164
+          "p": 0.1188
         },
         {
           "score": "0-0",
-          "p": 0.099
+          "p": 0.1037
         },
         {
           "score": "0-1",
-          "p": 0.0906
+          "p": 0.0942
         },
         {
           "score": "2-1",
-          "p": 0.086
+          "p": 0.0843
         }
       ],
       "expected_goals": {
-        "home": 1.33,
-        "away": 1.05
+        "home": 1.29,
+        "away": 1.04
       },
       "derived": {
-        "p_over_2_5": 0.4253,
-        "p_btts": 0.4849
+        "p_over_2_5": 0.4126,
+        "p_btts": 0.4757
       },
       "ratings": {
-        "elo_home": 1741.5,
-        "elo_away": 1722.6,
-        "elo_diff": 18.9
+        "elo_home": 1739.8,
+        "elo_away": 1731.4,
+        "elo_diff": 8.3
       }
     },
     {
@@ -4892,45 +4892,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.559,
-        "draw": 0.2193,
-        "away": 0.2217
+        "home": 0.5409,
+        "draw": 0.2245,
+        "away": 0.2346
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1066
+          "p": 0.1084
         },
         {
           "score": "2-1",
-          "p": 0.0969
-        },
-        {
-          "score": "2-0",
-          "p": 0.0778
+          "p": 0.0961
         },
         {
           "score": "1-0",
-          "p": 0.0763
+          "p": 0.0759
+        },
+        {
+          "score": "2-0",
+          "p": 0.0756
         },
         {
           "score": "1-2",
-          "p": 0.0631
+          "p": 0.0655
         }
       ],
       "expected_goals": {
-        "home": 1.91,
-        "away": 1.24
+        "home": 1.86,
+        "away": 1.27
       },
       "derived": {
-        "p_over_2_5": 0.6105,
-        "p_btts": 0.6117
+        "p_over_2_5": 0.6061,
+        "p_btts": 0.6129
       },
       "ratings": {
-        "elo_home": 1542.7,
-        "elo_away": 1508.3,
-        "elo_diff": 34.5
+        "elo_home": 1537.2,
+        "elo_away": 1525.5,
+        "elo_diff": 11.7
       }
     },
     {
@@ -4952,45 +4952,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1181,
-        "draw": 0.2574,
-        "away": 0.6244
+        "home": 0.0941,
+        "draw": 0.2239,
+        "away": 0.682
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "0-1",
-          "p": 0.1704
+          "p": 0.1668
         },
         {
           "score": "0-0",
-          "p": 0.1327
+          "p": 0.1328
         },
         {
           "score": "1-1",
-          "p": 0.1248
+          "p": 0.1273
         },
         {
           "score": "0-2",
-          "p": 0.1229
+          "p": 0.1182
         },
         {
           "score": "1-2",
-          "p": 0.0827
+          "p": 0.0828
         }
       ],
       "expected_goals": {
-        "home": 0.67,
-        "away": 1.39
+        "home": 0.7,
+        "away": 1.37
       },
       "derived": {
-        "p_over_2_5": 0.3411,
-        "p_btts": 0.3742
+        "p_over_2_5": 0.3413,
+        "p_btts": 0.3813
       },
       "ratings": {
-        "elo_home": 1470.4,
-        "elo_away": 1670.5,
-        "elo_diff": -200.1
+        "elo_home": 1494.0,
+        "elo_away": 1676.4,
+        "elo_diff": -182.4
       }
     },
     {
@@ -5012,45 +5012,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2402,
-        "draw": 0.3403,
-        "away": 0.4195
+        "home": 0.233,
+        "draw": 0.2668,
+        "away": 0.5002
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1331
+          "p": 0.1337
         },
         {
           "score": "0-1",
-          "p": 0.1279
+          "p": 0.1282
         },
         {
           "score": "0-0",
-          "p": 0.1022
+          "p": 0.1036
         },
         {
           "score": "0-2",
-          "p": 0.0942
+          "p": 0.0935
         },
         {
           "score": "1-2",
-          "p": 0.0889
+          "p": 0.0883
         }
       ],
       "expected_goals": {
         "home": 0.94,
-        "away": 1.4
+        "away": 1.39
       },
       "derived": {
-        "p_over_2_5": 0.4161,
-        "p_btts": 0.4669
+        "p_over_2_5": 0.4125,
+        "p_btts": 0.465
       },
       "ratings": {
-        "elo_home": 1487.8,
-        "elo_away": 1651.8,
-        "elo_diff": -163.9
+        "elo_home": 1500.9,
+        "elo_away": 1660.6,
+        "elo_diff": -159.6
       }
     },
     {
@@ -5072,45 +5072,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4047,
-        "draw": 0.3069,
-        "away": 0.2884
+        "home": 0.4206,
+        "draw": 0.267,
+        "away": 0.3124
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "0-0",
-          "p": 0.183
+          "p": 0.1874
         },
         {
           "score": "1-0",
-          "p": 0.1607
+          "p": 0.1615
         },
         {
           "score": "1-1",
-          "p": 0.1383
+          "p": 0.1379
         },
         {
           "score": "0-1",
-          "p": 0.132
+          "p": 0.1342
         },
         {
           "score": "2-0",
-          "p": 0.0794
+          "p": 0.0783
         }
       ],
       "expected_goals": {
-        "home": 0.95,
-        "away": 0.79
+        "home": 0.93,
+        "away": 0.78
       },
       "derived": {
-        "p_over_2_5": 0.2521,
-        "p_btts": 0.3404
+        "p_over_2_5": 0.2457,
+        "p_btts": 0.3348
       },
       "ratings": {
-        "elo_home": 1489.9,
-        "elo_away": 1546.7,
-        "elo_diff": -56.8
+        "elo_home": 1485.7,
+        "elo_away": 1555.9,
+        "elo_diff": -70.2
       }
     },
     {
@@ -5132,45 +5132,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4823,
-        "draw": 0.2647,
-        "away": 0.253
+        "home": 0.4963,
+        "draw": 0.2468,
+        "away": 0.2569
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1125
+          "p": 0.1123
         },
         {
           "score": "2-1",
-          "p": 0.0962
+          "p": 0.0955
         },
         {
           "score": "1-0",
-          "p": 0.0814
+          "p": 0.0789
         },
         {
           "score": "2-0",
-          "p": 0.078
+          "p": 0.0754
         },
         {
           "score": "1-2",
-          "p": 0.066
+          "p": 0.0676
         }
       ],
       "expected_goals": {
-        "home": 1.8,
-        "away": 1.23
+        "home": 1.79,
+        "away": 1.27
       },
       "derived": {
-        "p_over_2_5": 0.5834,
-        "p_btts": 0.5965
+        "p_over_2_5": 0.5886,
+        "p_btts": 0.6032
       },
       "ratings": {
-        "elo_home": 1608.2,
-        "elo_away": 1552.8,
-        "elo_diff": 55.4
+        "elo_home": 1604.0,
+        "elo_away": 1561.2,
+        "elo_diff": 42.9
       }
     },
     {
@@ -5192,45 +5192,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2169,
-        "draw": 0.271,
-        "away": 0.5122
+        "home": 0.1556,
+        "draw": 0.1903,
+        "away": 0.6541
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
-          "score": "1-2",
-          "p": 0.0969
+          "score": "1-1",
+          "p": 0.0981
         },
         {
-          "score": "1-1",
-          "p": 0.0964
+          "score": "1-2",
+          "p": 0.0974
         },
         {
           "score": "0-2",
-          "p": 0.0781
+          "p": 0.0799
         },
         {
           "score": "0-1",
-          "p": 0.0694
+          "p": 0.0718
         },
         {
           "score": "1-3",
-          "p": 0.0682
+          "p": 0.0677
         }
       ],
       "expected_goals": {
-        "home": 1.24,
-        "away": 2.11
+        "home": 1.22,
+        "away": 2.09
       },
       "derived": {
-        "p_over_2_5": 0.6506,
-        "p_btts": 0.6291
+        "p_over_2_5": 0.6414,
+        "p_btts": 0.6216
       },
       "ratings": {
-        "elo_home": 1542.7,
-        "elo_away": 1785.7,
-        "elo_diff": -243.0
+        "elo_home": 1537.2,
+        "elo_away": 1789.9,
+        "elo_diff": -252.7
       }
     },
     {
@@ -5252,45 +5252,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4906,
-        "draw": 0.2512,
-        "away": 0.2582
+        "home": 0.5297,
+        "draw": 0.2465,
+        "away": 0.2238
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1203
+          "p": 0.1197
         },
         {
           "score": "1-0",
-          "p": 0.1034
+          "p": 0.1049
         },
         {
           "score": "2-1",
-          "p": 0.0969
+          "p": 0.0972
         },
         {
           "score": "2-0",
-          "p": 0.0924
+          "p": 0.0945
         },
         {
           "score": "0-0",
-          "p": 0.0703
+          "p": 0.0707
         }
       ],
       "expected_goals": {
-        "home": 1.69,
-        "away": 1.05
+        "home": 1.71,
+        "away": 1.03
       },
       "derived": {
-        "p_over_2_5": 0.5162,
-        "p_btts": 0.5357
+        "p_over_2_5": 0.5151,
+        "p_btts": 0.5318
       },
       "ratings": {
         "elo_home": 1561.9,
-        "elo_away": 1544.6,
-        "elo_diff": 17.3
+        "elo_away": 1534.1,
+        "elo_diff": 27.8
       }
     },
     {
@@ -5312,45 +5312,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7071,
-        "draw": 0.1883,
-        "away": 0.1046
+        "home": 0.7298,
+        "draw": 0.1848,
+        "away": 0.0854
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
-          "score": "1-0",
-          "p": 0.1221
+          "score": "2-0",
+          "p": 0.1201
         },
         {
-          "score": "2-0",
-          "p": 0.1211
+          "score": "1-0",
+          "p": 0.119
         },
         {
           "score": "1-1",
-          "p": 0.1072
+          "p": 0.1059
         },
         {
           "score": "2-1",
-          "p": 0.0971
+          "p": 0.0975
         },
         {
           "score": "3-0",
-          "p": 0.0768
+          "p": 0.0775
         }
       ],
       "expected_goals": {
-        "home": 1.9,
-        "away": 0.8
+        "home": 1.94,
+        "away": 0.81
       },
       "derived": {
-        "p_over_2_5": 0.5077,
-        "p_btts": 0.4746
+        "p_over_2_5": 0.5178,
+        "p_btts": 0.4808
       },
       "ratings": {
-        "elo_home": 1672.3,
-        "elo_away": 1561.7,
-        "elo_diff": 110.7
+        "elo_home": 1672.7,
+        "elo_away": 1553.3,
+        "elo_diff": 119.4
       }
     },
     {
@@ -5372,45 +5372,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1962,
-        "draw": 0.3094,
-        "away": 0.4944
+        "home": 0.1874,
+        "draw": 0.292,
+        "away": 0.5206
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
-          "score": "0-2",
-          "p": 0.1131
+          "score": "1-1",
+          "p": 0.1153
         },
         {
           "score": "0-1",
-          "p": 0.1069
+          "p": 0.1132
         },
         {
-          "score": "1-1",
-          "p": 0.1026
+          "score": "0-2",
+          "p": 0.1062
         },
         {
           "score": "1-2",
-          "p": 0.0987
+          "p": 0.0981
         },
         {
-          "score": "0-3",
-          "p": 0.0762
+          "score": "0-0",
+          "p": 0.0721
         }
       ],
       "expected_goals": {
-        "home": 0.87,
-        "away": 2.02
+        "home": 0.92,
+        "away": 1.79
       },
       "derived": {
-        "p_over_2_5": 0.5526,
-        "p_btts": 0.51
+        "p_over_2_5": 0.5091,
+        "p_btts": 0.5076
       },
       "ratings": {
-        "elo_home": 1452.4,
-        "elo_away": 1642.0,
-        "elo_diff": -189.6
+        "elo_home": 1476.2,
+        "elo_away": 1630.0,
+        "elo_diff": -153.7
       }
     },
     {
@@ -5432,45 +5432,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7907,
-        "draw": 0.1182,
-        "away": 0.0911
+        "home": 0.8011,
+        "draw": 0.1209,
+        "away": 0.078
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1167
+          "p": 0.1166
         },
         {
           "score": "1-0",
-          "p": 0.1026
+          "p": 0.1057
         },
         {
           "score": "2-1",
-          "p": 0.0974
+          "p": 0.0979
         },
         {
           "score": "1-1",
-          "p": 0.0939
+          "p": 0.0974
         },
         {
           "score": "3-0",
-          "p": 0.0847
+          "p": 0.0821
         }
       ],
       "expected_goals": {
-        "home": 2.18,
-        "away": 0.83
+        "home": 2.11,
+        "away": 0.84
       },
       "derived": {
-        "p_over_2_5": 0.5795,
-        "p_btts": 0.5063
+        "p_over_2_5": 0.5657,
+        "p_btts": 0.504
       },
       "ratings": {
-        "elo_home": 1822.7,
-        "elo_away": 1636.7,
-        "elo_diff": 185.9
+        "elo_home": 1827.9,
+        "elo_away": 1648.7,
+        "elo_diff": 179.2
       }
     },
     {
@@ -5492,9 +5492,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4046,
-        "draw": 0.2649,
-        "away": 0.3305
+        "home": 0.4691,
+        "draw": 0.2267,
+        "away": 0.3042
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5504,33 +5504,33 @@
         },
         {
           "score": "2-1",
-          "p": 0.0845
+          "p": 0.0865
         },
         {
           "score": "1-2",
-          "p": 0.0818
+          "p": 0.0797
         },
         {
           "score": "2-2",
-          "p": 0.0676
+          "p": 0.0674
         },
         {
           "score": "1-0",
-          "p": 0.0588
+          "p": 0.0604
         }
       ],
       "expected_goals": {
-        "home": 1.65,
-        "away": 1.6
+        "home": 1.69,
+        "away": 1.56
       },
       "derived": {
-        "p_over_2_5": 0.6306,
-        "p_btts": 0.6501
+        "p_over_2_5": 0.6301,
+        "p_btts": 0.6491
       },
       "ratings": {
-        "elo_home": 1619.7,
-        "elo_away": 1753.3,
-        "elo_diff": -133.6
+        "elo_home": 1619.4,
+        "elo_away": 1729.5,
+        "elo_diff": -110.1
       }
     },
     {
@@ -5552,45 +5552,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4501,
-        "draw": 0.291,
-        "away": 0.2588
+        "home": 0.48,
+        "draw": 0.2775,
+        "away": 0.2425
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1252
+          "p": 0.1254
         },
         {
           "score": "2-1",
-          "p": 0.0909
+          "p": 0.0892
         },
         {
           "score": "1-0",
-          "p": 0.0904
+          "p": 0.0872
         },
         {
           "score": "1-2",
-          "p": 0.0736
+          "p": 0.0763
         },
         {
-          "score": "2-0",
+          "score": "0-1",
           "p": 0.0736
         }
       ],
       "expected_goals": {
-        "home": 1.53,
-        "away": 1.24
+        "home": 1.5,
+        "away": 1.28
       },
       "derived": {
-        "p_over_2_5": 0.5214,
-        "p_btts": 0.5612
+        "p_over_2_5": 0.5246,
+        "p_btts": 0.5662
       },
       "ratings": {
-        "elo_home": 1707.1,
-        "elo_away": 1636.5,
-        "elo_diff": 70.6
+        "elo_home": 1701.9,
+        "elo_away": 1650.4,
+        "elo_diff": 51.5
       }
     },
     {
@@ -5612,45 +5612,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.46,
-        "draw": 0.2783,
-        "away": 0.2617
+        "home": 0.4967,
+        "draw": 0.2556,
+        "away": 0.2478
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1248
+          "p": 0.126
         },
         {
           "score": "1-0",
-          "p": 0.0984
+          "p": 0.0942
         },
         {
           "score": "2-1",
-          "p": 0.0937
+          "p": 0.0917
         },
         {
           "score": "2-0",
-          "p": 0.0824
+          "p": 0.0767
         },
         {
-          "score": "0-0",
-          "p": 0.0722
+          "score": "0-1",
+          "p": 0.0723
         }
       ],
       "expected_goals": {
-        "home": 1.58,
-        "away": 1.14
+        "home": 1.53,
+        "away": 1.19
       },
       "derived": {
-        "p_over_2_5": 0.5102,
-        "p_btts": 0.5452
+        "p_over_2_5": 0.5122,
+        "p_btts": 0.5522
       },
       "ratings": {
-        "elo_home": 1619.8,
-        "elo_away": 1585.0,
-        "elo_diff": 34.8
+        "elo_home": 1605.9,
+        "elo_away": 1595.5,
+        "elo_diff": 10.4
       }
     },
     {
@@ -5672,45 +5672,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2229,
-        "draw": 0.3281,
-        "away": 0.449
+        "home": 0.2044,
+        "draw": 0.3025,
+        "away": 0.4931
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1244
+          "p": 0.1257
         },
         {
           "score": "0-1",
-          "p": 0.1222
+          "p": 0.123
         },
         {
           "score": "0-2",
-          "p": 0.1027
+          "p": 0.1018
         },
         {
           "score": "1-2",
-          "p": 0.0948
+          "p": 0.0942
         },
         {
           "score": "0-0",
-          "p": 0.0861
+          "p": 0.088
         }
       ],
       "expected_goals": {
-        "home": 0.92,
-        "away": 1.6
+        "home": 0.93,
+        "away": 1.58
       },
       "derived": {
-        "p_over_2_5": 0.4625,
-        "p_btts": 0.4873
+        "p_over_2_5": 0.4567,
+        "p_btts": 0.4851
       },
       "ratings": {
-        "elo_home": 1620.6,
-        "elo_away": 1864.7,
-        "elo_diff": -244.1
+        "elo_home": 1630.1,
+        "elo_away": 1868.8,
+        "elo_diff": -238.7
       }
     },
     {
@@ -5732,45 +5732,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6376,
-        "draw": 0.1575,
-        "away": 0.2049
+        "home": 0.6976,
+        "draw": 0.1324,
+        "away": 0.1701
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-1",
-          "p": 0.0967
-        },
-        {
-          "score": "1-1",
-          "p": 0.0878
+          "p": 0.0964
         },
         {
           "score": "2-0",
-          "p": 0.0857
+          "p": 0.0873
+        },
+        {
+          "score": "1-1",
+          "p": 0.086
         },
         {
           "score": "3-1",
-          "p": 0.0746
+          "p": 0.0757
         },
         {
           "score": "1-0",
-          "p": 0.0698
+          "p": 0.0699
         }
       ],
       "expected_goals": {
-        "home": 2.31,
-        "away": 1.13
+        "home": 2.36,
+        "away": 1.1
       },
       "derived": {
-        "p_over_2_5": 0.6683,
-        "p_btts": 0.6139
+        "p_over_2_5": 0.6715,
+        "p_btts": 0.6093
       },
       "ratings": {
-        "elo_home": 1859.8,
-        "elo_away": 1655.1,
-        "elo_diff": 204.7
+        "elo_home": 1867.3,
+        "elo_away": 1661.8,
+        "elo_diff": 205.4
       }
     },
     {
@@ -5792,45 +5792,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4721,
-        "draw": 0.2546,
-        "away": 0.2733
+        "home": 0.4863,
+        "draw": 0.2335,
+        "away": 0.2803
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1296
+          "p": 0.1302
         },
         {
           "score": "1-0",
-          "p": 0.0949
+          "p": 0.0937
         },
         {
           "score": "2-1",
-          "p": 0.088
+          "p": 0.0869
         },
         {
           "score": "0-1",
-          "p": 0.0802
+          "p": 0.0819
         },
         {
           "score": "0-0",
-          "p": 0.0772
+          "p": 0.0777
         }
       ],
       "expected_goals": {
-        "home": 1.43,
-        "away": 1.22
+        "home": 1.4,
+        "away": 1.24
       },
       "derived": {
-        "p_over_2_5": 0.4931,
+        "p_over_2_5": 0.4917,
         "p_btts": 0.5417
       },
       "ratings": {
-        "elo_home": 1531.0,
+        "elo_home": 1521.5,
         "elo_away": 1592.8,
-        "elo_diff": -61.8
+        "elo_diff": -71.3
       }
     },
     {
@@ -5852,9 +5852,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.8238,
-        "draw": 0.0985,
-        "away": 0.0777
+        "home": 0.8829,
+        "draw": 0.0631,
+        "away": 0.0541
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -5884,8 +5884,8 @@
         "away": 0.83
       },
       "derived": {
-        "p_over_2_5": 0.9255,
-        "p_btts": 0.5612
+        "p_over_2_5": 0.9254,
+        "p_btts": 0.5611
       },
       "ratings": {
         "elo_home": 1949.8,
@@ -5912,23 +5912,23 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3576,
-        "draw": 0.289,
-        "away": 0.3534
+        "home": 0.3205,
+        "draw": 0.2613,
+        "away": 0.4182
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1324
+          "p": 0.1323
         },
         {
           "score": "0-1",
-          "p": 0.1127
+          "p": 0.1123
         },
         {
           "score": "0-0",
-          "p": 0.0901
+          "p": 0.0898
         },
         {
           "score": "1-2",
@@ -5936,7 +5936,7 @@
         },
         {
           "score": "0-2",
-          "p": 0.0847
+          "p": 0.0845
         }
       ],
       "expected_goals": {
@@ -5944,8 +5944,8 @@
         "away": 1.42
       },
       "derived": {
-        "p_over_2_5": 0.4512,
-        "p_btts": 0.5019
+        "p_over_2_5": 0.4523,
+        "p_btts": 0.5028
       },
       "ratings": {
         "elo_home": 1582.6,
@@ -5972,15 +5972,15 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1808,
-        "draw": 0.2549,
-        "away": 0.5643
+        "home": 0.1301,
+        "draw": 0.3246,
+        "away": 0.5453
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1045
+          "p": 0.1035
         },
         {
           "score": "1-2",
@@ -5988,29 +5988,29 @@
         },
         {
           "score": "0-2",
-          "p": 0.0942
+          "p": 0.0953
         },
         {
           "score": "0-1",
-          "p": 0.0892
+          "p": 0.0893
         },
         {
           "score": "1-3",
-          "p": 0.0663
+          "p": 0.067
         }
       ],
       "expected_goals": {
-        "home": 1.06,
-        "away": 2.0
+        "home": 1.04,
+        "away": 2.02
       },
       "derived": {
-        "p_over_2_5": 0.5891,
-        "p_btts": 0.5688
+        "p_over_2_5": 0.591,
+        "p_btts": 0.567
       },
       "ratings": {
-        "elo_home": 1586.3,
-        "elo_away": 1872.9,
-        "elo_diff": -286.7
+        "elo_home": 1569.4,
+        "elo_away": 1869.7,
+        "elo_diff": -300.3
       }
     },
     {
@@ -6032,45 +6032,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4717,
-        "draw": 0.297,
-        "away": 0.2312
+        "home": 0.4973,
+        "draw": 0.2728,
+        "away": 0.23
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1294
+          "p": 0.1292
         },
         {
           "score": "1-0",
-          "p": 0.1088
+          "p": 0.1087
         },
         {
           "score": "2-1",
-          "p": 0.0919
+          "p": 0.0921
         },
         {
           "score": "2-0",
-          "p": 0.0858
+          "p": 0.0861
         },
         {
           "score": "0-0",
-          "p": 0.0833
+          "p": 0.0831
         }
       ],
       "expected_goals": {
-        "home": 1.49,
+        "home": 1.5,
         "away": 1.07
       },
       "derived": {
-        "p_over_2_5": 0.4722,
-        "p_btts": 0.5157
+        "p_over_2_5": 0.4731,
+        "p_btts": 0.5161
       },
       "ratings": {
-        "elo_home": 1524.5,
-        "elo_away": 1489.9,
-        "elo_diff": 34.6
+        "elo_home": 1527.9,
+        "elo_away": 1485.7,
+        "elo_diff": 42.2
       }
     },
     {
@@ -6092,19 +6092,19 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3299,
-        "draw": 0.2982,
-        "away": 0.372
+        "home": 0.3127,
+        "draw": 0.2933,
+        "away": 0.394
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1104
+          "p": 0.1097
         },
         {
           "score": "1-2",
-          "p": 0.0849
+          "p": 0.0847
         },
         {
           "score": "2-1",
@@ -6112,25 +6112,25 @@
         },
         {
           "score": "2-2",
-          "p": 0.0664
+          "p": 0.0668
         },
         {
           "score": "0-1",
-          "p": 0.0617
+          "p": 0.0608
         }
       ],
       "expected_goals": {
-        "home": 1.57,
+        "home": 1.58,
         "away": 1.62
       },
       "derived": {
-        "p_over_2_5": 0.6162,
-        "p_btts": 0.6392
+        "p_over_2_5": 0.6201,
+        "p_btts": 0.6422
       },
       "ratings": {
         "elo_home": 1561.9,
-        "elo_away": 1672.3,
-        "elo_diff": -110.4
+        "elo_away": 1672.7,
+        "elo_diff": -110.8
       }
     },
     {
@@ -6152,45 +6152,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5302,
-        "draw": 0.2561,
-        "away": 0.2137
+        "home": 0.5491,
+        "draw": 0.2264,
+        "away": 0.2245
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1036
+          "p": 0.1067
         },
         {
           "score": "2-1",
-          "p": 0.0931
+          "p": 0.0935
         },
         {
           "score": "1-2",
-          "p": 0.0692
+          "p": 0.0698
+        },
+        {
+          "score": "1-0",
+          "p": 0.0686
         },
         {
           "score": "2-0",
-          "p": 0.0663
-        },
-        {
-          "score": "2-2",
-          "p": 0.0653
+          "p": 0.068
         }
       ],
       "expected_goals": {
-        "home": 1.89,
-        "away": 1.4
+        "home": 1.84,
+        "away": 1.38
       },
       "derived": {
-        "p_over_2_5": 0.6387,
-        "p_btts": 0.645
+        "p_over_2_5": 0.6236,
+        "p_btts": 0.6339
       },
       "ratings": {
-        "elo_home": 1584.0,
-        "elo_away": 1553.6,
-        "elo_diff": 30.4
+        "elo_home": 1574.8,
+        "elo_away": 1550.5,
+        "elo_diff": 24.3
       }
     },
     {
@@ -6212,45 +6212,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1546,
-        "draw": 0.2966,
-        "away": 0.5488
+        "home": 0.1304,
+        "draw": 0.3004,
+        "away": 0.5693
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "0-1",
-          "p": 0.1316
+          "p": 0.1287
         },
         {
           "score": "0-2",
-          "p": 0.1214
+          "p": 0.1236
         },
         {
           "score": "1-1",
-          "p": 0.1135
+          "p": 0.1095
         },
         {
           "score": "1-2",
-          "p": 0.0956
+          "p": 0.0961
         },
         {
           "score": "0-0",
-          "p": 0.0829
+          "p": 0.078
         }
       ],
       "expected_goals": {
-        "home": 0.79,
-        "away": 1.77
+        "home": 0.78,
+        "away": 1.85
       },
       "derived": {
-        "p_over_2_5": 0.4712,
-        "p_btts": 0.4579
+        "p_over_2_5": 0.4871,
+        "p_btts": 0.4603
       },
       "ratings": {
-        "elo_home": 1552.0,
-        "elo_away": 1741.5,
-        "elo_diff": -189.5
+        "elo_home": 1548.8,
+        "elo_away": 1739.8,
+        "elo_diff": -190.9
       }
     },
     {
@@ -6272,9 +6272,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5902,
-        "draw": 0.2245,
-        "away": 0.1853
+        "home": 0.5817,
+        "draw": 0.2281,
+        "away": 0.1901
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6296,16 +6296,16 @@
         },
         {
           "score": "3-1",
-          "p": 0.066
+          "p": 0.0661
         }
       ],
       "expected_goals": {
-        "home": 1.99,
+        "home": 2.0,
         "away": 1.08
       },
       "derived": {
-        "p_over_2_5": 0.593,
-        "p_btts": 0.5752
+        "p_over_2_5": 0.5931,
+        "p_btts": 0.5753
       },
       "ratings": {
         "elo_home": 1674.9,
@@ -6332,9 +6332,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.2831,
-        "draw": 0.311,
-        "away": 0.4059
+        "home": 0.2865,
+        "draw": 0.3015,
+        "away": 0.4121
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6344,7 +6344,7 @@
         },
         {
           "score": "1-2",
-          "p": 0.0835
+          "p": 0.0834
         },
         {
           "score": "2-1",
@@ -6352,11 +6352,11 @@
         },
         {
           "score": "2-2",
-          "p": 0.0682
+          "p": 0.0683
         },
         {
           "score": "0-1",
-          "p": 0.0565
+          "p": 0.0564
         }
       ],
       "expected_goals": {
@@ -6364,8 +6364,8 @@
         "away": 1.66
       },
       "derived": {
-        "p_over_2_5": 0.6392,
-        "p_btts": 0.6568
+        "p_over_2_5": 0.6393,
+        "p_btts": 0.6569
       },
       "ratings": {
         "elo_home": 1551.3,
@@ -6392,9 +6392,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4895,
-        "draw": 0.2683,
-        "away": 0.2423
+        "home": 0.5375,
+        "draw": 0.2438,
+        "away": 0.2187
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6408,7 +6408,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.0834
+          "p": 0.0833
         },
         {
           "score": "2-0",
@@ -6424,7 +6424,7 @@
         "away": 1.24
       },
       "derived": {
-        "p_over_2_5": 0.5684,
+        "p_over_2_5": 0.5685,
         "p_btts": 0.5895
       },
       "ratings": {
@@ -6452,9 +6452,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4702,
-        "draw": 0.2908,
-        "away": 0.239
+        "home": 0.4442,
+        "draw": 0.3108,
+        "away": 0.2451
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -6464,7 +6464,7 @@
         },
         {
           "score": "1-0",
-          "p": 0.105
+          "p": 0.1049
         },
         {
           "score": "0-0",
@@ -6472,11 +6472,11 @@
         },
         {
           "score": "2-1",
-          "p": 0.0868
+          "p": 0.0869
         },
         {
           "score": "0-1",
-          "p": 0.0864
+          "p": 0.0863
         }
       ],
       "expected_goals": {
@@ -6484,8 +6484,8 @@
         "away": 1.14
       },
       "derived": {
-        "p_over_2_5": 0.4581,
-        "p_btts": 0.5133
+        "p_over_2_5": 0.4583,
+        "p_btts": 0.5135
       },
       "ratings": {
         "elo_home": 1470.8,
@@ -6512,15 +6512,15 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6419,
-        "draw": 0.2354,
-        "away": 0.1227
+        "home": 0.6516,
+        "draw": 0.2429,
+        "away": 0.1055
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1073
+          "p": 0.1074
         },
         {
           "score": "2-1",
@@ -6532,11 +6532,11 @@
         },
         {
           "score": "1-0",
-          "p": 0.096
+          "p": 0.0959
         },
         {
           "score": "3-0",
-          "p": 0.0763
+          "p": 0.0764
         }
       ],
       "expected_goals": {
@@ -6544,8 +6544,8 @@
         "away": 0.92
       },
       "derived": {
-        "p_over_2_5": 0.5886,
-        "p_btts": 0.5353
+        "p_over_2_5": 0.5887,
+        "p_btts": 0.5352
       },
       "ratings": {
         "elo_home": 1684.7,
@@ -6572,45 +6572,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4951,
-        "draw": 0.2667,
-        "away": 0.2382
+        "home": 0.5178,
+        "draw": 0.2532,
+        "away": 0.229
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1214
+          "p": 0.122
         },
         {
           "score": "1-0",
-          "p": 0.1098
-        },
-        {
-          "score": "2-0",
-          "p": 0.0968
+          "p": 0.1079
         },
         {
           "score": "2-1",
-          "p": 0.0966
+          "p": 0.0964
+        },
+        {
+          "score": "2-0",
+          "p": 0.0945
         },
         {
           "score": "0-0",
-          "p": 0.075
+          "p": 0.0745
         }
       ],
       "expected_goals": {
-        "home": 1.67,
-        "away": 1.0
+        "home": 1.66,
+        "away": 1.02
       },
       "derived": {
-        "p_over_2_5": 0.4993,
-        "p_btts": 0.5189
+        "p_over_2_5": 0.5013,
+        "p_btts": 0.5236
       },
       "ratings": {
-        "elo_home": 1619.8,
-        "elo_away": 1544.6,
-        "elo_diff": 75.1
+        "elo_home": 1605.9,
+        "elo_away": 1534.1,
+        "elo_diff": 71.8
       }
     },
     {
@@ -6632,45 +6632,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5874,
-        "draw": 0.2802,
-        "away": 0.1324
+        "home": 0.5916,
+        "draw": 0.2712,
+        "away": 0.1371
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
-          "score": "2-0",
-          "p": 0.1062
+          "score": "1-1",
+          "p": 0.1053
         },
         {
-          "score": "1-1",
-          "p": 0.1026
+          "score": "2-0",
+          "p": 0.1043
         },
         {
           "score": "1-0",
-          "p": 0.0994
+          "p": 0.1
         },
         {
           "score": "2-1",
-          "p": 0.0994
+          "p": 0.0995
         },
         {
           "score": "3-0",
-          "p": 0.072
+          "p": 0.0691
         }
       ],
       "expected_goals": {
-        "home": 2.04,
-        "away": 0.94
+        "home": 1.99,
+        "away": 0.95
       },
       "derived": {
-        "p_over_2_5": 0.5701,
-        "p_btts": 0.5332
+        "p_over_2_5": 0.5629,
+        "p_btts": 0.5353
       },
       "ratings": {
-        "elo_home": 1636.7,
-        "elo_away": 1552.8,
-        "elo_diff": 83.9
+        "elo_home": 1648.7,
+        "elo_away": 1561.2,
+        "elo_diff": 87.5
       }
     },
     {
@@ -6692,45 +6692,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.8063,
-        "draw": 0.1228,
-        "away": 0.0709
+        "home": 0.8389,
+        "draw": 0.1103,
+        "away": 0.0508
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1115
+          "p": 0.1146
         },
         {
           "score": "3-0",
-          "p": 0.1077
+          "p": 0.1008
         },
         {
           "score": "2-1",
-          "p": 0.0818
+          "p": 0.089
+        },
+        {
+          "score": "1-0",
+          "p": 0.0834
         },
         {
           "score": "3-1",
-          "p": 0.079
-        },
-        {
-          "score": "4-0",
-          "p": 0.078
+          "p": 0.0783
         }
       ],
       "expected_goals": {
-        "home": 2.9,
-        "away": 0.73
+        "home": 2.64,
+        "away": 0.78
       },
       "derived": {
-        "p_over_2_5": 0.702,
-        "p_btts": 0.4941
+        "p_over_2_5": 0.6626,
+        "p_btts": 0.5048
       },
       "ratings": {
-        "elo_home": 1707.1,
-        "elo_away": 1452.4,
-        "elo_diff": 254.8
+        "elo_home": 1701.9,
+        "elo_away": 1476.2,
+        "elo_diff": 225.7
       }
     },
     {
@@ -6752,45 +6752,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.7883,
-        "draw": 0.1185,
-        "away": 0.0933
+        "home": 0.7835,
+        "draw": 0.136,
+        "away": 0.0805
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
-          "score": "2-0",
-          "p": 0.0965
-        },
-        {
           "score": "2-1",
-          "p": 0.0944
+          "p": 0.0966
         },
         {
-          "score": "3-0",
-          "p": 0.0805
+          "score": "2-0",
+          "p": 0.0947
         },
         {
           "score": "1-1",
-          "p": 0.0792
+          "p": 0.0856
         },
         {
           "score": "3-1",
-          "p": 0.0788
+          "p": 0.0764
+        },
+        {
+          "score": "1-0",
+          "p": 0.0756
         }
       ],
       "expected_goals": {
-        "home": 2.5,
-        "away": 0.98
+        "home": 2.37,
+        "away": 1.02
       },
       "derived": {
-        "p_over_2_5": 0.6754,
-        "p_btts": 0.5768
+        "p_over_2_5": 0.6586,
+        "p_btts": 0.584
       },
       "ratings": {
-        "elo_home": 1753.3,
-        "elo_away": 1608.2,
-        "elo_diff": 145.2
+        "elo_home": 1729.5,
+        "elo_away": 1604.0,
+        "elo_diff": 125.4
       }
     },
     {
@@ -6812,23 +6812,23 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.52,
-        "draw": 0.3198,
-        "away": 0.1602
+        "home": 0.5185,
+        "draw": 0.3357,
+        "away": 0.1458
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1315
+          "p": 0.1317
         },
         {
           "score": "1-0",
-          "p": 0.1249
+          "p": 0.1251
         },
         {
           "score": "0-0",
-          "p": 0.0972
+          "p": 0.0976
         },
         {
           "score": "2-0",
@@ -6836,21 +6836,21 @@
         },
         {
           "score": "2-1",
-          "p": 0.0905
+          "p": 0.0904
         }
       ],
       "expected_goals": {
-        "home": 1.45,
+        "home": 1.44,
         "away": 0.95
       },
       "derived": {
-        "p_over_2_5": 0.4299,
-        "p_btts": 0.4761
+        "p_over_2_5": 0.429,
+        "p_btts": 0.4755
       },
       "ratings": {
-        "elo_home": 1582.0,
+        "elo_home": 1578.6,
         "elo_away": 1537.8,
-        "elo_diff": 44.3
+        "elo_diff": 40.9
       }
     },
     {
@@ -6872,45 +6872,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.509,
-        "draw": 0.2707,
-        "away": 0.2203
+        "home": 0.5232,
+        "draw": 0.2567,
+        "away": 0.2201
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-0",
-          "p": 0.162
+          "p": 0.1541
         },
         {
           "score": "2-0",
-          "p": 0.126
+          "p": 0.1289
         },
         {
           "score": "1-1",
-          "p": 0.1216
+          "p": 0.1174
         },
         {
           "score": "0-0",
-          "p": 0.1177
+          "p": 0.1048
         },
         {
           "score": "2-1",
-          "p": 0.0869
+          "p": 0.0901
         }
       ],
       "expected_goals": {
-        "home": 1.5,
-        "away": 0.69
+        "home": 1.61,
+        "away": 0.7
       },
       "derived": {
-        "p_over_2_5": 0.3747,
-        "p_btts": 0.393
+        "p_over_2_5": 0.4072,
+        "p_btts": 0.4084
       },
       "ratings": {
-        "elo_home": 1719.3,
-        "elo_away": 1571.1,
-        "elo_diff": 148.3
+        "elo_home": 1726.2,
+        "elo_away": 1563.4,
+        "elo_diff": 162.8
       }
     },
     {
@@ -6932,45 +6932,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.1666,
-        "draw": 0.176,
-        "away": 0.6574
+        "home": 0.1226,
+        "draw": 0.1534,
+        "away": 0.724
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "0-2",
-          "p": 0.1015
+          "p": 0.1053
         },
         {
           "score": "1-2",
-          "p": 0.0937
+          "p": 0.0933
         },
         {
           "score": "0-3",
-          "p": 0.0855
+          "p": 0.0887
+        },
+        {
+          "score": "0-1",
+          "p": 0.0796
         },
         {
           "score": "1-3",
-          "p": 0.0789
-        },
-        {
-          "score": "1-1",
-          "p": 0.0779
+          "p": 0.0786
         }
       ],
       "expected_goals": {
-        "home": 0.92,
+        "home": 0.89,
         "away": 2.53
       },
       "derived": {
-        "p_over_2_5": 0.6695,
-        "p_btts": 0.5582
+        "p_over_2_5": 0.6623,
+        "p_btts": 0.5444
       },
       "ratings": {
-        "elo_home": 1618.7,
-        "elo_away": 1859.2,
-        "elo_diff": -240.4
+        "elo_home": 1609.9,
+        "elo_away": 1862.3,
+        "elo_diff": -252.5
       }
     },
     {
@@ -6992,9 +6992,9 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.552,
-        "draw": 0.247,
-        "away": 0.201
+        "home": 0.5645,
+        "draw": 0.231,
+        "away": 0.2045
       },
       "market_probabilities": null,
       "scoreline_top": [
@@ -7012,11 +7012,11 @@
         },
         {
           "score": "1-0",
-          "p": 0.0905
+          "p": 0.0904
         },
         {
           "score": "3-1",
-          "p": 0.0658
+          "p": 0.0659
         }
       ],
       "expected_goals": {
@@ -7024,8 +7024,8 @@
         "away": 1.05
       },
       "derived": {
-        "p_over_2_5": 0.5844,
-        "p_btts": 0.5655
+        "p_over_2_5": 0.5846,
+        "p_btts": 0.5656
       },
       "ratings": {
         "elo_home": 1506.6,
@@ -7052,45 +7052,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.4627,
-        "draw": 0.284,
-        "away": 0.2534
+        "home": 0.4487,
+        "draw": 0.2592,
+        "away": 0.292
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1338
+          "p": 0.1351
         },
         {
           "score": "1-0",
-          "p": 0.1031
+          "p": 0.1003
         },
         {
           "score": "0-1",
-          "p": 0.0882
+          "p": 0.0936
         },
         {
           "score": "0-0",
-          "p": 0.0879
+          "p": 0.0899
         },
         {
           "score": "2-1",
-          "p": 0.0857
+          "p": 0.0824
         }
       ],
       "expected_goals": {
-        "home": 1.35,
-        "away": 1.16
+        "home": 1.28,
+        "away": 1.2
       },
       "derived": {
-        "p_over_2_5": 0.4582,
-        "p_btts": 0.5148
+        "p_over_2_5": 0.4523,
+        "p_btts": 0.5121
       },
       "ratings": {
-        "elo_home": 1642.0,
-        "elo_away": 1636.5,
-        "elo_diff": 5.4
+        "elo_home": 1630.0,
+        "elo_away": 1650.4,
+        "elo_diff": -20.5
       }
     },
     {
@@ -7112,45 +7112,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6133,
-        "draw": 0.2034,
-        "away": 0.1833
+        "home": 0.6207,
+        "draw": 0.194,
+        "away": 0.1854
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-1",
-          "p": 0.0933
+          "p": 0.094
         },
         {
           "score": "1-1",
-          "p": 0.0868
-        },
-        {
-          "score": "3-1",
-          "p": 0.0702
+          "p": 0.0879
         },
         {
           "score": "2-0",
-          "p": 0.069
+          "p": 0.0707
+        },
+        {
+          "score": "3-1",
+          "p": 0.0704
         },
         {
           "score": "2-2",
-          "p": 0.063
+          "p": 0.0624
         }
       ],
       "expected_goals": {
-        "home": 2.26,
-        "away": 1.35
+        "home": 2.25,
+        "away": 1.33
       },
       "derived": {
-        "p_over_2_5": 0.6989,
-        "p_btts": 0.6679
+        "p_over_2_5": 0.6929,
+        "p_btts": 0.6617
       },
       "ratings": {
-        "elo_home": 1642.4,
-        "elo_away": 1542.7,
-        "elo_diff": 99.7
+        "elo_home": 1644.9,
+        "elo_away": 1537.2,
+        "elo_diff": 107.7
       }
     },
     {
@@ -7172,45 +7172,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.6872,
-        "draw": 0.1879,
-        "away": 0.125
+        "home": 0.7283,
+        "draw": 0.1601,
+        "away": 0.1116
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1318
+          "p": 0.1319
         },
         {
           "score": "1-0",
-          "p": 0.1264
+          "p": 0.1226
         },
         {
           "score": "1-1",
-          "p": 0.0992
+          "p": 0.096
         },
         {
           "score": "2-1",
-          "p": 0.0949
+          "p": 0.0947
         },
         {
           "score": "3-0",
-          "p": 0.0883
+          "p": 0.0912
         }
       ],
       "expected_goals": {
-        "home": 2.01,
+        "home": 2.07,
         "away": 0.72
       },
       "derived": {
-        "p_over_2_5": 0.5134,
-        "p_btts": 0.4492
+        "p_over_2_5": 0.5281,
+        "p_btts": 0.4523
       },
       "ratings": {
-        "elo_home": 1707.7,
-        "elo_away": 1492.1,
-        "elo_diff": 215.6
+        "elo_home": 1715.4,
+        "elo_away": 1484.8,
+        "elo_diff": 230.6
       }
     },
     {
@@ -7232,45 +7232,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.706,
-        "draw": 0.1817,
-        "away": 0.1122
+        "home": 0.7359,
+        "draw": 0.1702,
+        "away": 0.0939
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-0",
-          "p": 0.1746
+          "p": 0.1745
         },
         {
           "score": "2-0",
-          "p": 0.1569
+          "p": 0.155
         },
         {
           "score": "0-0",
-          "p": 0.1073
+          "p": 0.1088
         },
         {
           "score": "1-1",
-          "p": 0.0995
+          "p": 0.1013
         },
         {
           "score": "3-0",
-          "p": 0.0915
+          "p": 0.0893
         }
       ],
       "expected_goals": {
-        "home": 1.75,
-        "away": 0.53
+        "home": 1.73,
+        "away": 0.54
       },
       "derived": {
-        "p_over_2_5": 0.3981,
-        "p_btts": 0.3438
+        "p_over_2_5": 0.3945,
+        "p_btts": 0.3465
       },
       "ratings": {
-        "elo_home": 1691.1,
-        "elo_away": 1470.4,
-        "elo_diff": 220.7
+        "elo_home": 1702.3,
+        "elo_away": 1494.0,
+        "elo_diff": 208.3
       }
     },
     {
@@ -7292,45 +7292,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5571,
-        "draw": 0.2356,
-        "away": 0.2073
+        "home": 0.5056,
+        "draw": 0.271,
+        "away": 0.2235
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1099
+          "p": 0.1136
         },
         {
           "score": "2-1",
-          "p": 0.0955
+          "p": 0.0942
         },
         {
           "score": "1-0",
-          "p": 0.0761
+          "p": 0.0777
         },
         {
           "score": "2-0",
-          "p": 0.0743
+          "p": 0.0726
         },
         {
           "score": "1-2",
-          "p": 0.0672
+          "p": 0.0702
         }
       ],
       "expected_goals": {
-        "home": 1.83,
-        "away": 1.28
+        "home": 1.74,
+        "away": 1.3
       },
       "derived": {
-        "p_over_2_5": 0.6009,
-        "p_btts": 0.6119
+        "p_over_2_5": 0.5863,
+        "p_btts": 0.6055
       },
       "ratings": {
-        "elo_home": 1634.4,
-        "elo_away": 1607.3,
-        "elo_diff": 27.1
+        "elo_home": 1617.4,
+        "elo_away": 1605.9,
+        "elo_diff": 11.5
       }
     },
     {
@@ -7352,45 +7352,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.5583,
-        "draw": 0.281,
-        "away": 0.1607
+        "home": 0.5684,
+        "draw": 0.2664,
+        "away": 0.1652
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-0",
-          "p": 0.1336
+          "p": 0.1303
         },
         {
           "score": "1-1",
-          "p": 0.1285
+          "p": 0.126
         },
         {
           "score": "2-0",
-          "p": 0.1045
+          "p": 0.106
         },
         {
           "score": "0-0",
-          "p": 0.0998
+          "p": 0.0938
         },
         {
           "score": "2-1",
-          "p": 0.0914
+          "p": 0.0932
         }
       ],
       "expected_goals": {
-        "home": 1.49,
-        "away": 0.87
+        "home": 1.55,
+        "away": 0.88
       },
       "derived": {
-        "p_over_2_5": 0.4222,
-        "p_btts": 0.4584
+        "p_over_2_5": 0.4391,
+        "p_btts": 0.4673
       },
       "ratings": {
-        "elo_home": 1630.8,
-        "elo_away": 1573.4,
-        "elo_diff": 57.4
+        "elo_home": 1630.7,
+        "elo_away": 1569.8,
+        "elo_diff": 60.9
       }
     },
     {
@@ -7412,45 +7412,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.705,
-        "draw": 0.192,
-        "away": 0.103
+        "home": 0.7181,
+        "draw": 0.1979,
+        "away": 0.084
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.1216
+          "p": 0.1256
         },
         {
           "score": "1-0",
-          "p": 0.1143
+          "p": 0.1179
         },
         {
           "score": "1-1",
-          "p": 0.1002
+          "p": 0.099
         },
         {
           "score": "2-1",
-          "p": 0.0973
+          "p": 0.0964
         },
         {
           "score": "3-0",
-          "p": 0.0827
+          "p": 0.0857
         }
       ],
       "expected_goals": {
-        "home": 2.04,
-        "away": 0.8
+        "home": 2.05,
+        "away": 0.77
       },
       "derived": {
-        "p_over_2_5": 0.5401,
-        "p_btts": 0.4839
+        "p_over_2_5": 0.5338,
+        "p_btts": 0.4714
       },
       "ratings": {
-        "elo_home": 1652.5,
-        "elo_away": 1443.2,
-        "elo_diff": 209.2
+        "elo_home": 1659.8,
+        "elo_away": 1436.4,
+        "elo_diff": 223.4
       }
     },
     {
@@ -7472,45 +7472,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.3361,
-        "draw": 0.3276,
-        "away": 0.3362
+        "home": 0.3196,
+        "draw": 0.2793,
+        "away": 0.401
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "1-1",
-          "p": 0.1177
+          "p": 0.119
         },
         {
           "score": "1-2",
-          "p": 0.0961
+          "p": 0.0952
         },
         {
           "score": "0-1",
-          "p": 0.0898
+          "p": 0.0889
         },
         {
           "score": "0-2",
-          "p": 0.0819
+          "p": 0.0796
         },
         {
           "score": "2-1",
-          "p": 0.0657
+          "p": 0.0677
         }
       ],
       "expected_goals": {
-        "home": 1.17,
-        "away": 1.72
+        "home": 1.2,
+        "away": 1.68
       },
       "derived": {
-        "p_over_2_5": 0.5513,
-        "p_btts": 0.572
+        "p_over_2_5": 0.5485,
+        "p_btts": 0.5733
       },
       "ratings": {
-        "elo_home": 1620.6,
-        "elo_away": 1822.7,
-        "elo_diff": -202.1
+        "elo_home": 1630.1,
+        "elo_away": 1827.9,
+        "elo_diff": -197.8
       }
     },
     {
@@ -7532,45 +7532,45 @@
       "is_neutral": false,
       "snapshot": "24h",
       "probabilities": {
-        "home": 0.8401,
-        "draw": 0.0843,
-        "away": 0.0756
+        "home": 0.8385,
+        "draw": 0.0787,
+        "away": 0.0828
       },
       "market_probabilities": null,
       "scoreline_top": [
         {
           "score": "2-0",
-          "p": 0.0982
+          "p": 0.1016
         },
         {
           "score": "2-1",
-          "p": 0.0917
+          "p": 0.0913
         },
         {
           "score": "3-0",
-          "p": 0.086
+          "p": 0.0892
         },
         {
           "score": "3-1",
-          "p": 0.0803
+          "p": 0.0801
         },
         {
-          "score": "1-1",
-          "p": 0.0733
+          "score": "1-0",
+          "p": 0.0737
         }
       ],
       "expected_goals": {
         "home": 2.63,
-        "away": 0.93
+        "away": 0.9
       },
       "derived": {
-        "p_over_2_5": 0.69,
-        "p_btts": 0.5666
+        "p_over_2_5": 0.6841,
+        "p_btts": 0.5536
       },
       "ratings": {
-        "elo_home": 1859.8,
-        "elo_away": 1574.0,
-        "elo_diff": 285.8
+        "elo_home": 1867.3,
+        "elo_away": 1576.0,
+        "elo_diff": 291.2
       }
     }
   ]
